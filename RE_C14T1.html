@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 14 – Reading Test 1</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head><body>
+<header><h1>Cambridge IELTS 14 – Reading Test 1</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">The Importance of Children’s Play</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Brick by brick, six-year-old Alice is building a magical kingdom. Imagining fairy-tale turrets and fire-breathing dragons, wicked witches and gallant heroes, she’s creating an enchanting world. Although she isn’t aware of it, <span class="hl">this fantasy is helping her take her first steps towards her capacity for creativity</span><span class="mark">1</span> and so it will have important repercussions in her adult life.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Minutes later, Alice has abandoned the kingdom in favour of playing schools with her younger brother. When she bosses him around as his ‘teacher’, she’s practising how to regulate her emotions through pretence. Later on, when they tire of this and settle down with a board game, <span class="hl">she’s learning about the need to follow rules and take turns with a partner</span><span class="mark">2</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> ‘Play in all its rich variety is one of the highest achievements of the human species,’ says Dr David Whitebread from the Faculty of Education at the University of Cambridge, UK. ‘It underpins how we develop as intellectual, problem-solving adults and is crucial to our success as a highly adaptable species.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Recognizing the importance of play is not new: over two millennia ago, the Greek philosopher Plato extolled its virtues as a means of developing skills for adult life, and ideas about play-based learning have been developing since the 19th century.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> But we live in changing times, and Whitebread is mindful of a worldwide decline in play, pointing out that <span class="hl">over half the people in the world now live in cities</span><span class="mark">3</span>. ‘The opportunities for free play, which I experienced almost every day of my childhood, are becoming increasingly scarce,’ he says. <span class="hl">Outdoor play is curtailed by perceptions of risk to do with traffic</span><span class="mark">4</span>, as well as <span class="hl">parents’ increased wish to protect their children from being the victims of crime</span><span class="mark">5</span>, and by the emphasis on ‘earlier is better’ <span class="hl">which is leading to greater competition in academic learning and schools</span><span class="mark">6</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> International bodies like the United Nations and the European Union have begun to develop policies concerned with children’s right to play, and to consider implications for leisure facilities and educational programmes. <span class="hl">But what they often lack is the evidence to base policies on</span><span class="mark">7</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> ‘The type of play we are interested in is child-initiated, spontaneous and unpredictable – but, as soon as you ask a five-year-old “to play”, then you as the researcher have intervened,’ explains Dr Sara Baker. ‘And we want to know what the long-term impact of play is. It’s a real challenge.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Dr Jenny Gibson agrees, pointing out that although some of the steps in the puzzle of how and why play is important have been looked at, <span class="hl">there is very little data on the impact it has on the child’s later life</span><span class="mark">8</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Now, thanks to the university’s new Centre for Research on Play in Education, Development and Learning (PEDAL), Whitebread, Baker, Gibson and a team of researchers hope to provide evidence on the role played by play in how a child develops.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> ‘A strong possibility is that play supports the early development of children’s self-control,’ explains Baker. ‘This is our ability to develop awareness of our own thinking processes – it influences how effectively we go about undertaking challenging activities.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> In a study carried out by Baker with toddlers and young pre-schoolers, she found that children with greater self-control solved problems more quickly when exploring an unfamiliar set-up requiring scientific reasoning. ‘This sort of evidence makes us think that giving children the chance to play will make them more successful problem-solvers in the long run.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶12</strong> If playful experiences do facilitate this aspect of development, say the researchers, it could be extremely significant for educational practices, because <span class="hl">the ability to self-regulate has been shown to be a key predictor of academic performance</span><span class="mark">9</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶13</strong> Gibson adds: ‘Playful behavior is also an important indicator of healthy social and emotional development. In my previous research, I investigated how observing children at play <span class="hl">can give us important clues about their well-being and can even be useful in the diagnosis of neurodevelopmental disorders like autism</span><span class="mark">10</span>.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶14</strong> Whitebread’s recent research has involved developing a play-based approach to supporting children’s writing. ‘Many primary school children find writing difficult, but we showed in a previous study that a playful stimulus was far more effective than an instructional one.’ <span class="hl">Children wrote longer and better-structured stories when they first played with dolls representing characters in the story</span><span class="mark">11</span>. In the latest study, children first created their story with Lego*, with similar results. ‘Many teachers commented that they had always previously had children saying they didn’t know what to write about. With the Lego building, however, <span class="hl">not a single child said this through the whole year of the project</span><span class="mark">12</span>.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶15</strong> Whitebread, who directs PEDAL, trained as a primary school teacher in the early 1970s, when, as he describes, ‘the teaching of young children was largely a quiet backwater, untroubled by any serious intellectual debate or controversy.’ Now, the landscape is very different, with hotly debated topics such as school starting age.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶16</strong> ‘<span class="hl">Somehow the importance of play has been lost in recent decades. It’s regarded as something trivial</span><span class="mark">13</span>, or even as something negative that contrasts with “work”. Let’s not lose sight of its benefits, and the fundamental contributions it makes to human achievements in the arts, sciences and technology. Let’s make sure children have a rich diet of play experiences.’</p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* Lego: coloured plastic building blocks and other pieces that can be joined together</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">The growth of bike-sharing schemes around the world</div>
+<p class="para"><strong>A</strong> The original idea for an urban bike-sharing scheme dates back to a summer’s day in Amsterdam in 1965. Provo, the organization that came up with the idea, <span class="hl">was a group of Dutch activists who wanted to change society</span><span class="mark">23</span>. They believed the scheme, which was known as the Witte Fietsenplan, <span class="hl">was an answer to the perceived threats of air pollution and consumerism</span><span class="mark">18</span><span class="mark">24</span>. In the centre of Amsterdam, they painted a small number of used bikes white. <span class="hl">They also distributed leaflets describing the dangers of cars</span><span class="mark">25</span> and inviting people to use the white bikes. The bikes were then left unlocked at various locations around the city, to be used by anyone in need of transport.</p>
+<p class="para"><strong>B</strong> Luud Schimmelpennink, a Dutch industrial engineer who still lives and cycles in Amsterdam, was heavily involved in the original scheme. He recalls how the scheme succeeded in attracting a great deal of attention – particularly when it came to publicising Provo’s aims – but struggled to get off the ground. <span class="hl">The police were opposed to Provo’s initiatives and almost as soon as the white bikes were distributed around the city, they removed them</span><span class="mark">26</span>. However, for Schimmelpennink and for bike-sharing schemes in general, this was just the beginning. ‘The first Witte Fietsenplan was just a symbolic thing,’ he says. ‘We painted a few bikes white, that was all. Things got more serious when I became a member of the Amsterdam city council two years later.’</p>
+<p class="para"><strong>C</strong> Schimmelpennink seized this opportunity to present a more elaborate Witte Fietsenplan to the city council. ‘My idea was that the municipality of Amsterdam would distribute 10,000 white bikes over the city, for everyone to use,’ he explains. ‘I made serious calculations. It turned out that a white bicycle – per person, per kilometer – <span class="hl">would cost the municipality only 10% of what it contributed to public transport per person per kilometer</span><span class="mark">17</span>.’ <span class="hl">Nevertheless, the council unanimously rejected the plan.</span><span class="mark">15</span> ‘They said that the bicycle belongs to the past. They saw a glorious future for the car,’ says Schimmelpennink. But he was not in the least discouraged.</p>
+<p class="para"><strong>D</strong> Schimmelpennink never stopped believing in bike-sharing, and in the mid-90s, two Danes asked for his help to set up a system in Copenhagen. The result was the world’s first large-scale bike-share programme. It worked on a deposit: ‘You dropped a coin in the bike and when you returned it, you got your money back.’ After setting up the Danish system, Schimmelpennink decided to try his luck again in the Netherlands – and this time he succeeded in arousing the interest of the Dutch Ministry of Transport. ‘<span class="hl">Times had changed</span><span class="mark">20</span>,’ he recalls. ‘<span class="hl">People had become more environmentally conscious, and the Danish experiment had proved that bike-sharing was a real possibility</span><span class="mark">20</span>.’ A new Witte Fietsenplan was launched in 1999 in Amsterdam. However, riding a white bike was no longer free; it cost one guilder per trip and payment was made with a chip card developed by the Dutch bank Postbank. Schimmelpennink designed conspicuous, sturdy white bikes locked in special racks which could be opened with the chip card – the plan started with 250 bikes, distributed over five stations.</p>
+<p class="para"><strong>E</strong> Theo Molenaar, who was a system designer for the project, worked alongside Schimmelpennink. ‘I remember when we were testing the bike racks, he announced that he had already designed better ones. But of course, we had to go through with the ones we had.’ <span class="hl">The system, however, was prone to vandalism and theft. ‘After every weekend there would always be a couple of bikes missing</span><span class="mark">14</span>,’ Molenaar says. ‘I really have no idea what people did with them, because they could instantly be recognised as white bikes.’ But the biggest blow came when Postbank decided to abolish the chip card, because it wasn’t profitable. ‘That chip card was pivotal to the system,’ Molenaar says. ‘To continue the project we would have needed to set up another system, but <span class="hl">the business partner had lost interest</span><span class="mark">19</span>.’</p>
+<p class="para"><strong>F</strong> Schimmelpennink was disappointed, but – characteristically – not for long. In 2002 he got a call from the French advertising corporation JC Decaux, who wanted to set up his bike-sharing scheme in Vienna. ‘That went really well. After Vienna, they set up a system in Lyon. Then in 2007, Paris followed. That was a decisive moment in the history of bike-sharing.’ The huge and unexpected success of the Parisian bike-sharing programme, which now boasts more than 20,000 bicycles, inspired cities all over the world to set up their own schemes, all modelled on Schimmelpennink’s. ‘It’s wonderful that this happened,’ he says. ‘<span class="hl">But financially I didn’t really benefit from it, because I never filed for a patent</span><span class="mark">16</span>.’</p>
+<p class="para"><strong>G</strong> In Amsterdam today, 38% of all trips are made by bike and, along with Copenhagen, <span class="hl">it is regarded as one of the two most cycle-friendly capitals in the world</span><span class="mark">22</span> – but the city never got another Witte Fietsenplan. Molenaar believes this may be because everybody in Amsterdam already has a bike. Schimmelpennink, however, cannot see that this changes Amsterdam’s need for a bike-sharing scheme. ‘People who travel on the underground don’t carry their bikes around. But <span class="hl">often they need additional transport to reach their final destination</span><span class="mark">21</span>.’ Although he thinks it is strange that a city like Amsterdam does not have a successful bike-sharing scheme, he is optimistic about the future. ‘In the ‘60s we didn’t stand a chance because people were prepared to give their lives to keep cars in the city. But that mentality has totally changed. Today everybody longs for cities that are not dominated by cars.’</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">Motivational factors and the hospitality industry</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> A critical ingredient in the success of hotels is developing and maintaining superior performance from their employees. How is that accomplished? What Human Resource Management (HRM) practices should organizations invest in to acquire and retain great employees?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Some hotels aim to provide superior working conditions for their employees. The idea originated from workplaces – usually in the non-service sector – that emphasized fun and enjoyment as part of work-life balance. By contrast, the service sector, and more specifically hotels, has traditionally not extended these practices to address basic employee needs, such as good working conditions.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Pfeffer (1994) emphasizes that in order to succeed in a global business environment, organizations must make investment in Human Resource Management (HRM) to allow them to acquire employees who possess better skills and capabilities than their competitors. This investment will be to their competitive advantage. Despite this recognition of the importance of employee development, the hospitality industry has historically been dominated by underdeveloped HR practices (Lucas, 2002).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Lucas also points out that ‘<span class="hl">the substance of HRM practices does not appear to be designed to foster constructive relations with employees or to represent a managerial approach that enables developing and drawing out the full potential of people</span><span class="mark">29</span>, even though employees may be broadly satisfied with many aspects of their work’ (Lucas, 2002). In addition, or maybe as a result, high employee turnover has been a recurring problem throughout the hospitality industry. <span class="hl">Among the many cited reasons are low compensation, inadequate benefits, poor working conditions and compromised employee morale and attitudes</span><span class="mark">31</span><span class="mark">32</span> (Maroudas et al., 2008).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Ng and Sorensen (2008) demonstrated that <span class="hl">when managers provide recognition to employees, motivate employees to work together</span><span class="mark">30</span>, and remove obstacles preventing effective performance, <span class="hl">employees feel more obligated to stay with the company</span><span class="mark">28</span>. This was succinctly summarized by Michel et al. (2013): ‘[P]roviding support to employees gives them the confidence to perform their jobs better and the motivation to stay with the organization.’ Hospitality organizations can therefore enhance employee motivation and retention through the development and improvement of their working conditions. These conditions are inherently linked to the working environment.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> While it seems likely that employees’ reactions to their job characteristics could be affected by a predisposition to view their work environment negatively, <span class="hl">no evidence exists to support this hypothesis</span><span class="mark">33</span> (Spector et al., 2000). However, given the opportunity, many people will find something to complain about in relation to their workplace (Poulston, 2009). There is a strong link between the perceptions of employees and particular factors of their work environment that are separate from the work itself, including company policies, salary and vacations.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Such conditions are particularly troubling for the luxury hotel market, where high-quality service, requiring a sophisticated approach to HRM, is recognized as a critical source of competitive advantage (Maroudas et al., 2008). In a real sense, the services of hotel employees represent their industry (Schneider and Bowen, 1993). This representation has commonly been limited to guest experiences. This suggests that there has been a dichotomy between the guest environment provided in luxury hotels and the working conditions of their employees.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> It is therefore essential for hotel management to develop HRM practices that enable them to inspire and retain competent employees. This requires an understanding of what motivates employees at different levels of management and different stages of their careers (Enz and Siguaw, 2000). <span class="hl">This implies that it is beneficial for hotel managers to understand what practices are most favorable to increase employee satisfaction and retention</span><span class="mark">27</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Herzberg (1966) proposes that people have two major types of needs, the first being extrinsic motivation factors relating to the context in which work is performed, rather than the work itself. These include working conditions and job security. When these factors are unfavorable, job dissatisfaction may result. Significantly, though, <span class="hl">just fulfilling these needs does not result in satisfaction, but only in the reduction of dissatisfaction</span><span class="mark">34</span> (Maroudas et al., 2008).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> Employees also have intrinsic motivation needs or motivators, which include such factors as achievement and recognition. Unlike extrinsic factors, motivator factors may ideally result in job satisfaction (Maroudas et al., 2008). Herzberg’s (1966) theory discusses the need for a ‘balance’ of these two types of needs.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> The impact of fun as a motivating factor at work has also been explored. For example, Tews, Michel and Stafford (2013) conducted <span class="hl">a study focusing on staff from a chain of themed restaurants in the United States</span><span class="mark">36</span>. It was found that <span class="hl">fun activities had a favorable impact on performance</span><span class="mark">37</span> and <span class="hl">manager support for fun had a favorable impact in reducing turnover</span><span class="mark">38</span>. Their findings support the view that fun may indeed have a beneficial effect, but <span class="hl">the framing of that fun must be carefully aligned with both organizational goals and employee characteristics</span><span class="mark">39</span><span class="mark">40</span>. ‘Managers must learn how to achieve the delicate balance of allowing employees the freedom to enjoy themselves at work while simultaneously maintaining high levels of performance’ (Tews et al., 2013).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶12</strong> Deery (2008) has recommended several actions that can be adopted at the organizational level to retain good staff as well as assist in balancing work and family life. Those particularly appropriate to the hospitality industry include <span class="hl">allowing adequate breaks during the working day</span><span class="mark">35</span>, staff functions that involve families, and providing health and well-being opportunities.</p>
+</div><div class="column right">
+<div class="hint">💡 Click any question card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1&ndash;8</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Children’s play</b></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Building a ‘magical kingdom’ may help develop ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">creativity</span><div class="explanation">‘this fantasy is helping her take her first steps towards her capacity for <b>creativity</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Board games involve ____ and turn-taking.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">rules</span><div class="explanation">‘she’s learning about the need to follow <b>rules</b> and take turns with a partner’.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Populations of ____ have grown.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">cities</span><div class="explanation">‘over half the people in the world now live in <b>cities</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Opportunities for free play are limited due to fear of ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">traffic</span><div class="explanation">‘curtailed by perceptions of risk to do with <b>traffic</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">… fear of ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">crime</span><div class="explanation">‘parents’ increased wish to protect their children from being the victims of <b>crime</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Increased ____ in schools.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">competition</span><div class="explanation">‘greater <b>competition</b> in academic learning and schools’.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">It is difficult to find ____ to support new policies.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">evidence</span><div class="explanation">‘what they often lack is the <b>evidence</b> to base policies on’.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Research needs to study the impact of play on the rest of the child’s ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">life</span><div class="explanation">‘there is very little data on the impact it has on the child’s later <b>life</b>’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 9–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">Children with good self-control are known to be likely to do well at school later on.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Self-control (self-regulation) ‘has been shown to be a key predictor of academic performance’.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">The way a child plays may provide information about possible medical problems.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Observing play gives clues about well-being and ‘can even be useful in the diagnosis of neurodevelopmental disorders like autism’.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Playing with dolls was found to benefit girls’ writing more than boys’ writing.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The doll study shows children wrote longer, better stories, but boys and girls are never compared. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">Children had problems thinking up ideas when they first created the story with Lego.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The opposite: with Lego, ‘not a single child said this’ – they no longer complained of not knowing what to write.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">People nowadays regard children’s play as less significant than they did in the past.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘Somehow the importance of play has been lost in recent decades. It’s regarded as something trivial’.</div></div>
+<div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14&ndash;18</div><p>Reading Passage 2 has seven paragraphs, <b>A&ndash;G</b>. Which paragraph contains the following information?</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">a description of how people misused a bike-sharing scheme<div class="yng">A–G</div></div><span class="answer ans-letter">E</span><div class="explanation">Paragraph E: ‘After every weekend there would always be a couple of bikes missing’ – vandalism and theft.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">an explanation of why a proposed bike-sharing scheme was turned down<div class="yng">A–G</div></div><span class="answer ans-letter">C</span><div class="explanation">Paragraph C: the council rejected the 10,000-bike plan, saying ‘the bicycle belongs to the past’.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">a reference to a person being unable to profit from their work<div class="yng">A–G</div></div><span class="answer ans-letter">F</span><div class="explanation">Paragraph F: ‘financially I didn’t really benefit from it, because I never filed for a patent’.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">an explanation of the potential savings a bike-sharing scheme would bring<div class="yng">A–G</div></div><span class="answer ans-letter">C</span><div class="explanation">Paragraph C: a white bicycle would cost the city ‘only 10% of what it contributed to public transport’.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">a reference to the problems a bike-sharing scheme was intended to solve<div class="yng">A–G</div></div><span class="answer ans-letter">A</span><div class="explanation">Paragraph A: the scheme was ‘an answer to the perceived threats of air pollution and consumerism’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 19&ndash;20</div><p>Choose <b>TWO</b> letters, <b>A&ndash;E</b>.</p><p style="font-size:.84rem;color:#4a5568;">Which TWO of the following statements are made in the text about the Amsterdam bike-sharing scheme of 1999?</p></div>
+<div class="q-block"><div class="q-num">Questions 19 &amp; 20</div><div class="question">Which TWO of the following statements are made in the text about the Amsterdam bike-sharing scheme of 1999?<ul class='opts'><li><b>A</b> It was initially opposed by a government department.</li><li><b>B</b> It failed when a partner in the scheme withdrew support.</li><li><b>C</b> It aimed to be more successful than the Copenhagen scheme.</li><li><b>D</b> It was made possible by a change in people’s attitudes.</li><li><b>E</b> It attracted interest from a range of bike designers.</li></ul><div class="yng">TWO letters, A–E</div></div><span class="answer ans-letter">B and D</span><div class="explanation"><b>B</b>: Postbank abolished the chip card and ‘the business partner had lost interest’. <b>D</b>: ‘Times had changed … People had become more environmentally conscious’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 21&ndash;22</div><p>Choose <b>TWO</b> letters, <b>A&ndash;E</b>.</p><p style="font-size:.84rem;color:#4a5568;">Which TWO of the following statements are made in the text about Amsterdam today?</p></div>
+<div class="q-block"><div class="q-num">Questions 21 &amp; 22</div><div class="question">Which TWO of the following statements are made in the text about Amsterdam today?<ul class='opts'><li><b>A</b> The majority of residents would like to prevent all cars from entering the city.</li><li><b>B</b> There is little likelihood of the city having another bike-sharing scheme.</li><li><b>C</b> More trips in the city are made by bike than by any other form of transport.</li><li><b>D</b> A bike-sharing scheme would benefit residents who use public transport.</li><li><b>E</b> The city has a reputation as a place that welcomes cyclists.</li></ul><div class="yng">TWO letters, A–E</div></div><span class="answer ans-letter">D and E</span><div class="explanation"><b>D</b>: underground travellers ‘often need additional transport to reach their final destination’. <b>E</b>: the city is ‘regarded as one of the two most cycle-friendly capitals in the world’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 23&ndash;26</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>The first urban bike-sharing scheme</b></p><p style="font-size:.84rem;color:#4a5568;">The first bike-sharing scheme was the idea of the Dutch group Provo. The people who belonged to this group were ___. They were concerned about damage to the environment and about ___, and believed that the scheme would draw attention to these issues. As well as painting some bikes white, they handed out ___ that condemned the use of cars. However, the scheme was not a great success: almost as quickly as Provo left the bikes around the city, the ___ took them away.</p></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">The people who belonged to this group were ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">activists</span><div class="explanation">Provo ‘was a group of Dutch <b>activists</b> who wanted to change society’.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">They were concerned about damage to the environment and about ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">consumerism</span><div class="explanation">‘the perceived threats of air pollution and <b>consumerism</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">They handed out ____ that condemned the use of cars.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">leaflets</span><div class="explanation">‘They also distributed <b>leaflets</b> describing the dangers of cars’.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Almost as quickly as Provo left the bikes around the city, the ____ took them away.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">police</span><div class="explanation">‘The <b>police</b> were opposed to Provo’s initiatives and almost as soon as the white bikes were distributed around the city, they removed them’.</div></div>
+<div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27&ndash;31</div><p>Look at the following statements and the list of researchers below. Match each statement with the correct researcher, <b>A&ndash;F</b>. <i>NB You may use any letter more than once.</i></p><ul class="opts"><li><b>A</b> Pfeffer</li><li><b>B</b> Lucas</li><li><b>C</b> Maroudas et al.</li><li><b>D</b> Ng and Sorensen</li><li><b>E</b> Enz and Siguaw</li><li><b>F</b> Deery</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Hotel managers need to know what would encourage good staff to remain.<div class="yng">A–F</div></div><span class="answer ans-letter">E</span><div class="explanation">Enz and Siguaw: managers need ‘an understanding of what motivates employees … to increase employee satisfaction and retention’.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">The actions of managers may make staff feel they shouldn’t move to a different employer.<div class="yng">A–F</div></div><span class="answer ans-letter">D</span><div class="explanation">Ng and Sorensen: when managers give recognition and support, ‘employees feel more obligated to stay with the company’.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Little is done in the hospitality industry to help workers improve their skills.<div class="yng">A–F</div></div><span class="answer ans-letter">B</span><div class="explanation">Lucas: HRM practices are not designed ‘to represent a managerial approach that enables developing and drawing out the full potential of people’.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Staff are less likely to change jobs if cooperation is encouraged.<div class="yng">A–F</div></div><span class="answer ans-letter">D</span><div class="explanation">Ng and Sorensen: when managers ‘motivate employees to work together’, staff feel more obligated to stay.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Dissatisfaction with pay is not the only reason why hospitality workers change jobs.<div class="yng">A–F</div></div><span class="answer ans-letter">C</span><div class="explanation">Maroudas et al. list many reasons – ‘Among the many cited reasons are low compensation, inadequate benefits, poor working conditions’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 32–35</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">One reason for high staff turnover in the hospitality industry is poor morale.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">High turnover is put down to ‘compromised employee morale and attitudes’ among other reasons.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">Research has shown that staff have a tendency to dislike their workplace.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The writer says the opposite: ‘no evidence exists to support this hypothesis’.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">An improvement in working conditions and job security makes staff satisfied with their jobs.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">‘just fulfilling these needs does not result in satisfaction, but only in the reduction of dissatisfaction’.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Staff should be allowed to choose when they take breaks during the working day.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Deery recommends ‘allowing adequate breaks during the working day’, but says nothing about staff choosing when to take them.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 36&ndash;40</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Fun at work</b></p></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Tews, Michel and Stafford carried out research on staff in an American chain of ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">restaurants</span><div class="explanation">‘a study focusing on staff from a chain of themed <b>restaurants</b> in the United States’.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">They discovered that activities designed for staff to have fun improved their ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">performance</span><div class="explanation">‘fun activities had a favorable impact on <b>performance</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Management involvement led to lower staff ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">turnover</span><div class="explanation">‘manager support for fun had a favorable impact in reducing <b>turnover</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">The activities needed to fit with the company’s ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">goals</span><div class="explanation">‘the framing of that fun must be carefully aligned with both organizational <b>goals</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">… and the ____ of the staff.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">characteristics</span><div class="explanation">‘aligned with both organizational goals and employee <b>characteristics</b>’.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body></html>

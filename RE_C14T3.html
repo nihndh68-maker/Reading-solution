@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 14 – Reading Test 3</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head><body>
+<header><h1>Cambridge IELTS 14 – Reading Test 3</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">The concept of intelligence</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> <span class="hl">Looked at in one way, everyone knows what intelligence is; looked at in another way, no one does.</span><span class="mark">2</span> In other words, people all have unconscious notions – known as ‘implicit theories’ – of intelligence, but no one knows for certain what it actually is. This chapter addresses how people conceptualize intelligence, whatever it may actually be.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> But why should we even care what people think intelligence is, as opposed only to valuing whatever it actually is? There are at least four reasons people’s conceptions of intelligence matter.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> First, implicit theories of intelligence drive the way in which people perceive and evaluate their own intelligence and that of others. To better understand the judgments people make about their own and others’ abilities, it is useful to learn about people’s implicit theories. For example, <span class="hl">parents’ implicit theories of their children’s language development will determine at what ages they will be willing to make various corrections in their children’s speech</span><span class="mark">4</span>. More generally, parents’ implicit theories of intelligence will determine at what ages they believe their children are ready to perform various cognitive tasks. Job interviewers will make hiring decisions on the basis of their implicit theories of intelligence. <span class="hl">People will decide who to be friends with on the basis of such theories</span><span class="mark">1</span>. In sum, knowledge about implicit theories of intelligence is important because this knowledge is so often used by people to make judgments in the course of their everyday lives.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Second, the implicit theories of scientific investigators ultimately give rise to their explicit theories. Thus it is useful to find out what these implicit theories are. Implicit theories provide a framework that is useful in defining the general scope of a phenomenon – especially a not-well-understood phenomenon. These implicit theories can suggest what aspects of the phenomenon have been more or less attended to in previous investigations.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Third, implicit theories can be useful when an investigator suspects that existing explicit theories are wrong or misleading. <span class="hl">If an investigation of implicit theories reveals little correspondence between the extant implicit and explicit theories</span><span class="mark">3</span>, the implicit theories may be wrong. But the possibility also needs to be taken into account that the explicit theories are wrong and in need of correction or supplementation. For example, some implicit theories of intelligence suggest the need for expansion of some of our explicit theories of the construct.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Finally, understanding implicit theories of intelligence can help elucidate developmental and cross-cultural differences. As mentioned earlier, people have expectations for intellectual performances that differ for children of different ages. <span class="hl">How these expectations differ is in part a function of culture</span><span class="mark">5</span>. For example, expectations for children who participate in Western-style schooling are almost certain to be different from those for children who do not participate in such schooling.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> I have suggested that there are three major implicit theories of how intelligence relates to society as a whole (Sternberg, 1997). These might be called Hamiltonian, Jeffersonian, and Jacksonian. These views are not based strictly, but rather, loosely, on the philosophies of Alexander Hamilton, Thomas Jefferson, and Andrew Jackson, three great statesmen in the history of the United States.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> The Hamiltonian view, which is similar to the Platonic view, is that <span class="hl">people are born with different levels of intelligence</span><span class="mark">10</span> and that <span class="hl">those who are less intelligent need the good offices of the more intelligent to keep them in line</span><span class="mark">11</span>, whether they are called government officials or, in Plato’s term, philosopher-kings. Herrnstein and Murray (1994) seem to have shared this belief when they wrote about the emergence of a cognitive (high-IQ) elite, which eventually would have to take responsibility for the largely irresponsible masses of non-elite (low-IQ) people who cannot take care of themselves. <span class="hl">Left to themselves, the unintelligent would create, as they always have created, a kind of chaos.</span><span class="mark">13</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> <span class="hl">The Jeffersonian view is that people should have equal opportunities</span><span class="mark">7</span>, but they do not necessarily avail themselves equally of these opportunities and are not necessarily equally rewarded for their accomplishments. <span class="hl">People are rewarded for what they accomplish, if given equal opportunity.</span><span class="mark">9</span> Low achievers are not rewarded to the same extent as high achievers. In the Jeffersonian view, the goal of education is not to favor or foster an elite, as in the Hamiltonian tradition, but rather to allow children the opportunities to make full use of the skills they have. My own views are similar to these (Sternberg, 1997).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> The Jacksonian view is that <span class="hl">all people are equal, not only as human beings but in terms of their competencies</span><span class="mark">12</span> – that one person would serve as well as another in government or on a jury or in almost any position of responsibility. In this view of democracy, people are essentially intersubstitutable except for specialized skills, all of which can be learned. In this view, <span class="hl">we do not need or want any institutions that might lead to favoring one group over another</span><span class="mark">8</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> Implicit theories of intelligence and of the relationship of intelligence to society perhaps need to be considered more carefully than they have been because they often serve as underlying presuppositions for explicit theories and even experimental designs that are then taken as scientific contributions. Until scholars are able to discuss their implicit theories and thus their assumptions, <span class="hl">they are likely to miss the point of what others are saying when discussing their explicit theories and their data</span><span class="mark">6</span>.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">Saving bugs to find new drugs</div>
+<p class="para"><strong>A</strong> More drugs than you might think are derived from, or inspired by, compounds found in living things. Looking to nature for the soothing and curing of our ailments is nothing new – we have been doing it for tens of thousands of years. You only have to look at other primates – <span class="hl">such as the capuchin monkeys who rub themselves with toxin-oozing millipedes to deter mosquitoes</span><span class="mark">16</span>, or the chimpanzees who use noxious forest plants to rid themselves of intestinal parasites – to realise that our ancient ancestors too probably had a basic grasp of medicine.</p>
+<p class="para"><strong>B</strong> Pharmaceutical science and chemistry built on these ancient foundations and perfected the extraction, characterization, modification and testing of these natural products. Then, for a while, <span class="hl">modern pharmaceutical science moved its focus away from nature and into the laboratory</span><span class="mark">19</span>, designing chemical compounds from scratch. The main cause of this shift is that although there are plenty of promising chemical compounds in nature, finding them is far from easy. Securing sufficient numbers of the organism in question, isolating and characterizing the compounds of interest, and producing large quantities of these compounds are all significant hurdles.</p>
+<p class="para"><strong>C</strong> Laboratory-based drug discovery has achieved varying levels of success, something which has now prompted the development of new approaches focusing once again on natural products. With the ability to mine genomes for useful compounds, it is now evident that we have barely scratched the surface of nature’s molecular diversity. This realization, together with several looming health crises, such as antibiotic resistance, <span class="hl">has put bioprospecting – the search for useful compounds in nature – firmly back on the map</span><span class="mark">14</span>.</p>
+<p class="para"><strong>D</strong> Insects are the undisputed masters of the terrestrial domain, where they occupy every possible niche. Consequently, they have a bewildering array of interactions with other organisms, something which has driven the evolution of <span class="hl">an enormous range of very interesting compounds for defensive and offensive purposes</span><span class="mark">21</span>. Their remarkable diversity exceeds that of every other group of animals on the planet combined. Yet even though insects are far and away the most diverse animals in existence, their potential as sources of therapeutic compounds is yet to be realised.</p>
+<p class="para"><strong>E</strong> From the tiny proportion of insects that have been investigated, several promising compounds have been identified. For example, alloferon, an antimicrobial compound produced by blow fly larvae, <span class="hl">is used as an antiviral and antitumor agent in South Korea and Russia</span><span class="mark">20</span>. The larvae of a few other insect species are being investigated for the potent antimicrobial compounds they produce. Meanwhile, a compound from the venom of the wasp Polybia paulista has potential in cancer treatment.</p>
+<p class="para"><strong>F</strong> <span class="hl">Why is it that insects have received relatively little attention in bioprospecting?</span><span class="mark">17</span> Firstly, there are so many insects that, without some manner of targeted approach, investigating this huge variety of species is a daunting task. Secondly, insects are generally very small, and the glands inside them that secrete potentially useful compounds are smaller still. This can make it difficult to obtain sufficient quantities of the compound for subsequent testing. Thirdly, although we consider insects to be everywhere, the reality of this ubiquity is vast numbers of a few extremely common species. Many insect species are infrequently encountered and very difficult to rear in captivity, which, again, can leave us with insufficient material to work with.</p>
+<p class="para"><strong>G</strong> My colleagues and I at Aberystwyth University in the UK have developed an approach in which <span class="hl">we use our knowledge of ecology as a guide to target our efforts</span><span class="mark">23</span>. The creatures that particularly interest us are the many <span class="hl">insects that secrete powerful poison for subduing prey and keeping it fresh for future consumption</span><span class="mark">24</span>. There are even more insects that are <span class="hl">masters of exploiting filthy habitats</span><span class="mark">25</span>, such as faeces and carcasses, where they are regularly challenged by thousands of micro-organisms. These insects have many antimicrobial compounds for dealing with pathogenic bacteria and fungi, <span class="hl">suggesting that there is certainly potential to find many compounds that can serve as or inspire new antibiotics</span><span class="mark">26</span>.</p>
+<p class="para"><strong>H</strong> Although natural history knowledge points us in the right direction, it doesn’t solve the problems associated with obtaining useful compounds from insects. Fortunately, <span class="hl">it is now possible to snip out the stretches of the insect’s DNA that carry the codes for the interesting compounds</span><span class="mark">15</span><span class="mark">22</span> and insert them into cell lines that allow larger quantities to be produced. And although the road from isolating and characterizing compounds with desirable qualities to developing a commercial product is very long and full of pitfalls, the variety of successful animal-derived pharmaceuticals on the market demonstrates there is a precedent here that is worth exploring.</p>
+<p class="para"><strong>I</strong> <span class="hl">With every bit of wilderness that disappears, we deprive ourselves of potential medicines.</span><span class="mark">18</span> As much as I’d love to help develop a groundbreaking insect-derived medicine, my main motivation for looking at insects in this way is conservation. I sincerely believe that all species, however small and seemingly insignificant, have a right to exist for their own sake. If we can shine a light on the darker recesses of nature’s medicine cabinet, exploring the useful chemistry of the most diverse animals on the planet, I believe we can make people think differently about the value of nature.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">The power of play</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Virtually every child, the world over, plays. The drive to play is so intense that <span class="hl">children will do so in any circumstances, for instance when they have no real toys</span><span class="mark">32</span>, or when parents do not actively encourage the behavior. In the eyes of a young child, running, pretending, and building are fun. Researchers and educators know that these <span class="hl">playful activities benefit the development of the whole child across social, cognitive, physical, and emotional domains</span><span class="mark">34</span>. Indeed, play is such an instrumental component to healthy child development that the United Nations High Commission on Human Rights (1989) recognized play as a fundamental right of every child.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Yet, while experts continue to expound a powerful argument for the importance of play in children’s lives, the actual time children spend playing continues to decrease. Today, children play eight hours less each week than their counterparts did two decades ago (Elkind 2008). Under pressure of rising academic standards, play is being replaced by test preparation in kindergartens and grade schools, and parents who aim to give their preschoolers a leg up are led to believe that flashcards and educational ‘toys’ are the path to success. <span class="hl">Our society has created a false dichotomy between play and learning.</span><span class="mark">33</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Through play, children learn to regulate their behavior, lay the foundations for later learning in science and mathematics, figure out the complex negotiations of social relationships, build a repertoire of creative problem-solving skills, and so much more. There is also an important role for adults in guiding children through playful learning opportunities.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> <span class="hl">Full consensus on a formal definition of play continues to elude the researchers and theorists who study it</span><span class="mark">35</span>. Definitions range from <span class="hl">discrete descriptions of various types of play such as physical, construction, language, or symbolic play</span><span class="mark">27</span> (Miler &amp; Almon 2009), to lists of broad criteria, based on observations and attitudes, that are meant to capture the essence of all play behaviors (e.g. Rubin et al. 1983).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> A majority of the contemporary definitions of play focus on several key criteria. The founder of the National Institute for Play, Stuart Brown, has described play as ‘anything that spontaneously is done for its own sake’. More specifically, he says it ‘appears purposeless, produces pleasure and joy, [and] leads one to the next stage of mastery’ (as quoted in Tippett 2008). Similarly, Miller and Almon (2009) say that play includes ‘activities that are freely chosen and directed by children and arise from intrinsic motivation’. Often, <span class="hl">play is defined along a continuum as more or less playful</span><span class="mark">31</span> using the following set of behavioral and dispositional criteria (e.g. Rubin et al. 1983).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Play is pleasurable: Children must enjoy the activity or it is not play. It is intrinsically motivated: Children engage in play simply for the satisfaction the behavior itself brings. <span class="hl">It has no extrinsically motivated function or goal</span><span class="mark">36</span>. Play is process oriented: When children play, the means are more important than the ends. It is freely chosen, spontaneous and voluntary. If a child is pressured, they will likely not think of the activity as play. Play is actively engaged: Players must be physically and/or mentally involved in the activity. Play is non-literal. It involves make-believe.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> According to this view, children’s playful behaviors can range in degree from 0% to 100% playful. Rubin and colleagues did not assign greater weight to any one dimension in determining playfulness; however, other researchers have suggested that <span class="hl">process orientation and a lack of obvious functional purpose may be the most important aspects of play</span><span class="mark">30</span> (e.g. Pellegrini 2009).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> From the perspective of a continuum, play can thus blend with other motives and attitudes that are less playful, such as work. Unlike play, work is typically not viewed as enjoyable and <span class="hl">it is extrinsically motivated (i.e. it is goal oriented)</span><span class="mark">36</span>. Researcher Joan Goodman (1994) suggested that <span class="hl">hybrid forms of work and play are not a detriment to learning; rather, they can provide optimal contexts for learning</span><span class="mark">29</span>. For example, a child may be engaged in a difficult, goal-directed activity set up by their teacher, but they may still be actively engaged and intrinsically motivated. At this mid-point between play and work, the child’s motivation, coupled with guidance from an adult, can create robust opportunities for playful learning.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Critically, recent research supports the idea that adults can facilitate children’s learning while maintaining a playful approach in interactions known as ‘guided play’ (Fisher et al. 2011). <span class="hl">The adult’s role in play varies as a function of their educational goals and the child’s developmental level</span><span class="mark">28</span> (Hirsch-Pasek et al. 2009).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> Guided play takes two forms. At a very basic level, adults can enrich the child’s environment by providing objects or experiences that promote aspects of a curriculum. In the more direct form of guided play, parents or other adults can support children’s play by joining in the fun as a co-player, raising thoughtful questions, commenting on children’s discoveries, or <span class="hl">encouraging further exploration or new facets to the child’s activity</span><span class="mark">37</span>. Although playful learning can be somewhat structured, it must also be child-centered (Nicolopolou et al. 2006). <span class="hl">Play should stem from the child’s own desire.</span><span class="mark">38</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> Both free and guided play are essential elements in a child-centered approach to playful learning. <span class="hl">Intrinsically motivated free play provides the child with true autonomy</span><span class="mark">39</span>, while <span class="hl">guided play is an avenue through which parents and educators can provide more targeted learning experiences</span><span class="mark">40</span>. In either case, play should be actively engaged, it should be predominantly child-directed, and it must be fun.</p>
+</div><div class="column right">
+<div class="hint">💡 Click any question card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1&ndash;3</div><p>Reading Passage 1 has ten sections, <b>A&ndash;J</b>. Which section contains the following information?</p><p style="font-size:.82rem;color:#4a5568;">The section letters follow the printed test. The sentence that gives each answer is highlighted in the passage.</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">information about how non-scientists’ assumptions about intelligence influence their behaviour towards others<div class="yng">Section A–J</div></div><span class="answer ans-letter">B</span><div class="explanation">Parents, job interviewers and friends all act on their implicit theories – ‘People will decide who to be friends with on the basis of such theories’.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">a reference to lack of clarity over the definition of intelligence<div class="yng">Section A–J</div></div><span class="answer ans-letter">A</span><div class="explanation">The opening: ‘Looked at in one way, everyone knows what intelligence is; looked at in another way, no one does.’</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">the point that a researcher’s implicit and explicit theories may be very different<div class="yng">Section A–J</div></div><span class="answer ans-letter">D</span><div class="explanation">An investigation may reveal ‘little correspondence between the extant implicit and explicit theories’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 4–6</div><p>Do the following statements agree with the claims of the writer in Reading Passage 1?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Slow language development in children is likely to prove disappointing to their parents.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Parents’ theories are said to govern when they correct their children’s speech, but no disappointment is mentioned. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">People’s expectations of what children should gain from education are universal.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Expectations are not universal: ‘How these expectations differ is in part a function of culture’.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Scholars may discuss theories without fully understanding each other.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">‘Until scholars are able to discuss their implicit theories … they are likely to miss the point of what others are saying’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 7&ndash;13</div><p>Look at the following statements and the list of theories below. Match each statement with the correct theory, <b>A</b>, <b>B</b> or <b>C</b>. <i>NB You may use any letter more than once.</i></p><ul class="opts"><li><b>A</b> Hamiltonian</li><li><b>B</b> Jeffersonian</li><li><b>C</b> Jacksonian</li></ul></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">It is desirable for the same possibilities to be open to everyone.<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">Jeffersonian: ‘people should have equal opportunities’.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">No section of society should have preferential treatment at the expense of another.<div class="yng">A / B / C</div></div><span class="answer ans-letter">C</span><div class="explanation">Jacksonian: ‘we do not need or want any institutions that might lead to favoring one group over another’.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">People should only gain benefits on the basis of what they actually achieve.<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">Jeffersonian: ‘People are rewarded for what they accomplish’.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Variation in intelligence begins at birth.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Hamiltonian: ‘people are born with different levels of intelligence’.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">The more intelligent people should be in positions of power.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Hamiltonian: the less intelligent ‘need the good offices of the more intelligent to keep them in line’.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">Everyone can develop the same abilities.<div class="yng">A / B / C</div></div><span class="answer ans-letter">C</span><div class="explanation">Jacksonian: ‘all people are equal … in terms of their competencies’.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">People of low intelligence are likely to lead uncontrolled lives.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Hamiltonian: ‘Left to themselves, the unintelligent would create … a kind of chaos’.</div></div>
+<div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14&ndash;20</div><p>Reading Passage 2 has nine paragraphs, <b>A&ndash;I</b>. Which paragraph contains the following information?</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">mention of factors driving a renewed interest in natural medicinal compounds.<div class="yng">A–I</div></div><span class="answer ans-letter">C</span><div class="explanation">Paragraph C: genome mining and ‘several looming health crises, such as antibiotic resistance’ put bioprospecting ‘firmly back on the map’.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">how recent technological advances have made insect research easier<div class="yng">A–I</div></div><span class="answer ans-letter">H</span><div class="explanation">Paragraph H: ‘it is now possible to snip out the stretches of the insect’s DNA’ and insert them into cell lines.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">examples of animals which use medicinal substances from nature<div class="yng">A–I</div></div><span class="answer ans-letter">A</span><div class="explanation">Paragraph A: capuchin monkeys rubbing themselves with millipedes and chimpanzees using noxious plants.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">reasons why it is challenging to use insects in drug research<div class="yng">A–I</div></div><span class="answer ans-letter">F</span><div class="explanation">Paragraph F sets out the problems: too many species, tiny glands, and species that are hard to rear.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">reference to how interest in drug research may benefit wildlife<div class="yng">A–I</div></div><span class="answer ans-letter">I</span><div class="explanation">Paragraph I: ‘With every bit of wilderness that disappears, we deprive ourselves of potential medicines’.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">a reason why nature-based medicines fell out of favour for a period<div class="yng">A–I</div></div><span class="answer ans-letter">B</span><div class="explanation">Paragraph B: ‘modern pharmaceutical science moved its focus away from nature and into the laboratory’.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">an example of an insect-derived medicine in use at the moment<div class="yng">A–I</div></div><span class="answer ans-letter">E</span><div class="explanation">Paragraph E: alloferon from blow fly larvae ‘is used as an antiviral and antitumor agent in South Korea and Russia’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 21&ndash;22</div><p>Choose <b>TWO</b> letters, <b>A&ndash;E</b>.</p><p style="font-size:.84rem;color:#4a5568;">Which TWO of the following make insects interesting for drug research?</p></div>
+<div class="q-block"><div class="q-num">Questions 21 &amp; 22</div><div class="question">Which TWO of the following make insects interesting for drug research?<ul class='opts'><li><b>A</b> the huge number of individual insects in the world</li><li><b>B</b> the variety of substances insects have developed to protect themselves</li><li><b>C</b> the potential to extract and make use of insects’ genetic codes</li><li><b>D</b> the similarities between different species of insect</li><li><b>E</b> the manageable size of most insects</li></ul><div class="yng">TWO letters, A–E</div></div><span class="answer ans-letter">B and C</span><div class="explanation"><b>B</b>: insects have ‘an enormous range of very interesting compounds for defensive and offensive purposes’. <b>C</b>: their DNA can now be snipped out and inserted into cell lines.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 23&ndash;26</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Research at Aberystwyth University</b></p><p style="font-size:.84rem;color:#4a5568;">Ross Piper and fellow zoologists at Aberystwyth University are using their expertise in ___ when undertaking bioprospecting with insects. They are especially interested in the compounds that insects produce to overpower and preserve their ___. They are also interested in compounds which insects use to protect themselves from pathogenic bacteria and fungi found in their ___. Piper hopes that these substances will be useful in the development of drugs such as ___.</p></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Using their expertise in ____ when undertaking bioprospecting with insects.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">ecology</span><div class="explanation">‘we use our knowledge of <b>ecology</b> as a guide to target our efforts’.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">The compounds that insects produce to overpower and preserve their ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">prey</span><div class="explanation">‘insects that secrete powerful poison for subduing <b>prey</b> and keeping it fresh for future consumption’.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Compounds which insects use to protect themselves from bacteria and fungi found in their ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">habitats</span><div class="explanation">‘masters of exploiting filthy <b>habitats</b>, such as faeces and carcasses’.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Useful in the development of drugs such as ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">antibiotics</span><div class="explanation">‘potential to find many compounds that can serve as or inspire new <b>antibiotics</b>’.</div></div>
+<div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27&ndash;31</div><p>Look at the following statements and the list of researchers below. Match each statement with the correct researcher, <b>A&ndash;G</b>. <i>NB You may use any letter more than once.</i></p><ul class="opts"><li><b>A</b> Elkind</li><li><b>B</b> Miller &amp; Almon</li><li><b>C</b> Rubin et al.</li><li><b>D</b> Stuart Brown</li><li><b>E</b> Pellegrini</li><li><b>F</b> Joan Goodman</li><li><b>G</b> Hirsch-Pasek et al.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Play can be divided into a number of separate categories.<div class="yng">A–G</div></div><span class="answer ans-letter">B</span><div class="explanation">Miller & Almon are cited for ‘discrete descriptions of various types of play such as physical, construction, language, or symbolic play’.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Adults’ intended goals affect how they play with children.<div class="yng">A–G</div></div><span class="answer ans-letter">G</span><div class="explanation">Hirsch-Pasek et al.: ‘The adult’s role in play varies as a function of their educational goals’.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Combining work with play may be the best way for children to learn.<div class="yng">A–G</div></div><span class="answer ans-letter">F</span><div class="explanation">Joan Goodman: hybrid forms of work and play ‘can provide optimal contexts for learning’.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Certain elements of play are more significant than others.<div class="yng">A–G</div></div><span class="answer ans-letter">E</span><div class="explanation">Pellegrini: ‘process orientation and a lack of obvious functional purpose may be the most important aspects of play’.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Activities can be classified on a scale of playfulness.<div class="yng">A–G</div></div><span class="answer ans-letter">C</span><div class="explanation">Rubin et al.: ‘play is defined along a continuum as more or less playful’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 32–36</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Children need toys in order to play.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The opposite: children play ‘in any circumstances, for instance when they have no real toys’.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">It is a mistake to treat play and learning as separate types of activities.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">‘Our society has created a false dichotomy between play and learning’.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Play helps children to develop their artistic talents.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Play is linked to social, cognitive, physical and emotional development, but artistic talent is never mentioned. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Researchers have agreed on a definition of play.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">‘Full consensus on a formal definition of play continues to elude the researchers and theorists who study it’.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Work and play differ in terms of whether or not they have a target.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Work ‘is extrinsically motivated (i.e. it is goal oriented)’, whereas play ‘has no extrinsically motivated function or goal’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 37&ndash;40</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Guided play</b></p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">An adult can develop the play, for instance by ____ the child to investigate different aspects of their game.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">encouraging</span><div class="explanation">‘or <b>encouraging</b> further exploration or new facets to the child’s activity’.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">It should still be based on the child’s ____ to play.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">desire</span><div class="explanation">‘Play should stem from the child’s own <b>desire</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Play without the intervention of adults gives children real ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">autonomy</span><div class="explanation">‘Intrinsically motivated free play provides the child with true <b>autonomy</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">With adults, play can be ____ at particular goals.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">targeted</span><div class="explanation">‘guided play is an avenue through which parents and educators can provide more <b>targeted</b> learning experiences’.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body></html>

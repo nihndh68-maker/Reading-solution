@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 14 – Reading Test 4</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head><body>
+<header><h1>Cambridge IELTS 14 – Reading Test 4</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">The secret of staying young</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Pheidole dentata, a native ant of the south-eastern U.S., isn’t immortal. But scientists have found that it doesn’t seem to show any signs of aging. Old worker ants can do everything just as well as the youngsters, and their brains appear just as sharp. ‘We get a picture that these ants really don’t decline,’ says Ysabel Giraldo, who studied the ants for her doctoral thesis at Boston University.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Such age-defying feats are rare in the animal kingdom. <span class="hl">Naked mole rats can live for almost 30 years and stay fit for nearly their entire lives</span><span class="mark">9</span>. They can still reproduce even when old, and they never get cancer. But the vast majority of animals deteriorate with age just like people do. Like the naked mole rat, ants are social creatures that usually live in highly organised colonies. ‘It’s this social complexity that makes P. dentata useful for studying aging in people,’ says Giraldo, now at the California Institute of Technology. Humans are also highly social, a trait that has been connected to healthier aging. By contrast, most animal studies of aging use mice, worms or fruit flies, which all lead much more isolated lives.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> In the lab, P. dentata worker ants typically live for around 140 days. <span class="hl">Giraldo focused on ants at four age ranges</span><span class="mark">1</span>: 20 to 22 days, 45 to 47 days, 95 to 97 days and 120 to 122 days. <span class="hl">Unlike all previous studies, which only estimated how old the ants were, her work tracked the ants from the time the pupae became adults</span><span class="mark">10</span>, so she knew their exact ages. Then she put them through a range of tests.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> <span class="hl">Giraldo watched how well the ants took care of the young of the colony</span><span class="mark">2</span>, recording how often each ant attended to, carried and fed them. She compared how well 20-day-old and 95-day-old ants <span class="hl">followed the telltale scent that the insects usually leave to mark a trail to food</span><span class="mark">3</span>. <span class="hl">She tested how ants responded to light</span><span class="mark">4</span> and also measured how active they were by counting how often ants in a small dish walked across a line. And she experimented with how ants react to live prey: a tethered fruit fly. <span class="hl">Giraldo expected the older ants to perform poorly in all these tasks. But the elderly insects were all good caretakers</span><span class="mark">11</span> and trail-followers – the 95-day-old ants could track the scent even longer than their younger counterparts. They all responded to light well, and the older ants were more active. And when it came to reacting to prey, <span class="hl">the older ants attacked the poor fruit fly just as aggressively as the young ones did</span><span class="mark">5</span>, flaring their mandibles or pulling at the fly’s legs.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Then Giraldo compared the brains of 20-day-old and 95-day-old ants, identifying any cells that were close to death. She saw no major differences with age, <span class="hl">nor was there any difference in the location of the dying cells</span><span class="mark">6</span>, showing that age didn’t seem to affect specific brain functions. Ants and other insects have structures in their brains called mushroom bodies, which are important for processing information, learning and memory. She also wanted to see if aging affects the density of synaptic complexes within these structures – <span class="hl">regions where neurons come together</span><span class="mark">7</span>. Again, the answer was no. What was more, the old ants didn’t experience any drop in the levels of either serotonin or dopamine – <span class="hl">brain chemicals whose decline often coincides with aging</span><span class="mark">8</span>. In humans, for example, a decrease in serotonin has been linked to Alzheimer’s disease.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> ‘This is the first time anyone has looked at both behavioral and neural changes in these ants so thoroughly,’ says Giraldo, who recently published the findings in the Proceedings of the Royal Society B. Scientists have looked at some similar aspects in bees, but <span class="hl">the results of recent bee studies were mixed – some studies showed age-related declines, which biologists call senescence, and others didn’t</span><span class="mark">12</span>. ‘For now, the study raises more questions than it answers,’ Giraldo says, ‘including how P. dentata stays in such good shape.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Also, if the ants don’t deteriorate with age, why do they die at all? <span class="hl">Out in the wild, the ants probably don’t live for a full 140 days thanks to predators, disease</span><span class="mark">13</span> and just being in an environment that’s much harsher than the comforts of the lab. ‘The lucky ants that do live into old age may suffer a steep decline just before dying,’ Giraldo says, but she can’t say for sure because her study wasn’t designed to follow an ant’s final moments.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> ‘It will be important to extend these findings to other species of social insects,’ says Gene E. Robinson, an entomologist at the University of Illinois at Urbana-Champaign. This ant might be unique, or it might represent a broader pattern among other social bugs with possible clues to the science of aging in larger animals. Either way, it seems that for these ants, age really doesn’t matter.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">Why zoos are good</div>
+<p class="para"><strong>A</strong> In my view, it is perfectly possible for many species of animals living in zoos or wildlife parks to have a quality of life as high as, or higher than, in the wild. <span class="hl">Animals in good zoos get a varied and high-quality diet with all the supplements required, and any illnesses they might have will be treated</span><span class="mark">17</span>. Their movement might be somewhat restricted, but they have a safe environment in which to live, and they are spared bullying and social ostracism by others of their kind. They do not suffer from the threat or stress of predators, or the irritation and pain of parasites or injuries. <span class="hl">The average captive animal will have a greater life expectancy compared with its wild counterpart</span><span class="mark">18</span>, and will not die of drought, of starvation or in the jaws of a predator. A lot of very nasty things happen to truly ‘wild’ animals that simply don’t happen in good zoos, and to view a life that is ‘free’ as one that is automatically ‘good’ is, I think, an error. Furthermore, zoos serve several key purposes.</p>
+<p class="para"><strong>B</strong> Firstly, zoos aid conservation. Colossal numbers of species are becoming extinct across the world, and many more are increasingly threatened and therefore risk extinction. Moreover, <span class="hl">some of these collapses have been sudden, dramatic and unexpected</span><span class="mark">14</span>, or were simply discovered very late in the day. A species protected in captivity can be bred up to provide a reservoir population against a population crash or extinction in the wild. <span class="hl">A good number of species only exist in captivity, with many of these living in zoos.</span><span class="mark">19</span> <span class="hl">Still more only exist in the wild because they have been reintroduced from zoos</span><span class="mark">26</span>, or have wild populations that have been boosted by captive bred animals. Without these efforts there would be fewer species alive today. Although reintroduction successes are few and far between, the numbers are increasing, and the very fact that species have been saved or reintroduced as a result of captive breeding proves the value of such initiatives.</p>
+<p class="para"><strong>C</strong> Zoos also provide education. Many children and adults, especially those in cities, will never see a wild animal beyond a fox or pigeon. While it is true that <span class="hl">television documentaries are becoming ever more detailed and impressive, and many natural history specimens are on display in museums</span><span class="mark">20</span><span class="mark">16</span>, there really is nothing to compare with seeing a living creature in the flesh, hearing it, smelling it, watching what it does and having the time to absorb details. That alone will bring a greater understanding and perspective to many, and hopefully give them a greater appreciation for wildlife, conservation efforts and how they can contribute.</p>
+<p class="para"><strong>D</strong> In addition to this, there is also the education that can take place in zoos through signs, talks and presentations which directly communicate information to visitors about the animals they are seeing and their place in the world. <span class="hl">This was an area where zoos used to be lacking</span><span class="mark">21</span>, but they are now increasingly sophisticated in their communication and outreach work. <span class="hl">Many zoos also work directly to educate conservation workers in other countries</span><span class="mark">24</span>, or <span class="hl">send their animal keepers abroad to contribute their knowledge and skills</span><span class="mark">23</span> to those working in zoos and reserves, thereby helping to improve conditions and reintroductions all over the world.</p>
+<p class="para"><strong>E</strong> Zoos also play a key role in research. If we are to save wild species and restore and repair ecosystems we need to know about how key species live, act and react. <span class="hl">Being able to undertake research on animals in zoos where there is less risk and fewer variables means real changes can be effected on wild populations</span><span class="mark">15</span><span class="mark">22</span>. Finding out about, for example, the oestrus cycle of an animal or its breeding rate helps us manage wild populations. Procedures such as capturing and moving at-risk or dangerous individuals are bolstered by knowledge gained in zoos about doses for anaesthetics, and by experience in handling and transporting animals. This can make a real difference to conservation efforts and to the reduction of human-animal conflicts, and can provide a knowledge base for helping with the increasing threats of habitat destruction and other problems.</p>
+<p class="para"><strong>F</strong> In conclusion, considering the many ongoing global threats to the environment, it is hard for me to see zoos as anything other than essential to the long-term survival of numerous species. They are vital not just in terms of protecting animals, but as a means of learning about them to aid those still in the wild, as well as <span class="hl">educating and informing the general population about these animals and their world</span><span class="mark">25</span> so that they can assist or at least accept the need to be more environmentally conscious. Without them, the world would be, and would increasingly become, a much poorer place.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">How Bad Is Ocean Garbage, Really?</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Chelsea Rochman, an ecologist at the University of California, Davis, has been trying to answer a dismal question: Is everything terrible, or are things just very, very bad?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Rochman is a member of the National Center for Ecological Analysis and Synthesis’s marine-debris working group, a collection of scientists who study, among other things, the growing problem of marine debris, also known as ocean trash. <span class="hl">Plenty of studies have sounded alarm bells about the state of marine debris</span><span class="mark">27</span>; in a recent paper published in the journal Ecology, <span class="hl">Rochman and her colleagues set out to determine how many of those perceived risks are real</span><span class="mark">40</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Often, Rochman says, scientists will end a paper by speculating about the broader impacts of what they’ve found. For example, <span class="hl">a study could show that certain seabirds eat plastic bags, and go on to warn that whole bird populations are at risk of dying out</span><span class="mark">28</span>. ‘<span class="hl">But the truth was that nobody had yet tested those perceived threats</span><span class="mark">29</span>,’ Rochman says. ‘There wasn’t a lot of information.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Rochman and her colleagues examined more than a hundred papers on the impacts of marine debris that were published through 2013. Within each paper, <span class="hl">they asked what threats scientists had studied – 366 perceived threats in all – and what they’d actually found</span><span class="mark">30</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> <span class="hl">In 83 percent of cases, the perceived dangers of ocean trash were proven true</span><span class="mark">31</span>. In the remaining cases, the working group found the studies had weaknesses in design and content which affected the validity of their conclusions – they lacked a control group, for example, or used faulty statistics.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Strikingly, Rochman says, <span class="hl">only one well-designed study failed to find the effect it was looking for, an investigation of mussels ingesting microscopic bits</span><span class="mark">32</span>. <span class="hl">The plastic moved from the mussels’ stomachs to their bloodstreams</span><span class="mark">33</span>, scientists found, and stayed there for weeks – but didn’t seem to stress out the shellfish.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> While mussels may be fine eating trash, though, the analysis also gave a clearer picture of the many ways that ocean debris is bothersome.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Within the studies they looked at, most of the proven threats came from plastic debris, rather than other materials like metal or wood. <span class="hl">Most of the dangers also involved large pieces of debris</span><span class="mark">34</span> – animals getting entangled in trash, for example, or eating it and severely injuring themselves.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> <span class="hl">But a lot of ocean debris is ‘microplastic’, or pieces smaller than five millimeters</span><span class="mark">35</span>. These may be ingredients used in cosmetics and toiletries, fibers shed by synthetic clothing in the wash, or eroded remnants of larger debris. Compared to the number of studies investigating large-scale debris, Rochman’s group found little research on the effects of these tiny bits. ‘There are a lot of open questions still for microplastic,’ Rochman says, though she notes that more papers on the subject have been published since 2013, the cutoff point for the group’s analysis.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> There are also, she adds, a lot of open questions about the ways that ocean debris can lead to sea-creature death. Many studies have looked at how plastic affects an individual animal, or that animal’s tissues or cells, <span class="hl">rather than whole populations</span><span class="mark">36</span>. And in the lab, <span class="hl">scientists often use higher concentrations of plastic than what’s really in the ocean</span><span class="mark">37</span>. None of that tells us how many birds or fish or sea turtles could die from plastic pollution – or <span class="hl">how deaths in one species could affect that animal’s predators</span><span class="mark">38</span>, or the rest of the ecosystem.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> ‘We need to be asking more ecologically relevant questions,’ Rochman says. Usually, scientists don’t know exactly how <span class="hl">disasters such as a tanker accidentally spilling its whole cargo of oil</span><span class="mark">39</span> and polluting huge areas of the ocean will affect the environment until after they’ve happened. ‘We don’t ask the right questions early enough,’ she says. But if ecologists can understand how the slow-moving effect of ocean trash is damaging ecosystems, they might be able to prevent things from getting worse.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶12</strong> Asking the right questions can help policy makers, and the public, figure out where to focus their attention. The problems that look or sound most dramatic may not be the best places to start. For example, the name of the ‘Great Pacific Garbage Patch’ – a collection of marine debris in the northern Pacific Ocean – might conjure up a vast, floating trash island. In reality though, much of the debris is tiny or below the surface; a person could sail through the area without seeing any trash at all. A Dutch group called ‘The Ocean Cleanup’ is currently working on plans to put mechanical devices in the Pacific Garbage Patch and similar areas to suck up plastic. But a recent paper used simulations to show that strategically positioning the cleanup devices closer to shore would more effectively reduce pollution over the long term.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶13</strong> ‘I think clearing up some of these misperceptions is really important,’ Rochman says. Among scientists as well as in the media, she says, ‘A lot of the images about strandings and entanglement and all of that cause the perception that plastic debris is killing everything in the ocean.’ Interrogating the existing scientific literature can help ecologists figure out which problems really need addressing, and which ones they’d be better off – like the mussels – absorbing and ignoring.</p>
+</div><div class="column right">
+<div class="hint">💡 Click any question card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1&ndash;8</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Ysabel Giraldo’s research</b></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Focused on a total of ____ different age groups of ants.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">four</span><div class="explanation">‘Giraldo focused on ants at <b>four</b> age ranges’.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Behaviour: how well ants looked after their ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">young</span><div class="explanation">‘how well the ants took care of the <b>young</b> of the colony’.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Their ability to locate ____ using a scent trail.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">food</span><div class="explanation">‘the telltale scent that the insects usually leave to mark a trail to <b>food</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">The effect that ____ had on them.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">light</span><div class="explanation">‘She tested how ants responded to <b>light</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">How ____ they attacked prey.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">aggressively</span><div class="explanation">‘the older ants attacked the poor fruit fly just as <b>aggressively</b> as the young ones did’.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Brains: comparison between age and the ____ of dying cells in the brains of ants.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">location</span><div class="explanation">‘nor was there any difference in the <b>location</b> of the dying cells’.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Condition of synaptic complexes (areas in which ____ meet) in the brain’s ‘mushroom bodies’.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">neurons</span><div class="explanation">‘regions where <b>neurons</b> come together’.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Level of two ____ in the brain associated with ageing.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">chemicals</span><div class="explanation">‘serotonin or dopamine – brain <b>chemicals</b> whose decline often coincides with aging’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 9–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">Pheidole dentata ants are the only known animals which remain active for almost their whole lives.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Naked mole rats also ‘stay fit for nearly their entire lives’, so these ants are not the only such animals.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Ysabel Giraldo was the first person to study Pheidole dentata ants using precise data about the insects’ ages.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘Unlike all previous studies … her work tracked the ants from the time the pupae became adults, so she knew their exact ages’.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">The ants in Giraldo’s experiments behaved as she had predicted that they would.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">‘Giraldo expected the older ants to perform poorly in all these tasks. But the elderly insects were all good caretakers’.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">The recent studies of bees used different methods of measuring age-related decline.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The bee studies gave mixed results, but their methods of measuring decline are never described. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">Pheidole dentata ants kept in laboratory conditions tend to live longer lives.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘Out in the wild, the ants probably don’t live for a full 140 days thanks to predators, disease’.</div></div>
+<div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14&ndash;17</div><p>Reading Passage 2 has six paragraphs, <b>A&ndash;F</b>. Which paragraph contains the following information?</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">a reference to how quickly animal species can die out<div class="yng">A–F</div></div><span class="answer ans-letter">B</span><div class="explanation">Paragraph B: ‘some of these collapses have been sudden, dramatic and unexpected’.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">reasons why it is preferable to study animals in captivity rather than in the wild<div class="yng">A–F</div></div><span class="answer ans-letter">E</span><div class="explanation">Paragraph E: research in zoos, ‘where there is less risk and fewer variables’.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">mention of two ways of learning about animals other than visiting them in zoos<div class="yng">A–F</div></div><span class="answer ans-letter">C</span><div class="explanation">Paragraph C: ‘television documentaries’ and ‘natural history specimens … in museums’.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">reasons why animals in zoos may be healthier than those in the wild<div class="yng">A–F</div></div><span class="answer ans-letter">A</span><div class="explanation">Paragraph A: a good diet, illnesses treated, no predators or parasites.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18–22</div><p>Do the following statements agree with the information given in Reading Passage 2?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">An animal is likely to live longer in a zoo than in the wild<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘The average captive animal will have a greater life expectancy compared with its wild counterpart’.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">There are some species in zoos which can no longer be found in the wild.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘A good number of species only exist in captivity, with many of these living in zoos’.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Improvements in the quality of TV wildlife documentaries have resulted in increased numbers of zoo visitors.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Documentaries are praised for their detail, but no effect on visitor numbers is claimed. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Zoos have always excelled at transmitting information about animals to the public.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The opposite: ‘This was an area where zoos used to be lacking’, though they are now more sophisticated.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Studying animals in zoos is less stressful for the animals than studying them in the wild.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Zoos are said to offer ‘less risk and fewer variables’ for the research, but the animals’ stress is not discussed.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 23&ndash;24</div><p>Choose <b>TWO</b> letters, <b>A&ndash;E</b>.</p><p style="font-size:.84rem;color:#4a5568;">Which TWO of the following are stated about zoo staff in the text?</p></div>
+<div class="q-block"><div class="q-num">Questions 23 &amp; 24</div><div class="question">Which TWO of the following are stated about zoo staff in the text?<ul class='opts'><li><b>A</b> Some take part in television documentaries about animals.</li><li><b>B</b> Some travel to overseas locations to join teams in zoos.</li><li><b>C</b> Some get experience with species in the wild before taking up zoo jobs.</li><li><b>D</b> Some teach people who are involved with conservation projects.</li><li><b>E</b> Some specialise in caring for species which are under threat.</li></ul><div class="yng">TWO letters, A–E</div></div><span class="answer ans-letter">B and D</span><div class="explanation"><b>B</b>: zoos ‘send their animal keepers abroad’. <b>D</b>: many zoos ‘work directly to educate conservation workers in other countries’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 25&ndash;26</div><p>Choose <b>TWO</b> letters, <b>A&ndash;E</b>.</p><p style="font-size:.84rem;color:#4a5568;">Which TWO of these beliefs about zoos does the writer mention in the text?</p></div>
+<div class="q-block"><div class="q-num">Questions 25 &amp; 26</div><div class="question">Which TWO of these beliefs about zoos does the writer mention in the text?<ul class='opts'><li><b>A</b> They can help children overcome their fears of wild animals.</li><li><b>B</b> They can increase public awareness of environmental issues.</li><li><b>C</b> They can provide employment for a range of professional people.</li><li><b>D</b> They can generate income to support wildlife conservation projects.</li><li><b>E</b> They can raise animals which can later be released into the wild.</li></ul><div class="yng">TWO letters, A–E</div></div><span class="answer ans-letter">B and E</span><div class="explanation"><b>B</b>: zoos educate and inform ‘the general population about these animals and their world’. <b>E</b>: some species ‘only exist in the wild because they have been reintroduced from zoos’.</div></div>
+<div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–33</div><p>Do the following statements agree with the information given in Reading Passage 3?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Rochman and her colleagues were the first people to research the problem of marine debris.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Plenty of earlier studies had already ‘sounded alarm bells about the state of marine debris’.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">The creatures most in danger from ocean trash are certain seabirds.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Seabirds appear only as an example of a speculative warning; no species is named as most endangered. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">The studies Rochman has reviewed have already proved that populations of some birds will soon become extinct.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">‘nobody had yet tested those perceived threats’ – the extinction warnings were not proven.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Rochman analysed papers on the different kinds of danger caused by ocean trash.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘they asked what threats scientists had studied – 366 perceived threats in all – and what they’d actually found’.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Most of the research analysed by Rochman and her colleagues was badly designed.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Only a minority were flawed: ‘In 83 percent of cases, the perceived dangers of ocean trash were proven true’.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">One study examined by Rochman was expecting to find that mussels were harmed by eating plastic.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘only one well-designed study failed to find the effect it was looking for, an investigation of mussels ingesting microscopic bits’ – it expected harm.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">Some mussels choose to eat plastic in preference to their natural diet.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The mussels ingested plastic and were unaffected, but no preference is mentioned. Nearest text highlighted.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 34&ndash;39</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Findings related to marine debris</b></p></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Bits of debris that were ____ (harmful to animals).<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">large</span><div class="explanation">‘Most of the dangers also involved <b>large</b> pieces of debris’.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">There was little research into ____, e.g. from synthetic fibres.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">microplastic</span><div class="explanation">‘Rochman’s group found little research on the effects of these tiny bits’ – ‘a lot of ocean debris is “<b>microplastic</b>” … fibers shed by synthetic clothing’.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Most of them focused on individual animals, not entire ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">populations</span><div class="explanation">‘rather than whole <b>populations</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">The ____ of plastic used in the lab did not always reflect those in the ocean.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">concentrations</span><div class="explanation">‘scientists often use higher <b>concentrations</b> of plastic than what’s really in the ocean’.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">The impact of a reduction in numbers on the ____ of that species.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">predators</span><div class="explanation">‘how deaths in one species could affect that animal’s <b>predators</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">More information is needed on the possible impact of future ____ (e.g. involving oil).<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">disasters</span><div class="explanation">‘<b>disasters</b> such as a tanker accidentally spilling its whole cargo of oil’.</div></div>
+<div class="qintro"><div class="qintro-t">Question 40</div><p>Choose the correct letter, <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b>.</p></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">What would be the best title for this passage?<ul class='opts'><li><b>A</b> Assessing the threat of marine debris</li><li><b>B</b> Marine debris: who is to blame?</li><li><b>C</b> A new solution to the problem of marine debris</li><li><b>D</b> Marine debris: the need for international action</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">A</span><div class="explanation">The whole passage weighs up which of the ‘perceived threats’ are real, so <b>Assessing the threat of marine debris</b> fits best.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body></html>
