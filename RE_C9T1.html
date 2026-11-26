@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Reading – Perkin · Is There Anybody Out There? · History of the Tortoise</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff;
+    --border: #e2e8f0; --text: #2d3748; --muted: #718096;
+    --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .list-headings { background: #edf2f7; border-radius: 6px; padding: 0.7rem 0.9rem; margin: 0.7rem 0; font-size: 0.86rem; }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>IELTS Reading – Perkin · Is There Anybody Out There? · The History of the Tortoise</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">William Henry Perkin</div>
+<p class="para">William Henry Perkin was born on March 12, 1838, in London, England. As a boy, Perkin's curiosity prompted early interests in the arts, sciences, photography, and engineering. But it was a chance stumbling upon a run-down, yet functional, laboratory in his late grandfather's home that solidified the young man's enthusiasm for chemistry.</p>
+<p class="para">As a student at the City of London School, Perkin became immersed in the study of chemistry. <span class="hl">His talent and devotion to the subject were perceived by his teacher, Thomas Hall, who encouraged him to attend a series of lectures given by the eminent scientist Michael Faraday at the Royal Institution.</span><span class="mark">1</span><span class="mark">2</span> Those speeches fired the young chemist's enthusiasm further, and he later went on to attend the Royal College of Chemistry, which he succeeded in entering in 1853, at the age of 15.</p>
+<p class="para">At the time of Perkin's enrolment, the Royal College of Chemistry was headed by the noted German chemist August Wilhelm Hofmann. <span class="hl">Perkin's scientific gifts soon caught Hofmann's attention and, within two years, he became Hofmann's youngest assistant.</span><span class="mark">3</span> Not long after that, Perkin made the scientific breakthrough that would bring him both fame and fortune.</p>
+<p class="para">At the time, <span class="hl">quinine was the only viable medical treatment for malaria. The drug is derived from the bark of the cinchona tree, native to South America</span><span class="mark">5</span>, and by 1856 demand for the drug was surpassing the available supply. Thus, when Hofmann made some passing comments about the desirability of a synthetic substitute for quinine, it was unsurprising that his star pupil was moved to take up the challenge.</p>
+<p class="para">During his vacation in 1856, <span class="hl">Perkin spent his time in the laboratory on the top floor of his family's house. He was attempting to manufacture quinine from aniline, an inexpensive and readily available coal tar waste product.</span><span class="mark">6</span> Despite his best efforts, however, he did not end up with quinine. Instead, he produced a mysterious dark sludge. Luckily, Perkin's scientific training and nature prompted him to investigate the substance further. Incorporating potassium dichromate and alcohol into the aniline at various stages of the experimental process, he finally produced a deep purple solution. And, proving the truth of the famous scientist Louis Pasteur's words '<span class="hl">chance favours only the prepared mind</span>'<span class="mark">7</span>, Perkin saw the potential of his unexpected find.</p>
+<p class="para">Historically, textile dyes were made from such natural sources as plants and animal excretions. Some of these, such as the glandular mucus of snails, were difficult to obtain and outrageously expensive. Indeed, <span class="hl">the purple colour extracted from a snail was once so costly that in society at the time only the rich could afford it.</span><span class="mark">8</span> Further, natural dyes tended to be muddy in hue and fade quickly. It was against this backdrop that Perkin's discovery was made.</p>
+<p class="para">Perkin quickly grasped that his purple solution could be used to colour fabric, thus making it the world's first synthetic dye. Realising the importance of this breakthrough, he lost no time in patenting it. But perhaps the most fascinating of all Perkin's reactions to his find was his <span class="hl">nearly instant recognition that the new dye had commercial possibilities.</span><span class="mark">9</span></p>
+<p class="para">Perkin originally named his dye Tyrian Purple, but <span class="hl">it later became commonly known as mauve</span><span class="mark">10</span> (from the French for the plant used to make the colour violet). He asked advice of <span class="hl">Scottish dye works owner Robert Pullar</span><span class="mark">11</span>, who assured him that manufacturing the dye would be well worth it if the colour remained fast (i.e. would not fade) and the cost was relatively low. So, over the fierce objections of his mentor Hofmann, he left college to give birth to the modern chemical industry.</p>
+<p class="para">With the help of his father and brother, Perkin set up a factory not far from London. Utilising the cheap and plentiful coal tar that was an almost unlimited byproduct of London's gas street lighting, the dye works began producing the world's first synthetically dyed material in 1857. <span class="hl">The company received a commercial boost from the Empress Eugenie of France, when she decided the new colour flattered her. Very soon, mauve was the necessary shade for all the fashionable ladies in that country.</span><span class="mark">12</span></p>
+<p class="para">Not to be outdone, England's Queen Victoria also appeared in public wearing a mauve gown, thus making it all the rage in England as well. The dye was bold and fast, and the public clamoured for more. Perkin went back to the drawing board.</p>
+<p class="para">Although Perkin's fame was achieved and fortune assured by his first discovery, the chemist continued his research. Among other dyes he developed and introduced were aniline red (1859) and aniline black (1863) and, in the late 1860s, Perkin's green. It is important to note that Perkin's synthetic dye discoveries had outcomes far beyond the merely decorative. The dyes also became vital to medical research in many ways. For instance, they were used to stain previously invisible microbes and bacteria, allowing researchers to identify such bacilli as tuberculosis, cholera, and anthrax. Artificial dyes continue to play a crucial role today. And, in what would have been particularly pleasing to Perkin, <span class="hl">their current use is in the search for a vaccine against malaria.</span><span class="mark">13</span></p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Is There Anybody Out There?</div>
+<p class="para"><strong>A</strong> The primary reason for the search is basic curiosity – the same curiosity about the natural world that drives all pure science. We want to know whether we are alone in the Universe. We want to know whether life evolves naturally if given the right conditions, or whether there is something very special about the Earth to have fostered the variety of life forms that we see around us on the planet. The simple detection of a radio signal will be sufficient to answer this most basic of all questions. In this sense, SETI is another cog in the machinery of pure science which is continually pushing out the horizon of our knowledge. However, there are other reasons for being interested in whether life exists elsewhere. For example, we have had civilisation on Earth for perhaps only a few thousand years, and the threats of nuclear war and pollution over the last few decades have told us that our survival may be tenuous. Will we last another two thousand years or will we wipe ourselves out? <span class="hl">Since the lifetime of a planet like ours is several billion years</span><span class="mark">18</span>, we can expect that, if other civilisations do survive in our galaxy, their ages will range from zero to several billion years. Thus any other civilisation that we hear from is likely to be far older, on average, than ourselves. The mere existence of such a civilisation will tell us that long-term survival is possible, and gives us some cause for optimism. <span class="hl">It is even possible that the older civilisation may pass on the benefits of their experience in dealing with threats to survival such as nuclear war and global pollution, and other threats that we haven't yet discovered.</span><span class="mark">21</span></p>
+<p class="para"><strong>B</strong> In discussing whether we are alone, most SETI scientists adopt two ground rules. First, UFOs (Unidentified Flying Objects) are generally ignored since most scientists don't consider the evidence for them to be strong enough to bear serious consideration (although it is also important to keep an open mind in case any really convincing evidence emerges in the future). Second, <span class="hl">we make a very conservative assumption that we are looking for a life form that is pretty well like us, since if it differs radically from us we may well not recognise it as a life form, quite apart from whether we are able to communicate with it. In other words, the life form we are looking for may well have two green heads and seven fingers, but it will nevertheless resemble us in that it should communicate with its fellows, be interested in the Universe, live on a planet orbiting a star like our Sun, and perhaps most restrictively, have a chemistry, like us, based on carbon and water.</span><span class="mark">14</span><span class="mark">22</span></p>
+<p class="para"><strong>C</strong> Even when we make these assumptions, our understanding of other life forms is still severely limited. We do not even know, for example, how many stars have planets, and we certainly do not know how likely it is that life will arise naturally, given the right conditions. However, when we look at the 100 billion stars in our galaxy (the Milky Way), and 100 billion galaxies in the observable Universe, it seems inconceivable that at least one of these planets does not have a life form on it; in fact, the best educated guess we can make, using the little that we do know about the conditions for carbon-based life, <span class="hl">leads us to estimate that perhaps one in 100,000 stars might have a life-bearing planet orbiting it. That means that our nearest neighbours are perhaps 100 light years away, which is almost next door in astronomical terms.</span><span class="mark">15</span></p>
+<p class="para"><strong>D</strong> An alien civilisation could choose many different ways of sending information across the galaxy, but many of these either require too much energy, or else are severely attenuated while traversing the vast distances across the galaxy. It turns out that, for a given amount of transmitted power, <span class="hl">radio waves in the frequency range 1000 to 3000 MHz travel the greatest distance, and so all searches to date have concentrated on looking for radio waves in this frequency range.</span><span class="mark">16</span><span class="mark">19</span> So far there have been a number of searches by various groups around the world, including <span class="hl">Australian searches using the radio telescope at Parkes, New South Wales. Until now there have not been any detections from the few hundred stars which have been searched.</span><span class="mark">23</span><span class="mark">24</span> The scale of the searches has been increased dramatically since 1992, when the US Congress voted NASA $10 million per year for ten years to conduct a thorough search for extra-terrestrial life. Much of the money in this project is being spent on developing the special hardware needed to search many frequencies at once. The project has two parts. One part is a targeted search using the world's largest radio telescopes, the American-operated telescope in Arecibo, Puerto Rico and the French telescope in Nancy in France. <span class="hl">This part of the project is searching the nearest 1000 likely stars with high sensitivity for signals in the frequency range 1000 to 3000 MHz.</span><span class="mark">20</span> The other part of the project is an undirected search which is monitoring all of space with a lower sensitivity, using the smaller antennas of NASA's Deep Space Network.</p>
+<p class="para"><strong>E</strong> There is considerable debate over how we should react if we detect a signal from an alien civilisation. <span class="hl">Everybody agrees that we should not reply immediately.</span><span class="mark">17</span><span class="mark">26</span> Quite apart from the impracticality of sending a reply over such large distances at short notice, it raises a host of ethical questions that would have to be addressed by the global community before any reply could be sent. Would the human race face the culture shock if faced with a superior and much older civilisation? Luckily, there is no urgency about this. The stars being searched are hundreds of light years away, so it takes hundreds of years for their signal to reach us, and a further few hundred years for our reply to reach them. It's not important, then, if there's a delay of a few years, or decades, while the human race debates the question of whether to reply, and perhaps carefully drafts a reply.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">The History of the Tortoise</div>
+<p class="para">If you go back far enough, everything lived in the sea. At various points in evolutionary history, enterprising individuals within many different animal groups moved out onto the land, sometimes even to the most parched deserts, taking their own private seawater with them in blood and cellular fluids. In addition to the reptiles, birds, mammals and insects which we see all around us, other groups that have succeeded out of water include scorpions, snails, crustaceans such as woodlice and land crabs, millipedes and centipedes, spiders and various worms. <span class="hl">And we mustn't forget the plants, without whose prior invasion of the land none of the other migrations could have happened.</span><span class="mark">27</span></p>
+<p class="para"><span class="hl">Moving from water to land involved a major redesign of every aspect of life, including breathing and reproduction.</span><span class="mark">28</span> Nevertheless, a good number of thoroughgoing land animals later turned around, abandoned their hard-earned terrestrial re-tooling, and returned to the water again. Seals have only gone part way back. They show us what the intermediates might have been like, on the way to extreme cases such as whales and dugongs. Whales (including the small whales we call dolphins) and dugongs, with their close cousins the manatees, ceased to be land creatures altogether and reverted to the full marine habits of their remote ancestors. They don't even come ashore to breed. They do, however, still breathe air, <span class="hl">having never developed anything equivalent to the gills of their earlier marine incarnation.</span><span class="mark">29</span> Turtles went back to the sea a very long time ago and, like all vertebrate returnees to the water, they breathe air. However, they are, in one respect, less fully given back to the water than whales or dugongs, for turtles still lay their eggs on beaches.</p>
+<p class="para">There is evidence that all modern turtles are descended from a terrestrial ancestor which lived before most of the dinosaurs. There are two key fossils called Proganochelys quenstedti and Palaeochersis talampayensis dating from early dinosaur times, which appear to be close to the ancestry of all modern turtles and tortoises. You might wonder how we can tell whether fossil animals lived on land or in water, especially if only fragments are found. <span class="hl">Sometimes it's obvious. Ichthyosaurs were reptilian contemporaries of the dinosaurs, with fins and streamlined bodies. The fossils look like dolphins and they surely lived like dolphins, in the water.</span><span class="mark">30</span><span class="mark">32</span><span class="mark">33</span> With turtles it is a little less obvious. One way to tell is by measuring the bones of their forelimbs.</p>
+<p class="para">Walter Joyce and Jacques Gauthier, at Yale University, obtained <span class="hl">three measurements in these particular bones of 71 species of living turtles and tortoises.</span><span class="mark">34</span> <span class="hl">They used a kind of triangular graph paper to plot the three measurements against one another.</span><span class="mark">35</span> <span class="hl">All the land tortoise species formed a tight cluster of points in the upper part of the triangle</span><span class="mark">36</span>; all the water turtles cluster in the lower part of the triangular graph. There was no overlap, except when they added some species that spend time both in water and on land. Sure enough, <span class="hl">these amphibious species show up on the triangular graph approximately half way between the 'wet cluster' of sea turtles and the 'dry cluster' of land tortoises.</span><span class="mark">37</span><span class="mark">38</span> The next step was to determine where the fossils fell. The bones of P. quenstedti and P. talampayensis leave us in no doubt. Their points on the graph are right in the thick of the dry cluster. <span class="hl">Both these fossils were dry-land tortoises.</span><span class="mark">39</span> They come from the era before our turtles returned to the water.</p>
+<p class="para">You might think, therefore, that modern land tortoises have probably stayed on land ever since those early terrestrial times, as most mammals did after a few of them went back to the sea. But apparently not. If you draw out the family tree of all modern turtles and tortoises, nearly all the branches are aquatic. Today's land tortoises constitute a single branch, deeply nested among branches consisting of aquatic turtles. This suggests that modern land tortoises have not stayed on land continuously since the time of P. quenstedti and P. talampayensis. Rather, their ancestors were among those who went back to the water, and they then re-emerged back onto the land in (relatively) more recent times.</p>
+<p class="para"><span class="hl">Tortoises therefore represent a remarkable double return. In common with all mammals, reptiles and birds, their remote ancestors were marine fish and before that various more or less worm-like creatures stretching back, still in the sea, to the primeval bacteria. Later ancestors lived on land and stayed there for a very large number of generations. Later ancestors still evolved back into the water and became sea turtles. And finally they returned yet again to the land as tortoises, some of which now live in the driest of deserts.</span><span class="mark">40</span></p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–7</div><p>Do the following statements agree with the information? <b>TRUE / FALSE / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Michael Faraday was the first person to recognize Perkin's ability as a student of chemistry.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">His teacher Thomas Hall recognised his talent first and encouraged him to attend Faraday's lectures.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Michael Faraday suggested Perkin should enroll in the Royal College of Chemistry.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Thomas Hall encouraged him to attend Faraday's lectures; the passage never says Faraday suggested he enrol.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Perkin employed August Wilhelm Hofmann as his assistant.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The roles are reversed: "he became Hofmann's youngest assistant."</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Perkin was still young when he made the discovery that made him rich and famous.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">He entered the Royal College at 15 and made the breakthrough in 1856, during his vacation — still a teenager.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">The trees from which quinine is derived grow only in South America.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">The cinchona tree is "native to South America"; within the passage this supports the statement.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Perkin hoped to manufacture a drug from a coal tar waste product.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">He attempted to manufacture quinine (a drug) from aniline, "an inexpensive and readily available coal tar waste product."</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Perkin was inspired by the discoveries of the famous scientist Louis Pasteur.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Pasteur's words "chance favours only the prepared mind" are quoted to describe Perkin's find — not to say Pasteur inspired him.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Answer the questions. Choose <b>NO MORE THAN TWO WORDS</b> from the passage.</p></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Before Perkin's discovery, with what group in society was the colour purple associated?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">the rich</span><div class="explanation">Purple was "so costly that in society at the time only the rich could afford it."</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">What potential did Perkin immediately understand that his new dye had?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">commercial possibilities</span><div class="explanation">"his nearly instant recognition that the new dye had commercial possibilities."</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">What was the name finally used to refer to the first colour Perkin invented?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">mauve</span><div class="explanation">"it later became commonly known as mauve."</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">What was the name of the person Perkin consulted before setting up his own dye works?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">Robert Pullar</span><div class="explanation">"He asked advice of Scottish dye works owner Robert Pullar."</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">In what country did Perkin's newly invented colour first become fashionable?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">France</span><div class="explanation">The Empress Eugenie of France adopted it, and soon "mauve was the necessary shade for all the fashionable ladies in that country."</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">According to the passage, which disease is now being targeted by researchers using synthetic dyes?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">malaria</span><div class="explanation">"their current use is in the search for a vaccine against malaria."</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Choose the correct heading for paragraphs B–E. <i>Write i–vii.</i></p>
+<ul class='list-headings'><li><b>i</b> Seeking the transmission of radio signals from planets</li><li><b>ii</b> Appropriate responses to signals from other civilizations</li><li><b>iii</b> Vast distances to Earth's closest neighbors</li><li><b>iv</b> Assumptions underlying the search for extra-terrestrial intelligence</li><li><b>v</b> Reasons for the search for extra-terrestrial intelligence</li><li><b>vi</b> Knowledge of extra-terrestrial life forms</li><li><b>vii</b> Likelihood of life on other planets</li></ul></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Paragraph B<div class="yng">Which heading?</div></div><span class="answer ans-letter">iv — Assumptions underlying the search for extra-terrestrial intelligence</span><div class="explanation">The two ground rules: ignore UFO evidence, and search for life that resembles us.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Paragraph C<div class="yng">Which heading?</div></div><span class="answer ans-letter">vii — Likelihood of life on other planets</span><div class="explanation">Estimates that one in 100,000 stars might have a life-bearing planet.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Paragraph D<div class="yng">Which heading?</div></div><span class="answer ans-letter">i — Seeking the transmission of radio signals from planets</span><div class="explanation">Radio waves in the 1000–3000 MHz range travel farthest; NASA's two-part search is described.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Paragraph E<div class="yng">Which heading?</div></div><span class="answer ans-letter">ii — Appropriate responses to signals from other civilizations</span><div class="explanation">Debate about how we should respond; everyone agrees not to reply immediately.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18–20</div><p>Answer the questions. Choose <b>NO MORE THAN TWO WORDS</b> from the passage.</p></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">What is the life expectancy of Earth?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">several billion years</span><div class="explanation">"the lifetime of a planet like ours is several billion years."</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">What kind of signals from other intelligent civilizations are SETI scientists searching for?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">radio waves</span><div class="explanation">"all searches to date have concentrated on looking for radio waves in this frequency range."</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">How many stars are the world's most powerful radio telescopes searching?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">1000 likely stars</span><div class="explanation">"This part of the project is searching the nearest 1000 likely stars..."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 21–26</div><p>Do the following statements agree with the views of the writer? <b>TRUE / FALSE / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Alien civilizations may be able to help the human race to overcome serious problems.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">An older civilisation "may pass on the benefits of their experience in dealing with threats to survival such as nuclear war and global pollution."</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">SETI scientists are trying to find a life form that resembles humans in many ways.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">They assume the life form "will nevertheless resemble us" — communicates, is curious, carbon/water-based.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">The Americans and Australians have co-operated on joint research projects.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Australian and American searches are both described, but joint co-operation is not mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">So far SETI scientists have picked up radio signals from several stars.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">"Until now there have not been any detections from the few hundred stars which have been searched."</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">The NASA project attracted criticism from some members of Congress.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Congress voted $10 million per year; criticism by members is not mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">If a signal from outer space is received, it will be important to respond promptly.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">"Everybody agrees that we should not reply immediately" — there is no urgency.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Answer the questions. Choose <b>NO MORE THAN TWO WORDS</b> from the passage.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">What had to transfer from sea to land before any animals could migrate?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">plants</span><div class="explanation">"without whose prior invasion of the land none of the other migrations could have happened."</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Which TWO processes are mentioned as those in which animals had to make big changes as they moved onto land?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">breathing and reproduction</span><div class="explanation">"a major redesign of every aspect of life, including breathing and reproduction."</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Which physical feature, possessed by their ancestors, do whales lack?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">gills</span><div class="explanation">They still breathe air, "having never developed anything equivalent to the gills of their earlier marine incarnation."</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Which animals might ichthyosaurs have resembled?<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">dolphins</span><div class="explanation">"The fossils look like dolphins and they surely lived like dolphins, in the water."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 31–33</div><p>Do the following statements agree with the information? <b>TRUE / FALSE / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Turtles were among the first group of animals to migrate back to the sea.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Turtles returned to the sea "a very long time ago," but not that they were among the first.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">It is always difficult to determine where an animal lived when its fossilized remains are incomplete.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">"Sometimes it's obvious" — e.g. ichthyosaur fossils clearly indicate an aquatic lifestyle.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">The habitat of ichthyosaurs can be determined by the appearance of their fossilized remains.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Their fins and streamlined bodies, resembling dolphins, show they lived in water.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 34–39</div><p>Complete the flow-chart. Choose <b>NO MORE THAN TWO WORDS AND/OR A NUMBER</b> from the passage.</p></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Step 1: 71 species were examined and a total of <b>34 ………</b> were taken from the bones of their forelimbs.<div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">three measurements</span><div class="explanation">"obtained three measurements in these particular bones of 71 species."</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Step 2: The data was recorded on a <b>35 ………</b><div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">triangular graph paper</span><div class="explanation">"They used a kind of triangular graph paper to plot the three measurements..."</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Outcome: Land tortoises were represented by a dense <b>36 ………</b> of points towards the top.<div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">cluster</span><div class="explanation">"formed a tight cluster of points in the upper part of the triangle."</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Step 3: The same data was collected from some living <b>37 ………</b> species.<div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">amphibious</span><div class="explanation">They added "species that spend time both in water and on land" — described as amphibious.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Outcome: The points were positioned about <b>38 ………</b> up the triangle.<div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">half way</span><div class="explanation">They "show up on the triangular graph approximately half way between..."</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Outcome: The position of the points indicated that both these ancient creatures were <b>39 ………</b><div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">dry-land tortoises</span><div class="explanation">"Both these fossils were dry-land tortoises."</div></div>
+<div class="qintro"><div class="qintro-t">Question 40</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">According to the writer, the most significant thing about tortoises is that<ul class='opts'><li><b>A</b> they are able to adapt to life in extremely dry environments.</li><li><b>B</b> their original life form was a kind of primeval bacteria.</li><li><b>C</b> they have so much in common with sea turtles.</li><li><b>D</b> they have made the transition from sea to land more than once.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">Tortoises represent "a remarkable double return" — sea → land → water → land again.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Reading – Attitudes to Language · Tidal Power · Information Theory</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff;
+    --border: #e2e8f0; --text: #2d3748; --muted: #718096;
+    --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .list-headings { background: #edf2f7; border-radius: 6px; padding: 0.7rem 0.9rem; margin: 0.7rem 0; font-size: 0.86rem; }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>IELTS Reading – Attitudes to Language · Tidal Power · Information Theory</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Attitudes to Language</div>
+<p class="para"><span class="hl">It is not easy to be systematic and objective about language study. Popular linguistic debate regularly deteriorates into invective and polemic. Language belongs to everyone, so most people feel they have a right to hold an opinion about it. And when opinions differ, emotions can run high. Arguments can start as easily over minor points of usage as over major policies of linguistic education.</span><span class="mark">1</span><span class="mark">2</span></p>
+<p class="para">Language, moreover, is a very public behaviour, so it is easy for different usages to be noted and criticised. No part of society or social behaviour is exempt: <span class="hl">linguistic factors influence how we judge personality, intelligence, social status, educational standards, job aptitude, and many other areas of identity and social survival.</span><span class="mark">3</span> As a result, it is easy to hurt, and to be hurt, when language use is unfeelingly attacked.</p>
+<p class="para">In its most general sense, <span class="hl">prescriptivism is the view that one variety of language has an inherently higher value than others, and that this ought to be imposed on the whole of the speech community.</span><span class="mark">9</span> The view is propounded especially in relation to grammar and vocabulary, and frequently with reference to pronunciation. The variety which is favoured, in this account, is usually a version of the 'standard' written language, especially as encountered in literature, or in the formal spoken language which most closely reflects this style. Adherents to this variety are said to speak or write 'correctly'; deviations from it are said to be 'incorrect'.</p>
+<p class="para">All the main languages have been studied prescriptively, especially in the 18th century approach to the writing of grammars and dictionaries. The aims of these early grammarians were threefold: (a) they wanted to codify the principles of their languages, to show that there was a system beneath the apparent chaos of usage, (b) they wanted a means of settling disputes over usage, and (c) they wanted to point out what they felt to be common errors, in order to 'improve' the language. <span class="hl">The authoritarian nature of the approach is best characterised by its reliance on 'rules' of grammar. Some usages are 'prescribed,' to be learnt and followed accurately; others are 'proscribed,' to be avoided.</span><span class="mark">10</span> In this early period, there were no half-measures: usage was either right or wrong, and it was the task of the grammarian not simply to record alternatives, but to pronounce judgement upon them.</p>
+<p class="para"><span class="hl">These attitudes are still with us, and they motivate a widespread concern that linguistic standards should be maintained.</span><span class="mark">5</span> Nevertheless, there is an alternative point of view that is concerned less with standards than with the facts of linguistic usage. This approach is summarised in the statement that <span class="hl">it is the task of the grammarian to describe, not prescribe – to record the facts of linguistic diversity, and not to attempt the impossible tasks of evaluating language variation or halting language change.</span><span class="mark">6</span> <span class="hl">In the second half of the 18th century, we already find advocates of this view, such as Joseph Priestley, whose Rudiments of English Grammar (1761) insists that 'the custom of speaking is the original and only just standard of any language'.</span><span class="mark">7</span><span class="mark">11</span><span class="mark">12</span> Linguistic issues, it is argued, cannot be solved by logic and legislation. And this view has become the tenet of the modern linguistic approach to grammatical analysis.</p>
+<p class="para">In our own time, the opposition between 'descriptivists' and 'prescriptivists' has often become extreme, with both sides painting unreal pictures of the other. <span class="hl">Descriptive grammarians have been presented as people who do not care about standards, because of the way they see all forms of usage as equally valid. Prescriptive grammarians have been presented as blind adherents to a historical tradition. The opposition has even been presented in quasi-political terms – of radical liberalism vs elitist conservatism.</span><span class="mark">8</span></p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Tidal Power</div>
+<p class="para"><strong>A</strong> Operating on the same principle as wind turbines, the power in sea turbines comes from tidal currents which turn blades similar to ships' propellers, but, unlike wind, the tides are predictable and the power input is constant. The technology raises the prospect of Britain becoming self-sufficient in renewable energy and drastically reducing its carbon dioxide emissions. If tide, wind and wave power are all developed, Britain would be able to close gas, coal and nuclear power plants and export renewable power to other parts of Europe. <span class="hl">Unlike wind power, which Britain originally developed and then abandoned for 20 years allowing the Dutch to make it a major industry, undersea turbines could become a big export earner to island nations such as Japan and New Zealand.</span><span class="mark">16</span><span class="mark">18</span><span class="mark">19</span><span class="mark">20</span><span class="mark">21</span></p>
+<p class="para"><strong>B</strong> Tidal sites have already been identified that will produce one sixth or more of the UK's power – and at prices competitive with modern gas turbines and undercutting those of the already ailing nuclear industry. One site alone, the Pentland Firth, between Orkney and mainland Scotland, could produce 10% of the country's electricity with banks of turbines under the sea, and another at Alderney in the Channel Islands three times the 1,200 megawatts of Britain's largest and newest nuclear plant, Sizewell B, in Suffolk. Other sites identified include the Bristol Channel and the west coast of Scotland, particularly the channel between Campbeltown and Northern Ireland.</p>
+<p class="para"><strong>C</strong> Work on designs for the new turbine blades and sites are well advanced at the University of Southampton's sustainable energy research group. <span class="hl">The first station is expected to be installed off Lynmouth in Devon shortly to test the technology in a venture jointly funded by the department of Trade and Industry and the European Union.</span><span class="mark">14</span> AbuBakr Bahaj, in charge of the Southampton research, said: 'The prospects for energy from tidal currents are far better than from wind because the flows of water are predictable and constant. <span class="hl">The technology for dealing with the hostile saline environment under the sea has been developed in the North Sea oil industry and much is already known about turbine blade design, because of wind power and ship propellers.</span><span class="mark">17</span> There are a few technical difficulties, but I believe in the next five to ten years we will be installing commercial marine turbine farms.' Southampton has been awarded £215,000 over three years to develop the turbines and is working with Marine Current Turbines, a subsidiary of IT power, on the Lynmouth project. EU research has now identified 106 potential sites for tidal power, 80% round the coasts of Britain. <span class="hl">The best sites are between islands or around heavily indented coasts where there are strong tidal currents.</span><span class="mark">22</span></p>
+<p class="para"><strong>D</strong> A marine turbine blade needs to be only one third of the size of a wind generator to produce three times as much power. The blades will be about 20 metres in diameter, so around 30 metres of water is required. <span class="hl">Unlike wind power, there are unlikely to be environmental objections. Fish and other creatures are thought unlikely to be at risk from the relatively slow-turning blades.</span><span class="mark">24</span> Each turbine will be mounted on a tower which will connect to the national power supply grid via underwater cables. <span class="hl">The towers will stick out of the water and be lit, to warn shipping, and also be designed to be lifted out of the water for maintenance and to clean seaweed from the blades.</span><span class="mark">23</span></p>
+<p class="para"><strong>E</strong> Dr Bahaj has done most work on the Alderney site, where there are powerful currents. <span class="hl">The single undersea turbine farm would produce far more power than needed for the Channel Islands and most would be fed into the French Grid and be re-imported into Britain via the cable under the Channel.</span><span class="mark">15</span></p>
+<p class="para"><strong>F</strong> <span class="hl">One technical difficulty is cavitation, where low pressure behind a turning blade causes air bubbles.</span><span class="mark">25</span><span class="mark">26</span> These can cause vibration and damage the blades of the turbines. Dr Bahaj said: 'We have to test a number of blade types to avoid this happening or at least make sure it does not damage the turbines or reduce performance. Another slight concern is submerged debris floating into the blades. So far we do not know how much of a problem it might be. We will have to make the turbines robust because the sea is a hostile environment, but all the signs that we can do it are good.'</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Information Theory – The Big Idea</div>
+<p class="para"><strong>A</strong> <span class="hl">In April 2002 an event took place which demonstrated one of the many applications of information theory. The space probe, Voyager I, launched in 1977, had sent back spectacular images of Jupiter and Saturn and then soared out of the Solar System on a one-way mission to the stars. After 25 years of exposure to the freezing temperatures of deep space, the probe was beginning to show its age. Sensors and circuits were on the brink of failing and NASA experts realised that they had to do something or lose contact with their probe forever. The solution was to get a message to Voyager I to instruct it to use spares to change the failing parts. With the probe 12 billion kilometres from Earth, this was not an easy task. By means of a radio dish belonging to NASA's Deep Space Network, the message was sent out into the depths of space.</span><span class="mark">31</span><span class="mark">33</span><span class="mark">34</span><span class="mark">35</span><span class="mark">36</span><span class="mark">37</span> Even travelling at the speed of light, it took over 11 hours to reach its target, far beyond the orbit of Pluto. Yet, incredibly, the little probe managed to hear the faint call from its home planet, and successfully made the switchover.</p>
+<p class="para"><strong>B</strong> It was the longest-distance repair job in history, and a triumph for the NASA engineers. But it also highlighted the astonishing power of the techniques developed by American communications engineer Claude Shannon, who had died just a year earlier. Born in 1916 in Petoskey, Michigan, Shannon showed an early talent for maths and for building gadgets, and made breakthroughs in the foundations of computer technology when still a student. While at Bell Laboratories, Shannon developed information theory, but <span class="hl">shunned the resulting acclaim</span><span class="mark">29</span>. In the 1940s, he single-handedly created an entire science of communication which has since inveigled its way into a host of applications, from DVDs to satellite communications to bar codes – any area, in short, where data has to be conveyed rapidly yet accurately.</p>
+<p class="para"><strong>C</strong> This all seems light years away from the down-to-earth uses Shannon originally had for his work, which began when he was a 22-year-old graduate engineering student at the prestigious Massachusetts Institute of Technology in 1939. <span class="hl">He set out with an apparently simple aim: to pin down the precise meaning of the concept of 'information'.</span><span class="mark">32</span> <span class="hl">The most basic form of information, Shannon argued, is whether something is true or false – which can be captured in the binary unit, or 'bit', of the form 1 or 0.</span><span class="mark">38</span> Having identified this fundamental unit, Shannon set about defining otherwise vague ideas about information and how to transmit it from place to place. In the process he discovered something surprising: it is always possible to guarantee information will get through random interference – 'noise' – intact.</p>
+<p class="para"><strong>D</strong> Noise usually means unwanted sounds which interfere with genuine information. Information theory generalises this idea via theorems that capture the effects of noise with mathematical precision. In particular, Shannon showed that <span class="hl">noise sets a limit on the rate at which information can pass along communication channels while remaining error-free. This rate depends on the relative strengths of the signal and noise travelling down the communication channel, and on its capacity (its 'bandwidth').</span><span class="mark">27</span><span class="mark">39</span> The resulting limit, given in units of bits per second, is the absolute maximum rate of error-free communication given signal strength and noise level. The trick, Shannon showed, is to find ways of packaging up – 'coding' – information to cope with the ravages of noise, while staying within the information-carrying capacity – 'bandwidth' – of the communication system being used.</p>
+<p class="para"><strong>E</strong> Over the years scientists have devised many such coding methods, and they have proved crucial in many technological feats. The Voyager spacecraft transmitted data using codes which added one extra bit for every single bit of information; the result was an error rate of just one bit in 10,000 – and stunningly clear pictures of the planets. <span class="hl">Other codes have become part of everyday life – such as the Universal Product Code, or bar code, which uses a simple error-detecting system that ensures supermarket check-out lasers can read the price even on, say, a crumpled bag of crisps.</span><span class="mark">30</span> As recently as 1993, engineers made a major breakthrough by discovering so-called turbo codes – <span class="hl">which come very close to Shannon's ultimate limit for the maximum rate that data can be transmitted reliably</span><span class="mark">40</span>, and now play a key role in the mobile videophone revolution.</p>
+<p class="para"><strong>F</strong> Shannon also laid the foundations of more efficient ways of storing information, by stripping out superfluous ('redundant') bits from data which contributed little real information. <span class="hl">As mobile phone text messages like 'I CN C U' show, it is often possible to leave out a lot of data without losing much meaning.</span><span class="mark">28</span> As with error correction, however, there's a limit beyond which messages become too ambiguous. Shannon showed how to calculate this limit, opening the way to the design of compression methods that cram maximum information into the minimum space.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–8</div><p>Do the following statements agree with the claims of the writer? <b>YES / NO / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">There are understandable reasons why arguments occur about language.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Language belongs to everyone, people feel entitled to opinions, and emotions run high when opinions differ.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">People feel more strongly about language education than about small differences in language usage.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Arguments can start "as easily over minor points of usage as over major policies of linguistic education" — not more strongly about education.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Our assessment of a person's intelligence is affected by the way he or she uses language.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"linguistic factors influence how we judge personality, intelligence, social status..."</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Prescriptive grammar books cost a lot of money to buy in the 18th century.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">18th-century grammars and dictionaries are discussed, but their prices are never mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Prescriptivism still exists today.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"These attitudes are still with us..."</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">According to descriptivists it is pointless to try to stop language change.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Descriptivists see "halting language change" as one of the "impossible tasks".</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Descriptivism only appeared after the 18th century.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Advocates like Joseph Priestley were already present "in the second half of the 18th century".</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Both descriptivists and prescriptivists have been misrepresented.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"both sides painting unreal pictures of the other" — each is presented via unfair stereotypes.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 9–12</div><p>Complete the summary using the list of words, A–I.</p><ul class='opts'><li><b>A</b> descriptivists</li><li><b>B</b> language expert</li><li><b>C</b> popular speech</li><li><b>D</b> formal language</li><li><b>E</b> evaluation</li><li><b>F</b> rules</li><li><b>G</b> modern linguists</li><li><b>H</b> prescriptivists</li><li><b>I</b> change</li></ul></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">According to <b>9 ………</b> there is only one correct form of language.<div class="yng">A–I</div></div><span class="answer ans-letter">H — prescriptivists</span><div class="explanation">Prescriptivism holds that one variety of language has inherently higher value and should be imposed on the whole speech community.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">…place great importance on grammatical <b>10 ………</b><div class="yng">A–I</div></div><span class="answer ans-letter">F — rules</span><div class="explanation">The approach relies on 'rules' of grammar — some usages prescribed, others proscribed.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Conversely, the view of <b>11 ………</b>, such as Joseph Priestley…<div class="yng">A–I</div></div><span class="answer ans-letter">A — descriptivists</span><div class="explanation">Priestley is cited as an advocate of the descriptive approach in the second half of the 18th century.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">…grammar should be based on <b>12 ………</b><div class="yng">A–I</div></div><span class="answer ans-letter">C — popular speech</span><div class="explanation">Priestley: "the custom of speaking is the original and only just standard of any language."</div></div>
+<div class="qintro"><div class="qintro-t">Question 13</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">What is the writer's purpose in Reading Passage?<ul class='opts'><li><b>A</b> to argue in favour of a particular approach to writing dictionaries and grammar books</li><li><b>B</b> to present a historical account of differing views of language</li><li><b>C</b> to describe the differences between spoken and written language</li><li><b>D</b> to show how a certain view of language has been discredited</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">The passage introduces attitudes, traces the historical development of prescriptivism, presents descriptivism as an alternative, and discusses modern debates.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Which paragraph contains the following information? <i>Write A–F. You may use any letter more than once.</i></p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">the location of the first test site<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">C</span><div class="explanation">The first station is "expected to be installed off Lynmouth in Devon."</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">a way of bringing the power produced on one site back into Britain<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">E</span><div class="explanation">Alderney power would be fed into the French Grid and "re-imported into Britain via the cable under the Channel."</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">a reference to a previous attempt by Britain to find an alternative source of energy<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">A</span><div class="explanation">Britain "originally developed and then abandoned [wind power] for 20 years allowing the Dutch to make it a major industry."</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">mention of the possibility of applying technology from another industry<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">C</span><div class="explanation">Technology for the hostile saline underwater environment "has been developed in the North Sea oil industry."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18–22</div><p>Choose <b>FIVE</b> letters, A–J.</p><ul class='opts'><li><b>A</b> It is a more reliable source of energy than wind power.</li><li><b>B</b> It would replace all other forms of energy in Britain.</li><li><b>C</b> Its introduction has come as a result of public pressure.</li><li><b>D</b> It would cut down on air pollution.</li><li><b>E</b> It could contribute to the closure of many existing power stations in Britain.</li><li><b>F</b> It could be a means of increasing national income.</li><li><b>G</b> It could face a lot of resistance from other fuel industries.</li><li><b>H</b> It could be sold more cheaply than any other type of fuel.</li><li><b>I</b> It could compensate for the shortage of inland sites for energy production.</li><li><b>J</b> It is best produced in the vicinity of coastlines with particular features.</li></ul></div>
+<div class="q-block"><div class="q-num">Questions 18–22</div><div class="question">Five claims about tidal power made by the writer<div class="yng">A–J (any order)</div></div><span class="answer ans-letter">A · D · E · F · J</span><div class="explanation"><b>A</b>: tides predictable and constant. <b>D</b>: drastically reducing CO₂ emissions. <b>E</b>: could close gas, coal and nuclear plants. <b>F</b>: "big export earner." <b>J</b>: best sites are between islands or around heavily indented coasts with strong currents.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 23–26</div><p>Label the diagram. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Design feature of the towers — they can be lifted out for ………<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">maintenance</span><div class="explanation">"designed to be lifted out of the water for maintenance and to clean seaweed from the blades."</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Blades turn relatively ……… so fish are not at risk.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">slow (turning)</span><div class="explanation">"Fish and other creatures are thought unlikely to be at risk from the relatively slow-turning blades."</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">In cavitation, ……… behind a turning blade causes air bubbles.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">low pressure</span><div class="explanation">"cavitation, where low pressure behind a turning blade causes air bubbles."</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">The technical difficulty that causes vibration and blade damage is called ………<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">cavitation</span><div class="explanation">"One technical difficulty is cavitation... These can cause vibration and damage the blades."</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–32</div><p>Which paragraph contains the following information? <i>Write A–F.</i></p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">an explanation of the factors affecting the transmission of information<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">D</span><div class="explanation">The rate of error-free transmission depends on signal strength, noise level and channel bandwidth.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">an example of how unnecessary information can be omitted<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">F</span><div class="explanation">"As mobile phone text messages like 'I CN C U' show, it is often possible to leave out a lot of data without losing much meaning."</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">a reference to Shannon's attitude to fame<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">B</span><div class="explanation">Shannon "developed information theory, but shunned the resulting acclaim."</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">details of a machine capable of interpreting incomplete information<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">E</span><div class="explanation">"supermarket check-out lasers can read the price even on, say, a crumpled bag of crisps."</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">a detailed account of an incident involving information theory<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">A</span><div class="explanation">The 2002 Voyager I repair — the longest-distance repair job in history.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">a reference to what Shannon initially intended to achieve in his research<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">C</span><div class="explanation">"He set out with an apparently simple aim: to pin down the precise meaning of the concept of 'information'."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 33–37</div><p>Complete the notes. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">The probe transmitted pictures of both <b>33 ………</b> and <b>33 ………</b><div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">Jupiter and Saturn</span><div class="explanation">"had sent back spectacular images of Jupiter and Saturn."</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">…then left the <b>34 ………</b><div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">Solar System</span><div class="explanation">"soared out of the Solar System on a one-way mission to the stars."</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Scientists feared that both the <b>35 ………</b> and <b>35 ………</b> were about to stop working.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">sensors and circuits</span><div class="explanation">"Sensors and circuits were on the brink of failing..."</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">The only hope was to tell the probe to replace them with <b>36 ………</b><div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">spares</span><div class="explanation">"instruct it to use spares to change the failing parts."</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">A <b>37 ………</b> was used to transmit the message at the speed of light.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">radio dish</span><div class="explanation">"By means of a radio dish belonging to NASA's Deep Space Network..."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 38–40</div><p>Do the following statements agree with the information? <b>TRUE / FALSE / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">The concept of describing something as true or false was the starting point for Shannon in his attempts to send messages over distances.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">"The most basic form of information, Shannon argued, is whether something is true or false — which can be captured in the binary unit..."</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">The amount of information that can be sent in a given time period is determined with reference to the signal strength and noise level.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">"This rate depends on the relative strengths of the signal and noise... and on its capacity (its 'bandwidth')."</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Products have now been developed which can convey more information than Shannon had anticipated as possible.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Turbo codes "come very close to Shannon's ultimate limit" — they do not exceed what he considered possible.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

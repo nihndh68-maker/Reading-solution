@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Reading – Classroom Noise · Venus in Transit · Think Differently</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff;
+    --border: #e2e8f0; --text: #2d3748; --muted: #718096;
+    --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .list-headings { background: #edf2f7; border-radius: 6px; padding: 0.7rem 0.9rem; margin: 0.7rem 0; font-size: 0.86rem; }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>IELTS Reading – Classroom Noise · Venus in Transit · Think Differently</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Classroom Noise and Auditory Problems</div>
+<p class="para"><strong>A</strong> Hearing impairment or other auditory function deficit in young children can have a major impact on their development of speech and communication, resulting in a detrimental effect on their ability to learn at school. This is likely to have major consequences for the individual and the population as a whole. <span class="hl">The New Zealand Ministry of Health has found from research carried out over two decades that 6-10% of children in that country are affected by hearing loss.</span><span class="mark">6</span><span class="mark">7</span></p>
+<p class="para"><strong>B</strong> A preliminary study in New Zealand has shown that classroom noise presents a major concern for teachers and pupils. <span class="hl">Modern teaching practices, the organisation of desks in the classroom, poor classroom acoustics, and mechanical means of ventilation such as air-conditioning units all contribute to the number of children unable to comprehend the teacher's voice.</span><span class="mark">3</span><span class="mark">11</span> Education researchers Nelson and Soli have also suggested that recent trends in learning often involve collaborative interaction of multiple minds and tools as much as individual possession of information. This all amounts to heightened activity and noise levels, which have the potential to be particularly serious for children experiencing auditory function deficit. Noise in classrooms can only exacerbate their difficulty in comprehending and processing verbal communication with other children and instructions from the teacher.</p>
+<p class="para"><strong>C</strong> Children with auditory function deficit are potentially failing to learn to their maximum potential because of noise levels generated in classrooms. The effects of noise on the ability of children to learn effectively in typical classroom environments are now the subject of increasing concern. <span class="hl">The International Institute of Noise Control Engineering (I-INCE), on the advice of the World Health Organization, has established an international working party, which includes New Zealand, to evaluate noise and reverberation control for school rooms.</span><span class="mark">2</span></p>
+<p class="para"><strong>D</strong> While the detrimental effects of noise in classroom situations are not limited to children experiencing disability, those with a disability that affects their processing of speech and verbal communication could be extremely vulnerable. <span class="hl">The auditory function deficits in question include hearing impairment, autistic spectrum disorders (ASD) and attention deficit disorders (ADD/ADHD).</span><span class="mark">5</span></p>
+<p class="para"><strong>E</strong> Autism is considered a neurological and genetic life-long disorder that causes discrepancies in the way information is processed. This disorder is characterised by interlinking problems with social imagination, social communication and social interaction. According to Janzen, this affects the ability to understand and relate in typical ways to people, understand events and objects in the environment, and understand or respond to sensory stimuli. Autism does not allow learning or thinking in the same ways as in children who are developing normally.</p>
+<p class="para">Autistic spectrum disorders often result in major difficulties in comprehending verbal information and speech processing. <span class="hl">Those experiencing these disorders often find sounds such as crowd noise and the noise generated by machinery painful and distressing.</span><span class="mark">8</span> This is difficult to scientifically quantify as such extra-sensory stimuli vary greatly from one autistic individual to another. But a child who finds any type of noise in their classroom or learning space intrusive is likely to be adversely affected in their ability to process information.</p>
+<p class="para"><strong>F</strong> The attention deficit disorders are indicative of neurological and genetic disorders and are characterised by difficulties with sustaining attention, effort and persistence, organisation skills and disinhibition. Children experiencing these disorders find it difficult to screen out unimportant information, and focus on everything in the environment rather than attending to a single activity. Background noise in the classroom becomes a major distraction, which can affect their ability to concentrate.</p>
+<p class="para"><strong>G</strong> Children experiencing an auditory function deficit can often find speech and communication very difficult to isolate and process when set against high levels of background noise. These levels come from outside activities that penetrate the classroom structure, from teaching activities, and other noise generated inside, which can be exacerbated by room reverberation. Strategies are needed to obtain the optimum classroom construction and perhaps a change in classroom culture and methods of teaching. In particular, the effects of noisy classrooms and activities on those experiencing disabilities in the form of auditory function deficit need thorough investigation. <span class="hl">It is probable that many undiagnosed children exist in the education system with 'invisible' disabilities. Their needs are less likely to be met than those of children with known disabilities.</span><span class="mark">9</span></p>
+<p class="para"><strong>H</strong> <span class="hl">The New Zealand Government has developed a New Zealand Disability Strategy and has embarked on a wide-ranging consultation process. The strategy recognises that people experiencing disability face significant barriers in achieving a full quality of life in areas such as attitude, education, employment and access to services. Objective 3 of the New Zealand Disability Strategy is to 'Provide the Best Education for Disabled People' by improving education so that all children, youth learners and adult learners will have equal opportunities to learn and develop within their already existing local school.</span><span class="mark">1</span><span class="mark">10</span> For a successful education, the learning environment is vitally significant, so any effort to improve this is likely to be of great benefit to all children, but especially to those with auditory function disabilities.</p>
+<p class="para"><strong>I</strong> A number of countries are already in the process of formulating their own standards for the control and reduction of classroom noise. New Zealand will probably follow their example. The literature to date on noise in school rooms appears to focus on the effects on schoolchildren in general, their teachers and the hearing impaired. Only limited attention appears to have been given to those students experiencing the other disabilities involving auditory function deficit. <span class="hl">It is imperative that the needs of these children are taken into account in the setting of appropriate international standards to be promulgated in future.</span><span class="mark">4</span></p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Venus in Transit</div>
+<p class="para"><strong>A</strong> On 8 June 2004, more than half the population of the world were treated to a rare astronomical event. For over six hours, the planet Venus steadily inched its way over the surface of the Sun. This 'transit' of Venus was the first since 6 December 1882. On that occasion, the American astronomer Professor Simon Newcomb led a party to South Africa to observe the event. They were based at a girls' school, where – it is alleged – the combined forces of three schoolmistresses outperformed the professionals with the accuracy of their observations.</p>
+<p class="para"><strong>B</strong> For centuries, transits of Venus have drawn explorers and astronomers alike to the four corners of the globe. And you can put it all down to the extraordinary polymath Edmond Halley. In November 1677, Halley observed a transit of the innermost planet, Mercury, from the desolate island of St Helena in the South Pacific. <span class="hl">He realised that, from different latitudes, the passage of the planet across the Sun's disc would appear to differ. By timing the transit from two widely-separated locations, teams of astronomers could calculate the parallax angle – the apparent difference in position of an astronomical body due to a difference in the observer's position. Calculating this angle would allow astronomers to measure what was then the ultimate goal: the distance of the Earth from the Sun.</span><span class="mark">19</span> This distance is known as the 'astronomical unit' or AU.</p>
+<p class="para"><strong>C</strong> Halley was aware that the AU was one of the most fundamental of all astronomical measurements. <span class="hl">Johannes Kepler, in the early 17th century, had shown that the distances of the planets from the Sun governed their orbital speeds, which were easily measurable.</span><span class="mark">20</span> But no-one had found a way to calculate accurate distances to the planets from the Earth. The goal was to measure the AU; then, knowing the orbital speeds of all the other planets round the Sun, the scale of the Solar System would fall into place. However, Halley realised that Mercury was so far away that its parallax angle would be very difficult to determine. As Venus was closer to the Earth, its parallax angle would be larger, and Halley worked out that by using Venus it would be possible to measure the Sun's distance to 1 part in 500. But there was a problem: transits of Venus, unlike those of Mercury, are rare, occurring in pairs roughly eight years apart every hundred or so years. Nevertheless, he accurately predicted that Venus would cross the face of the Sun in both 1761 and 1769 – though he didn't survive to see either.</p>
+<p class="para"><strong>D</strong> Inspired by Halley's suggestion of a way to pin down the scale of the Solar System, teams of British and French astronomers set out on expeditions to places as diverse as India and Siberia. But things weren't helped by Britain and France being at war. The person who deserves most sympathy is the French astronomer Guillaume Le Gentil. <span class="hl">He was thwarted by the fact that the British were besieging his observation site at Pondicherry in India. Fleeing on a French warship crossing the Indian Ocean, Le Gentil saw a wonderful transit – but the ship's pitching and rolling ruled out any attempt at making accurate observations.</span><span class="mark">15</span><span class="mark">21</span> Undaunted, he remained south of the equator, keeping himself busy by studying the islands of Mauritius and Madagascar before setting off to observe the next transit in the Philippines. Ironically after travelling nearly 50,000 kilometres, his view was clouded out at the last moment, a very dispiriting experience.</p>
+<p class="para"><strong>E</strong> While the early transit timings were as precise as instruments would allow, <span class="hl">the measurements were dogged by the 'black drop' effect. When Venus begins to cross the Sun's disc, it looks smeared not circular – which makes it difficult to establish timings. This is due to diffraction of light. The second problem is that Venus exhibits a halo of light when it is seen just outside the Sun's disc. While this showed astronomers that Venus was surrounded by a thick layer of gases refracting sunlight around it, both effects made it impossible to obtain accurate timings.</span><span class="mark">17</span><span class="mark">24</span></p>
+<p class="para"><strong>F</strong> But astronomers laboured hard to analyse the results of these expeditions to observe Venus transits. <span class="hl">Johann Franz Encke, Director of the Berlin Observatory, finally determined a value for the AU based on all these parallax measurements: 153,340,000 km. Reasonably accurate for the time, that is quite close to today's value of 149,597,870 km, determined by radar</span><span class="mark">18</span>, which has now superseded transits and all other methods in accuracy. <span class="hl">The AU is a cosmic measuring rod, and the basis of how we scale the Universe today. The parallax principle can be extended to measure the distances to the stars. If we look at a star in January – when Earth is at one point in its orbit – it will seem to be in a different position from where it appears six months later. Knowing the width of Earth's orbit, the parallax shift lets astronomers calculate the distance.</span><span class="mark">14</span><span class="mark">26</span></p>
+<p class="para"><strong>G</strong> June 2004's transit of Venus was thus more of an astronomical spectacle than a scientifically important event. <span class="hl">But such transits have paved the way for what might prove to be one of the most vital breakthroughs in the cosmos – detecting Earth-sized planets orbiting other stars.</span><span class="mark">16</span></p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">A Neuroscientist Reveals How To Think Differently</div>
+<p class="para">In the last decade a revolution has occurred in the way that scientists think about the brain. We now know that the decisions humans make can be traced to the firing patterns of neurons in specific parts of the brain. <span class="hl">These discoveries have led to the field known as neuroeconomics, which studies the brain's secrets to success in an economic environment that demands innovation and being able to do things differently from competitors.</span><span class="mark">27</span> A brain that can do this is an iconoclastic one. Briefly, an iconoclast is a person who does something that others say can't be done.</p>
+<p class="para">This definition implies that iconoclasts are different from other people, but more precisely, <span class="hl">it is their brains that are different in three distinct ways: perception, fear response, and social intelligence.</span><span class="mark">28</span> Each of these three functions utilizes a different circuit in the brain. Naysayers might suggest that the brain is irrelevant, that thinking in an original, even revolutionary, way is more a matter of personality than brain function. But the field of neuroeconomics was born out of the realization that the physical workings of the brain place limitations on the way we make decisions. By understanding these constraints, we begin to understand why some people march to a different drumbeat.</p>
+<p class="para">The first thing to realize is that the brain suffers from limited resources. It has a fixed energy budget, about the same as a 40 watt light bulb, so it has evolved to work as efficiently as possible. This is where most people are impeded from being an iconoclast. For example, when confronted with information streaming from the eyes, the brain will interpret this information in the quickest way possible. <span class="hl">Thus it will draw on both past experience and any other source of information, such as what other people say, to make sense of what it is seeing. This happens all the time. The brain takes shortcuts that work so well we are hardly ever aware of them.</span><span class="mark">29</span> We think our perceptions of the world are real, but they are only biological and electrical rumblings. <span class="hl">Perception is not simply a product of what your eyes or ears transmit to your brain. More than the physical reality of photons or sound waves, perception is a product of the brain.</span><span class="mark">30</span></p>
+<p class="para">Perception is central to iconoclasm. Iconoclasts see things differently to other people. <span class="hl">Their brains do not fall into efficiency pitfalls as much as the average person's brain. Iconoclasts, either because they were born that way or through learning, have found ways to work around the perceptual shortcuts that plague most people.</span><span class="mark">31</span> Perception is not something that is hardwired into the brain. It is a learned process, which is both a curse and an opportunity for change. The brain faces the fundamental problem of interpreting physical stimuli from the senses. Everything the brain sees, hears, or touches has multiple interpretations. The one that is ultimately chosen is simply the brain's best theory. In technical terms, these conjectures have their basis in the statistical likelihood of one interpretation over another and are heavily influenced by past experience and, importantly for potential iconoclasts, what other people say.</p>
+<p class="para">The best way to see things differently to other people is to bombard the brain with things it has never encountered before. <span class="hl">Novelty releases the perceptual process from the chains of past experience and forces the brain to make new judgments. Successful iconoclasts have an extraordinary willingness to be exposed to what is fresh and different. Observation of iconoclasts shows that they embrace novelty while most people avoid things that are different.</span><span class="mark">32</span><span class="mark">33</span></p>
+<p class="para">The problem with novelty, however, is that it tends to trigger the brain's fear system. <span class="hl">Fear is a major impediment to thinking like an iconoclast and stops the average person in his tracks. There are many types of fear, but the two that inhibit iconoclastic thinking and people generally find difficult to deal with are fear of uncertainty and fear of public ridicule.</span><span class="mark">35</span> These may seem like trivial phobias. But fear of public speaking, which everyone must do from time to time, afflicts one-third of the population. <span class="hl">This makes it too common to be considered a mental disorder. It is simply a common variant of human nature, one which iconoclasts do not let inhibit their reactions.</span><span class="mark">37</span></p>
+<p class="para">Finally, to be successful iconoclasts, individuals must sell their ideas to other people. This is where social intelligence comes in. Social intelligence is the ability to understand and manage people in a business setting. In the last decade there has been an explosion of knowledge about the social brain and how the brain works when groups coordinate decision making. Neuroscience has revealed which brain circuits are responsible for functions like understanding what other people think, empathy, fairness, and social identity. These brain regions play key roles in whether people convince others of their ideas. Perception is important in social cognition too. The perception of someone's enthusiasm, or reputation, can make or break a deal. Understanding how perception becomes intertwined with social decision making shows why successful iconoclasts are so rare.</p>
+<p class="para"><span class="hl">Iconoclasts create new opportunities in every area from artistic expression to technology to business. They supply creativity and innovation not easily accomplished by committees. Rules aren't important to them. Iconoclasts face alienation and failure, but can also be a major asset to any organization.</span><span class="mark">38</span><span class="mark">40</span> It is crucial for success in any field to understand how the iconoclastic mind works.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–6</div><p>Which section contains the following information? <i>Write A–I.</i></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">an account of a national policy initiative<div class="yng">Which section (A–I)?</div></div><span class="answer ans-letter">H</span><div class="explanation">Paragraph H describes the New Zealand Disability Strategy and its education objective — a national policy initiative.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">a description of a global team effort<div class="yng">Which section (A–I)?</div></div><span class="answer ans-letter">C</span><div class="explanation">The International Institute of Noise Control Engineering set up an international working party (including New Zealand).</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">a hypothesis as to one reason behind the growth in classroom noise<div class="yng">Which section (A–I)?</div></div><span class="answer ans-letter">B</span><div class="explanation">Modern teaching practices, desk arrangements, poor acoustics and ventilation all contribute to rising classroom noise.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">a demand for suitable worldwide regulations<div class="yng">Which section (A–I)?</div></div><span class="answer ans-letter">I</span><div class="explanation">"It is imperative that the needs of these children are taken into account in the setting of appropriate international standards..."</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">a list of medical conditions which place some children more at risk from noise than others<div class="yng">Which section (A–I)?</div></div><span class="answer ans-letter">D</span><div class="explanation">Hearing impairment, autistic spectrum disorders (ASD) and attention deficit disorders (ADD/ADHD).</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">the estimated proportion of children in New Zealand with auditory problems<div class="yng">Which section (A–I)?</div></div><span class="answer ans-letter">A</span><div class="explanation">Research over two decades found 6–10% of children in New Zealand are affected by hearing loss.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 7–10</div><p>Answer the questions. Choose <b>NO MORE THAN TWO WORDS AND/OR A NUMBER</b>.</p></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">For what period of time has hearing loss in schoolchildren been studied in New Zealand?<div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">two decades</span><div class="explanation">"research carried out over two decades."</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">In addition to machinery noise, what other type of noise can upset children with autism?<div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">crowd noise</span><div class="explanation">Autistic children "find sounds such as crowd noise and the noise generated by machinery painful and distressing."</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">What term is used to describe the hearing problems of schoolchildren which have not been diagnosed?<div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">invisible disabilities</span><div class="explanation">Many undiagnosed children have "'invisible' disabilities."</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">What part of the New Zealand Disability Strategy aims to give schoolchildren equal opportunity?<div class="yng">NO MORE THAN TWO WORDS AND/OR A NUMBER</div></div><span class="answer ans-letter">Objective 3</span><div class="explanation">"Objective 3... is to 'Provide the Best Education for Disabled People'..."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 11 &amp; 12</div><p>Choose <b>TWO</b> letters, A–F. Which TWO factors contributing to classroom noise are mentioned?</p><ul class='opts'><li><b>A</b> current teaching methods</li><li><b>B</b> echoing corridors</li><li><b>C</b> cooling systems</li><li><b>D</b> large class sizes</li><li><b>E</b> loud-voiced teachers</li><li><b>F</b> playground games</li></ul></div>
+<div class="q-block"><div class="q-num">Questions 11 &amp; 12</div><div class="question">Two factors contributing to classroom noise<div class="yng">A–F (any order)</div></div><span class="answer ans-letter">A and C</span><div class="explanation"><b>A</b>: "Modern teaching practices... contribute to the number of children unable to comprehend the teacher's voice." <b>C</b>: "mechanical means of ventilation such as air-conditioning units."</div></div>
+<div class="qintro"><div class="qintro-t">Question 13</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">What is the writer's overall purpose in writing this article?<ul class='opts'><li><b>A</b> to compare different methods of dealing with auditory problems</li><li><b>B</b> to provide solutions for overly noisy learning environments</li><li><b>C</b> to increase awareness of the situation of children with auditory problems</li><li><b>D</b> to promote New Zealand as a model for other countries to follow</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">The article highlights the educational difficulties these children face and the need for research and standards — its overall purpose is to raise awareness.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Which paragraph contains the following information? <i>Write A–G.</i></p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">examples of different ways in which the parallax principle has been applied<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">F</span><div class="explanation">Paragraph F applies parallax to calculate the AU and then extends it to measure distances to the stars.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">a description of an event which prevented a transit observation<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">D</span><div class="explanation">War prevented Le Gentil from observing at Pondicherry; his ship's pitching and rolling ruled out accurate observations.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">a statement about potential future discoveries leading on from transit observations<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">G</span><div class="explanation">Transits "have paved the way for what might prove to be one of the most vital breakthroughs... detecting Earth-sized planets orbiting other stars."</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">a description of physical states connected with Venus which early astronomical instruments failed to overcome<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">E</span><div class="explanation">The 'black drop' effect and Venus's halo of light made it impossible to obtain accurate timings.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18–21</div><p>Match each statement with the correct person, A–D.</p><ul class='opts'><li><b>A</b> Edmond Halley</li><li><b>B</b> Johannes Kepler</li><li><b>C</b> Guillaume Le Gentil</li><li><b>D</b> Johann Franz Encke</li></ul></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">He calculated the distance of the Sun from the Earth based on observations of Venus with a fair degree of accuracy.<div class="yng">Which person?</div></div><span class="answer ans-letter">D — Johann Franz Encke</span><div class="explanation">Encke determined the AU as 153,340,000 km — "reasonably accurate for the time."</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">He understood that the distance of the Sun from the Earth could be worked out by comparing observations of a transit.<div class="yng">Which person?</div></div><span class="answer ans-letter">A — Edmond Halley</span><div class="explanation">Halley realised that timing a transit from two widely-separated locations gives the parallax angle, hence the Earth–Sun distance.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">He realised that the time taken by a planet to go round the Sun depends on its distance from the Sun.<div class="yng">Which person?</div></div><span class="answer ans-letter">B — Johannes Kepler</span><div class="explanation">Kepler "had shown that the distances of the planets from the Sun governed their orbital speeds."</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">He witnessed a Venus transit but was unable to make any calculations.<div class="yng">Which person?</div></div><span class="answer ans-letter">C — Guillaume Le Gentil</span><div class="explanation">He saw a transit from a French warship, but its "pitching and rolling ruled out any attempt at making accurate observations."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 22–26</div><p>Do the following statements agree with the information? <b>TRUE / FALSE / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Halley observed one transit of the planet Venus.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Halley observed a transit of Mercury, not Venus — in November 1677.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Le Gentil managed to observe a second Venus transit.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">He travelled to the Philippines for the next transit, but "his view was clouded out at the last moment."</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">The shape of Venus appears distorted when it starts to pass in front of the Sun.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">"it looks smeared not circular" — i.e. its shape appears distorted.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Early astronomers suspected that the atmosphere on Venus was toxic.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The passage describes a thick layer of gases, but never says astronomers suspected it was toxic.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">The parallax principle allows astronomers to work out how far away distant stars are from the Earth.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">"The parallax principle can be extended to measure the distances to the stars."</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–31</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Neuroeconomics is a field of study which seeks to<ul class='opts'><li><b>A</b> cause a change in how scientists understand brain chemistry.</li><li><b>B</b> understand how good decisions are made in the brain.</li><li><b>C</b> understand how the brain is linked to achievement in competitive fields.</li><li><b>D</b> trace the specific firing patterns of neurons in different areas of the brain.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">Neuroeconomics "studies the brain's secrets to success in an economic environment that demands innovation."</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">According to the writer, iconoclasts are distinctive because<ul class='opts'><li><b>A</b> they create unusual brain circuits</li><li><b>B</b> their brains function differently</li><li><b>C</b> their personalities are distinctive</li><li><b>D</b> they make decisions easily</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">"it is their brains that are different in three distinct ways: perception, fear response, and social intelligence."</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">According to the writer, the brain works efficiently because<ul class='opts'><li><b>A</b> it uses the eyes quickly</li><li><b>B</b> it interprets data logically</li><li><b>C</b> it generates its own energy</li><li><b>D</b> it relies on previous events</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">The brain takes shortcuts, drawing on "past experience and any other source of information... to make sense of what it is seeing."</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">The writer says that perception is<ul class='opts'><li><b>A</b> a combination of photons and sound waves</li><li><b>B</b> a reliable product of what your senses transmit</li><li><b>C</b> a result of brain processes</li><li><b>D</b> a process we are usually conscious of</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">"More than the physical reality of photons or sound waves, perception is a product of the brain."</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">According to the writer, an iconoclastic thinker<ul class='opts'><li><b>A</b> centralises perceptual thinking in one part of the brain</li><li><b>B</b> avoids cognitive traps</li><li><b>C</b> has a brain that is hardwired for learning</li><li><b>D</b> has more opportunities than the average person</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">Their brains "do not fall into efficiency pitfalls as much as the average person's brain" — i.e. they avoid cognitive traps.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 32–37</div><p>Do the following statements agree with the claims of the writer? <b>YES / NO / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Exposure to different events forces the brain to think differently.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"Novelty releases the perceptual process from the chains of past experience and forces the brain to make new judgments."</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">Iconoclasts are unusually receptive to new experiences.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"Successful iconoclasts have an extraordinary willingness to be exposed to what is fresh and different."</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Most people are too shy to try different things.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The passage says most people avoid novelty, but never attributes this to shyness.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">If you think in an iconoclastic way, you can easily overcome fear.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Fear is "a major impediment to thinking like an iconoclast" — the passage never says overcoming it is easy.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">When concern about embarrassment matters less, other fears become irrelevant.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Fear of public ridicule is named as one obstacle, but no claim is made that reducing it makes other fears irrelevant.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Fear of public speaking is a psychological illness.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">"too common to be considered a mental disorder. It is simply a common variant of human nature."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 38–40</div><p>Complete each sentence with the correct ending, A–E.</p><ul class='opts'><li><b>A</b> requires both perceptual and social intelligence skills.</li><li><b>B</b> focuses on how groups decide on an action.</li><li><b>C</b> works in many fields, both artistic and scientific.</li><li><b>D</b> leaves one open to criticism and rejection.</li><li><b>E</b> involves understanding how organisations manage people.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Thinking like a successful iconoclast is demanding because it ………<div class="yng">A–E</div></div><span class="answer ans-letter">D — leaves one open to criticism and rejection</span><div class="explanation">"Iconoclasts face alienation and failure" — and, in context, criticism and rejection from others.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">The concept of the social brain is useful to iconoclasts because it ………<div class="yng">A–E</div></div><span class="answer ans-letter">B — focuses on how groups decide on an action</span><div class="explanation">"how the brain works when groups coordinate decision making."</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Iconoclasts are generally an asset because their way of thinking ………<div class="yng">A–E</div></div><span class="answer ans-letter">C — works in many fields, both artistic and scientific</span><div class="explanation">"Iconoclasts create new opportunities in every area from artistic expression to technology to business."</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>
