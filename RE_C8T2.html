@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 8 Test 2 – Reading | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff;
+    --border: #e2e8f0; --text: #2d3748; --muted: #718096;
+    --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .list-headings { background: #edf2f7; border-radius: 6px; padding: 0.7rem 0.9rem; margin: 0.7rem 0; font-size: 0.86rem; }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 8 Test 2 – Reading</h1><p>Sheet Glass Manufacture · The Little Ice Age · The Meaning and Power of Smell</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Sheet Glass Manufacture: the Float Process</div>
+<p class="para">Glass, which has been made since the time of the Mesopotamians and Egyptians, is little more than a mixture of sand, soda ash and lime. When heated to about 1500 degrees Celsius (°C) this becomes a molten mass that hardens when slowly cooled. <span class="hl">The first successful method for making clear, flat glass involved spinning.</span><span class="mark">1</span> This method was very effective as <span class="hl">the glass had not touched any surfaces between being soft and becoming hard, so it stayed perfectly unblemished, with a 'fire finish'.</span><span class="mark">2</span> However, <span class="hl">the process took a long time and was labour intensive.</span><span class="mark">3</span></p>
+<p class="para">Nevertheless, demand for flat glass was very high and glassmakers across the world were looking for a method of making it continuously. The first continuous ribbon process involved squeezing molten glass through two hot rollers, similar to an old mangle. <span class="hl">This allowed glass of virtually any thickness to be made non-stop</span><span class="mark">4</span>, but <span class="hl">the rollers would leave both sides of the glass marked</span><span class="mark">5</span>, and these would then need to be ground and polished. This part of the process rubbed away around 20 per cent of the glass, and the machines were very expensive.</p>
+<p class="para">The float process for making flat glass was invented by Alistair Pilkington. This process allows the manufacture of clear, tinted and coated glass for buildings, and clear and tinted glass for vehicles. Pilkington had been experimenting with improving the melting process, and in 1952 he had the idea of <span class="hl">using a bed of molten metal to form the flat glass, eliminating altogether the need for rollers within the float bath.</span><span class="mark">6</span> <span class="hl">The metal had to melt at a temperature less than the hardening point of glass (about 600°C), but could not boil at a temperature below the temperature of the molten glass (about 1500°C). The best metal for the job was tin.</span><span class="mark">7</span><span class="mark">9</span></p>
+<p class="para">The rest of the concept relied on gravity, which guaranteed that the surface of the molten metal was perfectly flat and horizontal. Consequently, when pouring molten glass onto the molten tin, the underside of the glass would also be perfectly flat. If the glass were kept hot enough, it would flow over the molten tin until the top surface was also flat, horizontal and perfectly parallel to the bottom surface. <span class="hl">Once the glass cooled to 604°C or less it was too hard to mark and could be transported out of the cooling zone by rollers.</span><span class="mark">8</span> The glass settled to a thickness of six millimetres because of surface tension interactions between the glass and the tin. By fortunate coincidence, 60 per cent of the flat glass market at that time was for six-millimetre glass.</p>
+<p class="para">Pilkington built a pilot plant in 1953 and by 1955 he had convinced his company to build a full-scale plant. However, <span class="hl">it took 14 months of non-stop production, costing the company £100,000 a month, before the plant produced any usable glass. Furthermore, once they succeeded in making marketable flat glass, the machine was turned off for a service to prepare it for years of continuous production. When it started up again it took another four months to get the process right again.</span><span class="mark">10</span><span class="mark">11</span> They finally succeeded in 1959 and there are now float plants all over the world, with each able to produce around 1000 tons of glass every day, non-stop for around 15 years.</p>
+<p class="para">Float plants today make glass of near optical quality. Several processes – melting, refining, homogenising – take place simultaneously in the 2000 tonnes of molten glass in the furnace. They occur in separate zones in a complex glass flow driven by high temperatures. It adds up to a continuous melting process, lasting as long as 50 hours, that delivers glass smoothly and continuously to the float bath, and from there to a coating zone and finally a heat treatment zone, where stresses formed during cooling are relieved.</p>
+<p class="para">The principle of float glass is unchanged since the 1950s. However, <span class="hl">the product has changed dramatically, from a single thickness of 6.8 mm to a range from sub-millimetre to 25 mm, from a ribbon frequently marred by inclusions and bubbles to almost optical perfection.</span><span class="mark">12</span> To ensure the highest quality, inspection takes place at every stage. Occasionally, a bubble is not removed during refining, a sand grain refuses to melt, a tremor in the tin puts ripples into the glass ribbon. Automated on-line inspection does two things. Firstly, it reveals process faults upstream that can be corrected. <span class="hl">Inspection technology allows more than 100 million measurements a second to be made across the ribbon, locating flaws the unaided eye would be unable to see.</span><span class="mark">13</span> Secondly, it enables computers downstream to steer cutters around flaws.</p>
+<p class="para">Float glass is sold by the square metre, and at the final stage computers translate customer requirements into patterns of cuts designed to minimise waste.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">The Little Ice Age</div>
+<p class="para"><strong>A</strong> This book will provide a detailed examination of the Little Ice Age and other climatic shifts, but, before I embark on that, let me provide a historical context. We tend to think of climate – as opposed to weather – as something unchanging, yet <span class="hl">humanity has been at the mercy of climate change for its entire existence</span>, with at least eight glacial episodes in the past 730,000 years. Our ancestors adapted to the universal but irregular global warming since the end of the last great Ice Age, around 10,000 years ago, with dazzling opportunism. They developed strategies for surviving harsh drought cycles, decades of heavy rainfall or unaccustomed cold; adopted agriculture and stock-raising, which revolutionised human life; and founded the world's first pre-industrial civilisations in Egypt, Mesopotamia and the Americas. But the price of sudden climate change, in famine, disease and suffering, was often high.</p>
+<p class="para"><strong>B</strong> The Little Ice Age lasted from roughly 1300 until the middle of the nineteenth century. Only two centuries ago, Europe experienced a cycle of bitterly cold winters; mountain glaciers in the Swiss Alps were the lowest in recorded memory, and pack ice surrounded Iceland for much of the year. <span class="hl">The climatic events of the Little Ice Age did more than help shape the modern world. They are the deeply important context for the current unprecedented global warming.</span><span class="mark">14</span> <span class="hl">The Little Ice Age was far from a deep freeze, however; rather an irregular seesaw of rapid climatic shifts, few lasting more than a quarter-century</span><span class="mark">20</span>, driven by complex and still little understood interactions between the atmosphere and the ocean. <span class="hl">The seesaw brought cycles of intensely cold winters and easterly winds, then switched abruptly to years of heavy spring and early summer rains, mild winters, and frequent Atlantic storms</span><span class="mark">21</span>, <span class="hl">or to periods of droughts, light northeasterly winds, and summer heat waves.</span><span class="mark">22</span></p>
+<p class="para"><strong>C</strong> Reconstructing the climate changes of the past is extremely difficult, because systematic weather observations began only a few centuries ago, in Europe and North America. Records from India and tropical Africa are even more recent. For the time before records began, we have only 'proxy records' <span class="hl">reconstructed largely from tree rings and ice cores</span><span class="mark">18</span>, supplemented by a few incomplete written accounts. We now have hundreds of tree-ring records from throughout the northern hemisphere, and many from south of the equator, too, amplified with a growing body of temperature data from ice cores drilled in Antarctica, Greenland, the Peruvian Andes, and other locations. We are close to a knowledge of annual summer and winter temperature variations over much of the northern hemisphere going back 600 years.</p>
+<p class="para"><strong>D</strong> <span class="hl">This book is a narrative history of climatic shifts during the past ten centuries</span><span class="mark">15</span>, and some of the ways in which people in Europe adapted to them. Part One describes the Medieval Warm Period, roughly 900 to 1200. During these three centuries, <span class="hl">Norse voyagers from Northern Europe explored northern seas, settled Greenland, and visited North America.</span><span class="mark">25</span> It was not a time of uniform warmth, for then, as always since the Great Ice Age, there were constant shifts in rainfall and temperature. Mean European temperatures were about the same as today, perhaps slightly cooler.</p>
+<p class="para"><strong>E</strong> It is known that the Little Ice Age cooling began in Greenland and the Arctic in about 1200. As the Arctic ice pack spread southward, Norse voyages to the west were rerouted into the open Atlantic, then ended altogether. Storminess increased in the North Atlantic and North Sea. Colder, much wetter weather descended on Europe between 1315 and 1319, when thousands perished in a continent-wide famine. By 1400, the weather had become decidedly more unpredictable and stormier, with sudden shifts and lower temperatures that culminated in the cold decades of the late sixteenth century. Fish were a vital commodity in growing towns and cities, where food supplies were a constant concern. Dried cod and herring were already the staples of the European fish trade, but <span class="hl">changes in water temperatures forced fishing fleets to work further offshore. The Basques, Dutch, and English developed the first offshore fishing boats adapted to a colder and stormier Atlantic.</span><span class="mark">26</span> <span class="hl">A gradual agricultural revolution in northern Europe stemmed from concerns over food supplies at a time of rising populations. The revolution involved intensive commercial farming and the growing of animal fodder on land not previously used for crops. The increased productivity from farmland made some countries self-sufficient in grain and livestock and offered effective protection against famine.</span><span class="mark">16</span></p>
+<p class="para"><strong>F</strong> Global temperatures began to rise slowly after 1850, with the beginning of the Modern Warm Period. <span class="hl">There was a vast migration from Europe by land-hungry farmers and others, to which the famine caused by the Irish potato blight contributed, to North America, Australia, New Zealand, and southern Africa.</span><span class="mark">23</span> <span class="hl">Millions of hectares of forest and woodland fell before the newcomers' axes between 1850 and 1890, as intensive European farming methods expanded across the world. The unprecedented land clearance released vast quantities of carbon dioxide into the atmosphere, triggering for the first time humanly caused global warming.</span><span class="mark">17</span><span class="mark">24</span> Temperatures climbed more rapidly in the twentieth century as the use of fossil fuels proliferated and greenhouse gas levels continued to soar. The rise has been even steeper since the early 1980s. The Little Ice Age has given way to a new climatic regime, marked by prolonged and steady warming. At the same time, extreme weather events like Category 5 hurricanes are becoming more frequent.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">The meaning and power of smell</div>
+<p class="para"><strong>A</strong> A survey conducted by Anthony Synott at Montreal's Concordia University asked participants to comment on how important smell was to them in their lives. It became apparent that <span class="hl">smell can evoke strong emotional responses. A scent associated with a good experience can bring a rush of joy, while a foul odour or one associated with a bad memory may make us grimace with disgust.</span><span class="mark">27</span> Respondents to the survey noted that many of their olfactory likes and dislikes were based on emotional associations. Such associations can be powerful enough so that odours that we would generally label unpleasant become agreeable, and those that we would generally consider fragrant become disagreeable for particular individuals. The perception of smell, therefore, consists not only of the sensation of the odours themselves, but of the experiences and emotions associated with them.</p>
+<p class="para"><strong>B</strong> Odours are also essential cues in social bonding. One respondent to the survey believed that there is no true emotional bonding without touching and smelling a loved one. In fact, <span class="hl">infants recognise the odours of their mothers soon after birth and adults can often identify their children or spouses by scent.</span><span class="mark">28</span> <span class="hl">In one well-known test, women and men were able to distinguish by smell alone clothing worn by their marriage partners from similar clothing worn by other people.</span><span class="mark">34</span><span class="mark">37</span> Most of the subjects would probably never have given much thought to odour as a cue for identifying family members before being involved in the test, but as the experiment revealed, even when not consciously considered, smells register.</p>
+<p class="para"><strong>C</strong> In spite of its importance to our emotional and sensory lives, smell is probably the most undervalued sense in many cultures. <span class="hl">The reason often given for the low regard in which smell is held is that, in comparison with its importance among animals, the human sense of smell is feeble and undeveloped.</span><span class="mark">29</span><span class="mark">35</span> While it is true that the olfactory powers of humans are nothing like as fine as those possessed by certain animals, they are still remarkably acute. Our noses are able to recognise thousands of smells, and to perceive odours which are present only in extremely small quantities.</p>
+<p class="para"><strong>D</strong> Smell, however, is a highly elusive phenomenon. <span class="hl">Odours, unlike colours, for instance, cannot be named in many languages because the specific vocabulary simply doesn't exist.</span><span class="mark">30</span><span class="mark">38</span> 'It smells like . . .,' we have to say when describing an odour, struggling to express our olfactory experience. Nor can odours be recorded: there is no effective way to either capture or store them over time. In the realm of olfaction, we must make do with descriptions and recollections. This has implications for olfactory research.</p>
+<p class="para"><strong>E</strong> Most of the research on smell undertaken to date has been of a physical scientific nature. Significant advances have been made in the understanding of the biological and chemical nature of olfaction, but many fundamental questions have yet to be answered. <span class="hl">Researchers have still to decide whether smell is one sense or two – one responding to odours proper and the other registering odourless chemicals in the air.</span><span class="mark">36</span><span class="mark">39</span> Other unanswered questions are whether the nose is the only part of the body affected by odours, and how smells can be measured objectively given the nonphysical components. Questions like these mean that <span class="hl">interest in the psychology of smell is inevitably set to play an increasingly important role for researchers.</span><span class="mark">31</span></p>
+<p class="para"><strong>F</strong> However, smell is not simply a biological and psychological phenomenon. Smell is cultural, hence it is a social and historical phenomenon. <span class="hl">Odours are invested with cultural values: smells that are considered to be offensive in some cultures may be perfectly acceptable in others.</span><span class="mark">32</span><span class="mark">40</span> Therefore, our sense of smell is a means of, and model for, interacting with the world. Different smells can provide us with intimate and emotionally charged experiences and the value that we attach to these experiences is interiorised by the members of society in a deeply personal way. Importantly, our commonly held feelings about smells can help distinguish us from other cultures. The study of the cultural history of smell is, therefore, in a very real sense, an investigation into the essence of human culture.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–8</div><p>Complete the table and diagram. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">The first successful method for making clear, flat glass involved <b>1 ………</b><div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">spinning</span><div class="explanation">"The first successful method for making clear, flat glass involved spinning."</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">The glass stayed perfectly <b>2 ………</b> because it touched no surface.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">(perfectly) unblemished</span><div class="explanation">It "stayed perfectly unblemished, with a 'fire finish'."</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Drawback of spinning: it took a long time and was <b>3 ………</b><div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">labour-intensive</span><div class="explanation">"the process took a long time and was labour intensive."</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Roller process: allowed glass of virtually any <b>4 ………</b> to be made non-stop.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">thickness</span><div class="explanation">"This allowed glass of virtually any thickness to be made non-stop."</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Drawback: the rollers left both sides of the glass <b>5 ………</b><div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">marked</span><div class="explanation">"the rollers would leave both sides of the glass marked."</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Pilkington poured <b>6 ………</b> onto a bed of molten metal.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">(molten) glass</span><div class="explanation">He had the idea of "using a bed of molten metal to form the flat glass."</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">The best metal for the job was <b>7 ………</b><div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">(molten) tin</span><div class="explanation">"The best metal for the job was tin."</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Once hard, the glass was transported out by <b>8 ………</b><div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">rollers</span><div class="explanation">"could be transported out of the cooling zone by rollers."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 9–13</div><p>Do the following statements agree with the information? <b>TRUE / FALSE / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">The metal used in the float process had to have specific properties.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">The metal had to melt below the glass's hardening point yet not boil below the molten-glass temperature.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Pilkington invested some of his own money in his float plant.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The passage mentions the company spending £100,000 a month, but never states whether Pilkington invested personal money.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Pilkington's first full-scale plant was an instant commercial success.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">It took 14 months of non-stop production and another four months after servicing before the process worked correctly.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">The process invented by Pilkington has now been improved.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">The principle is unchanged, but the product has changed dramatically in thickness range and optical quality.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">Computers are better than humans at detecting faults in glass.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Inspection locates flaws "the unaided eye would be unable to see."</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Choose the correct heading for paragraphs B and D–F. <i>Write i–ix.</i></p>
+<ul class='list-headings'><li><b>i</b> Predicting climatic changes</li><li><b>ii</b> The relevance of the Little Ice Age today</li><li><b>iii</b> How cities contribute to climate change</li><li><b>iv</b> Human impact on the climate</li><li><b>v</b> How past climatic conditions can be determined</li><li><b>vi</b> A growing need for weather records</li><li><b>vii</b> A study covering a thousand years</li><li><b>viii</b> People have always responded to climate change</li><li><b>ix</b> Enough food at last</li></ul></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Paragraph B<div class="yng">Which heading?</div></div><span class="answer ans-letter">ii — The relevance of the Little Ice Age today</span><div class="explanation">The Little Ice Age is "the deeply important context for the current unprecedented global warming."</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Paragraph D<div class="yng">Which heading?</div></div><span class="answer ans-letter">vii — A study covering a thousand years</span><div class="explanation">"This book is a narrative history of climatic shifts during the past ten centuries."</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Paragraph E<div class="yng">Which heading?</div></div><span class="answer ans-letter">ix — Enough food at last</span><div class="explanation">Increased productivity made countries self-sufficient and offered protection against famine.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Paragraph F<div class="yng">Which heading?</div></div><span class="answer ans-letter">iv — Human impact on the climate</span><div class="explanation">Land clearance released CO₂, "triggering for the first time humanly caused global warming."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18–22</div><p>Complete the summary using the list of words, A–I.</p><ul class='opts'><li><b>A</b> climatic shifts</li><li><b>B</b> ice cores</li><li><b>C</b> tree rings</li><li><b>D</b> glaciers</li><li><b>E</b> interactions</li><li><b>F</b> weather observations</li><li><b>G</b> heat waves</li><li><b>H</b> storms</li><li><b>I</b> written accounts</li></ul></div>
+<div class="q-block"><div class="q-num">Questions 18 &amp; 19</div><div class="question">Main sources of knowledge of the distant past are <b>18 ………</b> and <b>19 ………</b><div class="yng">A–I (either order)</div></div><span class="answer ans-letter">C — tree rings · B — ice cores</span><div class="explanation">'Proxy records' were "reconstructed largely from tree rings and ice cores."</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">The Little Ice Age was a time of <b>20 ………</b>, rather than consistent freezing.<div class="yng">A–I</div></div><span class="answer ans-letter">A — climatic shifts</span><div class="explanation">It was "an irregular seesaw of rapid climatic shifts."</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Some periods of <b>21 ………</b> and heavy rain.<div class="yng">A–I</div></div><span class="answer ans-letter">H — storms</span><div class="explanation">"years of heavy spring and early summer rains, mild winters, and frequent Atlantic storms."</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Others saw <b>22 ………</b> with no rain at all.<div class="yng">A–I</div></div><span class="answer ans-letter">G — heat waves</span><div class="explanation">"periods of droughts, light northeasterly winds, and summer heat waves."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 23–26</div><p>Classify each event: <b>A</b> Medieval Warm Period · <b>B</b> Little Ice Age · <b>C</b> Modern Warm Period</p></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Many Europeans started farming abroad.<div class="yng">A / B / C</div></div><span class="answer ans-letter">C — Modern Warm Period</span><div class="explanation">After 1850, "a vast migration from Europe by land-hungry farmers... to North America, Australia, New Zealand, and southern Africa."</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">The cutting down of trees began to affect the climate.<div class="yng">A / B / C</div></div><span class="answer ans-letter">C — Modern Warm Period</span><div class="explanation">Land clearance released CO₂, "triggering for the first time humanly caused global warming."</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Europeans discovered other lands.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A — Medieval Warm Period</span><div class="explanation">Norse voyagers "explored northern seas, settled Greenland, and visited North America."</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Changes took place in fishing patterns.<div class="yng">A / B / C</div></div><span class="answer ans-letter">B — Little Ice Age</span><div class="explanation">Changes in water temperatures forced fleets further offshore; new boats were developed for the colder Atlantic.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–32</div><p>Choose the correct heading for each paragraph, A–F. <i>Write i–viii.</i></p>
+<ul class='list-headings'><li><b>i</b> The difficulties of talking about smells</li><li><b>ii</b> The role of smell in personal relationships</li><li><b>iii</b> Future studies into smell</li><li><b>iv</b> The relationship between the brain and the nose</li><li><b>v</b> The interpretation of smells as a factor in defining groups</li><li><b>vi</b> Why our sense of smell is not appreciated</li><li><b>vii</b> Smell is our superior sense</li><li><b>viii</b> The relationship between smell and feelings</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Paragraph A<div class="yng">Which heading?</div></div><span class="answer ans-letter">viii — The relationship between smell and feelings</span><div class="explanation">Smell "can evoke strong emotional responses"; likes/dislikes are based on emotional associations.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Paragraph B<div class="yng">Which heading?</div></div><span class="answer ans-letter">ii — The role of smell in personal relationships</span><div class="explanation">Infants recognise mothers; adults identify children/spouses by scent — smell as a social-bonding cue.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Paragraph C<div class="yng">Which heading?</div></div><span class="answer ans-letter">vi — Why our sense of smell is not appreciated</span><div class="explanation">Smell is "the most undervalued sense" because the human sense is thought feeble versus animals'.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Paragraph D<div class="yng">Which heading?</div></div><span class="answer ans-letter">i — The difficulties of talking about smells</span><div class="explanation">Odours "cannot be named in many languages because the specific vocabulary simply doesn't exist."</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Paragraph E<div class="yng">Which heading?</div></div><span class="answer ans-letter">iii — Future studies into smell</span><div class="explanation">Many fundamental questions remain; "interest in the psychology of smell is inevitably set to play an increasingly important role."</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Paragraph F<div class="yng">Which heading?</div></div><span class="answer ans-letter">v — The interpretation of smells as a factor in defining groups</span><div class="explanation">Smells are invested with cultural values; shared feelings about smells "help distinguish us from other cultures."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 33–36</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">According to the introduction, we become aware of the importance of smell when<ul class='opts'><li><b>A</b> we discover a new smell</li><li><b>B</b> we experience a powerful smell</li><li><b>C</b> our ability to smell is damaged</li><li><b>D</b> we are surrounded by odours</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">Loss or impairment of the sense makes its true value apparent — it is only noticed when it fails.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">The experiment described in paragraph B<ul class='opts'><li><b>A</b> shows how we make use of smell without realising it</li><li><b>B</b> demonstrates that family members have a similar smell</li><li><b>C</b> proves that a sense of smell is learnt</li><li><b>D</b> compares the sense of smell in males and females</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Subjects had never consciously thought of odour as an identifying cue, yet "even when not consciously considered, smells register."</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">What is the writer doing in paragraph C?<ul class='opts'><li><b>A</b> supporting other research</li><li><b>B</b> making a proposal</li><li><b>C</b> rejecting a common belief</li><li><b>D</b> describing limitations</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">The writer acknowledges animals' finer powers but argues human smell is "still remarkably acute" — challenging the common belief.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">What does the writer suggest about the study of smell in paragraph E?<ul class='opts'><li><b>A</b> The measurement of smell is becoming more accurate</li><li><b>B</b> Researchers believe smell is a purely physical reaction</li><li><b>C</b> Most smells are inoffensive</li><li><b>D</b> Smell is yet to be defined</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">Fundamental questions remain unresolved — whether smell is one sense or two, and how it can be measured objectively.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Complete the sentences. Choose <b>ONE WORD ONLY</b> from the passage.</p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Odours can help people recognise the ……… belonging to their husbands and wives.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">clothing</span><div class="explanation">People "distinguish by smell alone clothing worn by their marriage partners."</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Some groups may have difficulty describing smell because they lack the appropriate ………<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">vocabulary</span><div class="explanation">Odours cannot be named because "the specific vocabulary simply doesn't exist."</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">The sense of smell may involve response to ……… which do not smell, in addition to obvious odours.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">chemicals</span><div class="explanation">One sense may respond to odours, the other to "odourless chemicals in the air."</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Odours regarded as unpleasant in certain ……… are not regarded as unpleasant in others.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">cultures</span><div class="explanation">"smells that are considered to be offensive in some cultures may be perfectly acceptable in others."</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

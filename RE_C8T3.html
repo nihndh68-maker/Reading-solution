@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 8 Test 3 – Reading | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff;
+    --border: #e2e8f0; --text: #2d3748; --muted: #718096;
+    --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .list-headings { background: #edf2f7; border-radius: 6px; padding: 0.7rem 0.9rem; margin: 0.7rem 0; font-size: 0.86rem; }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 8 Test 3 – Reading</h1><p>Striking Back at Lightning · The Nature of Genius · How Does the Biological Clock Tick?</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Striking Back at Lightning with Lasers</div>
+<p class="para">Seldom is the weather more dramatic than when thunderstorms strike. Their electrical fury inflicts death or serious injury on around 500 people each year in the United States alone. As the clouds roll in, a leisurely round of golf can become a terrifying dice with death – out in the open, a lone golfer may be a lightning bolt's most inviting target. And there is damage to property too. <span class="hl">Lightning damage costs American power companies more than $100 million a year.</span><span class="mark">2</span></p>
+<p class="para">But researchers in the United States and Japan are planning to hit back. Already in laboratory trials they have tested strategies for neutralising the power of thunderstorms, and this winter they will brave real storms, equipped with an armoury of lasers that they will be pointing towards the heavens to discharge thunderclouds before lightning can strike.</p>
+<p class="para">The idea of forcing storm clouds to discharge their lightning on command is not new. In the early 1960s, researchers tried firing rockets trailing wires into thunderclouds to set up an easy discharge path for the huge electric charges that these clouds generate. <span class="hl">The technique survives to this day at a test site in Florida run by the University of Florida, with support from the Electrical Power Research Institute (EPRI), based in California. EPRI, which is funded by power companies, is looking at ways to protect the United States' power grid from lightning strikes.</span><span class="mark">3</span><span class="mark">4</span> 'We can cause the lightning to strike where we want it to using rockets,' says Ralph Bernstein, manager of lightning projects at EPRI. The rocket site is providing precise measurements of lightning voltages and allowing engineers to check how electrical equipment bears up.</p>
+<p class="para"><strong>Bad behaviour</strong><br>But while rockets are fine for research, they cannot provide the protection from lightning strikes that everyone is looking for. <span class="hl">The rockets cost around $1,200 each, can only be fired at a limited frequency and their failure rate is about 40 per cent.</span><span class="mark">9</span> And even when they do trigger lightning, things still do not always go according to plan. 'Lightning is not perfectly well behaved,' says Bernstein. 'Occasionally, it will take a branch and go someplace it wasn't supposed to go.'</p>
+<p class="para">And anyway, who would want to fire streams of rockets in a populated area? 'What goes up must come down,' points out Jean-Claude Diels of the University of New Mexico. <span class="hl">Diels is leading a project, which is backed by EPRI, to try to use lasers to discharge lightning safely</span><span class="mark">3</span><span class="mark">5</span> – and safety is a basic requirement since no one wants to put themselves or their expensive equipment at risk. With around $500,000 invested so far, a promising system is just emerging from the laboratory.</p>
+<p class="para">The idea began some 20 years ago, when <span class="hl">high-powered lasers were revealing their ability to extract electrons out of atoms and create ions.</span><span class="mark">7</span> <span class="hl">If a laser could generate a line of ionisation in the air all the way up to a storm cloud, this conducting path could be used to guide lightning to Earth, before the electric field becomes strong enough to break down the air in an uncontrollable surge.</span><span class="mark">8</span> <span class="hl">To stop the laser itself being struck, it would not be pointed straight at the clouds. Instead it would be directed at a mirror, and from there into the sky. The mirror would be protected by placing lightning conductors close by.</span><span class="mark">10</span> Ideally, the cloud-zapper (gun) would be cheap enough to be installed around all key power installations, and portable enough to be taken to international sporting events to beam up at brewing storm clouds.</p>
+<p class="para"><strong>A stumbling block</strong><br>However, there is still a big stumbling block. <span class="hl">The laser is no nifty portable: it's a monster that takes up a whole room. Diels is trying to cut down the size and says that a laser around the size of a small table is in the offing.</span><span class="mark">6</span> He plans to test this more manageable system on live thunderclouds next summer.</p>
+<p class="para">Bernstein says that Diels's system is attracting lots of interest from the power companies. <span class="hl">But they have not yet come up with the $5 million that EPRI says will be needed to develop a commercial system</span><span class="mark">11</span>, by making the lasers yet smaller and cheaper. 'I cannot say I have money yet, but I'm working on it,' says Bernstein. <span class="hl">He reckons that the forthcoming field tests will be the turning point – and he's hoping for good news. Bernstein predicts 'an avalanche of interest and support' if all goes well.</span><span class="mark">12</span> He expects to see cloud-zappers eventually costing $50,000 to $100,000 each.</p>
+<p class="para">Other scientists could also benefit. With a lightning 'switch' at their fingertips, materials scientists could find out what happens when mighty currents meet matter. Diels also hopes to see the birth of 'interactive meteorology' – not just forecasting the weather but controlling it. 'If we could discharge clouds, we might affect the weather,' he says.</p>
+<p class="para">And perhaps, says Diels, we'll be able to confront some other meteorological menaces. 'We think we could prevent hail by inducing lightning,' he says. Thunder, the shock wave that comes from a lightning flash, is thought to be the trigger for the torrential rain that is typical of storms. A laser thunder factory could shake the moisture out of clouds, perhaps preventing the formation of the giant hailstones that threaten crops. With luck, as the storm clouds gather this winter, laser-toting researchers could, for the first time, strike back.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">The Nature of Genius</div>
+<p class="para">There has always been an interest in geniuses and prodigies. The word 'genius', from the Latin gens (= family) and the term 'genius', meaning 'begetter', comes from the early Roman cult of a divinity as the head of the family. In its earliest form, genius was concerned with the ability of the head of the family, the paterfamilias, to perpetuate himself. Gradually, genius came to represent a person's characteristics and thence an individual's highest attributes derived from his 'genius' or guiding spirit. Today, people still look to stars or genes, astrology or genetics, in the hope of finding the source of exceptional abilities or personal characteristics.</p>
+<p class="para">The concept of genius and of gifts has become part of our folk culture, and attitudes are ambivalent towards them. We envy the gifted and mistrust them. <span class="hl">In the mythology of giftedness, it is popularly believed that if people are talented in one area, they must be defective in another, that intellectuals are impractical, that prodigies burn too brightly too soon and burn out</span><span class="mark">14</span>, that gifted people are eccentric, that they are physical weaklings, that there's a thin line between genius and madness, <span class="hl">that genius runs in families</span><span class="mark">15</span>, that the gifted are so clever they don't need special help, that giftedness is the same as having a high IQ, that some races are more intelligent or musical or mathematical than others, <span class="hl">that genius goes unrecognised and unrewarded, that adversity makes men wise or that people with gifts have a responsibility to use them.</span><span class="mark">16</span> Language has been enriched with such terms as 'highbrow', 'egghead', 'blue-stocking', 'wiseacre', 'know-all', 'boffin' and, for many, 'intellectual' is a term of denigration.</p>
+<p class="para">The nineteenth century saw considerable interest in the nature of genius, and produced not a few studies of famous prodigies. Perhaps for us today, two of the most significant aspects of most of these studies of genius are the frequency with which early encouragement and teaching by parents and tutors had beneficial effects on the intellectual, artistic or musical development of the children but caused great difficulties of adjustment later in their lives, and the frequency with which abilities went unrecognised by teachers and schools. However, <span class="hl">the difficulty with the evidence produced by these studies, fascinating as they are in collecting together anecdotes and apparent similarities and exceptions, is that they are not what we would today call norm-referenced. In other words, when, for instance, information is collated about early illnesses, methods of upbringing, schooling, etc., we must also take into account information from other historical sources about how common or exceptional these were at the time.</span><span class="mark">19</span> For instance, infant mortality was high and life expectancy much shorter than today, home tutoring was common in the families of the nobility and wealthy, bullying and corporal punishment were common at the best independent schools and, for the most part, the cases studied were members of the privileged classes. <span class="hl">It was only with the growth of paediatrics and psychology in the twentieth century that studies could be carried out on a more objective, if still not always very scientific, basis.</span><span class="mark">20</span></p>
+<p class="para">Geniuses, however they are defined, are but the peaks which stand out through the mist of history and are visible to the particular observer from his or her particular vantage point. Change the observers and the vantage points, clear away some of the mist, and a different lot of peaks appear. Genius is a term we apply to those whom we recognise for their outstanding achievements and who stand near the end of the continuum of human abilities which reaches back through the mundane and mediocre to the incapable. <span class="hl">There is still much truth in Dr. Samuel Johnson's observation, 'The true genius is a mind of large general powers, accidentally determined to some particular direction'. We may disagree with the 'general', for we doubt if all musicians of genius could have become scientists of genius or vice versa</span><span class="mark">21</span>, but there is no doubting the accidental determination which nurtured or triggered their gifts into those channels into which they have poured their powers so successfully. Along the continuum of abilities are hundreds of thousands of gifted men and women, boys and girls.</p>
+<p class="para">What we appreciate, enjoy or marvel at in the works of genius or the achievements of prodigies are the manifestations of skills or abilities which are similar to, but so much superior to, our own. <span class="hl">But that their minds are not different from our own is demonstrated by the fact that the hard-won discoveries of scientists like Kepler or Einstein become the commonplace knowledge of schoolchildren and the once outrageous shapes and colours of an artist like Paul Klee so soon appear on the fabrics we wear.</span><span class="mark">22</span> <span class="hl">This does not minimise the supremacy of their achievements</span><span class="mark">23</span>, which outstrip our own as the sub-four-minute milers outstrip our jogging.</p>
+<p class="para">To think of geniuses and the gifted as having uniquely different brains is only reasonable if we accept that each human brain is uniquely different. The purpose of instruction is to make us even more different from one another, and in the process of being educated we can learn from the achievements of those more gifted than ourselves. But before we try to emulate geniuses or encourage our children to do so we should note that some of the things we learn from them may prove unpalatable. We may envy their achievements and fame, but <span class="hl">we should also recognise the price they may have paid in terms of perseverance, single-mindedness, dedication, restrictions on their personal lives, the demands upon their energies and time, and how often they had to display great courage to preserve their integrity or to make their way to the top.</span><span class="mark">25</span></p>
+<p class="para">Genius and giftedness are relative descriptive terms of no real substance. We may, at best, give them some precision by defining them and placing them in a context but, whatever we do, <span class="hl">we should never delude ourselves into believing that gifted children or geniuses are different from the rest of humanity</span><span class="mark">24</span>, save in the degree to which they have developed the performance of their abilities.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">How Does the Biological Clock Tick?</div>
+<p class="para"><strong>A</strong> Our life span is restricted. Everyone accepts this as 'biologically' obvious. 'Nothing lives forever!' However, in this statement we think of artificially produced, technical objects, products which are subjected to natural wear and tear during use. This leads to the result that at some time or other the object stops working and is unusable ('death' in the biological sense). But are the wear and tear and loss of function of technical objects and the death of living organisms really similar or comparable?</p>
+<p class="para"><strong>B</strong> Our 'dead' products are 'static', closed systems. It is always the basic material which constitutes the object and which, in the natural course of things, is worn down and becomes 'older'. <span class="hl">Ageing in this case must occur according to the laws of physical chemistry and of thermodynamics.</span><span class="mark">33</span> <span class="hl">Although the same law holds for a living organism, the result of this law is not inexorable in the same way. At least as long as a biological system has the ability to renew itself it could actually become older without ageing; an organism is an open, dynamic system through which new material continuously flows.</span><span class="mark">27</span><span class="mark">38</span> Destruction of old material and formation of new material are thus in permanent dynamic equilibrium. The material of which the organism is formed changes continuously. Thus our bodies continuously exchange old substance for new, just like a spring which more or less maintains its form and movement, but in which the water molecules are always different.</p>
+<p class="para"><strong>C</strong> <span class="hl">Thus ageing and death should not be seen as inevitable, particularly as the organism possesses many mechanisms for repair. It is not, in principle, necessary for a biological system to age and die.</span><span class="mark">38</span> Nevertheless, a restricted life span, ageing, and then death are basic characteristics of life. <span class="hl">The reason for this is easy to recognise: in nature, the existent organisms either adapt or are regularly replaced by new types. Because of changes in the genetic material (mutations) these have new characteristics and in the course of their individual lives they are tested for optimal or better adaptation to the environmental conditions.</span><span class="mark">28</span><span class="mark">35</span> <span class="hl">Immortality would disturb this system – it needs room for new and better life.</span><span class="mark">36</span> This is the basic problem of evolution.</p>
+<p class="para"><strong>D</strong> Every organism has a life span which is highly characteristic. There are striking differences in life span between different species, but within one species the parameter is relatively constant. For example, the average duration of human life has hardly changed in thousands of years. <span class="hl">Although more and more people attain an advanced age as a result of developments in medical care and better nutrition, the characteristic upper limit for most remains 80 years.</span><span class="mark">29</span> A further argument against the simple wear and tear theory is the observation that the time within which organisms age lies between a few days (even a few hours for unicellular organisms) and several thousand years, as with mammoth trees.</p>
+<p class="para"><strong>E</strong> <span class="hl">If a life span is a genetically determined biological characteristic, it is logically necessary to propose the existence of an internal clock, which in some way measures and controls the ageing process and which finally determines death as the last step in a fixed programme.</span><span class="mark">30</span> Like the life span, the metabolic rate has for different organisms a fixed mathematical relationship to the body mass. In comparison to the life span this relationship is 'inverted': the larger the organism the lower its metabolic rate. Again this relationship is valid not only for birds, but also, similarly on average within the systematic unit, for all other organisms (plants, animals, unicellular organisms).</p>
+<p class="para"><strong>F</strong> <span class="hl">Animals which behave 'frugally' with energy become particularly old</span><span class="mark">31</span>, for example, crocodiles and tortoises. Parrots and birds of prey are often held chained up. Thus they are not able to 'experience life' and so they attain a high life span in captivity. Animals which save energy by hibernation or lethargy (e.g. bats or hedgehogs) live much longer than those which are always active. The metabolic rate of mice can be reduced by a very low consumption of food (hunger diet). They then may live twice as long as their well fed comrades. Women become distinctly (about 10 per cent) older than men. If you examine the metabolic rates of the two sexes you establish that the higher male metabolic rate roughly accounts for the lower male life span. That means that they live life 'energetically' – more intensively, but not for as long.</p>
+<p class="para"><strong>G</strong> <span class="hl">It follows from the above that sparing use of energy reserves should tend to extend life.</span><span class="mark">32</span><span class="mark">40</span> Extreme high performance sports may lead to optimal cardiovascular performance, but they quite certainly do not prolong life. <span class="hl">Relaxation lowers metabolic rate, as does adequate sleep and in general an equable and balanced personality.</span><span class="mark">40</span> Each of us can develop his or her own 'energy saving programme' with a little self-observation, critical self-control and, above all, logical consistency. Experience will show that to live in this way not only increases the life span but is also very healthy. This final aspect should not be forgotten.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–3</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">The main topic discussed in the text is<ul class='opts'><li><b>A</b> the damage caused to US golf courses and golf players by lightning strikes.</li><li><b>B</b> the effect of lightning on power supplies in the US and in Japan.</li><li><b>C</b> a variety of methods used in trying to control lightning strikes.</li><li><b>D</b> a laser technique used in trying to control lightning strikes.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">The passage centres on researchers developing a laser system to discharge thunderclouds; rockets are discussed only as an earlier alternative.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">According to the text, every year lightning<ul class='opts'><li><b>A</b> does considerable damage to buildings during thunderstorms.</li><li><b>B</b> kills or injures mainly golfers in the United States.</li><li><b>C</b> kills or injures around 500 people throughout the world.</li><li><b>D</b> damages more than 100 American power companies.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">"Lightning damage costs American power companies more than $100 million a year" — substantial property and infrastructure damage. B is too narrow (golfers are only an example); C wrongly says "throughout the world" (it's the US).</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Researchers at the University of Florida and at the University of New Mexico<ul class='opts'><li><b>A</b> receive funds from the same source</li><li><b>B</b> are using the same techniques</li><li><b>C</b> are employed by commercial companies</li><li><b>D</b> are in opposition to each other</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Florida's rocket site is supported by EPRI; Diels's laser project is "backed by EPRI". Both receive EPRI funding.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 4–6</div><p>Complete the sentences. Write <b>NO MORE THAN TWO WORDS</b>.</p></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">EPRI receives financial support from ………<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">power companies</span><div class="explanation">"EPRI, which is funded by power companies."</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">The advantage of Diels's technique is that it can be used ………<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">safely</span><div class="explanation">"to try to use lasers to discharge lightning safely."</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">The main difficulty with the laser equipment is related to its ………<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">size</span><div class="explanation">It's "a monster that takes up a whole room"; Diels is trying to cut down the size.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 7–10</div><p>Complete the summary using the list of words, A–I.</p><ul class='opts'><li><b>A</b> cloud-zappers</li><li><b>B</b> atoms</li><li><b>C</b> storm clouds</li><li><b>D</b> mirrors</li><li><b>E</b> technique</li><li><b>F</b> ions</li><li><b>G</b> rockets</li><li><b>H</b> conductors</li><li><b>I</b> thunder</li></ul></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">A laser creates a line of ionisation by removing electrons from <b>7 ………</b><div class="yng">A–I</div></div><span class="answer ans-letter">B — atoms</span><div class="explanation">"extract electrons out of atoms and create ions."</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">The laser is directed at <b>8 ………</b> to control electrical charges.<div class="yng">A–I</div></div><span class="answer ans-letter">C — storm clouds</span><div class="explanation">A conducting path "all the way up to a storm cloud" guides lightning to Earth.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">Less dangerous than using <b>9 ………</b><div class="yng">A–I</div></div><span class="answer ans-letter">G — rockets</span><div class="explanation">Rockets cost ~$1,200 each, have limited firing frequency and a 40% failure rate — lasers are the safer alternative.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">As protection for the laser, beams are aimed firstly at <b>10 ………</b><div class="yng">A–I</div></div><span class="answer ans-letter">D — mirrors</span><div class="explanation">"it would be directed at a mirror, and from there into the sky."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 11–13</div><p>Do the following statements agree with the claims of the writer? <b>YES / NO / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Power companies have given Diels enough money to develop his laser.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">"they have not yet come up with the $5 million that EPRI says will be needed to develop a commercial system."</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">Obtaining money to improve the lasers will depend on tests in real storms.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Bernstein "reckons that the forthcoming field tests will be the turning point" and predicts "an avalanche of interest and support" if all goes well.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">Weather forecasters are intensely interested in Diels's system.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Interest from power companies and benefits for materials scientists and meteorology are mentioned, but not weather forecasters specifically.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–18</div><p>Which FIVE of these beliefs are reported by the writer? <i>Answers may be in any order.</i></p><ul class='list-headings'><li><b>A</b> Truly gifted people are talented in all areas.</li><li><b>B</b> The talents of geniuses are soon exhausted.</li><li><b>C</b> Gifted people should use their gifts.</li><li><b>D</b> A genius appears once in every generation.</li><li><b>E</b> Genius can be easily destroyed by discouragement.</li><li><b>F</b> Genius is inherited.</li><li><b>G</b> Gifted people are very hard to live with.</li><li><b>H</b> People never appreciate true genius.</li><li><b>I</b> Geniuses are natural leaders.</li><li><b>J</b> Gifted people develop their greatness through difficulties.</li><li><b>K</b> Genius will always reveal itself.</li></ul></div>
+<div class="q-block"><div class="q-num">Questions 14–18</div><div class="question">Five beliefs reported by the writer<div class="yng">B, C, F, H, J (any order)</div></div><span class="answer ans-letter">B · C · F · H · J</span><div class="explanation"><b>B</b>: "prodigies burn too brightly too soon and burn out." <b>C</b>: "people with gifts have a responsibility to use them." <b>F</b>: "genius runs in families." <b>H</b>: "genius goes unrecognised and unrewarded." <b>J</b>: "adversity makes men wise."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 19–26</div><p>Do the following statements agree with the information? <b>TRUE / FALSE / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Nineteenth-century studies of the nature of genius failed to take into account the uniqueness of the person's upbringing.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">The studies were "not... norm-referenced" — they failed to consider how common or exceptional upbringing, schooling, etc. were at the time.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Nineteenth-century studies of genius lacked both objectivity and a proper scientific approach.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">"It was only with the growth of paediatrics and psychology in the twentieth century that studies could be carried out on a more objective, if still not always very scientific, basis."</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">A true genius has general powers capable of excellence in any area.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The writer doubts "if all musicians of genius could have become scientists of genius or vice versa."</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">The skills of ordinary individuals are in essence the same as the skills of prodigies.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Geniuses' discoveries become commonplace knowledge; "their minds are not different from our own."</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">The ease with which truly great ideas are accepted and taken for granted fails to lessen their significance.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">"This does not minimise the supremacy of their achievements."</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Giftedness and genius deserve proper scientific research into their true nature so that all talent may be retained for the human race.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The passage warns against treating gifted people as fundamentally different, but does not claim research is needed to retain talent.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Geniuses often pay a high price to achieve greatness.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">They pay a price "in terms of perseverance, single-mindedness, dedication, restrictions on their personal lives, the demands upon their energies and time."</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">To be a genius is worth the high personal cost.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The sacrifices are described, but the passage never says whether achieving genius is ultimately worth the cost.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–32</div><p>Choose the correct heading for paragraphs B–G. <i>Write i–x.</i></p>
+<ul class='list-headings'><li><b>i</b> The biological clock</li><li><b>ii</b> Why dying is beneficial</li><li><b>iii</b> The ageing process of men and women</li><li><b>iv</b> Prolonging your life</li><li><b>v</b> Limitations of life span</li><li><b>vi</b> Modes of development of different species</li><li><b>vii</b> A stable life span despite improvements</li><li><b>viii</b> Energy consumption</li><li><b>ix</b> Fundamental differences in ageing of objects and organisms</li><li><b>x</b> Repair of genetic material</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Paragraph B<div class="yng">Which heading?</div></div><span class="answer ans-letter">ix — Fundamental differences in ageing of objects and organisms</span><div class="explanation">Static artificial objects wear down, but organisms continuously renew themselves — fundamentally different ageing.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Paragraph C<div class="yng">Which heading?</div></div><span class="answer ans-letter">ii — Why dying is beneficial</span><div class="explanation">Death and a limited lifespan let new organisms with new genetic characteristics replace existing ones, creating room for adaptation.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Paragraph D<div class="yng">Which heading?</div></div><span class="answer ans-letter">vii — A stable life span despite improvements</span><div class="explanation">Despite medical care and better nutrition, "the characteristic upper limit for most remains 80 years."</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Paragraph E<div class="yng">Which heading?</div></div><span class="answer ans-letter">i — The biological clock</span><div class="explanation">The existence of "an internal clock, which in some way measures and controls the ageing process."</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Paragraph F<div class="yng">Which heading?</div></div><span class="answer ans-letter">viii — Energy consumption</span><div class="explanation">Animals that conserve energy live longer; men's higher metabolic rate accounts for their lower lifespan.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Paragraph G<div class="yng">Which heading?</div></div><span class="answer ans-letter">iv — Prolonging your life</span><div class="explanation">Relaxation, adequate sleep and a balanced lifestyle are recommended for a longer, healthier life.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 33–36</div><p>Complete the notes. Choose <b>NO MORE THAN TWO WORDS</b> from the passage.</p></div>
+<div class="q-block"><div class="q-num">Questions 33 &amp; 34</div><div class="question">Objects age in accordance with principles of <b>33 ………</b> and of <b>34 ………</b><div class="yng">NO MORE THAN TWO WORDS (either order)</div></div><span class="answer ans-letter">physical chemistry · thermodynamics</span><div class="explanation">"Ageing in this case must occur according to the laws of physical chemistry and of thermodynamics."</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Through mutations, organisms can <b>35 ………</b> better to the environment.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">adapt</span><div class="explanation">New characteristics "are tested for optimal or better adaptation to the environmental conditions."</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question"><b>36 ………</b> would pose a serious problem for the theory of evolution.<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">immortality</span><div class="explanation">"Immortality would disturb this system – it needs room for new and better life."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Do the following statements agree with the views of the writer? <b>YES / NO / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">The wear and tear theory applies to both artificial objects and biological systems.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The writer questions whether the wear and tear of technical objects is comparable to the death of living organisms, which can renew themselves.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">In principle, it is possible for a biological system to become older without ageing.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"a biological system... could actually become older without ageing"; "It is not, in principle, necessary for a biological system to age and die."</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Within seven years, about 90 per cent of a human body is replaced as new.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The body exchanges old material for new, but no figures about 90% or seven years are given.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Conserving energy may help to extend a human's life.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"sparing use of energy reserves should tend to extend life"; relaxation and adequate sleep lower metabolic rate.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

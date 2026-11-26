@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 8 Test 4 – Reading | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff;
+    --border: #e2e8f0; --text: #2d3748; --muted: #718096;
+    --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .list-headings { background: #edf2f7; border-radius: 6px; padding: 0.7rem 0.9rem; margin: 0.7rem 0; font-size: 0.86rem; }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow: 0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+  .diagram { background:#f0fff4; border:2px dashed #68d391; border-radius:10px; padding:1rem; margin:1rem 0; font-size:.86rem; }
+  .diagram h4 { color:#276749; font-size:.92rem; margin-bottom:.5rem; }
+  .diagram .part { display:flex; align-items:center; gap:.6rem; margin:.45rem 0; }
+  .diagram .part .lbl { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; background:#276749; color:#fff; border-radius:50%; font-weight:700; font-size:.8rem; flex-shrink:0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 8 Test 4 – Reading</h1><p>Land of the Rising Sun · Biological Control of Pests · Collecting Ant Specimens</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Land of the Rising Sun</div>
+<p class="para"><strong>A</strong> Japan has a significantly better record in terms of average mathematical attainment than England and Wales. Large sample international comparisons of pupils' attainments since the 1960s have established that not only did Japanese pupils at age 13 have better scores of average attainment, but there was also a larger proportion of 'low' attainers in England, where, incidentally, <span class="hl">the variation in attainment scores was much greater</span><span class="mark">6</span>. <span class="hl">The percentage of Gross National Product spent on education is reasonably similar in the two countries, so how is this higher and more consistent attainment in maths achieved?</span><span class="mark">7</span></p>
+<p class="para"><strong>B</strong> <span class="hl">Lower secondary schools in Japan cover three school years, from the seventh grade (age 13) to the ninth grade (age 15). Virtually all pupils at this stage attend state schools: only 3 per cent are in the private sector. Schools are usually modern in design, set well back from the road and spacious inside.</span><span class="mark">1</span><span class="mark">8</span> Classrooms are large and pupils sit at single desks in rows. Lessons last for a standardised 50 minutes and are always followed by a 10-minute break, which gives the pupils a chance to let off steam. Teachers begin with a formal address and mutual bowing, and then concentrate on whole-class teaching.</p>
+<p class="para">Classes are large – usually about 40 – and are unstreamed. Pupils stay in the same class for all lessons throughout the school and develop considerable class identity and loyalty. Pupils attend the school in their own neighbourhood, which in theory removes ranking by school. In practice in Tokyo, because of the relative concentration of schools, there is some competition to get into the 'better' school in a particular area.</p>
+<p class="para"><strong>C</strong> Traditional ways of teaching form the basis of the lesson and the remarkably quiet classes take their own notes of the points made and the examples demonstrated. <span class="hl">Everyone has their own copy of the textbook supplied by the central education authority, Monbusho, as part of the concept of free compulsory education up to the age of 15. These textbooks are, on the whole, small, presumably inexpensive to produce, but well set out and logically developed.</span><span class="mark">2</span><span class="mark">10</span> (One teacher was particularly keen to introduce colour and pictures into maths textbooks: he felt this would make them more accessible to pupils brought up in a cartoon culture.) <span class="hl">Besides approving textbooks, Monbusho also decides the highly centralised national curriculum and how it is to be delivered.</span><span class="mark">2</span></p>
+<p class="para"><strong>D</strong> <span class="hl">Lessons all follow the same pattern. At the beginning, the pupils put solutions to the homework on the board, then the teachers comment, correct or elaborate as necessary. Pupils mark their own homework: this is an important principle in Japanese schooling as it enables pupils to see where and why they made a mistake</span><span class="mark">3</span><span class="mark">9</span>, so that these can be avoided in future. No one minds mistakes or ignorance as long as you are prepared to learn from them.</p>
+<p class="para"><span class="hl">After the homework has been discussed, the teacher explains the topic of the lesson, slowly and with a lot of repetition and elaboration. Examples are demonstrated on the board; questions from the textbook are worked through first with the class, and then the class is set questions from the textbook to do individually.</span><span class="mark">3</span><span class="mark">11</span> Only rarely are supplementary worksheets distributed in a maths class. The impression is that the logical nature of the textbooks and their comprehensive coverage of different types of examples, combined with the relative homogeneity of the class, renders work sheets unnecessary. At this point, the teacher would circulate and make sure that all the pupils were coping well.</p>
+<p class="para"><strong>E</strong> It is remarkable that large, mixed-ability classes could be kept together for maths throughout all their compulsory schooling from 6 to 15. <span class="hl">Teachers say that they give individual help at the end of a lesson or after school, setting extra work if necessary. In observed lessons, any strugglers would be assisted by the teacher or quietly seek help from their neighbour. Carefully fostered class identity makes pupils keen to help each other</span><span class="mark">4</span> – anyway, it is in their interests since the class progresses together.</p>
+<p class="para">This scarcely seems adequate help to enable slow learners to keep up. However, the Japanese attitude towards education runs along the lines of 'if you work hard enough, you can do almost anything'. <span class="hl">Parents are kept closely informed of their children's progress and will play a part in helping their children to keep up with class, sending them to 'Juku' (private evening tuition) if extra help is needed and encouraging them to work harder.</span><span class="mark">4</span><span class="mark">12</span> It seems to work, at least for 95 per cent of the school population.</p>
+<p class="para"><strong>F</strong> So what are the major contributing factors in the success of maths teaching?</p>
+<p class="para">Clearly, attitudes are important. <span class="hl">Education is valued greatly in Japanese culture; maths is recognised as an important compulsory subject throughout schooling; and the emphasis is on hard work coupled with a focus on accuracy. Other relevant points relate to the supportive attitude of a class towards slower pupils, the lack of competition within a class, and the positive emphasis on learning for oneself and improving one's own standard.</span><span class="mark">5</span><span class="mark">13</span> And the view of repetitively boring lessons and learning the facts by heart, which is sometimes quoted in relation to Japanese classes, may be unfair and unjustified. No poor maths lessons were observed. They were mainly good and one or two were inspirational.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Biological Control of Pests</div>
+<p class="para">The continuous and reckless use of synthetic chemicals for the control of pests which pose a threat to agricultural crops and human health is proving to be counter-productive. <span class="hl">Apart from engendering widespread ecological disorders, pesticides have contributed to the emergence of a new breed of chemical-resistant, highly lethal superbugs.</span><span class="mark">14</span></p>
+<p class="para">According to a recent study by the Food and Agriculture Organisation (FAO), <span class="hl">more than 300 species of agricultural pests have developed resistance to a wide range of potent chemicals.</span><span class="mark">15</span> Not to be left behind are the disease-spreading pests, about 100 species of which have become immune to a variety of insecticides now in use.</p>
+<p class="para">One glaring disadvantage of pesticides' application is that, while destroying harmful pests, they also wipe out many useful non-targeted organisms, which keep the growth of the pest population in check. This results in what agroecologists call the 'treadmill syndrome'. Because of their tremendous breeding potential and genetic diversity, <span class="hl">many pests are known to withstand synthetic chemicals and bear offspring with a built-in resistance to pesticides.</span><span class="mark">19</span></p>
+<p class="para">The havoc that the 'treadmill syndrome' can bring about is well illustrated by what happened to cotton farmers in Central America. <span class="hl">In the early 1940s, basking in the glory of chemical-based intensive agriculture, the farmers avidly took to pesticides as a sure measure to boost crop yield.</span><span class="mark">16</span> The insecticide was applied eight times a year in the mid-1940s, rising to 28 in a season in the mid-1950s, following the sudden proliferation of three new varieties of chemical-resistant pests.</p>
+<p class="para"><span class="hl">By the mid-1960s, the situation took an alarming turn with the outbreak of four more new pests, necessitating pesticide spraying to such an extent that 50% of the financial outlay on cotton production was accounted for by pesticides.</span><span class="mark">17</span> In the early 1970s, the spraying frequently reached 70 times a season as the farmers were pushed to the wall by the invasion of genetically stronger insect species.</p>
+<p class="para">Most of the pesticides in the market today remain inadequately tested for properties that cause cancer and mutations as well as for other adverse effects on health, says a study by United States environmental agencies. The United States National Resource Defense Council has found that DDT was the most popular of a long list of dangerous chemicals in use.</p>
+<p class="para">In the face of the escalating perils from indiscriminate applications of pesticides, a more effective and ecologically sound strategy of biological control, involving the selective use of natural enemies of the pest population, is fast gaining popularity – though, as yet, it is a new field with limited potential. The advantage of biological control in contrast to other methods is that it provides a relatively low-cost, perpetual control system with a minimum of detrimental side-effects. <span class="hl">When handled by experts, bio-control is safe, non-polluting and self-dispersing.</span><span class="mark">21</span></p>
+<p class="para">The Commonwealth Institute of Biological Control (CIBC) in Bangalore, with its global network of research laboratories and field stations, is one of the most active, non-commercial research agencies engaged in pest control by setting natural predators against parasites. CIBC also serves as a clearing-house for the export and import of biological agents for pest control world-wide.</p>
+<p class="para">CIBC successfully used a seed-feeding weevil, native to Mexico, to control the obnoxious parthenium weed, known to exert devious influence on agriculture and human health in both India and Australia. Similarly the Hyderabad-based Regional Research Laboratory (RRL), supported by CIBC, is now trying out an Argentinian weevil for the eradication of water hyacinth, another dangerous weed, which has become a nuisance in many parts of the world. According to Mrs Kaiser Jamil of RRL, 'The Argentinian weevil does not attack any other plant and a pair of adult bugs could destroy the weed in 4-5 days.' <span class="hl">CIBC is also perfecting the technique for breeding parasites that prey on 'disapene scale' insects – notorious defoliants of fruit trees in the US and India.</span><span class="mark">22</span></p>
+<p class="para">How effectively biological control can be pressed into service is proved by the following examples. In the late 1960s, <span class="hl">when Sri Lanka's flourishing coconut groves were plagued by leaf-mining hispides</span><span class="mark">24</span>, a larval parasite imported from Singapore brought the pest under control. <span class="hl">A natural predator indigenous to India, Neodumetia sangawani, was found useful in controlling the Rhodes grass-scale insect</span><span class="mark">23</span> that was devouring forage grass in many parts of the US. By using Neochetina bruci, a beetle native to Brazil, scientists at Kerala Agricultural University freed a 12-kilometre-long canal from the clutches of the weed Salvinia molesta, popularly called 'African Payal' in Kerala. <span class="hl">About 30,000 hectares of rice fields in Kerala are infested by this weed.</span><span class="mark">26</span></p>
+<p class="para">Similarly the Hyderabad-based Regional Research Laboratory (RRL), supported by CIBC, is now trying out <span class="hl">an Argentinian weevil for the eradication of water hyacinth</span><span class="mark">25</span>, another dangerous weed, which has become a nuisance in many parts of the world.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Collecting Ant Specimens</div>
+<p class="para">Collecting ants can be as simple as picking up stray ones and placing them in a glass jar, or as complicated as completing an exhaustive survey of all species present in an area and estimating their relative abundances. The exact method used will depend on the final purpose of the collections. <span class="hl">For taxonomy, or classification, long series, from a single nest, which contain all castes (workers, including majors and minors, and, if present, queens and males) are desirable, to allow the determination of variation within species.</span><span class="mark">27</span> <span class="hl">For ecological studies, the most important factor is collecting identifiable samples of as many of the different species present as possible.</span><span class="mark">29</span> <span class="hl">Unfortunately, these methods are not always compatible. The taxonomist sometimes overlooks whole species in favour of those groups currently under study, while the ecologist often collects only a limited number of specimens of each species, thus reducing their value for taxonomic investigations.</span><span class="mark">30</span></p>
+<p class="para">To collect as wide a range of species as possible, several methods must be used. These include hand collecting, using baits to attract the ants, ground litter sampling, and the use of pitfall traps. <span class="hl">Hand collecting consists of searching for ants everywhere they are likely to occur. This includes on the ground, under rocks, logs or other objects on the ground, in rotten wood on the ground or on trees, in vegetation, on tree trunks and under bark. When possible, collections should be made from nests or foraging columns and at least 20 to 25 individuals collected.</span><span class="mark">31</span> This will ensure that all individuals are of the same species, and so increase their value for detailed studies. Since some species are largely nocturnal, collecting should not be confined to daytime. <span class="hl">Specimens are collected using an aspirator (often called a pooter), forceps, a fine, moistened paint brush, or fingers, if the ants are known not to sting. Individual insects are placed in plastic or glass tubes (1.5-3.0 ml capacity for small ants, 5-8 ml for larger ants) containing 75% to 95% ethanol.</span><span class="mark">35</span> Plastic tubes with secure tops are better than glass because they are lighter, and do not break as easily if mishandled.</p>
+<p class="para"><span class="hl">Baits can be used to attract and concentrate foragers. This often increases the number of individuals collected and attracts species that are otherwise elusive.</span><span class="mark">33</span> Sugars and meats or oils will attract different species and a range should be utilised. These baits can be placed either on the ground or on the trunks of trees or large shrubs. When placed on the ground, baits should be situated on small paper cards or other flat, light-coloured surfaces, or in test-tubes or vials. This makes it easier to spot ants and to capture them before they can escape into the surrounding leaf litter.</p>
+<p class="para">Many ants are small and forage primarily in the layer of leaves and other debris on the ground. Collecting these species by hand can be difficult. One of the most successful ways to collect them is to gather the leaf litter in which they are foraging and extract the ants from it. This is most commonly done by placing leaf litter on a screen over a large funnel, often under some heat. As the leaf litter dries from above, ants (and other animals) move downward and eventually fall out the bottom and are collected in alcohol placed below the funnel. <span class="hl">This method works especially well in rain forests and marshy areas.</span><span class="mark">32</span> A method of improving the catch when using a funnel is to sift the leaf litter through a coarse screen before placing it above the funnel. This will concentrate the litter and remove larger leaves and twigs. It will also allow more litter to be sampled when using a limited number of funnels.</p>
+<p class="para">The pitfall trap is another commonly used tool for collecting ants. <span class="hl">A pitfall trap can be any small container placed in the ground with the top level with the surrounding surface and filled with a preservative.</span><span class="mark">37</span><span class="mark">38</span> <span class="hl">Ants are collected when they fall into the trap while foraging.</span><span class="mark">39</span> The diameter of the traps can vary from about 18 mm to 10 cm and the number used can vary from a few to several hundred. The size of the traps used is influenced largely by personal preference (although larger sizes are generally better), while the number will be determined by the study being undertaken. <span class="hl">The preservative used is usually ethylene glycol or propylene glycol, as alcohol will evaporate quickly and the traps will dry out. One advantage of pitfall traps is that they can be used to collect over a period of time with minimal maintenance and intervention.</span><span class="mark">34</span><span class="mark">36</span> One disadvantage is that some species are not collected as they either avoid the traps or do not commonly encounter them while foraging.</p>
+<p class="passage-title" style="margin-top:1.2rem;">Questions 37–40 – Diagram: A Pitfall Trap</p>
+<div class="diagram">
+  <h4>Diagram: cross-section of a pitfall trap (in the ground)</h4>
+  <div class="part"><span class="lbl">A</span><span>The <span class="hl">small container</span><span class="mark">37</span> placed in the ground, top level with the surface.</span></div>
+  <div class="part"><span class="lbl">B</span><span>Inside the trap: a <span class="hl">preservative</span><span class="mark">38</span> (ethylene glycol / propylene glycol), <span class="hl">not alcohol</span><span class="mark">40</span>.</span></div>
+  <div class="part"><span class="lbl">C</span><span>Ants fall in while <span class="hl">foraging</span><span class="mark">39</span> along the ground.</span></div>
+  <div class="part"><span class="lbl">D</span><span>The smooth sides and the liquid prevent escape (the trap is designed to be <span class="hl">minimal maintenance</span><span class="mark">40</span>).</span></div>
+</div>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–5</div><p>Choose the correct heading for sections B–F. <i>Write i–ix.</i></p>
+<ul class='list-headings'><li><b>i</b> The influence of Monbusho</li><li><b>ii</b> Helping less successful students</li><li><b>iii</b> The success of compulsory education</li><li><b>iv</b> Research findings concerning achievements in maths</li><li><b>v</b> The typical format of a maths lesson</li><li><b>vi</b> Comparative expenditure on maths education</li><li><b>vii</b> Background to middle-years education in Japan</li><li><b>viii</b> The key to Japanese successes in maths education</li><li><b>ix</b> The role of homework correction</li></ul></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Section B<div class="yng">Which heading?</div></div><span class="answer ans-letter">vii — Background to middle-years education in Japan</span><div class="explanation">Describes ages (13–15), school types, classroom layout, lesson duration and class sizes.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Section C<div class="yng">Which heading?</div></div><span class="answer ans-letter">i — The influence of Monbusho</span><div class="explanation">Monbusho supplies/approves textbooks and decides the centralised national curriculum.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Section D<div class="yng">Which heading?</div></div><span class="answer ans-letter">v — The typical format of a maths lesson</span><div class="explanation">The sequence: homework review → teacher explains → examples → individual textbook work.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Section E<div class="yng">Which heading?</div></div><span class="answer ans-letter">ii — Helping less successful students</span><div class="explanation">Individual help, extra work, peer assistance and Juku tuition for strugglers.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Section F<div class="yng">Which heading?</div></div><span class="answer ans-letter">viii — The key to Japanese successes in maths education</span><div class="explanation">Summarises the reasons: attitudes, hard work, accuracy, cooperation, self-improvement.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 6–9</div><p>Do the following statements agree with the claims of the writer? <b>YES / NO / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">There is a wider range of achievement amongst English pupils studying maths than amongst their Japanese counterparts.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"the variation in attainment scores was much greater" in England.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">The percentage of Gross National Product spent on education generally reflects the level of attainment in mathematics.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">GNP spending was "reasonably similar" despite Japan's better results.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Private schools in Japan are more modern and spacious than state-run lower secondary schools.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">State schools are described as modern and spacious, but no comparison with private schools is made.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">Teachers mark homework in Japanese schools.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">"Pupils mark their own homework" — teachers comment, correct or elaborate, but do not mark it themselves.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 10–13</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Maths textbooks in Japanese schools are<ul class='opts'><li><b>A</b> cheap for pupils to buy.</li><li><b>B</b> well organised and adapted to the needs of the pupils.</li><li><b>C</b> written to be used in conjunction with TV programmes.</li><li><b>D</b> not very popular with many Japanese teachers.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">They are "well set out and logically developed"; one teacher wanted colour and pictures to make them more accessible.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">When a new maths topic is introduced,<ul class='opts'><li><b>A</b> students answer questions on the board.</li><li><b>B</b> students rely entirely on the textbook.</li><li><b>C</b> it is carefully and patiently explained to the students.</li><li><b>D</b> it is usual for students to use extra worksheets.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">The teacher "explains the topic of the lesson, slowly and with a lot of repetition and elaboration."</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">How do schools deal with students who experience difficulties?<ul class='opts'><li><b>A</b> They are given appropriate supplementary tuition.</li><li><b>B</b> They are encouraged to copy from other pupils.</li><li><b>C</b> They are forced to explain their slow progress.</li><li><b>D</b> They are placed in a mixed-ability class.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Teachers give individual help and extra work; parents may send children to Juku (private evening tuition).</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">Why do Japanese students tend to achieve relatively high rates of success in maths?<ul class='opts'><li><b>A</b> It is a compulsory subject in Japan.</li><li><b>B</b> They are used to working without help from others.</li><li><b>C</b> Much effort is made and correct answers are emphasised.</li><li><b>D</b> There is a strong emphasis on repetitive learning.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">The emphasis is on hard work and accuracy; the writer questions the "repetitive/boring" view.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">The use of pesticides has contributed to<ul class='opts'><li><b>A</b> a change in the way ecologies are classified by agroecologists.</li><li><b>B</b> an imbalance in many ecologies around the world.</li><li><b>C</b> the prevention of ecological disasters in some parts of the world.</li><li><b>D</b> an increase in the range of ecologies which can be usefully farmed.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">Pesticides have caused "widespread ecological disorders" and produced resistant superbugs.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">The FAO has counted more than 300 agricultural pests which<ul class='opts'><li><b>A</b> are no longer responding to most pesticides in use.</li><li><b>B</b> can be easily controlled through the use of pesticides.</li><li><b>C</b> continue to spread disease in a wide range of crops.</li><li><b>D</b> may be used as part of bio-control's replacement of pesticides.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">More than 300 species "have developed resistance to a wide range of potent chemicals."</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Cotton farmers in Central America began to use pesticides<ul class='opts'><li><b>A</b> because of an intensive government advertising campaign.</li><li><b>B</b> in response to the appearance of new varieties of pest.</li><li><b>C</b> as a result of changes in the seasons and the climate.</li><li><b>D</b> to ensure more cotton was harvested from each crop.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">Farmers "took to pesticides as a sure measure to boost crop yield."</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">By the mid-1960s, cotton farmers in Central America found that pesticides<ul class='opts'><li><b>A</b> were wiping out 50% of the pests plaguing the crops.</li><li><b>B</b> were destroying 50% of the crops they were meant to protect.</li><li><b>C</b> were causing a 50% increase in the number of new pests reported.</li><li><b>D</b> were costing 50% of the total amount they spent on their crops.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">"50% of the financial outlay on cotton production was accounted for by pesticides."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18–21</div><p>Do the following statements agree with the claims of the writer? <b>YES / NO / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Disease-spreading pests respond more quickly to pesticides than agricultural pests do.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Both groups' resistance is described, but their relative speed of developing resistance is not compared.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">A number of pests are now born with an innate immunity to some pesticides.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Pests "bear offspring with a built-in resistance to pesticides."</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Biological control entails using synthetic chemicals to try and change the genetic make-up of the pests' offspring.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Biological control uses natural enemies of the pest population — not synthetic chemicals.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Bio-control is free from danger under certain circumstances.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">"When handled by experts, bio-control is safe, non-polluting and self-dispersing."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 22–26</div><p>Complete each sentence with the correct ending, A–I.</p><ul class='opts'><li><b>A</b> forage grass</li><li><b>B</b> rice fields</li><li><b>C</b> coconut trees</li><li><b>D</b> fruit trees</li><li><b>E</b> water hyacinth</li><li><b>F</b> parthenium weed</li><li><b>G</b> Brazilian beetles</li><li><b>H</b> grass-scale insects</li><li><b>I</b> larval parasites</li></ul></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Disapene scale insects feed on ………<div class="yng">A–I</div></div><span class="answer ans-letter">D — fruit trees</span><div class="explanation">"notorious defoliants of fruit trees in the US and India."</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Neodumetia sangawani ate ………<div class="yng">A–I</div></div><span class="answer ans-letter">H — grass-scale insects</span><div class="explanation">Useful in controlling the Rhodes grass-scale insect.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Leaf-mining hispides blighted ………<div class="yng">A–I</div></div><span class="answer ans-letter">C — coconut trees</span><div class="explanation">"Sri Lanka's flourishing coconut groves were plagued by leaf-mining hispides."</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">An Argentinian weevil may be successful in wiping out ………<div class="yng">A–I</div></div><span class="answer ans-letter">E — water hyacinth</span><div class="explanation">RRL was testing an Argentinian weevil to eradicate water hyacinth.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Salvinia molesta plagues ………<div class="yng">A–I</div></div><span class="answer ans-letter">B — rice fields</span><div class="explanation">"About 30,000 hectares of rice fields in Kerala are infested by this weed."</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Do the following statements agree with the information? <b>TRUE / FALSE / NOT GIVEN</b></p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Taxonomic research involves comparing members of one group of ants.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Long series from a single nest "allow the determination of variation within species."</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">New species of ant are frequently identified by taxonomists.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Taxonomy's purpose is discussed, but how often new species are identified is not stated.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Range is the key criterion for ecological collections.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">For ecological studies, the key factor is "collecting identifiable samples of as many of the different species present as possible."</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">A single collection of ants can generally be used for both taxonomic and ecological purposes.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">"Unfortunately, these methods are not always compatible."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 31–36</div><p>Classify each statement: <b>A</b> hand collecting · <b>B</b> using bait · <b>C</b> sampling ground litter · <b>D</b> using a pitfall trap</p></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">It is preferable to take specimens from groups of ants.<div class="yng">A / B / C / D</div></div><span class="answer ans-letter">A — hand collecting</span><div class="explanation">Collections "should be made from nests or foraging columns and at least 20 to 25 individuals collected."</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">It is particularly effective for wet habitats.<div class="yng">A / B / C / D</div></div><span class="answer ans-letter">C — sampling ground litter</span><div class="explanation">"This method works especially well in rain forests and marshy areas."</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">It is a good method for species which are hard to find.<div class="yng">A / B / C / D</div></div><span class="answer ans-letter">B — using bait</span><div class="explanation">Baits "attract species that are otherwise elusive."</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Little time and effort is required.<div class="yng">A / B / C / D</div></div><span class="answer ans-letter">D — using a pitfall trap</span><div class="explanation">Pitfall traps "can be used to collect over a period of time with minimal maintenance and intervention."</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Separate containers are used for individual specimens.<div class="yng">A / B / C / D</div></div><span class="answer ans-letter">A — hand collecting</span><div class="explanation">"Individual insects are placed in plastic or glass tubes... containing 75% to 95% ethanol."</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Non-alcoholic preservative should be used.<div class="yng">A / B / C / D</div></div><span class="answer ans-letter">D — using a pitfall trap</span><div class="explanation">Ethylene glycol or propylene glycol is used, "as alcohol will evaporate quickly and the traps will dry out."</div></div>
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Label the diagram. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Label A — the small ……… placed in the ground<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">container</span><div class="explanation">"A pitfall trap can be any small container placed in the ground with the top level with the surrounding surface."</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Label B — the trap is filled with a ………<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">preservative</span><div class="explanation">"...and filled with a preservative." Usually ethylene glycol or propylene glycol.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Label C — ants fall in while ………<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">foraging</span><div class="explanation">"Ants are collected when they fall into the trap while foraging."</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Label D — a non-alcoholic ……… is used<div class="yng">NO MORE THAN TWO WORDS</div></div><span class="answer ans-letter">preservative</span><div class="explanation">Reinforces Q38: the preservative used is ethylene glycol or propylene glycol, not alcohol.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para') || m.closest('.diagram');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>
