@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 16 – Reading Test 2 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 16 – Reading Test 2</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">The White Horse of Uffington</div>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> The cutting of huge figures or 'geoglyphs' into the earth of English hillsides has taken place for more than 3,000 years. There are 56 hill figures scattered around England, <span class="hl">with the vast majority on the chalk downlands of the country's southern counties.</span><span class="mark">1</span> <span class="hl">The figures include giants, horses, crosses and regimental badges.</span><span class="mark">2</span> Although the majority of these geoglyphs date within the last 300 years or so, there are one or two that are much older.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> <span class="hl">The most famous of these figures is perhaps also the most mysterious</span><span class="mark">8</span> – the Uffington White Horse in Oxfordshire. <span class="hl">The White Horse has recently been re-dated and shown to be even older than its previously assigned ancient pre-Roman Iron Age date.</span><span class="mark">3</span> More controversial is the date of the enigmatic Long Man of Wilmington in Sussex. <span class="hl">While many historians are convinced the figure is prehistoric, others believe that it was the work of an artistic monk from a nearby priory and was created between the 11th and 15th centuries.</span><span class="mark">4</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> The method of cutting these huge figures was simply to <span class="hl">remove the overlying grass to reveal the gleaming white chalk below.</span><span class="mark">5</span> However, the grass would soon grow over the geoglyph again unless it was regularly cleaned or scoured by a fairly large team of people. <span class="hl">One reason that the vast majority of hill figures have disappeared is that when the traditions associated with the figures faded, people no longer bothered or remembered to clear away the grass to expose the chalk outline.</span><span class="mark">6</span> Furthermore, <span class="hl">over hundreds of years the outlines would sometimes change due to people not always cutting in exactly the same place,</span><span class="mark">7</span> thus creating a different shape to the original geoglyph. That fact that any ancient hill figures survive at all in England today is testament to the strength and continuity of local customs and beliefs which, in one case at least, must stretch back over millennia.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> The Uffington White Horse is a unique, stylised representation of a horse consisting of a long, sleek back, thin disjointed legs, a streaming tail, and a bird-like beaked head. The elegant creature almost melts into the landscape. The horse is situated 2.5 km from Uffington village on a steep slope close to the Late Bronze Age (c. 7th century BCE) hillfort of Uffington Castle and below <span class="hl">the Ridgeway,</span><span class="mark">9</span> a long-distance Neolithic track.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> The Uffington Horse is also surrounded by Bronze Age burial mounds. It is not far from the Bronze Age cemetery of Lambourn Seven Barrows, which consists of more than 30 well-preserved burial mounds. The carving has been placed in such a way as to make it extremely difficult to see from close quarters, and like many geoglyphs is best appreciated from the air. Nevertheless, there are certain areas of the Vale of the White Horse, the valley containing and named after the enigmatic creature, from which an adequate impression may be gained. Indeed on a clear day the carving can be seen from up to 30 km away.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> The earliest evidence of a horse at Uffington is from the 1070s CE when 'White Horse Hill' is mentioned in <span class="hl">documents from the nearby Abbey of Abingdon,</span><span class="mark">10</span> and the first reference to the horse itself is soon after, in 1190 CE. However, the carving is believed to date back much further than that. Due to the similarity of the Uffington White Horse to the stylised depictions of horses on 1st century BCE coins, it had been thought that the creature must also date to that period.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> However, in 1995 Optically Stimulated Luminescence (OSL) testing was carried out by the Oxford Archaeological Unit on <span class="hl">soil from two of the lower layers of the horse's body,</span><span class="mark">11</span> and from another cut near the base. The result was a date for the horse's construction somewhere between 1400 and 600 BCE – in other words, it had a Late Bronze Age or Early Iron Age origin.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> The latter end of this date range would tie the carving of the horse in with occupation of the nearby Uffington hillfort, indicating that it may represent a tribal emblem marking the land of the inhabitants of the hillfort. Alternatively, the carving may have been carried out during a Bronze or Iron Age ritual. Some researchers see the horse as representing the Celtic horse goddess Epona, who was worshipped as <span class="hl">a protector of horses, and for her associations with fertility.</span><span class="mark">12</span> However, the cult of Epona was not imported from Gaul (France) until around the first century CE. This date is at least six centuries after the Uffington Horse was probably carved. Nevertheless, the horse had great ritual and economic significance during the Bronze and Iron Ages, as attested by its depictions on jewellery and other metal objects. It is possible that the carving represents a goddess in native mythology, such as <span class="hl">Rhiannon, described in later Welsh mythology</span><span class="mark">13</span> as a beautiful woman dressed in gold and riding a white horse.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> The fact that geoglyphs can disappear easily, along with their associated rituals and meaning, indicates that they were never intended to be anything more than temporary gestures. But this does not lessen their importance. These giant carvings are a fascinating glimpse into the minds of their creators and how they viewed the landscape in which they lived.</p>
+
+<p class="para" style="font-size:0.82rem;color:var(--muted);">*Iron Age: a period (in Britain 800 BCE – 43 CE) that is characterised by the use of iron tools<br>*Bronze Age: a period (in Britain c. 2,500 BCE – 800 BCE) that is characterised by the development of bronze tools<br>**Neolithic: a period (in Britain c. 4,000 BCE – c. 2,500 BCE) that is significant for the spread of agricultural practices, and the use of stone tools<br>***Celtic: an ancient people who migrated from Europe to Britain before the Romans</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">I contain multitudes</div>
+<p class="para" style="font-style:italic;color:var(--muted);">Wendy Moore reviews Ed Yong's book about microbes</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> <span class="hl">Microbes, most of them bacteria, have populated this planet since long before animal life developed and they will outlive us.</span><span class="mark">14</span> Invisible to the naked eye, they are ubiquitous. They inhabit the soil, air, rocks and water and are present within every form of life, from seaweed and coral to dogs and humans. And, as Yong explains in his utterly absorbing and hugely important book we mess with them at our peril.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Every species has its own colony of microbes, called a 'microbiome', and these microbes vary not only between species but also between individuals and within different parts of each individual. What is amazing is that <span class="hl">while the number of human cells in the average person is about 30 trillion, the number of microbial ones is higher – about 39 trillion.</span><span class="mark">15</span> At best, Yong informs us, we are only 50 per cent human. Indeed, some scientists even suggest we should think of each species and its microbes as a single unit, dubbed a 'holobiont'.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> In each human there are microbes that live only in the stomach, the mouth or the armpit and by and large they do so peacefully. So 'bad' microbes are just microbes out of context. Microbes that sit contentedly in the human gut (where there are more microbes than there are stars in the galaxy) can become deadly if they find their way into the bloodstream. These communities are constantly changing too. The right hand shares just one sixth of its microbes with the left hand. And, of course, we are surrounded by microbes. Every time we eat, we swallow a million microbes in each gram of food; we are continually swapping microbes with other humans, pets and the world at large.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> It's a fascinating topic and Yong, a young British science journalist, is an extraordinarily adept guide. Writing with lightness and panache, he has a knack of explaining complex science in terms that are both easy to understand and totally enthralling. Yong is on a mission. Leading us gently by the hand, he takes us into the world of microbes – a bizarre, alien planet – in a bid to persuade us to love them as much as he does. By the end, we do.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> For most of human history we had no idea that microbes existed. <span class="hl">The first man to see these extraordinarily potent creatures was a Dutch lens-maker called Antony van Leeuwenhoek in the 1670s.</span><span class="mark">16</span> Using microscopes of his own design that could magnify up to 270 times, he examined a drop of water from a nearby lake and found it teeming with tiny creatures he called 'animalcules'. <span class="hl">It wasn't until nearly two hundred years later that the research of French biologist Louis Pasteur indicated that some microbes caused disease.</span><span class="mark">16</span> It was Pasteur's 'germ theory' that gave bacteria the poor image that endures today.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Yong's book is in many ways a plea for microbial tolerance, pointing out that while <span class="hl">fewer than one hundred species of bacteria bring disease,</span><span class="mark">17</span> many thousands more play a vital role in maintaining our health. The book also acknowledges that our attitude towards bacteria is not a simple one. We tend to see the dangers posed by bacteria, yet at the same time we are sold yoghurts and drinks that supposedly nurture 'friendly' bacteria. In reality, says Yong, bacteria should not be viewed as either friends or foes, villains or heroes. Instead we should realise <span class="hl">we have a symbiotic relationship, that can be mutually beneficial or mutually destructive.</span><span class="mark">18</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> What then do these millions of organisms do? The answer is pretty much everything. New research is now unravelling the ways in which bacteria aid digestion, regulate our immune systems, eliminate toxins, produce vitamins, affect our behaviour and even combat obesity. 'They actually help us become who we are,' says Yong. But we are facing a growing problem. <span class="hl">Our obsession with hygiene,</span><span class="mark">20</span> our overuse of antibiotics and <span class="hl">our unhealthy, low-fibre diets</span><span class="mark">19</span> are disrupting the bacterial balance and may be responsible for soaring rates of allergies and immune problems, such as inflammatory bowel disease (IBD).</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> The most recent research actually turns accepted norms upside down. For example, there are studies indicating that <span class="hl">the excessive use of household detergents and antibacterial products actually destroys the microbes that normally keep the more dangerous germs at bay.</span><span class="mark">21</span> Other studies show that <span class="hl">keeping a dog as a pet gives children early exposure to a diverse range of bacteria, which may help protect them against allergies later.</span><span class="mark">22</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> The readers of Yong's book must be prepared for <span class="hl">a decidedly unglamorous world. Among the less appealing case studies</span><span class="mark">23</span> is one about a fungus that is wiping out entire populations of frogs and that can be halted by a rare microbial bacterium. Another is about <span class="hl">squid that carry luminescent bacteria that protect them against predators.</span><span class="mark">24</span> However, if you can overcome your distaste for some of the investigations, the reasons for Yong's enthusiasm become clear. The microbial world is a place of wonder. Already, in an attempt to stop mosquitoes spreading dengue fever – a disease that infects 400 million people a year – <span class="hl">mosquitoes are being loaded with a bacterium to block the disease.</span><span class="mark">25</span> <span class="hl">In the future, our ability to manipulate microbes means we could construct buildings with useful microbes built into their walls to fight off infections.</span><span class="mark">26</span> Just imagine a neonatal hospital ward coated in a specially mixed cocktail of microbes so that babies get the best start in life.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">How to make wise decisions</div>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Across cultures, wisdom has been considered one of the most revered human qualities. Although the truly wise may seem few and far between, empirical research examining wisdom suggests that <span class="hl">it isn't an exceptional trait possessed by a small handful of bearded philosophers after all</span><span class="mark">27</span> – in fact, the latest studies suggest that most of us have the ability to make wise decisions, given the right context.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> '<span class="hl">It appears that experiential, situational, and cultural factors are even more powerful in shaping wisdom than previously imagined,</span><span class="mark">28</span>' says Associate Professor Igor Grossmann of the University of Waterloo in Ontario, Canada. 'Recent empirical findings from cognitive, developmental, social, and personality psychology cumulatively suggest that people's ability to reason wisely varies dramatically across experiential and situational contexts. Understanding the role of such contextual factors offers unique insights into understanding wisdom in daily life, as well as how it can be enhanced and taught.'</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> It seems that it's not so much that some people simply possess wisdom and others lack it, but that our ability to reason wisely depends on a variety of external factors. 'It is impossible to characterize thought processes attributed to wisdom without considering the role of contextual factors,' explains Grossmann. 'In other words, <span class="hl">wisdom is not solely an "inner quality" but rather unfolds as a function of situations people happen to be in.</span><span class="mark">29</span> Some situations are more likely to promote wisdom than others.'</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Coming up with a definition of wisdom is challenging, but Grossmann and his colleagues have identified four key characteristics as part of a framework of wise reasoning. One is <span class="hl">intellectual humility or recognition of the limits of our own knowledge,</span><span class="mark">31</span> and another is <span class="hl">appreciation of perspectives wider than the issue at hand.</span><span class="mark">32</span><span class="mark">33</span> Sensitivity to the possibility of change in social relations is also key, along with compromise or integration of different attitudes and beliefs.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Grossmann and his colleagues have also found that <span class="hl">one of the most reliable ways to support wisdom in our own day-to-day decisions is to look at scenarios from a third-party perspective, as though giving advice to a friend.</span><span class="mark">30</span><span class="mark">34</span> Research suggests that when adopting a first-person viewpoint we focus on 'the focal features of the environment' and when we adopt a third-person, 'observer' viewpoint we reason more broadly and <span class="hl">focus more on interpersonal and moral ideals such as justice and impartiality.</span><span class="mark">35</span> Looking at problems from this more expansive viewpoint appears to foster cognitive processes related to wise decisions.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> What are we to do, then, when confronted with situations like a disagreement with a spouse or negotiating a contract at work, that require us to take a personal stake? Grossmann argues that even when we aren't able to change the situation, we can still evaluate these experiences from different perspectives.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> For example, in one experiment that took place during the peak of a recent economic recession, graduating college seniors were asked to reflect on their job prospects. <span class="hl">The students were instructed to imagine their career either 'as if you were a distant observer' or 'before your own eyes as if you were right there'.</span><span class="mark">36</span> <span class="hl">Participants in the group assigned to the 'distant observer' role displayed more wisdom-related reasoning</span><span class="mark">39</span> (intellectual humility and recognition of change) than did participants in the control group.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> In another study, <span class="hl">couples in long-term romantic relationships</span><span class="mark">38</span> were <span class="hl">instructed to visualize an unresolved relationship conflict either through the eyes of an outsider or from their own perspective.</span><span class="mark">37</span> Participants then discussed the incident with their partner for 10 minutes, after which they wrote down their thoughts about it. <span class="hl">Couples in the 'other's eyes' condition were significantly more likely to rely on wise reasoning</span><span class="mark">39</span> – recognizing others' perspectives and searching for a compromise – compared to the couples in the egocentric condition.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> 'Ego-decentering promotes greater focus on others and enables a bigger picture, conceptual view of the experience, affording recognition of intellectual humility and change,' says Grossmann.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> We might associate wisdom with intelligence or particular personality traits, but research shows <span class="hl">only a small positive relationship between wise thinking and crystallized intelligence</span><span class="mark">40</span> and the personality traits of openness and agreeableness. 'It is remarkable how much people can vary in their wisdom from one situation to the next, and how much stronger such contextual effects are for understanding the relationship between wise judgment and its social and affective outcomes as compared to the generalized "traits",' Grossmann explains. 'That is, knowing how wisely a person behaves in a given situation is more informative for understanding their emotions or likelihood to forgive [or] retaliate as compared to knowing whether the person may be wise "in general".'</p>
+
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–8</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Most geoglyphs in England are located in a particular area of the country.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Of the 56 hill figures, the vast majority are on the chalk downlands of the southern counties.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">There are more geoglyphs in the shape of a horse than any other creature.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Horses are listed among the figures, but the numbers of horse figures and other creatures are never compared.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">A recent dating of the Uffington White Horse indicates that people were mistaken about its age.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">It has been re-dated and shown to be older than its previously assigned pre-Roman Iron Age date.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Historians have come to an agreement about the origins of the Long Man of Wilmington.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Many historians think it is prehistoric, while others believe a monk made it between the 11th and 15th centuries.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Geoglyphs were created by people placing white chalk on the hillside.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">They were made by removing the grass to reveal the white chalk underneath.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Many geoglyphs in England are no longer visible.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">'The vast majority of hill figures have disappeared' because people stopped clearing the grass.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">The shape of some geoglyphs has been altered over time.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Outlines changed over hundreds of years as people did not always cut in exactly the same place.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">The fame of the Uffington White Horse is due to its size.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">It is called the most famous and most mysterious figure, but its fame is never attributed to its size.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 9–13</div><p>Complete the summary. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>The Uffington White Horse</b></p></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">near an ancient road known as the <b>9 ………</b></div><span class="answer ans-letter">Ridgeway</span><div class="explanation">The horse lies 'below the Ridgeway, a long-distance Neolithic track'.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">first reference to White Horse Hill appears in <b>10 ………</b> from the 1070s</div><span class="answer ans-letter">documents</span><div class="explanation">'White Horse Hill' is mentioned in documents from the Abbey of Abingdon in the 1070s.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">according to analysis of the surrounding <b>11 ………</b>, the Horse is Late Bronze Age / Early Iron Age</div><span class="answer ans-letter">soil</span><div class="explanation">OSL testing was carried out on soil from layers of the horse's body.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">goddess Epona – associated with protection of horses and <b>12 ………</b></div><span class="answer ans-letter">fertility</span><div class="explanation">Epona was worshipped as a protector of horses 'and for her associations with fertility'.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">a representation of a Welsh goddess called <b>13 ………</b></div><span class="answer ans-letter">Rhiannon</span><div class="explanation">The carving may represent a native goddess such as Rhiannon, from later Welsh mythology.</div></div>
+
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–16</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">What point does the writer make about microbes in the first paragraph?<ul class='opts'><li><b>A</b> They adapt quickly to their environment.</li><li><b>B</b> The risk they pose has been exaggerated.</li><li><b>C</b> They are more plentiful in animal life than plant life.</li><li><b>D</b> They will continue to exist for longer than the human race.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">Microbes have existed since before animal life 'and they will outlive us'.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">In the second paragraph, the writer is impressed by the fact that<ul class='opts'><li><b>A</b> each species tends to have vastly different microbes.</li><li><b>B</b> some parts of the body contain relatively few microbes.</li><li><b>C</b> the average individual has more microbial cells than human ones.</li><li><b>D</b> scientists have limited understanding of how microbial cells behave.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">'What is amazing' is that the average person has about 30 trillion human cells but about 39 trillion microbial ones.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">What is the writer doing in the fifth paragraph?<ul class='opts'><li><b>A</b> explaining how a discovery was made</li><li><b>B</b> comparing scientists' theories about microbes</li><li><b>C</b> describing confusion among scientists</li><li><b>D</b> giving details of how microbes cause disease</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">It describes how Leeuwenhoek first saw microbes through his microscope and how Pasteur later linked some to disease.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 17–20</div><p>Complete the summary using the list of words, A–H. <b>We should be more tolerant of microbes</b></p><ul class='opts'><li><b>A</b> solution</li><li><b>B</b> partnership</li><li><b>C</b> destruction</li><li><b>D</b> exaggeration</li><li><b>E</b> cleanliness</li><li><b>F</b> regulations</li><li><b>G</b> illness</li><li><b>H</b> nutrition</li></ul></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">…only a relatively small number lead to <b>17 ………</b></div><span class="answer ans-letter">G – illness</span><div class="explanation">Fewer than one hundred species of bacteria 'bring disease'.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">…our relationship with microbes is one based on <b>18 ………</b></div><span class="answer ans-letter">B – partnership</span><div class="explanation">We have a symbiotic relationship that can be mutually beneficial or mutually destructive.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Our poor <b>19 ………</b>, our overuse of antibiotics…</div><span class="answer ans-letter">H – nutrition</span><div class="explanation">Our 'unhealthy, low-fibre diets' disrupt the bacterial balance.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">…and our excessive focus on <b>20 ………</b></div><span class="answer ans-letter">E – cleanliness</span><div class="explanation">Our 'obsession with hygiene' is another cause of imbalance.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 21–26</div><p>Do the following statements agree with the claims of the writer in Reading Passage 2?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">It is possible that using antibacterial products in the home fails to have the desired effect.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Excessive use of antibacterial products 'actually destroys the microbes that normally keep the more dangerous germs at bay'.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">It is a good idea to ensure that children come into contact with as few bacteria as possible.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Early exposure to a diverse range of bacteria, for example through a pet dog, may help protect children against allergies.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Yong's book contains more case studies than are necessary.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Some case studies are called unappealing, but the writer never says there are too many.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">The case study about bacteria that prevent squid from being attacked may have limited appeal.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Readers must be prepared for 'a decidedly unglamorous world', and the squid study is listed among the less appealing case studies.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Efforts to control dengue fever have been surprisingly successful.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Mosquitoes are being loaded with a bacterium to block the disease, but no result is reported.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Microbes that reduce the risk of infection have already been put inside the walls of some hospital wards.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">This is a future possibility ('we could construct buildings…'), not something already done.</div></div>
+
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">What point does the writer make in the first paragraph?<ul class='opts'><li><b>A</b> Wisdom appears to be unique to the human race.</li><li><b>B</b> A basic assumption about wisdom may be wrong.</li><li><b>C</b> Concepts of wisdom may depend on the society we belong to.</li><li><b>D</b> There is still much to be discovered about the nature of wisdom.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">Wisdom may not be the exceptional trait of a few after all – most of us can make wise decisions in the right context.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">What does Igor Grossmann suggest about the ability to make wise decisions?<ul class='opts'><li><b>A</b> It can vary greatly from one person to another.</li><li><b>B</b> Earlier research into it was based on unreliable data.</li><li><b>C</b> The importance of certain influences on it was underestimated.</li><li><b>D</b> Various branches of psychology define it according to their own criteria.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">Experiential, situational and cultural factors are 'even more powerful in shaping wisdom than previously imagined'.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">According to the third paragraph, Grossmann claims that the level of wisdom an individual shows<ul class='opts'><li><b>A</b> can be greater than they think it is.</li><li><b>B</b> will be different in different circumstances.</li><li><b>C</b> may be determined by particular aspects of their personality.</li><li><b>D</b> should develop over time as a result of their life experiences.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">Wisdom 'unfolds as a function of situations people happen to be in' – it is not solely an inner quality.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">What is described in the fifth paragraph?<ul class='opts'><li><b>A</b> a difficulty encountered when attempting to reason wisely</li><li><b>B</b> an example of the type of person who is likely to reason wisely</li><li><b>C</b> a controversial view about the benefits of reasoning wisely</li><li><b>D</b> a recommended strategy that can help people to reason wisely</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">The paragraph recommends looking at scenarios from a third-party, observer perspective.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 31–35</div><p>Complete the summary using the list of words, A–J. <b>The characteristics of wise reasoning</b></p><ul class='opts'><li><b>A</b> opinions</li><li><b>B</b> confidence</li><li><b>C</b> view</li><li><b>D</b> modesty</li><li><b>E</b> problems</li><li><b>F</b> objectivity</li><li><b>G</b> fairness</li><li><b>H</b> experiences</li><li><b>I</b> range</li><li><b>J</b> reasons</li></ul></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">…a certain degree of <b>31 ………</b> regarding the extent of our knowledge</div><span class="answer ans-letter">D – modesty</span><div class="explanation">'Intellectual humility or recognition of the limits of our own knowledge.'</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">…take into account <b>32 ………</b> which may not be the same as our own</div><span class="answer ans-letter">A – opinions</span><div class="explanation">'Appreciation of perspectives wider than the issue at hand' – taking others' opinions into account.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">We should also be able to take a broad <b>33 ………</b> of any situation</div><span class="answer ans-letter">C – view</span><div class="explanation">The same characteristic – appreciating perspectives wider than the issue at hand – means taking a broad view.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">…it is better to regard scenarios with <b>34 ………</b></div><span class="answer ans-letter">F – objectivity</span><div class="explanation">Looking at scenarios from a third-party perspective, as though advising a friend, is the detached, objective view.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">…we focus more on <b>35 ………</b> and on other moral ideals</div><span class="answer ans-letter">G – fairness</span><div class="explanation">The observer viewpoint focuses on 'moral ideals such as justice and impartiality'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 36–40</div><p>Do the following statements agree with the information given in Reading Passage 3?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Students participating in the job prospects experiment could choose one of two perspectives to take.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The students 'were instructed' to take one of the two perspectives – they were assigned, not given a choice.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Participants in the couples experiment were aware that they were taking part in a study about wise reasoning.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The couples' instructions are described, but nothing says what they knew about the aim of the study.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">In the couples experiments, the length of the couples' relationships had an impact on the results.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The couples are described as being in long-term relationships, but no effect of relationship length on results is mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">In both experiments, the participants who looked at the situation from a more detached viewpoint tended to make wiser decisions.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">The 'distant observer' group and the 'other's eyes' couples both showed more wise reasoning than their comparison groups.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Grossmann believes that a person's wisdom is determined by their intelligence to only a very limited extent.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Research shows 'only a small positive relationship between wise thinking and crystallized intelligence'.</div></div>
+
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>
