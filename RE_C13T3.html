@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 13 – Reading Test 3 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+  .tbl { border-collapse:collapse; width:100%; font-size:.84rem; margin-top:.4rem; background:#fff; }
+  .tbl th, .tbl td { border:1px solid var(--border); padding:.35rem .5rem; text-align:left; vertical-align:top; }
+  .tbl th { background:#e2e8f0; color:var(--primary); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cambridge IELTS 13 – Reading Test 3</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <div class="column left">
+    <div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">The coconut palm</div>
+<p class="para">For millennia, the coconut has been central to the lives of Polynesian and Asian peoples. In the western world, on the other hand, coconuts have always been exotic and unusual, sometimes rare. The Italian merchant traveller Marco Polo apparently saw coconuts in South Asia in the late 13th century, and among the mid-14th-century travel writings of Sir John Mandeville there is mention of ‘great Notes of Ynde’ (great Nuts of India). Today, images of palm-fringed tropical beaches are clichés in the west to sell holidays, chocolate bars, fizzy drinks and even romance.</p>
+<p class="para">Typically, we envisage coconuts as brown cannonballs that, when opened, provide sweet white flesh. But we see only part of the fruit and none of the plant from which they come. The coconut palm has a smooth, slender, grey trunk, up to 30 metres tall. This is an important source of timber for building houses, and <span class="hl">is increasingly being used as a replacement for endangered hardwoods in the furniture construction industry</span><span class="mark">1</span>. The trunk is surmounted by a rosette of leaves, each of which may be up to six metres long. The leaves have hard veins in their centres which, in many parts of the world, are used as brushes after the green part of the leaf has been stripped away. Immature coconut flowers are tightly clustered together among the leaves at the top of the trunk. The flower stems may be tapped for their sap to produce a drink, and <span class="hl">the sap can also be reduced by boiling to produce a type of sugar used for cooking</span><span class="mark">2</span>.</p>
+<p class="para">Coconut palms produce as many as seventy fruits per year, weighing more than a kilogram each. The wall of the fruit has three layers: a waterproof outer layer, a fibrous middle layer and a hard, inner layer. The thick fibrous middle layer produces coconut fibre, ‘coir’, <span class="hl">which has numerous uses and is particularly important in manufacturing ropes</span><span class="mark">3</span>. The woody innermost layer, the shell, with its three prominent ‘eyes’, surrounds the seed. <span class="hl">An important product obtained from the shell is charcoal</span><span class="mark">4</span>, which is widely used in various industries as well as in the home as a cooking fuel. <span class="hl">When broken in half, the shells are also used as bowls in many parts of Asia.</span><span class="mark">5</span></p>
+<p class="para">Inside the shell are the nutrients (endosperm) needed by the developing seed. Initially, the endosperm is a sweetish liquid, coconut water, which is enjoyed as a drink, but <span class="hl">also provides the hormones which encourage other plants to grow more rapidly and produce higher yields</span><span class="mark">6</span>. As the fruit matures, the coconut water gradually solidifies to form the brilliant white, fat-rich, edible flesh or meat. Dried coconut flesh, ‘copra’, is made into coconut oil and coconut milk, <span class="hl">which are widely used in cooking in different parts of the world, as well as in cosmetics</span><span class="mark">7</span>. <span class="hl">A derivative of coconut fat, glycerine, acquired strategic importance in a quite different sphere, as Alfred Nobel introduced the world to his nitroglycerine-based invention: dynamite.</span><span class="mark">8</span></p>
+<p class="para">Their biology would appear to make coconuts the great maritime voyagers and coastal colonizers of the plant world. The large, energy-rich fruits are able to float in water and tolerate salt, but cannot remain viable indefinitely; studies suggest after about 110 days at sea they are no longer able to germinate. Literally cast onto desert island shores, <span class="hl">with little more than sand to grow in and exposed to the full glare of the tropical sun, coconut seeds are able to germinate and root</span><span class="mark">9</span>. The air pocket in the seed, created as the endosperm solidifies, protects the embryo. In addition, the fibrous fruit wall that helped it to float during the voyage stores moisture that can be taken up by the roots of the coconut seedling as it starts to grow.</p>
+<p class="para">There have been centuries of academic debate over the origins of the coconut. There were no coconut palms in West Africa, the Caribbean or the east coast of the Americans before the voyages of the European explorers Vasco da Gama and Columbus in the late 15th and early 16th centuries. 16th century trade and human migration patterns reveal that <span class="hl">Arab traders and European sailors are likely to have moved coconuts from South and Southeast Asia to Africa and then across the Atlantic to the east coast of America</span><span class="mark">10</span>. <span class="hl">But the origin of coconuts discovered along the west coast of America by 16th century sailors has been the subject of centuries of discussion.</span><span class="mark">11</span> Two diametrically opposed origins have been proposed: that they came from Asia, or that they were native to America. Both suggestions have problems. <span class="hl">In Asia, there is a large degree of coconut diversity and evidence of millennia of human use – but there are no relatives growing in the wild.</span><span class="mark">12</span> In America, there are close coconut relatives, but no evidence that coconuts are indigenous. <span class="hl">These problems have led to the intriguing suggestion that coconuts originated on coral islands in the Pacific and were dispersed from there.</span><span class="mark">13</span></p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">How baby talk gives infant brains a boost</div>
+<p class="para"><strong>A</strong> The typical way of talking to a baby – high-pitched, exaggerated and repetitious – is a source of fascination for linguists who hope to understand how ‘baby talk’ impacts on learning. Most babies start developing their hearing while still in the womb, <span class="hl">prompting some hopeful parents to play classical music to their pregnant bellies</span><span class="mark">25</span>. Some research even suggests that infants are listening to adult speech as early as 10 weeks before being born, gathering the basic building blocks of their family’s native tongue.</p>
+<p class="para"><strong>B</strong> Early language exposure seems to have benefits to the brain – for instance, studies suggest that babies raised in bilingual homes are better at learning how to mentally prioritize information. So how does the sweet if sometimes absurd sound of infant-directed speech influence a baby’s development? Here are some recent studies that explore the science behind baby talk.</p>
+<p class="para"><strong>C</strong> Fathers don’t use baby talk as often or in the same ways as mothers – and that’s perfectly OK, according to a new study. Mark VanDam of Washington State University at Spokane and colleagues <span class="hl">equipped parents with recording devices and speech-recognition software</span><span class="mark">18</span> to study the way they interacted with their youngsters during a normal day. ‘We found that moms do exactly what you’d expect and what’s been described many times over,’ VanDam explains. ‘But we found that dads aren’t doing the same thing. <span class="hl">Dads didn’t raise their pitch or fundamental frequency when they talked to kids.</span><span class="mark">19</span>’ Their role may be rooted in <span class="hl">what is called the bridge hypothesis</span><span class="mark">20</span>, which dates back to 1975. It suggests that fathers use less familial language to provide their children with a bridge to the kind of speech they’ll hear in public. ‘The idea is that <span class="hl">a kid gets to practice a certain kind of speech with mom and another kind of speech with dad, so the kid then has a wider repertoire of kinds of speech to practice</span><span class="mark">16</span><span class="mark">21</span>,’ says VanDam.</p>
+<p class="para"><strong>D</strong> Scientists from the University of Washington and the University of Connecticut collected thousands of 30-second conversations between parents and their babies, <span class="hl">fitting 26 children with audio-recording vests that captured language and sound during a typical eight-hour day</span><span class="mark">22</span>. <span class="hl">The study found that the more baby talk parents used, the more their youngsters began to babble.</span><span class="mark">17</span> And when researchers saw the same babies at age two, they found that <span class="hl">frequent baby talk had dramatically boosted vocabulary, regardless of socioeconomic status</span><span class="mark">23</span>. ‘Those children who listened to a lot of baby talk were talking more than the babies that listened to more adult talk or standard speech,’ says Nairán Ramirez-Esparza of the University of Connecticut. ‘We also found that <span class="hl">it really matters whether you use baby talk in a one-on-one context</span><span class="mark">14</span>,’ she adds. ‘The more parents use baby talk one-on-one, the more babies babble, and the more they babble, the more words they produce later in life.’</p>
+<p class="para"><strong>E</strong> Another study suggests that parents might want to pair their youngsters up so they can babble more with their own kind. Researchers from McGill University and Université du Québec à Montréal <span class="hl">found that babies seem to like listening to each other rather than to adults</span><span class="mark">26</span> – which may be why baby talk is such a universal tool among parents. They played repeating vowel sounds made by a special synthesizing device that mimicked sounds made by either an adult woman or another baby. This way, only the impact of the auditory cues was observed. The team then measured how long each type of sound held the infants’ attention. <span class="hl">They found that the ‘infant’ sounds held babies’ attention nearly 40 percent longer.</span><span class="mark">26</span> The baby noises also induced more reactions in the listening infants, like smiling or lip moving, which approximates sound making. The team theorizes that this attraction to other infant sounds could help launch the learning process that leads to speech. ‘It may be some property of the sound that is just drawing their attention,’ says study co-author Linda Polka. ‘Or maybe they are really interested in that particular type of sound because they are starting to focus on their own ability to make sounds. We are speculating here but it might catch their attention because they recognize it as a sound they could possibly make.’</p>
+<p class="para"><strong>F</strong> In a study published in <em>Proceedings of the National Academy of Sciences</em>, a total of 57 babies from two slightly different age groups – seven months and eleven and a half months – were played a number of syllables from both their native language (English) and a non-native tongue (Spanish). The infants were placed in a brain-activation scanner that recorded activity in a brain region known to guide the motor movements that produce speech. <span class="hl">The results suggest that listening to baby talk prompts infant brains to start practicing their language skills.</span><span class="mark">15</span> ‘Finding activation in motor areas the baby brain is engaged in trying to talk back right from the start, and suggests that seven-month-olds’ brains are already trying to figure out how to make interesting finding was that <span class="hl">while the seven-month-olds responded to all speech sounds regardless of language, the brains of the older infants worked harder at the motor activations of non-native sounds compared to native sounds</span><span class="mark">24</span>. The study may have also uncovered a process by which babies recognize differences between their native language and other tongues.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Whatever happened to the Harappan Civilisation?</div>
+<p class="para" style="font-style:italic;color:var(--muted);">New research sheds light on the disappearance of an ancient society</p>
+<p class="para"><strong>A</strong> The Harappan Civilisation of ancient Pakistan and India flourished 5,000 years ago, but a thousand years later their cities were abandoned. The Harappan Civilisation was a sophisticated Bronze Age society who built ‘megacities’ and traded internationally in luxury craft products, and yet seemed to have left almost no depictions of themselves. But <span class="hl">their lack of self-imagery – at a time when the Egyptians were carving and painting representations of themselves all over their temples</span><span class="mark">29</span> – is only part of the mystery.</p>
+<p class="para"><strong>B</strong> ‘<span class="hl">There is plenty of archaeological evidence to tell us about the rise of the Harappan Civilisation, but relatively little about its fall</span><span class="mark">40</span>,’ explains archaeologist Dr Cameron Petrie of the University of Cambridge. ‘As populations increased, <span class="hl">cities were built that had great baths, craft workshops, palaces and halls laid out in distinct sectors. Houses were arranged in blocks, with wide main streets and narrow alleyways, and many had their own wells and drainage systems.</span><span class="mark">30</span> It was very much a “thriving” civilisation.’ Then around 2100 BC, a transformation began. Streets went uncleaned, buildings started to be abandoned, and ritual structures fell out of use. After their final demise, a millennium passed before really large-scale cities appeared once more in South Asia.</p>
+<p class="para"><strong>C</strong> <span class="hl">Some have claimed that major glacier-fed rivers changed their course, dramatically affecting the water supply and agriculture; or that the cities could not cope with an increasing population, they exhausted their resource base, the trading economy broke down or they succumbed to invasion and conflict; and yet others that climate change caused an environmental change that affected food and water provision.</span><span class="mark">27</span> ‘It is unlikely that there was a single cause for the decline of the civilisation. But the fact is, <span class="hl">until now, we have had little solid evidence from the area for most of the key elements</span><span class="mark">40</span>,’ said Petrie. ‘A lot of the archaeological debate has really only been well-argued speculation.’</p>
+<p class="para"><strong>D</strong> A research team led by Petrie, together with Dr Ravindanath Singh of Banaras Hindu University in India, found early in their investigations that many of the archaeological sites were not where they were supposed to be, completely altering understanding of the way that this region was inhabited in the past. When they carried out a survey of how the larger area was settled in relation to sources of water, <span class="hl">they found inaccuracies in the published geographic locations of ancient settlements ranging from several hundred metres to many kilometres</span><span class="mark">31</span>. They realised that any attempts to use the existing data were likely to be fundamentally flawed. Over the course of several seasons of fieldwork they carried out new surveys, <span class="hl">finding an astonishing 198 settlement sites that were previously unknown</span><span class="mark">31</span>.</p>
+<p class="para"><strong>E</strong> Now, research published by Dr Yama Dixit and Professor David Hodell, both from Cambridge’s Department of Earth Sciences, has provided the first definitive evidence for climate change affecting the plains of north-western India, where hundreds of Harappan sites are known to have been situated. <span class="hl">The researchers gathered shells</span><span class="mark">32</span> of <em>Melanoides tuberculate</em> snails <span class="hl">from the sediments of an ancient lake</span><span class="mark">33</span> and used geochemical analysis as a means of tracing the climate history of the region. ‘As today, the major source of water into the lake is likely to have been the summer monsoon,’ says Dixit. ‘But we have observed that there was an abrupt change about 4,100 years ago, when <span class="hl">the amount of evaporation from the lake exceeded the rainfall – indicative of a drought</span><span class="mark">34</span>.’ Hodell adds: ‘<span class="hl">We estimate that the weakening of the Indian summer monsoon climate lasted about 200 years</span><span class="mark">39</span> before recovering to the previous conditions, which we still see today.’</p>
+<p class="para"><strong>F</strong> It has long been thought that other great Bronze Age civilisations also declined at a similar time, with a global-scale climate event being seen as the cause. While it is possible that these local-scale processes were linked, the real archaeological interest lies in understanding the impact of these larger-scale events on different environments and different populations. ‘Considering the vast area of the Harappan Civilisation with its variable weather systems,’ explains Singh, ‘<span class="hl">it is essential that we obtain more climate data from areas close to the two great cities at Mohenjodaro and Harappa and also from the Indian Punjab</span><span class="mark">37</span>.’</p>
+<p class="para"><strong>G</strong> Petrie and Singh’s team is now examining archaeological records and trying to understand details of how people led their lives in the region five millennia ago. <span class="hl">They are analysing grains cultivated at the time</span><span class="mark">35</span>, and trying to work out whether they were grown under extreme conditions of water stress, and whether they were adjusting the combinations of crops they were growing for different weather systems. They are also looking at <span class="hl">whether the types of pottery used, and other aspects of their material culture, were distinctive to specific regions</span><span class="mark">36</span> or were more similar across larger areas. This gives us insight into the types of interactive networks that the population was involved in, and whether those changed.</p>
+<p class="para"><strong>H</strong> Petrie believes that archaeologists are in a unique position to investigate how past societies responded to environmental and climatic change. ‘By investigating responses to environmental pressures and threats, <span class="hl">we can learn from the past to engage with the public, and the relevant governmental and administrative bodies, to be more proactive in issues such as the management and administration of water supply, the balance of urban and rural development, and the importance of preserving cultural heritage in the future</span><span class="mark">28</span><span class="mark">38</span>.’</p>
+  </div>
+
+  <div class="column right">
+    <div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–8</div><p>Complete the table below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><table class="tbl"><tr><th colspan="3">THE COCONUT PALM</th></tr><tr><th>Part</th><th>Description</th><th>Uses</th></tr><tr><td>trunk</td><td>up to 30 metres</td><td>timber for houses and the making of <b>1 ………</b></td></tr><tr><td>leaves</td><td>up to 6 metres long</td><td>to make brushes</td></tr><tr><td>flowers</td><td>at the top of the trunk</td><td>stems provide sap, used as a drink or a source of <b>2 ………</b></td></tr><tr><td>fruits – outer layer</td><td></td><td></td></tr><tr><td>fruits – middle layer (coir fibres)</td><td></td><td>used for <b>3 ………</b></td></tr><tr><td>fruits – inner layer (shell)</td><td></td><td>a source of <b>4 ………</b> (when halved) for <b>5 ………</b></td></tr><tr><td>coconut water</td><td></td><td>a drink; a source of <b>6 ………</b> for other plants</td></tr><tr><td>coconut flesh</td><td></td><td>oil and milk for cooking and <b>7 ………</b>; glycerine (an ingredient in <b>8 ………</b>)</td></tr></table></div>
+<div class="q-block">
+      <div class="q-num">Question 1</div>
+      <div class="question">Trunk – up to 30 metres – uses: timber for houses and the making of <b>1 ………</b>.</div>
+      <span class="answer ans-letter">furniture</span>
+      <div class="explanation">The trunk “is increasingly being used as a replacement for endangered hardwoods in the furniture construction industry.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 2</div>
+      <div class="question">Flowers – at the top of the trunk – uses: stems provide sap, used as a drink or a source of <b>2 ………</b>.</div>
+      <span class="answer ans-letter">sugar</span>
+      <div class="explanation">The flower stems “can also be reduced by boiling to produce a type of sugar used for cooking.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 3</div>
+      <div class="question">Fruits, middle layer (coir fibres) – used for <b>3 ………</b>.</div>
+      <span class="answer ans-letter">ropes</span>
+      <div class="explanation">Coir “is particularly important in manufacturing ropes.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 4</div>
+      <div class="question">Fruits, inner layer (shell) – a source of <b>4 ………</b> (when halved) for <b>5 ………</b>.</div>
+      <span class="answer ans-letter">charcoal</span>
+      <div class="explanation">“An important product obtained from the shell is charcoal…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 5</div>
+      <div class="question">Fruits, inner layer (shell) – a source of <b>4 ………</b> (when halved) for <b>5 ………</b>.</div>
+      <span class="answer ans-letter">bowls</span>
+      <div class="explanation">“When broken in half, the shells are also used as bowls in many parts of Asia.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 6</div>
+      <div class="question">Coconut water – a drink; a source of <b>6 ………</b> for other plants.</div>
+      <span class="answer ans-letter">hormones</span>
+      <div class="explanation">Coconut water “also provides the hormones which encourage other plants to grow more rapidly and produce higher yields.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 7</div>
+      <div class="question">Coconut flesh – oil and milk for cooking and <b>7 ………</b>; glycerine (an ingredient in <b>8 ………</b>).</div>
+      <span class="answer ans-letter">cosmetics</span>
+      <div class="explanation">Coconut oil and milk “are widely used in cooking… as well as in cosmetics.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 8</div>
+      <div class="question">Coconut flesh – oil and milk for cooking and <b>7 ………</b>; glycerine (an ingredient in <b>8 ………</b>).</div>
+      <span class="answer ans-letter">dynamite</span>
+      <div class="explanation">Glycerine (from coconut fat) was used by Alfred Nobel in his invention of dynamite.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 9–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block">
+      <div class="q-num">Question 9</div>
+      <div class="question">Coconut seeds need shade in order to germinate.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">The text says seeds can germinate “exposed to the full glare of the tropical sun” on desert island shores with only sand. They do not need shade.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 10</div>
+      <div class="question">Coconuts were probably transported to Asia from America in the 16th century.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">Coconuts were moved from South and Southeast Asia to Africa and then to the east coast of America, not the other way round.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 11</div>
+      <div class="question">Coconuts found on the west coast of America were a different type from those found on the east coast.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The passage discusses the origin debate for west-coast American coconuts but never compares the type of coconut on the west coast with those on the east coast.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 12</div>
+      <div class="question">All the coconuts found in Asia are cultivated varieties.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">In Asia “there is a large degree of coconut diversity and evidence of millennia of human use – but there are no relatives growing in the wild.” This implies all Asian coconuts are cultivated.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 13</div>
+      <div class="question">Coconuts are cultivated in different ways in America and the Pacific.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">No information is given about different cultivation methods in America and the Pacific.</div>
+    </div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Look at the following ideas and the list of researchers below. Match each idea with the correct researcher, A, B or C. <i>NB You may use any letter more than once.</i></p><p><b>List of Researchers</b></p><ul class="opts"><li><b>A</b> Mark VanDam</li><li><b>B</b> Nairán Ramirez-Esparza</li><li><b>C</b> Patricia Kuhl</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 14</div>
+      <div class="question">the importance of adults giving babies individual attention when talking to them<div class="yng">Match with A, B or C</div></div>
+      <span class="answer ans-letter">B (Nairán Ramirez-Esparza)</span>
+      <div class="explanation">She emphasises that “it really matters whether you use baby talk in a one-on-one context.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 15</div>
+      <div class="question">the connection between what babies hear and their own efforts to create speech<div class="yng">Match with A, B or C</div></div>
+      <span class="answer ans-letter">C (Patricia Kuhl)</span>
+      <div class="explanation">Her study (Paragraph F) shows that listening to speech activates motor areas in the baby brain that are used for producing speech (“trying to talk back”).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 16</div>
+      <div class="question">the advantage for the baby of having two parents each speaking in a different way<div class="yng">Match with A, B or C</div></div>
+      <span class="answer ans-letter">A (Mark VanDam)</span>
+      <div class="explanation">He discusses the “bridge hypothesis”: fathers use more adult-like speech so the child practises two different kinds of speech and develops a wider repertoire.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 17</div>
+      <div class="question">the connection between the amount of baby talk babies hear and how much vocalising they do themselves<div class="yng">Match with A, B or C</div></div>
+      <span class="answer ans-letter">B (Nairán Ramirez-Esparza)</span>
+      <div class="explanation">Her study found that the more baby talk parents used, the more babies babbled, and later the larger their vocabulary became.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 18–23</div><p>Complete the summary below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p><p><b>Research into how parents talk to babies</b></p><p>Researchers at Washington State University used <b>18 ………</b>, together with specialised computer programs, to analyse how parents interacted with their babies during a normal day. The study revealed that <b>19 ………</b> tended not to modify their ordinary speech patterns when interacting with their babies. According to an idea known as the <b>20 ………</b>, they may use a more adult type of speech to prepare infants for the language they will hear outside the family home. According to the researchers, hearing baby talk from one parent and ‘normal’ language from the other expands the baby’s <b>21 ………</b> of types of speech which they can practise.</p><p>Meanwhile, another study carried out by scientists from the University of Washington and the University of Connecticut recorded speech and sound using special <b>22 ………</b> that the babies were equipped with. When they studied the babies again at age two, they found that those who had heard a lot of baby talk in infancy had a much larger <b>23 ………</b> than those who had not.</p></div>
+<div class="q-block">
+      <div class="q-num">Question 18</div>
+      <div class="question">Researchers at Washington State University used <b>18 ………</b>, together with specialised computer programs, to analyse how parents interacted with their babies during a normal day.</div>
+      <span class="answer ans-letter">recording devices</span>
+      <div class="explanation">“equipped parents with recording devices and speech-recognition software…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 19</div>
+      <div class="question">The study revealed that <b>19 ………</b> tended not to modify their ordinary speech patterns when interacting with their babies.</div>
+      <span class="answer ans-letter">fathers / dads</span>
+      <div class="explanation">“dads aren’t doing the same thing. Dads didn’t raise their pitch…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 20</div>
+      <div class="question">According to an idea known as the <b>20 ………</b>, they may use a more adult type of speech to prepare infants for the language they will hear outside the family home.</div>
+      <span class="answer ans-letter">bridge hypothesis</span>
+      <div class="explanation">“Their role may be rooted in what is called the bridge hypothesis…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 21</div>
+      <div class="question">According to the researchers, hearing baby talk from one parent and ‘normal’ language from the other expands the baby’s <b>21 ………</b> of types of speech which they can practise.</div>
+      <span class="answer ans-letter">repertoire</span>
+      <div class="explanation">“…so the kid then has a wider repertoire of kinds of speech to practice.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 22</div>
+      <div class="question">Meanwhile, another study carried out by scientists from the University of Washington and the University of Connecticut recorded speech and sound using special <b>22 ………</b> that the babies were equipped with.</div>
+      <span class="answer ans-letter">(audio-recording) vests</span>
+      <div class="explanation">“…fitting 26 children with audio-recording vests…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 23</div>
+      <div class="question">When they studied the babies again at age two, they found that those who had heard a lot of baby talk in infancy had a much larger <b>23 ………</b> than those who had not.</div>
+      <span class="answer ans-letter">vocabulary</span>
+      <div class="explanation">Frequent baby talk “had dramatically boosted vocabulary…”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 24–26</div><p>Reading Passage 2 has six paragraphs, <b>A–F</b>. Which paragraph contains the following information? <i>Write the correct letter, A–F.</i></p></div>
+<div class="q-block">
+      <div class="q-num">Question 24</div>
+      <div class="question">a reference to a change which occurs in babies’ brain activity before the end of their first year.<div class="yng">Which paragraph (A–F)?</div></div>
+      <span class="answer ans-letter">F</span>
+      <div class="explanation">Paragraph F describes a change in brain activity between 7-month-olds (who respond to all sounds) and 11½-month-olds (who work harder on non-native sounds).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 25</div>
+      <div class="question">an example of what some parents do for their baby’s benefit before birth<div class="yng">Which paragraph (A–F)?</div></div>
+      <span class="answer ans-letter">A</span>
+      <div class="explanation">Paragraph A mentions parents playing classical music to their pregnant bellies.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 26</div>
+      <div class="question">a mention of babies’ preference for the sounds that other babies make<div class="yng">Which paragraph (A–F)?</div></div>
+      <span class="answer ans-letter">E</span>
+      <div class="explanation">Paragraph E states that babies paid more attention to infant-like vowel sounds than to adult-like sounds.</div>
+    </div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–31</div><p>Reading Passage 3 has eight paragraphs, <b>A–H</b>. Which paragraph contains the following information? <i>NB You may use any letter more than once.</i></p></div>
+<div class="q-block">
+      <div class="q-num">Question 27</div>
+      <div class="question">proposed explanations for the decline of the Harappan Civilisation<div class="yng">Which paragraph (A–H)?</div></div>
+      <span class="answer ans-letter">C</span>
+      <div class="explanation">Paragraph C lists several proposed explanations (river course changes, population pressure, resource exhaustion, trade breakdown, invasion, climate change).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 28</div>
+      <div class="question">reference to a present-day application of some archaeological research findings<div class="yng">Which paragraph (A–H)?</div></div>
+      <span class="answer ans-letter">H</span>
+      <div class="explanation">Paragraph H discusses how studying past responses to environmental change can help modern society with water management, urban/rural balance, and cultural heritage.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 29</div>
+      <div class="question">a difference between the Harappan Civilisation and another culture of the same period<div class="yng">Which paragraph (A–H)?</div></div>
+      <span class="answer ans-letter">A</span>
+      <div class="explanation">Paragraph A contrasts the Harappans’ almost complete lack of self-depictions with the Egyptians, who covered their temples with images of themselves.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 30</div>
+      <div class="question">a description of some features of Harappan urban design<div class="yng">Which paragraph (A–H)?</div></div>
+      <span class="answer ans-letter">B</span>
+      <div class="explanation">Paragraph B describes the urban features: great baths, craft workshops, palaces, houses in blocks, wide streets, narrow alleyways, wells and drainage systems.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 31</div>
+      <div class="question">reference to the discovery of errors made by previous archaeologists<div class="yng">Which paragraph (A–H)?</div></div>
+      <span class="answer ans-letter">D</span>
+      <div class="explanation">Paragraph D reports that many published locations of sites were inaccurate (errors of hundreds of metres to many kilometres) and that 198 new sites were found.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 32–36</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Looking at evidence of climate change</b></p><p>Yama Dixit and David Hodell have found the first definitive evidence of climate change affecting the plains of north-western India thousands of years ago. By collecting the <b>32 ………</b> of snails and analysing them, they discovered evidence of a change in water levels in a <b>33 ………</b> in the region. This occurred when there was less <b>34 ………</b> than evaporation, and suggests that there was an extended period of drought.</p><p>Petrie and Singh’s team are using archaeological records to look at <b>35 ………</b> from five millennia ago, in order to know whether people had adapted their agricultural practices to changing climatic conditions. They are also examining objects including <b>36 ………</b>, so as to find out about links between inhabitants of different parts of the region and whether these changed over time.</p></div>
+<div class="q-block">
+      <div class="q-num">Question 32</div>
+      <div class="question">By collecting the <b>32 ………</b> of snails and analysing them, they discovered evidence of a change in water levels in a <b>33 ………</b> in the region.</div>
+      <span class="answer ans-letter">shells</span>
+      <div class="explanation">“The researchers gathered shells of Melanoides tuberculate snails…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 33</div>
+      <div class="question">By collecting the <b>32 ………</b> of snails and analysing them, they discovered evidence of a change in water levels in a <b>33 ………</b> in the region.</div>
+      <span class="answer ans-letter">lake</span>
+      <div class="explanation">“…from the sediments of an ancient lake…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 34</div>
+      <div class="question">This occurred when there was less <b>34 ………</b> than evaporation, and suggests that there was an extended period of drought.</div>
+      <span class="answer ans-letter">rainfall</span>
+      <div class="explanation">“…when the amount of evaporation from the lake exceeded the rainfall…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 35</div>
+      <div class="question">Petrie and Singh’s team are using archaeological records to look at <b>35 ………</b> from five millennia ago, in order to know whether people had adapted their agricultural practices to changing climatic conditions.</div>
+      <span class="answer ans-letter">grains</span>
+      <div class="explanation">“They are analysing grains cultivated at the time…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 36</div>
+      <div class="question">They are also examining objects including <b>36 ………</b>, so as to find out about links between inhabitants of different parts of the region and whether these changed over time.</div>
+      <span class="answer ans-letter">pottery</span>
+      <div class="explanation">“They are also looking at whether the types of pottery used… were distinctive…”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Look at the following statements and the list of researchers below. Match each statement with the correct researcher, A, B, C or D. <i>NB You may use any letter more than once.</i></p><p><b>List of Researchers</b></p><ul class="opts"><li><b>A</b> Cameron Petrie</li><li><b>B</b> Ravindanath Singh</li><li><b>C</b> Yama Dixit</li><li><b>D</b> David Hodell</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 37</div>
+      <div class="question">Finding further information about changes to environmental conditions in the region is vital.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">B (Ravindanath Singh)</span>
+      <div class="explanation">Singh says it is “essential that we obtain more climate data from areas close to the two great cities… and also from the Indian Punjab.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 38</div>
+      <div class="question">Examining previous patterns of behaviour may have long-term benefits.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">A (Cameron Petrie)</span>
+      <div class="explanation">Petrie argues that by investigating past responses to environmental pressures we can help modern society be more proactive (long-term benefits).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 39</div>
+      <div class="question">Rough calculations indicate the approximate length of a period of water shortage.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">D (David Hodell)</span>
+      <div class="explanation">Hodell estimates that the weakening of the monsoon “lasted about 200 years.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 40</div>
+      <div class="question">Information about the decline of the Harappan Civilisation has been lacking.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">A (Cameron Petrie)</span>
+      <div class="explanation">Petrie states: “There is plenty of archaeological evidence to tell us about the rise… but relatively little about its fall” and that until now there has been “little solid evidence.”</div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>

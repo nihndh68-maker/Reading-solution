@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 13 – Reading Test 4 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 13 – Reading Test 4</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Cutty Sark: the fastest sailing ship of all time</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> The nineteenth century was a period of great technological development in Britain, and for shipping the major changes were from wind to steam power, and from wood to iron and steel.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> The fastest commercial sailing vessels of all time were <span class="hl">clippers, three-masted ships built to transport goods around the world, although some also took passengers</span><span class="mark">1</span>. From the 1840s until 1869, when the Suez Canal opened and steam propulsion was replacing sail, clippers dominated world trade. Although many were built, only one has survived more or less intact: <em>Cutty Sark</em>, now on display in Greenwich, southeast London.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> <em>Cutty Sark</em>'s unusual name <span class="hl">comes from the poem <em>Tam O'Shanter</em> by the Scottish poet Robert Burns. Tam, a farmer, is chased by a witch called Nannie, who is wearing a 'cutty sark' – an old Scottish name for a short nightdress</span><span class="mark">2</span>. The witch is depicted in <em>Cutty Sark</em>'s figurehead – the carving of a woman typically at the front of old sailing ships. In legend, and in Burns's poem, witches cannot cross water, so this was a rather strange choice of name for a ship.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> <em>Cutty Sark</em> was built in Dumbarton, Scotland, in 1869, for a shipping company owned by John Willis. To carry out construction, Willis chose a new shipbuilding firm, Scott & Linton, and <span class="hl">ensured that the contract with them put him in a very strong position</span><span class="mark">3</span>. In the end, the firm was forced out of business, and the ship was finished by a competitor.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Willis's company was active in the tea trade between China and Britain, where speed could bring shipowners both profits and prestige, so <em>Cutty Sark</em> <span class="hl">was designed to make the journey more quickly than any other ship</span><span class="mark">4</span>. On her maiden voyage, in 1870, she set sail from London, carrying large amounts of goods to China. She returned laden with tea, making the journey back to London in four months. However, <em>Cutty Sark</em> never lived up to the high expectations of her owner, as a result of bad winds and various misfortunes. On one occasion, in 1872, the ship and a rival clipper, <em>Thermopylae</em>, left port in China on the same day. Crossing the Indian Ocean, <em>Cutty Sark</em> gained a lead of over 400 miles, but then her rudder was severely damaged in stormy seas, making her impossible to steer. The ship's crew had the daunting task of repairing the rudder at sea, and only succeeded at the second attempt. <span class="hl"><em>Cutty Sark</em> reached London a week after <em>Thermopylae</em>.</span><span class="mark">5</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Steam ships posed a growing threat to clippers, as their speed and cargo capacity increased. In addition, the opening of the Suez Canal in 1869, the same year that <em>Cutty Sark</em> was launched, had a serious impact. While steam ships <span class="hl">could make use of the quick, direct route between the Mediterranean and the Red Sea</span><span class="mark">6</span>, the canal was of no use to sailing ships, <span class="hl">which needed the much stronger winds of the oceans, and so had to sail a far greater distance</span><span class="mark">7</span>. <span class="hl">Steam ships reduced the journey time between Britain and China by approximately two months.</span><span class="mark">6</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> By 1878, tea traders weren't interested in <em>Cutty Sark</em>, and instead, she took on the much less prestigious work of carrying any cargo between any two ports in the world. In 1880, violence aboard the ship led ultimately to the replacement of the captain with an incompetent drunkard who stole the crew's wages. He was suspended from service, and a new captain appointed. This marked a turnaround and the beginning of the most successful period in <em>Cutty Sark</em>'s working life, <span class="hl">transporting wool from Australia to Britain</span><span class="mark">9</span>. One such journey took just under 12 weeks, beating every other ship sailing that year by around a month.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> The ship's next captain, Richard Woodget, <span class="hl">was an excellent navigator</span><span class="mark">10</span>, who got the best out of both his ship and his crew. As a sailing ship, <em>Cutty Sark</em> depended on the strong trade winds of the southern hemisphere, and Woodget took her further south than any previous captain, <span class="hl">bringing her dangerously close to icebergs off the southern tip of South America</span><span class="mark">8</span>. His gamble paid off, though, and the ship was the fastest vessel in the wool trade for ten years.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> As competition from steam ships increased in the 1890s, and <em>Cutty Sark</em> approached the end of her life expectancy, she became less profitable. She was sold to a Portuguese firm, which renamed her <em>Ferreira</em>. For the next 25 years, she again carried miscellaneous cargoes around the world.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> <span class="hl">Badly damaged in a gale in 1922</span><span class="mark">11</span>, she was put into Falmouth harbour in southwest England, for repairs. Wilfred Dowman, a retired sea captain who owned a training vessel, recognised her and tried to buy her, but without success. She returned to Portugal and was sold to another Portuguese company. Dowman was determined, however, and offered a high price: this was accepted, and the ship returned to Falmouth the following year and had her original name restored.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> <span class="hl">Dowman used <em>Cutty Sark</em> as a training ship, and she continued in this role after his death.</span><span class="mark">12</span> When she was no longer required, in 1954, she was transferred to dry dock at Greenwich to go on public display. <span class="hl">The ship suffered from fire in 2007, and again, less seriously, in 2014</span><span class="mark">13</span>, but now <em>Cutty Sark</em> attracts a quarter of a million visitors a year.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">SAVING THE SOIL</div>
+<p class="para" style="font-style:italic;color:var(--muted);">More than a third of the Earth's top layer is at risk. Is there hope for our planet's most precious resource?</p>
+<p class="para"><strong>A</strong> More than a third of the world's soil is endangered, according to a recent UN report. If we don't slow the decline, all farmable soil could be gone in 60 years. Since soil grows 95% of our food, and sustains human life in other more surprising ways, that is a huge problem.</p>
+<p class="para"><strong>B</strong> Peter Groffman, from the Cary Institute of Ecosystem Studies in New York, points out that soil scientists have been warning about the degradation of the world's soil for decades. At the same time, our understanding of its importance to humans has grown. A single gram of healthy soil might contain 100 million bacteria, as well as other microorganisms such as viruses and fungi, <span class="hl">living amid decomposing plants and various minerals</span><span class="mark">14</span>.</p>
+<p class="para">That means soils do not just grow our food, but are the source of nearly all our existing antibiotics, and could be our best hope in the fight against antibiotic-resistant bacteria. Soil is also an ally against climate change: as microorganisms within soil digest dead animals and plants, <span class="hl">they lock in their carbon content, holding three times the amount of carbon as does the entire atmosphere</span><span class="mark">15</span>. <span class="hl">Soils also store water, preventing flood damage</span><span class="mark">16</span>: in the UK, damage to buildings, roads and bridges from floods caused by soil degradation costs £233 million every year.</p>
+<p class="para"><strong>C</strong> If the soil loses its ability to perform these functions, the human race could be in big trouble. The danger is not that the soil will disappear completely, but that the microorganisms that give it its special properties will be lost. And once this has happened, it may take the soil thousands of years to recover.</p>
+<p class="para"><span class="hl">Agriculture is by far the biggest problem.</span><span class="mark">17</span> <span class="hl">In the wild, when plants grow they remove nutrients from the soil, but then when the plants die and decay these nutrients are returned directly to the soil.</span><span class="mark">23</span> <span class="hl">Humans tend not to return unused parts of harvested crops directly to the soil to enrich it</span><span class="mark">18</span>, meaning that the soil gradually becomes less fertile. In the past we developed strategies to get around the problem, such as regularly varying the types of crops grown, or leaving fields uncultivated for a season.</p>
+<p class="para"><strong>D</strong> But these practices became inconvenient as populations grew and agriculture had to be run on more commercial lines. A solution came in the early 20th century with the Haber-Bosch process for manufacturing ammonium nitrate. Farmers have been putting this synthetic fertiliser on their fields ever since.</p>
+<p class="para">But over the past few decades, it has become clear this wasn't such a bright idea. <span class="hl">Chemical fertilisers can release polluting nitrous oxide into the atmosphere and excess is often washed away with the rain, releasing nitrogen into rivers.</span><span class="mark">19</span> More recently, we have found that indiscriminate use of fertilisers hurts the soil itself, turning it acidic and salty, and degrading the soil they are supposed to nourish.</p>
+<p class="para"><strong>E</strong> One of the people looking for a solution to this problem is Pius Floris, who started out running a tree-care business in the Netherlands, and now advises some of the world's top soil scientists. <span class="hl">He came to realise that the best way to ensure his trees flourished was to take care of the soil</span><span class="mark">22</span>, and has developed a cocktail of beneficial bacteria, fungi and humus* to do this. Researchers at the University of Valladolid in Spain recently used this cocktail on soils destroyed by years of fertiliser overuse. <span class="hl">When they applied Floris's mix to the desert-like test plots, a good crop of plants emerged that were not just healthy at the surface, but had roots strong enough to pierce dirt as hard as rock.</span><span class="mark">20</span> The few plants that grew in the control plots, fed with traditional fertilisers, were small and weak.</p>
+<p class="para"><strong>F</strong> However, measures like this are not enough to solve the global soil degradation problem. To assess our options on a global scale we first need an accurate picture of what types of soil are out there, and the problems they face. That's not easy. For one thing, <span class="hl">there is no agreed international system for classifying soil</span><span class="mark">26</span>. In an attempt to unify the different approaches, the UN has created the Global Soil Map project. Researchers from nine countries are working together to create <span class="hl">a map linked to a database that can be fed measurements from field surveys, drone surveys, satellite imagery, lab analyses and so on</span><span class="mark">24</span> to provide real-time data on the state of the soil. Within the next four years, they aim to have mapped soils worldwide to a depth of 100 metres, with the results freely accessible to all.</p>
+<p class="para"><strong>G</strong> But this is only a first step. We need ways of presenting the problem that bring it home to governments and the wider public, says Pamela Chasek at the International Institute for Sustainable Development, in Winnipeg, Canada. 'Most scientists don't speak language that policy-makers can understand, and vice versa.' <span class="hl">Chasek and her colleagues have proposed a goal of 'zero net land degradation'. Like the idea of carbon neutrality, it is an easily understood target that can help shape expectations and encourage action.</span><span class="mark">21</span></p>
+<p class="para">For soils on the brink, that may be too late. <span class="hl">Several researchers are agitating for the immediate creation of protected zones for endangered soils.</span><span class="mark">25</span> One difficulty here is defining what these areas should conserve: areas where the greatest soil diversity is present? Or areas of unspoilt soils that could act as a future benchmark of quality?</p>
+<p class="para">Whatever we do, if we want our soils to survive, we need to take action now.</p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* humus – a substance produced by decaying plant material</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Book Review</div>
+<p class="para" style="font-style:italic;color:var(--muted);"><em>The Happiness Industry: How the Government and Big Business Sold Us Well-Being</em>, by William Davies</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> 'Happiness is the ultimate goal because it is self-evidently good. If we are asked why happiness matters we can give no further external reason. It just obviously does matter.' This pronouncement by Richard Layard, an economist and advocate of 'positive psychology', summarises the beliefs of many people today. For Layard and others like him, it is obvious that the purpose of government is to promote a state of collective well-being. The only question is how to achieve it, and here positive psychology – a supposed science that not only identifies what makes people happy but also allows their happiness to be measured – can show the way. Equipped with this science, they say, governments can secure happiness in society in a way they never could in the past.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> It is an astonishingly crude and simple-minded way of thinking, and for that very reason increasingly popular. <span class="hl">Those who think in this way are oblivious to the vast philosophical literature in which the meaning and value of happiness have been explored and questioned, and write as if nothing of any importance had been thought on the subject until it came to their attention.</span><span class="mark">27</span> It was the philosopher Jeremy Bentham (1748-1832) who was more than anyone else responsible for the development of this way of thinking. For Bentham it was obvious that the human good consists of pleasure and the absence of pain. <span class="hl">The Greek philosopher Aristotle may have identified happiness with self-realisation in the 4th century BC</span><span class="mark">28</span>, and thinkers throughout the ages may have struggled to reconcile the pursuit of happiness with other human values, but for Bentham all this was mere metaphysics or fiction. Without knowing anything much of him or the school of moral theory he established – since they are by education and intellectual conviction illiterate in the history of ideas – our advocates of positive psychology follow in his tracks in rejecting as outmoded and irrelevant pretty much the entirety of ethical reflection on human happiness to date.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> But as William Davies notes in his recent book <em>The Happiness Industry</em>, the view that happiness is the only self-evident good is actually a way of limiting moral inquiry. One of the virtues of this rich, lucid and arresting book is that it places the current cult of happiness in a well-defined historical framework. Rightly, Davies starts his story with Bentham, noting that he was far more than a philosopher. Davies writes, 'Bentham's activities were those which we might now associate with a public sector management consultant'. In the 1790s, he wrote to the Home Office <span class="hl">suggesting that the departments of government be linked together through a set of 'conversation tubes'</span><span class="mark">30</span>, and to the Bank of England with <span class="hl">a design for a printing device that could produce unforgeable banknotes</span><span class="mark">31</span>. He drew up <span class="hl">plans for a 'frigidarium' to keep provisions such as meat, fish, fruit and vegetables fresh</span><span class="mark">32</span>. His celebrated design for a prison to be known as a 'Panopticon', in which <span class="hl">prisoners would be kept in solitary confinement while being visible at all times to the guards</span><span class="mark">33</span>, was very nearly adopted. (Surprisingly, Davies does not discuss the fact that Bentham meant his Panopticon not just as a model prison but also as an instrument of control that could be applied to schools and factories.)</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Bentham was also a pioneer of the 'science of happiness'. If happiness is to be regarded as a science, it has to be measured, and <span class="hl">Bentham suggested two ways in which this might be done</span><span class="mark">34</span>. <span class="hl">Viewing happiness as a complex of pleasurable sensations, he suggested that it might be quantified by measuring the human pulse rate.</span><span class="mark">36</span> Alternatively, money could be used as the standard for quantification: if two different goods have the same price, it can be claimed that they produce the same quantity of pleasure in the consumer. Bentham was more attracted by the latter measure. By associating money so closely to inner experience, Davies writes, Bentham '<span class="hl">set the stage for the entangling of psychological research and capitalism that would shape the business practices of the twentieth century</span><span class="mark">29</span>'.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> <span class="hl"><em>The Happiness Industry</em> describes how the project of a science of happiness has become integral to capitalism. We learn much that is interesting about how economic problems are being redefined and treated as psychological maladies.</span><span class="mark">35</span> In addition, Davies shows how the belief that inner states of pleasure and displeasure can be objectively measured has informed management studies and advertising. The tendency of thinkers such as J B Watson, the founder of behaviourism*, was that human beings could be shaped, or manipulated, by policymakers and managers. Watson had no factual basis for his view of human action. <span class="hl">When he became president of the American Psychological Association in 1915, he 'had never even studied a single human being': his research had been confined to experiments on white rats.</span><span class="mark">37</span> Yet Watson's reductive model is now widely applied, with 'behaviour change' becoming the goal of governments: <span class="hl">in Britain, a 'Behaviour Insights Team' has been established by the government</span><span class="mark">38</span> to study how people can be encouraged, at minimum cost to the public purse, to live in what are considered to be socially desirable ways.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> <span class="hl">Modern industrial societies appear to need the possibility of ever-increasing happiness to motivate them in their labours.</span><span class="mark">39</span> But whatever its intellectual pedigree, <span class="hl">the idea that governments should be responsible for promoting happiness is always a threat to human freedom</span><span class="mark">40</span>.</p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* 'behaviourism': a branch of psychology which is concerned with observable behaviour</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–8</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Clippers were originally intended to be used as passenger ships.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">FALSE</span><div class="explanation">Clippers were built 'to transport goods around the world, although some also took passengers'.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question"><em>Cutty Sark</em> was given the name of a character in a poem.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">FALSE</span><div class="explanation">The name is the short nightdress (the 'cutty sark') worn by the witch Nannie, not the character herself.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">The contract between John Willis and Scott & Linton favoured Willis.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">TRUE</span><div class="explanation">Willis ensured the contract put him in a very strong position.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">John Willis wanted <em>Cutty Sark</em> to be the fastest tea clipper travelling between the UK and China.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">TRUE</span><div class="explanation">She was designed to make the journey more quickly than any other ship.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Despite storm damage, <em>Cutty Sark</em> beat <em>Thermopylae</em> back to London.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">FALSE</span><div class="explanation">She reached London a week after <em>Thermopylae</em>.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">The opening of the Suez Canal meant that steam ships could travel between Britain and China faster than clippers.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">TRUE</span><div class="explanation">Steam ships could use the quick direct route and cut the journey time by about two months.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Steam ships sometimes used the ocean route to travel between London and China.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Only sailing ships are said to need the ocean route; steam ships' use of it is not mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Captain Woodget put <em>Cutty Sark</em> at risk of hitting an iceberg.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">TRUE</span><div class="explanation">He took her 'dangerously close to icebergs'.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 9–13</div><p>Complete the sentences. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">After 1880, <em>Cutty Sark</em> carried <b>9 ………</b> as its main cargo during its most successful time.</div><span class="answer ans-letter">wool</span><div class="explanation">Her most successful period was spent 'transporting wool from Australia to Britain'.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">As a captain and <b>10 ………</b>, Woodget was very skilled.</div><span class="answer ans-letter">navigator</span><div class="explanation">He 'was an excellent navigator'.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question"><em>Ferreira</em> went to Falmouth to repair damage that a <b>11 ………</b> had caused.</div><span class="answer ans-letter">gale</span><div class="explanation">She was 'badly damaged in a gale in 1922'.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">Between 1923 and 1954, <em>Cutty Sark</em> was used for <b>12 ………</b>.</div><span class="answer ans-letter">training</span><div class="explanation">Dowman used her as a training ship until 1954.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question"><em>Cutty Sark</em> has twice been damaged by <b>13 ………</b> in the 21st century.</div><span class="answer ans-letter">fire</span><div class="explanation">Fires in 2007 and 2014.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Complete the summary. Write <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Why soil degradation could be a disaster for humans</b></p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">as well as plant remains and <b>14 ………</b></div><span class="answer ans-letter">minerals</span><div class="explanation">Healthy soil contains decomposing plants 'and various minerals'.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">its function in storing <b>15 ………</b> has a significant effect on the climate</div><span class="answer ans-letter">carbon</span><div class="explanation">Microorganisms lock in carbon, holding three times as much as the atmosphere.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">it prevents damage to property and infrastructure because it holds <b>16 ………</b></div><span class="answer ans-letter">water</span><div class="explanation">Soils store water, preventing flood damage.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">The main factor contributing to soil degradation is the <b>17 ………</b> carried out by humans.</div><span class="answer ans-letter">agriculture</span><div class="explanation">'Agriculture is by far the biggest problem.'</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18–21</div><p>Complete each sentence with the correct ending, A–F.</p><ul class='opts'><li><b>A</b> may improve the number and quality of plants growing there</li><li><b>B</b> may contain data from up to nine countries</li><li><b>C</b> may not be put back into the soil</li><li><b>D</b> may help governments to be more aware of soil-related issues</li><li><b>E</b> may cause damage to different aspects of the environment</li><li><b>F</b> may be better for use at a global level</li></ul></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Nutrients contained in the unused parts of harvested crops</div><span class="answer ans-letter">C</span><div class="explanation">Humans tend not to return unused parts of harvested crops directly to the soil.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Synthetic fertilisers produced with Haber-Bosch process</div><span class="answer ans-letter">E</span><div class="explanation">They release nitrous oxide, pollute rivers with nitrogen, and turn soil acidic and salty.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Addition of a mixture developed by Pius Floris to the soil</div><span class="answer ans-letter">A</span><div class="explanation">Treated plots grew a good crop of healthy plants with strong roots.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">The idea of zero net soil degradation</div><span class="answer ans-letter">D</span><div class="explanation">It is an easily understood target that can shape expectations and encourage action, bringing the problem home to governments.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 22–26</div><p>Which section (A–G) contains the following information? <i>You may use any letter more than once.</i></p></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">a reference to one person's motivation for a soil-improvement project<div class="yng">Which section (A–G)?</div></div><span class="answer ans-letter">E</span><div class="explanation">Pius Floris realised that caring for the soil was the best way to make his trees flourish.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">an explanation of how soil stayed healthy before the development of farming<div class="yng">Which section (A–G)?</div></div><span class="answer ans-letter">C</span><div class="explanation">In the wild, nutrients taken up by plants return to the soil when the plants die and decay.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">examples of different ways of collecting information on soil degradation<div class="yng">Which section (A–G)?</div></div><span class="answer ans-letter">F</span><div class="explanation">Field surveys, drone surveys, satellite imagery and lab analyses.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">a suggestion for a way of keeping some types of soil safe in the near future<div class="yng">Which section (A–G)?</div></div><span class="answer ans-letter">G</span><div class="explanation">Researchers want protected zones for endangered soils.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">a reason why it is difficult to provide an overview of soil degradation<div class="yng">Which section (A–G)?</div></div><span class="answer ans-letter">F</span><div class="explanation">There is no agreed international system for classifying soil.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–29</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">What is the reviewer's attitude to advocates of positive psychology?<ul class='opts'><li><b>A</b> They are wrong to reject the ideas of Bentham.</li><li><b>B</b> They are over-influenced by their study of Bentham's theories.</li><li><b>C</b> They have a fresh new approach to ideas on human happiness.</li><li><b>D</b> They are ignorant about the ideas they should be considering.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">He says they are oblivious to the philosophical literature on happiness and 'illiterate in the history of ideas'.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">The reviewer refers to Aristotle in order to suggest that happiness<ul class='opts'><li><b>A</b> may not be just pleasure and the absence of pain.</li><li><b>B</b> should not be the main goal of humans.</li><li><b>C</b> is not something that should be fought for.</li><li><b>D</b> is not just an abstract concept.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Aristotle saw happiness as self-realisation, unlike Bentham's pleasure and absence of pain.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">According to Davies, Bentham's suggestion for linking the price of goods to happiness was significant because<ul class='opts'><li><b>A</b> it was the first successful way of assessing happiness.</li><li><b>B</b> it established a connection between work and psychology.</li><li><b>C</b> it was the first successful example of psychological research.</li><li><b>D</b> it involved consideration of the rights of consumers.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">It 'set the stage for the entangling of psychological research and capitalism'.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 30–34</div><p>Complete the summary using the list of words, A–G.</p><ul class='opts'><li><b>A</b> measurement</li><li><b>B</b> security</li><li><b>C</b> implementation</li><li><b>D</b> profits</li><li><b>E</b> observation</li><li><b>F</b> communication</li><li><b>G</b> preservation</li></ul></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">he suggested a type of technology to improve <b>30 ………</b> for different Government departments</div><span class="answer ans-letter">F – communication</span><div class="explanation">'Conversation tubes' to link government departments.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">a new way of printing banknotes to increase <b>31 ………</b></div><span class="answer ans-letter">B – security</span><div class="explanation">A printing device producing unforgeable banknotes.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">a method for the <b>32 ………</b> of food</div><span class="answer ans-letter">G – preservation</span><div class="explanation">A 'frigidarium' to keep provisions fresh.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">a prison which allowed the <b>33 ………</b> of prisoners at all times</div><span class="answer ans-letter">E – observation</span><div class="explanation">Prisoners were visible at all times to the guards.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">possibilities for its <b>34 ………</b>, and suggested some methods</div><span class="answer ans-letter">A – measurement</span><div class="explanation">Happiness had to be measured; he suggested pulse rate or money.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 35–40</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">One strength of <em>The Happiness Industry</em> is its discussion of the relationship between psychology and economics.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">The book shows how the science of happiness became integral to capitalism and how economic problems are treated as psychological ones.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">It is more difficult to measure some emotions than others.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Measurement methods are described, but emotions are not compared (highlight is the nearest related passage).</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Watson's ideas on behaviourism were supported by research on humans he carried out before 1915.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">By 1915 he 'had never even studied a single human being'; his research was on white rats.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Watson's ideas have been most influential on governments outside America.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Britain's Behaviour Insights Team is mentioned, but no claim is made about where his ideas were most influential.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">The need for happiness is linked to industrialisation.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">'Modern industrial societies appear to need the possibility of ever-increasing happiness to motivate them.'</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">A main aim of government should be to increase the happiness of the population.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The writer ends by calling this idea 'always a threat to human freedom'.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

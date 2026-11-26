@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 13 – Reading Test 1 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 13 – Reading Test 1</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Case Study: Tourism New Zealand website</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> New Zealand is a small country of four million inhabitants, a long-haul flight from all the major tourist-generating markets of the world. Tourism currently makes up 9% of the country's gross domestic product, and is the country's largest export sector. Unlike other export sectors, which make products and then sell them overseas, tourism brings its customers to New Zealand. The product is the country itself – the people, the places and the experiences. In 1999, Tourism New Zealand launched a campaign to communicate a new brand position to the world. The campaign focused on New Zealand's scenic beauty, exhilarating outdoor activities and authentic Maori culture, and it made New Zealand one of the strongest national brands in the world.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> A key feature of the campaign was the website newzealand.com, which provided potential visitors to New Zealand with a single gateway to everything the destination had to offer. The heart of the website was a database of tourism services operators, both those based in New Zealand and those based abroad which offered tourism service to the country. Any tourism-related business could be listed by filling in a simple form. This meant that even the smallest bed and breakfast address or specialist activity provider could gain a web presence with access to an audience of long-haul visitors. In addition, because <span class="hl">participating businesses were able to update the details they gave on a regular basis</span><span class="mark">1</span>, the information provided remained accurate. And to maintain and improve standards, Tourism New Zealand organised a scheme whereby organisations appearing on the website underwent an independent evaluation against a set of agreed national standards of quality. As part of this, <span class="hl">the effect of each business on the environment was considered</span><span class="mark">2</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> To communicate the New Zealand experience, the site also carried features relating to famous people and places. One of the most popular was <span class="hl">an interview with former New Zealand All Blacks rugby captain Tana Umaga</span><span class="mark">3</span>. Another feature that attracted a lot of attention was an interactive journey through <span class="hl">a number of the locations chosen for blockbuster films</span><span class="mark">4</span> which had made use of New Zealand's stunning scenery as a backdrop. As the site developed, additional features were added to help independent travelers devise their own customised itineraries. To make it easier to plan motoring holidays, the site catalogued the most popular driving routes in the country, <span class="hl">highlighting different routes according to the season</span><span class="mark">5</span> and indicating distances and times.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Later, a Travel Planner feature was added, which allowed visitors to click and 'bookmark' places or attractions they were interested in, and then view the results on a map. The Travel Planner offered suggested routes and public transport options between the chosen locations. <span class="hl">There were also links to accommodation in the area.</span><span class="mark">6</span> By registering with the website, users could save their Travel Plan and return to it later, or print it out to take on the visit. The website also had a 'Your Words' section where <span class="hl">anyone could submit a blog of their New Zealand travels</span><span class="mark">7</span> for possible inclusion on the website.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> The Tourism New Zealand website won two Webby awards for online achievement and innovation. More importantly perhaps, the growth of tourism to New Zealand was impressive. Overall tourism expenditure increased by an average of 6.9% per year between 1999 and 2004. From Britain, visits to New Zealand grew at an average annual rate of 13% between 2002 and 2006, compared to a rate of 4% overall for British visits abroad.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> <span class="hl">The website was set up to allow both individuals and travel organisations to create itineraries and travel packages to suit their own needs and interests.</span><span class="mark">8</span> On the website, <span class="hl">visitors can search for activities not solely by geographical location, but also by the particular nature of the activity</span><span class="mark">9</span>. This is important as research shows that <span class="hl">activities are the key driver of visitor satisfaction, contributing 74% to visitor satisfaction, while transport and accommodation account for the remaining 26%</span><span class="mark">10</span>. The more activities that visitors undertake, the more satisfied they will be. It has also been found that <span class="hl">visitors enjoy cultural activities most when they are interactive, such as visiting a <em>marae</em> (meeting ground) to learn about traditional Maori life</span><span class="mark">11</span>. Many long-haul travelers enjoy such learning experiences, which provide them with stories to take home to their friends and family. In addition, it appears that visitors to New Zealand don't want to be 'one of the crowd' and find activities that involve only a few people more special and meaningful.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> It could be argued that New Zealand is not a typical destination. <span class="hl">New Zealand is a small country with a visitor economy composed mainly of small businesses.</span><span class="mark">12</span> It is generally perceived as a safe English-speaking country with a reliable transport infrastructure. Because of the long-haul flight, most visitors stay for longer (average 20 days) and want to see as much of the country as possible on what is often seen as <span class="hl">a once-in-a-lifetime visit</span><span class="mark">13</span>. However, the underlying lessons apply anywhere – the effectiveness of a strong brand, a strategy based on unique experiences and a comprehensive and user-friendly website.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Why being bored is stimulating – and useful, too</div>
+<p class="para"><strong>A</strong> We all know how it feels – it's impossible to keep your mind on anything, time stretches out, and all the things you could do seem equally unlikely to make you feel better. But <span class="hl">defining boredom so that it can be studied in the lab has proved difficult</span><span class="mark">14</span>. For a start, it can include a lot of other mental states, such as frustration, apathy, depression and indifference. There isn't even agreement over whether boredom is always a low-energy, flat kind of emotion or whether feeling agitated and restless counts as boredom, too. In his book, <em>Boredom: A Lively History</em>, Peter Toohey at the University of Calgary, Canada, compares it to disgust – an emotion that motivates us to stay away from certain situations. '<span class="hl">If disgust protects humans from infection, boredom may protect them from "infectious" social situations</span><span class="mark">20</span>,' he suggests.</p>
+<p class="para"><strong>B</strong> By asking people about their experiences of boredom, Thomas Goetz and his team at the University of Konstanz in Germany have recently <span class="hl">identified five distinct types: indifferent, calibrating, searching, reactant and apathetic</span><span class="mark">15</span>. These can be plotted on two axes – one running left to right, which measures low to high arousal, and the other from top to bottom, which measures how positive or negative the feeling is. Intriguingly, Goetz has found that while people experience all kinds of boredom, they tend to specialise in one. Of the five types, <span class="hl">the most damaging is 'reactant' boredom with its explosive combination of high arousal and negative emotion</span><span class="mark">21</span>. The most useful is what Goetz calls 'indifferent' boredom: someone isn't engaged in anything satisfying but still feels relaxed and calm. However, it remains to be seen whether there are any character traits that predict the kind of boredom each of us might be prone to.</p>
+<p class="para"><strong>C</strong> Psychologist Sandi Mann at the University of Central Lancashire, UK, goes further. 'All emotions are there for a reason, including boredom,' she says. <span class="hl">Mann has found that being bored makes us more creative.</span><span class="mark">16</span> 'We're all afraid of being bored but in actual fact it can lead to all kinds of amazing things,' she says. In experiments published last year, Mann found that people who had been made to feel bored by copying numbers out of the phone book for 15 minutes came up with more creative ideas about how to use a polystyrene cup than a control group. Mann concluded that a passive, boring activity is best for creativity because it allows the mind to wander. In fact, she goes so far as to suggest that we should seek out more boredom in our lives.</p>
+<p class="para"><strong>D</strong> Psychologist John Eastwood at York University in Toronto, Canada, isn't convinced. 'If you are in a state of mind-wandering you are not bored,' he says. 'In my view, by definition boredom is an undesirable state.' That doesn't necessarily mean that it isn't adaptive, he adds. 'Pain is adaptive – if we didn't have physical pain, bad things would happen to us. Does that mean that we should actively cause pain? No. But even if boredom has evolved to help us survive, <span class="hl">it can still be toxic if allowed to fester</span><span class="mark">17</span>.' For Eastwood, the central feature of boredom is a failure to put our 'attention system' into gear. This causes <span class="hl">an inability to focus on anything</span><span class="mark">24</span>, which makes time seem to go painfully slowly. What's more, <span class="hl">your efforts to improve the situation can end up making you feel worse</span><span class="mark">22</span>. 'People try to connect with the world and if they are not successful there's that frustration and irritability,' he says. Perhaps most worryingly, says Eastwood, repeatedly failing to engage attention can lead to a state where we don't know what to do any more, and no longer care.</p>
+<p class="para"><strong>E</strong> Eastwood's team is now trying to explore why the attention system fails. It's early days but they think that at least some of it comes down to personality. Boredom proneness has been linked with a variety of traits. <span class="hl">People who are motivated by pleasure seem to suffer particularly badly.</span><span class="mark">25</span> <span class="hl">Other personality traits, such as curiosity, are associated with a high boredom threshold.</span><span class="mark">26</span> More evidence that boredom has detrimental effects comes from studies of people who are more or less prone to boredom. It seems <span class="hl">those who bore easily face poorer prospects in education, their career and even life in general</span><span class="mark">18</span>. But of course, boredom itself cannot kill – it's the things we do to deal with it that may put us in danger. What can we do to alleviate it before it comes to that? Goetz's group has one suggestion. Working with teenagers, they found that those who 'approach' a boring situation – in other words, see that it's boring and get stuck in anyway – report less boredom than those who try to avoid it by using snacks, TV or social media for distraction.</p>
+<p class="para"><strong>F</strong> Psychologist Francoise Wemelsfelder speculates that <span class="hl">our over-connected lifestyles might even be a new source of boredom</span><span class="mark">23</span>. 'In modern human society there is a lot of overstimulation but still a lot of problems finding meaning,' she says. <span class="hl">So instead of seeking yet more mental stimulation, perhaps we should leave our phones alone, and use boredom to motivate us to engage with the world in a more meaningful way.</span><span class="mark">19</span></p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Artificial artist?</div>
+<p class="para" style="font-style:italic;color:var(--muted);">Can computers really create works of art?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> The Painting Fool is one of a growing number of computer programs which, so their makers claim, possess creative talents. <span class="hl">Classical music by an artificial composer has had audiences enraptured, and even tricked them into believing a human was behind the score. Artworks painted by a robot have sold for thousands of dollars and been hung in prestigious galleries. And software has been built which creates art that could not have been imagined by the programmer.</span><span class="mark">27</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Human beings are the only species to perform sophisticated creative acts regularly. If we can break this process down into computer code, where does that leave human creativity? 'This is a question at the very core of humanity,' says Geraint Wiggins, a computational creativity researcher at Goldsmiths, University of London. 'It scares a lot of people. <span class="hl">They are worried that it is taking something special away from what it means to be human.</span><span class="mark">28</span>'</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> To some extent, we are all familiar with computerised art. The question is: where does the work of the artist stop and the creativity of the computer begin? Consider one of the oldest machine artists, Aaron, a robot that has had paintings exhibited in London's Tate Modern and the San Francisco Museum of Modern Art. Aaron can pick up a paintbrush and paint on canvas on its own. Impressive perhaps, but <span class="hl">it is still little more than a tool to realise the programmer's own creative ideas</span><span class="mark">29</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Simon Colton, the designer of the Painting Fool, is keen to make sure his creation doesn't attract the same criticism. Unlike earlier 'artists' such as Aaron, the Painting Fool only needs minimal direction and <span class="hl">can come up with its own concepts by going online for material</span><span class="mark">29</span>. The software runs its own web searches and trawls through social media sites. It is now beginning to display a kind of imagination too, creating pictures from scratch. One of its original works is a series of fuzzy landscapes, depicting trees and sky. While some might say they have a mechanical look, Colton argues that <span class="hl">such reactions arise from people's double standards towards software-produced and human-produced art</span><span class="mark">30</span>. After all, he says, consider that the Painting Fool painted the landscapes without referring to a photo. 'If a child painted a new scene from its head, you'd say it has a certain level of imagination,' he points out. 'The same should be true of a machine.' Software bugs can also lead to unexpected results. Some of the Painting Fool's paintings of a chair came out in black and white, thanks to a technical glitch. <span class="hl">This gives the work an eerie, ghostlike quality.</span><span class="mark">31</span> Human artists like the renowned Ellsworth Kelly are lauded for limiting their colour palette – so why should computers be any different?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> <span class="hl">Researchers like Colton don't believe it is right to measure machine creativity directly to that of humans who 'have had millennia to develop our skills'</span><span class="mark">32</span>. Others, though, are fascinated by the prospect that a computer might create something as original and subtle as our best artists. So far, only one has come close. Composer David Cope invented a program called Experiments in Musical Intelligence, or EMI. Not only did EMI create compositions in Cope's style, but also that of the most revered classical composers, including Bach, Chopin and Mozart. Audiences were moved to tears, and <span class="hl">EMI even fooled classical music experts into thinking they were hearing genuine Bach</span><span class="mark">33</span>. Not everyone was impressed however. Some, such as Wiggins, have blasted Cope's work as pseudoscience, and <span class="hl">condemned him for his deliberately vague explanation of how the software worked</span><span class="mark">34</span>. Meanwhile, Douglas Hofstadter of Indiana University <span class="hl">said EMI created replicas which still rely completely on the original artist's creative impulses</span><span class="mark">35</span>. <span class="hl">When audiences found out the truth they were often outraged with Cope</span><span class="mark">36</span>, and one music lover even tried to punch him. Amid such controversy, Cope destroyed EMI's vital databases.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> But why did so many people love the music, yet recoil when they discovered how it was composed? <span class="hl">A study by computer scientist David Moffat of Glasgow Caledonian University provides a clue.</span><span class="mark">38</span> He asked both expert musicians and non-experts to assess six compositions. <span class="hl">The participants weren't told beforehand whether the tunes were composed by humans or computers</span><span class="mark">37</span>, but were asked to guess, and then rate how much they liked each one. <span class="hl">People who thought the composer was a computer tended to dislike the piece more than those who believed it was human.</span><span class="mark">39</span> This was true even among the experts, who might have been expected to be more objective in their analyses.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Where does this prejudice come from? Paul Bloom of Yale University has a suggestion: he reckons part of the pleasure we get from art stems from the creative process behind the work. This can give it an 'irresistible essence', says Bloom. Meanwhile, <span class="hl">experiments by Justin Kruger of New York University have shown that people's enjoyment of an artwork increases if they think more time and effort was needed to create it</span><span class="mark">40</span>. Similarly, Colton thinks that when people experience art, they wonder what the artist might have been thinking or what the artist is trying to tell them. It seems obvious, therefore, that with computers producing art, this speculation is cut short – there's nothing to explore. But as technology becomes increasingly complex, finding those greater depths in computer art could become possible. This is precisely why Colton asks the Painting Fool to tap into online social networks for its inspiration: hopefully this way it will choose themes that will already be meaningful to us.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–7</div><p>Complete the table below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question"><i>Database of tourism services:</i> allowed businesses to <b>1 ………</b> information regularly</div><span class="answer ans-letter">update</span><div class="explanation">Businesses could <b>update</b> their details regularly.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question"><i>Database of tourism services:</i> provided a country-wide evaluation of businesses, including their impact on the <b>2 ………</b></div><span class="answer ans-letter">environment</span><div class="explanation">The effect of each business on the <b>environment</b> was considered.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question"><i>Special features on local topics:</i> e.g. an interview with a former sports <b>3 ………</b></div><span class="answer ans-letter">captain</span><div class="explanation">Interview with former All Blacks rugby <b>captain</b> Tana Umaga.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question"><i>Special features on local topics:</i> and an interactive tour of various locations used in <b>4 ………</b></div><span class="answer ans-letter">films</span><div class="explanation">Locations chosen for blockbuster <b>films</b>.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question"><i>Information on driving routes:</i> varied depending on the <b>5 ………</b></div><span class="answer ans-letter">season</span><div class="explanation">Routes were highlighted according to the <b>season</b>.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question"><i>Travel Planner:</i> included a map showing selected places, details of public transport and local <b>6 ………</b></div><span class="answer ans-letter">accommodation</span><div class="explanation">Links to <b>accommodation</b> in the area.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question"><i>'Your Words':</i> travellers could send a link to their <b>7 ………</b></div><span class="answer ans-letter">blog</span><div class="explanation">Anyone could submit a <b>blog</b> of their travels.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">The website www.newzealand.com aimed to provide ready-made itineraries and packages for travel companies and individual tourists.</div><span class="answer ans-letter">FALSE</span><div class="explanation">The site let people create itineraries and packages to suit their own needs – it did not aim to provide ready-made ones.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">It was found that most visitors started searching on the website by geographical location.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Search by location or by type of activity is mentioned, but not which method most visitors used first.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">According to research, 26% of visitor satisfaction is related to their accommodation.</div><span class="answer ans-letter">FALSE</span><div class="explanation">Activities contribute 74%; transport <b>and</b> accommodation together make up the other 26%.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Visitors to New Zealand like to become involved in the local culture.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Visitors enjoy cultural activities most when they are interactive, such as visiting a <em>marae</em>.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">Visitors like staying in small hotels in New Zealand rather than in larger ones.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">No comparison between small and large hotels is made (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">Many visitors feel it is unlikely that they will return to New Zealand after their visit.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Most visitors see the trip as 'a once-in-a-lifetime visit'.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–19</div><p>Reading Passage 2 has six paragraphs, A–F. Choose the correct heading for each paragraph from the list below.</p><p><b>List of Headings</b></p><ul class='opts'><li><b>i</b> The productive outcomes that may result from boredom</li><li><b>ii</b> What teachers can do to prevent boredom</li><li><b>iii</b> A new explanation and a new cure for boredom</li><li><b>iv</b> Problems with a scientific approach to boredom</li><li><b>v</b> A potential danger arising from boredom</li><li><b>vi</b> Creating a system of classification for feelings of boredom</li><li><b>vii</b> Age groups most affected by boredom</li><li><b>viii</b> Identifying those most affected by boredom</li></ul></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Paragraph A</div><span class="answer ans-letter">iv</span><div class="explanation">Paragraph A discusses the difficulty of defining boredom for laboratory study.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Paragraph B</div><span class="answer ans-letter">vi</span><div class="explanation">Paragraph B describes Goetz's five types of boredom.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Paragraph C</div><span class="answer ans-letter">i</span><div class="explanation">Mann finds boredom increases creativity.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Paragraph D</div><span class="answer ans-letter">v</span><div class="explanation">Prolonged boredom can become 'toxic' and lead to not caring.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Paragraph E</div><span class="answer ans-letter">viii</span><div class="explanation">Boredom proneness is linked to personality traits and poorer life outcomes.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Paragraph F</div><span class="answer ans-letter">iii</span><div class="explanation">Modern overstimulation may cause boredom; use boredom to engage more meaningfully.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 20–23</div><p>Match each person with the correct idea, A–E.</p><p><b>List of Ideas</b></p><ul class='opts'><li><b>A</b> The way we live today may encourage boredom.</li><li><b>B</b> One sort of boredom is worse than all the others.</li><li><b>C</b> Levels of boredom may fall in the future.</li><li><b>D</b> Trying to cope with boredom can increase its negative effects.</li><li><b>E</b> Boredom may encourage us to avoid an unpleasant experience.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Peter Toohey</div><span class="answer ans-letter">E</span><div class="explanation">Boredom may protect us from 'infectious' social situations, like disgust.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Thomas Goetz</div><span class="answer ans-letter">B</span><div class="explanation">'Reactant' boredom is the most damaging of the five types.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">John Eastwood</div><span class="answer ans-letter">D</span><div class="explanation">Efforts to improve a boring situation can make people feel worse.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Francoise Wemelsfelder</div><span class="answer ans-letter">A</span><div class="explanation">Over-connected modern lifestyles may be a new source of boredom.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 24–26</div><p>Complete the summary. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Responses to boredom</b></p></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">For John Eastwood, the central feature of boredom is that people cannot <b>24 ………</b>, due to a failure in what he calls the 'attention system', and as a result they become frustrated and irritable.</div><span class="answer ans-letter">focus</span><div class="explanation">'An inability to <b>focus</b> on anything'.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">His team suggests that those for whom <b>25 ………</b> is an important aim in life may have problems in coping with boredom,</div><span class="answer ans-letter">pleasure</span><div class="explanation">People motivated by <b>pleasure</b> suffer particularly badly.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">whereas those who have the characteristic of <b>26 ………</b> can generally cope with it.</div><span class="answer ans-letter">curiosity</span><div class="explanation">Traits such as <b>curiosity</b> go with a high boredom threshold.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–31</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">What is the writer suggesting about computer-produced works in the first paragraph?<ul class='opts'><li><b>A</b> People's acceptance of them can vary considerably.</li><li><b>B</b> A great deal of progress has already been attained in this field.</li><li><b>C</b> They have had more success in some artistic genres than in others.</li><li><b>D</b> The advances are not as significant as the public believes them to be.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">The first paragraph lists many successes (music, robot paintings, software art), showing significant progress.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">According to Geraint Wiggins, why are many people worried by computer art?<ul class='opts'><li><b>A</b> It is aesthetically inferior to human art.</li><li><b>B</b> It may ultimately supersede human art.</li><li><b>C</b> It undermines a fundamental human quality.</li><li><b>D</b> It will lead to a deterioration in human ability.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">People worry it is 'taking something special away from what it means to be human'.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">What is a key difference between Aaron and the Painting Fool?<ul class='opts'><li><b>A</b> its programmer's background</li><li><b>B</b> public response to its work</li><li><b>C</b> the source of its subject matter</li><li><b>D</b> the technical standard of its output</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">Aaron realises the programmer's ideas; the Painting Fool finds its own concepts online.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">What point does Simon Colton make in the fourth paragraph?<ul class='opts'><li><b>A</b> Software-produced art is often dismissed as childish and simplistic.</li><li><b>B</b> The same concepts of creativity should not be applied to all forms of art.</li><li><b>C</b> It is unreasonable to expect a machine to be as imaginative as a human being.</li><li><b>D</b> People tend to judge computer art and human art according to different criteria.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">Colton says reactions arise from people's 'double standards' towards software-produced and human-produced art.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">The writer refers to the paintings of a chair as an example of computer art which<ul class='opts'><li><b>A</b> achieves a particularly striking effect.</li><li><b>B</b> exhibits a certain level of genuine artistic skill.</li><li><b>C</b> closely resembles that of a well-known artist.</li><li><b>D</b> highlights the technical limitations of the software.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">The black-and-white chair paintings have 'an eerie, ghostlike quality'.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 32–37</div><p>Complete each sentence with the correct ending, A–G.</p><p><b>List of Endings</b></p><ul class='opts'><li><b>A</b> generating work that was virtually indistinguishable from that of humans.</li><li><b>B</b> knowing whether it was the work of humans or software.</li><li><b>C</b> producing work entirely dependent on the imagination of its creator.</li><li><b>D</b> comparing the artistic achievements of humans and computers.</li><li><b>E</b> revealing the technical details of his program.</li><li><b>F</b> persuading the public to appreciate computer art.</li><li><b>G</b> discovering that it was the product of a computer program.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Simon Colton says it is important to consider the long-term view when</div><span class="answer ans-letter">D</span><div class="explanation">Machine creativity should not be compared directly with humans who have had millennia to develop their skills.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">David Cope's EMI software surprised people by</div><span class="answer ans-letter">A</span><div class="explanation">EMI fooled experts into thinking they were hearing genuine Bach.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Geraint Wiggins criticised Cope for not</div><span class="answer ans-letter">E</span><div class="explanation">Wiggins condemned his 'deliberately vague explanation of how the software worked'.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Douglas Hofstadter claimed that EMI was</div><span class="answer ans-letter">C</span><div class="explanation">EMI relied 'completely on the original artist's creative impulses'.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Audiences who had listened to EMI's music became angry after</div><span class="answer ans-letter">G</span><div class="explanation">They were outraged when they found out the truth about its origin.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">The participants in David Moffat's study had to assess music without</div><span class="answer ans-letter">B</span><div class="explanation">They weren't told beforehand whether the tunes were composed by humans or computers.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 38–40</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Moffat's research may help explain people's reactions to EMI.</div><span class="answer ans-yes">YES</span><div class="explanation">His study is presented as 'a clue' to why people loved the music but recoiled when they learned its origin.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">The non-experts in Moffat's study all responded in a predictable way.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Nothing is said about whether the non-experts all responded predictably (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Justin Kruger's findings cast doubt on Paul Bloom's theory about people's prejudice towards computer art.</div><span class="answer ans-no">NO</span><div class="explanation">Kruger's findings (people like art more when they think more effort went into it) support Bloom's theory about the creative process.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>
