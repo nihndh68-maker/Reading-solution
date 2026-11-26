@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 21 – Reading Test 3 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff; --border: #e2e8f0;
+    --text: #2d3748; --muted: #718096; --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  .note { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.85rem; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+  .tbl { border-collapse:collapse; width:100%; font-size:.84rem; margin-top:.4rem; background:#fff; }
+  .tbl th, .tbl td { border:1px solid var(--border); padding:.35rem .5rem; text-align:left; vertical-align:top; }
+  .tbl th { background:#e2e8f0; color:var(--primary); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cambridge IELTS 21 (Academic) – Reading Test 3</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Saving the saiga</div>
+<p class="para">The saiga, a species of antelope native to Central Asia, once roamed the vast grasslands of this region in enormous herds, many millions strong. Regrettably, such spectacular sights are a thing of the past. Today, the saiga is largely confined to a single country: Kazakhstan. This country is estimated to be home to <span class="hl">well over 90% of the global saiga population</span><span class="mark">8</span>, with Russia, Mongolia and Uzbekistan accounting for the rest.</p>
+<p class="para">The saiga is perfectly adapted to the tough conditions of the remote wilderness of the steppes of Central Asia. One such adaptation is its bizarre bulbous nose, which enables the animal to survive the extreme seasonal temperature swings of the region. The swollen nostrils of the nose serve several purposes: they <span class="hl">filter out dust</span><span class="mark">1</span> and <span class="hl">cool the blood</span><span class="mark">2</span> during hot, dry summers, and they warm the cold air before it enters the saiga’s lungs in winter. Other seasonal adaptations include <span class="hl">a heavy winter coat that the saiga sheds when the weather warms up</span><span class="mark">3</span>.</p>
+<p class="para">Despite these superb adaptations to harsh conditions, the saiga has no defence against the threats posed by humans. It was almost driven to extinction by hunters in the 19th century. Legal protection ensured its survival for a while, and <span class="hl">numbers steadily recovered throughout most of the 20th century</span><span class="mark">9</span>. But the respite was only temporary. In the ten years following the break-up of the former Soviet Union in 1991, over 95% of the global population was lost – one of the fastest examples of species loss ever recorded for a mammal.</p>
+<p class="para">The dramatic decline during this decade was due to illegal poaching on an industrial scale. Male saiga are a particular target, because <span class="hl">their horns are highly prized by traditional medicine practitioners</span><span class="mark">4</span>. Poaching reached epidemic levels after <span class="hl">misguided conservationists tried to relieve the pressure on threatened African rhinos by actively encouraging the use of saiga horns in traditional medicine as an alternative to those of rhinos</span><span class="mark">10</span>. Male saiga were almost wiped out, leading to a population crash from which the species has been struggling to recover ever since.</p>
+<p class="para">Another threat to the survival of the saiga is <span class="hl">loss of habitat, as a result of agricultural expansion and human settlement</span><span class="mark">5</span>. Physical barriers such as railways, pipelines and fences can <span class="hl">block the seasonal migration routes of this transboundary species</span><span class="mark">6</span>. In the worst cases, herds may starve to death after being trapped.</p>
+<p class="para">Then there is the risk of disease. In 2015, an outbreak of haemorrhagic septicaemia, caused by the normally harmless bacterium <em>Pasteurella multocida</em>, killed over 75% of the global adult saiga population in just three weeks. In 2017, 60% of the Mongolian saiga population – a subspecies found nowhere else in the world – was killed by a virus that spilled over from livestock. These so-called mass mortality events represent an unpredictable and serious threat to the species.</p>
+<p class="para"><span class="hl">Climate change poses a further threat. Although well adapted to cold winters and hot summers, saiga struggle to cope with temperature extremes and unpredictable fluctuations in climate.</span><span class="mark">11</span> Experts believe that unusually warm weather may have triggered the 2015 mass mortality event. The steppe region has also become increasingly arid in recent years, and <span class="hl">many of the smaller streams that the species normally depended on have dried up and vanished</span><span class="mark">7</span>.</p>
+<p class="para">Recent efforts to save the saiga have been spearheaded by the Altyn Dala Conservation Initiative, a project led by the Association for the Conservation of Biodiversity of Kazakhstan, working in partnership with the Kazakh government’s Committee for Forestry and Wildlife, Frankfurt Zoological Society and Fauna and Flora, an international conservation charity. Its purpose is <span class="hl">to protect and restore Kazakhstan’s steppe, semi-desert and desert ecosystems and the many species they support, including the critically endangered saiga</span><span class="mark">12</span>. <span class="hl">In 2022 the United Nations recognised the initiative as a World Restoration Flagship project, an accolade reserved for the ten best examples of large-scale ecosystem restoration around the globe.</span><span class="mark">13</span></p>
+<p class="para">So, how many saiga are there now? By 2000, the global saiga population had hit an all-time low of just 21,000 individuals. There was some recovery in the first decade of the new millennium but this was then crushed by devastating mass mortality events that saw the loss of hundreds of thousands of the species. But thanks to the intervention of the Altyn Dala Conservation Initiative, the most recent episodes in the ongoing story of the saiga have been relatively uplifting. Three years ago, the Ustyurt Plateau population in Kazakhstan experienced its largest mass birth of saiga calves in many years. An aerial census two years ago recorded an estimated 842,000 saiga across Kazakhstan as a whole, and according to an aerial survey earlier this year, the saiga population in Kazakhstan now exceeds 1.9 million. The world’s strangest-looking antelope remains critically endangered, but the direction of travel is positive.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">The problems of getting around the city of Dar es Salaam</div>
+<p class="para">Dar es Salaam in Tanzania is one of the fastest growing cities in Africa. <span class="hl">Its population has increased eightfold since 1980 and swells by half a million people every year. United Nations projections anticipate it will become a megacity within seven years as its population passes 10 million, reaching 13.4 million by 2035.</span><span class="mark">14</span> Daniel Hoornweg for the Global Cities Institute forecasts the city could be home to an incredible 73.7 million people by 2100.</p>
+<p class="para">Today, <span class="hl">four out of five of its people live in single-storey informal settlements</span><span class="mark">15</span> on the spreading edges of the city, where the journey to and from the centre regularly takes over two hours. It can be longer if rain turns the dirt roads to mud.</p>
+<p class="para">Even in the middle of the day, traffic frequently slows to a stop without warning. It is not unusual for cars and minibuses to queue for 20 minutes at a key intersection. <span class="hl">A single suburban rail line serves residents in a few areas to the south but is tiny in the context of the wider city.</span><span class="mark">16</span> Outside the centre many rely on boda boda (motorbike taxis) to navigate the narrow side streets and potholed mud roads that make up much of the metropolis. Their safety record is scandalous.</p>
+<p class="para">Dar es Salaam’s reliance on four arterial roads into the city is a legacy of the colonial government that planned the city at the start of the 20th century to cater for a population of 35,000. Most of the current growth is made up of young people arriving from the countryside to find work, and as the population has exploded, Dar es Salaam has grown around those four highways. Nearly all the expansion is happening on the periphery, and <span class="hl">nearly all takes place informally without any agreed strategy</span><span class="mark">17</span>.</p>
+<p class="para">But Dar es Salaam is pinning its hopes on a solution that could offer a different model for Africa’s megacities, giving them an alternative to a future controlled by the private car. <span class="hl">Unlike many cities on the continent, Dar es Salaam isn’t trying to build a metro. It has chosen a less exciting but cheaper and more achievable method: the bus.</span><span class="mark">18</span></p>
+<p class="para">The DART bus rapid transit (BRT) system runs on <span class="hl">bus lanes separated from other traffic</span><span class="mark">19</span>, mostly in the middle of the road to reduce stoppages. <span class="hl">Ticket purchase and control takes place at stations prior to boarding</span><span class="mark">20</span> and the buses are step-free, which means <span class="hl">the entire route is accessible to people using wheelchairs</span><span class="mark">21</span> or who are travelling with baby buggies.</p>
+<p class="para">‘The new buses are much, much better,’ says Paulas George, a young IT worker. He takes the bus every day and it has cut his journey time by two-thirds. He says it is not perfect, though, complaining that <span class="hl">drivers often refuse to turn on the air conditioning to save fuel</span><span class="mark">22</span>.</p>
+<p class="para">That is not the only problem. A shortage of buses after <span class="hl">a serious flood at the main depot during the rainy season</span><span class="mark">23</span> means the system is carrying 200,000 people a day – half the expected capacity. <span class="hl">Smartcards can’t be used as the mechanical readers aren’t working either</span><span class="mark">24</span>, forcing passengers to buy individual paper tickets for every journey. Each is printed with a scannable QR code, but there are no scanners. <span class="hl">Staff stand by the gates and tear tickets as people enter.</span><span class="mark">25</span> As a result, <span class="hl">queues are considerable at peak times</span><span class="mark">26</span>.</p>
+<p class="para">Morogoro Road to the north-west of the city was phase I of the BRT project. Phases II and III will install bus lanes along Nyerere Road to the south-west and Kilwa Road to the south. Construction on both routes is due to start imminently. Phase IV, towards Bagamoyo in the north, is in the preliminary design stage. ‘Much of the city will have access to a world-class transport system within the space of a few years,’ says Chris Kost, the Africa director of ITDP (the Institute for Transportation and Development Policy). All phases are being planned to high standards and, once complete, a third of city residents will be within a short walk of the BRT network.</p>
+<p class="para">The ITDP regrets Africa’s obsession with metros. ‘With a metro, an international firm will often just parachute in its own system,’ says Kost. ‘Bus rapid transit allows existing stakeholders to get involved. That’s what we did in Dar es Salaam and what we’re planning in Nairobi, where the bus bodies will be built in the city and local operators will look after tickets, fare collection and IT … Bus rapid transit has been transformational for Dar es Salaam. For millions of people in African cities, this is their best hope of ever being connected.’</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Rethinking the Past</div>
+<p class="para">It is by now a truism that the story of human evolution is being rethought. Discoveries have come thick and fast over the last decade or so, and these have forced us to rethink many crucial points, such as how old our species is – about 300,000 years old as opposed to 200,000 – and what extinct hominins, such as our cousins the Neanderthals, were really like. But because there are so many species and eras involved, it’s hard to discern the common threads linking them.</p>
+<p class="para"><span class="hl">However, I do think it’s possible to draw out some overall messages from the blizzard of archaeological finds in recent years. Two things stand out to me. One is the growing evidence that many supposedly ‘advanced’ behaviours, such as architecture and art, can be traced much further back in time than we thought, often to hominin species that existed before modern humans. And the other is that we have badly misunderstood gender roles in prehistoric societies</span><span class="mark">27</span>, imposing patriarchal values onto cultures that had very different ideas about how women should behave.</p>
+<p class="para">Let’s start with architecture. <span class="hl">At Kalambo Falls in Zambia, researchers found buried logs that had been shaped with stone tools so that they interlocked.</span><span class="mark">31</span> They seem to have once been part of a larger structure, perhaps a building. This would be unsurprising if they weren’t 476,000 years old. That’s almost 200,000 years before our species, <em>Homo sapiens</em>, evolved. <span class="hl">Extinct hominins also managed to settle in extreme places. For instance, we now know that extinct hominins such as the Denisovans lived on the frozen heights of high-altitude regions 200,000 years ago</span><span class="mark">32</span> – upending the old notion that such environments were only settled by modern humans around 3,600 years ago.</p>
+<p class="para">Art also seems to have been invented by older hominins. <span class="hl">We have had evidence for a long time now that Neanderthals painted on cave walls. Even earlier species, such as <em>Homo erectus</em>, may also have made art,</span><span class="mark">35</span> <span class="hl">for example by engraving patterns on shells</span><span class="mark">36</span>. By far the most contentious claim in this area is that <em>Homo naledi</em> made art. <em>H. naledi</em> lived around 250,000 years ago, making it a contemporary of our species. However, it had quite a small brain, typical of older hominins – and was therefore, according to palaeoanthropological dogma, incapable of complex behaviours. Nevertheless, <span class="hl">in the Rising Star cave system in South Africa where the <em>H. naledi</em> remains were found, researchers have found what seem to be etchings – resembling rudimentary artwork – on the cave walls</span><span class="mark">37</span>, though <span class="hl">these have yet to be firmly dated</span><span class="mark">38</span>.</p>
+<p class="para">To say these claims about <em>H. naledi</em> are controversial is to understate the situation. Many experts say the evidence presented so far is completely inadequate to support them. <span class="hl">The dispute has only been heightened by the way the results were released, in a non-traditional journal that publishes peer reviews publicly alongside the paper.</span><span class="mark">39</span> My views on the <em>H. naledi</em> controversy are complicated. I do think more evidence is needed: <span class="hl">in particular with regard to the dating of the etchings</span><span class="mark">38</span>. At the same time, I think <span class="hl">the species’ small brains are a distraction</span><span class="mark">40</span>. Palaeoanthropologists got fixated on brain size because it was what they could see: if what you have is skeletons, then all you know about brains are their shapes and sizes. But other properties, such as the brain’s internal wiring, are surely equally important and may explain how a species like <em>H. naledi</em> might have been capable of complex behaviours, despite their small brains.</p>
+<p class="para">In a sense, we shouldn’t be surprised that so many of these behaviours had their origins in older, extinct hominins. <span class="hl">Evolution usually works by incremental steps and so does technology. The first birds weren’t great at flying, and the first mobile phones weren’t great at, well, anything really.</span><span class="mark">28</span> The idea that there was a sudden explosion of intelligence and creativity at some point in our evolution isn’t inherently ridiculous: sometimes a system hits a tipping point and undergoes runaway change. But there was never that much evidence that human evolution worked this way. Instead, it seems the Neanderthals and many others all walked so we could run.</p>
+<p class="para">One way or another, the <em>H. naledi</em> story is going to be an example of letting our preconceptions get in the way of the evidence. The same is true for our ideas about gender in prehistory. <span class="hl">Archaeology was invented by individuals with now unfashionably patriarchal views about gender, and those notions fed into their research. Today’s researchers are trying to unpick this stuff</span><span class="mark">29</span>, and there have been some significant steps in recent years.</p>
+<p class="para">Perhaps the most dramatic was the demolition of ‘Man the Hunter’. This was the idea, promoted for decades, that in most prehistoric societies the men went out to hunt and the women looked after the home. However, <span class="hl">a meta-analysis published in June 2023 compiled data on several dozen foraging societies and found women hunted in 80 per cent of them</span><span class="mark">33</span>. In line with this, it emerged that an ancient spear-throwing tool called an atlatl enables women to launch projectiles at the same speed as men. We have also seen growing evidence of women occupying positions of authority in ancient societies. The Viking queen Thyra may have helped unify Denmark in the 900s. Going further back, <span class="hl">an Iberian leader from around 4000 years ago turned out to be female, not male as many had assumed, when proteins in her teeth were analysed</span><span class="mark">34</span>.</p>
+<p class="para"><span class="hl">It seems that the more we find out about past societies, the more our preconceptions about the ways society ‘has to be’ turn out to be wrong. Inequality, authoritarianism and patriarchy aren’t inevitable. They’re choices, and prehistory shows us that we can choose differently.</span><span class="mark">30</span></p>
+  </div>
+
+  <div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–7</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>The saiga</b></p><p><i>Adaptations</i><br>• has a large bulbous nose with swollen nostrils that keep <b>1 ………</b> out, lower the temperature of its <b>2 ………</b> in summer and warm the air entering its lungs in winter<br>• grows a thick <b>3 ………</b> in winter, which it loses in spring</p><p><i>Reasons for population decline</i><br>• poaching, especially for the <b>4 ………</b> of male saiga<br>• expansion of farms and settlements, causing reduction in the size of the saiga’s <b>5 ………</b> and loss of access to the <b>6 ………</b> which they use for migration<br>• various forms of disease, leading to mass mortality events<br>• climate change, causing the disappearance of <b>7 ………</b> which the saiga relied on</p></div>
+<div class="q-block">
+      <div class="q-num">Question 1</div>
+      <div class="question">The nostrils keep <b>1 ………</b> out.</div>
+      <span class="answer ans-letter">dust</span>
+      <div class="explanation">The swollen nostrils “filter out dust.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 2</div>
+      <div class="question">…lower the temperature of its <b>2 ………</b> in summer.</div>
+      <span class="answer ans-letter">blood</span>
+      <div class="explanation">They “cool the blood during hot, dry summers.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 3</div>
+      <div class="question">Grows a thick <b>3 ………</b> in winter, which it loses in spring.</div>
+      <span class="answer ans-letter">coat</span>
+      <div class="explanation">“A heavy winter coat that the saiga sheds when the weather warms up.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 4</div>
+      <div class="question">Poaching, especially for the <b>4 ………</b> of male saiga.</div>
+      <span class="answer ans-letter">horns</span>
+      <div class="explanation">Males are targeted because “their horns are highly prized by traditional medicine practitioners.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 5</div>
+      <div class="question">Expansion of farms and settlements reduces the size of the saiga’s <b>5 ………</b>.</div>
+      <span class="answer ans-letter">habitat</span>
+      <div class="explanation">The threat is “loss of habitat, as a result of agricultural expansion and human settlement.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 6</div>
+      <div class="question">…and loss of access to the <b>6 ………</b> which they use for migration.</div>
+      <span class="answer ans-letter">routes</span>
+      <div class="explanation">Physical barriers “can block the seasonal migration routes of this transboundary species.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 7</div>
+      <div class="question">Climate change causes the disappearance of <b>7 ………</b> which the saiga relied on.</div>
+      <span class="answer ans-letter">streams</span>
+      <div class="explanation">“Many of the smaller streams that the species normally depended on have dried up and vanished.”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block">
+      <div class="q-num">Question 8</div>
+      <div class="question">Today, numbers of saiga are distributed evenly across four nations in Central Asia: Kazakhstan, Russia, Mongolia and Uzbekistan.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">Kazakhstan holds “well over 90%” of the global population; the other three share the remainder.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 9</div>
+      <div class="question">For most of the 20th century, the population of saiga were falling.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">After the 19th-century near-extinction, “numbers steadily recovered throughout most of the 20th century.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 10</div>
+      <div class="question">Efforts to protect rhinos in Africa had a significant effect on saiga populations.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">Conservationists encouraged using saiga horn instead of rhino horn, poaching reached epidemic levels, and male saiga were almost wiped out.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 11</div>
+      <div class="question">Unpredictable fluctuations in climate are threatening the wildlife of Central Asia more than in other parts of the world.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">Climate fluctuations are named as a threat to the saiga, but no comparison with other regions or wildlife is made.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 12</div>
+      <div class="question">The Altyn Dala Conservation Initiative was formed for the benefit of a number of different animals.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">It aims to protect ecosystems “and the many species they support, including the critically endangered saiga.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 13</div>
+      <div class="question">The Altyn Dala Conservation Initiative’s recognition as a World Restoration Flagship project attracted additional international funding for the scheme.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The 2022 UN recognition is mentioned, but funding is not.</div>
+    </div>
+<div class="divider"></div>
+<div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–18</div><p>Do the following statements agree with the information given in Reading Passage 2?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block">
+      <div class="q-num">Question 14</div>
+      <div class="question">The population of Dar es Salaam is rising more rapidly than was previously predicted.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">Growth figures and projections are given, but nothing says the rise is faster than earlier forecasts.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 15</div>
+      <div class="question">Most of the residents of Dar es Salaam live in high-rise blocks on the edge of the city.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">Four out of five people live in “single-storey informal settlements,” not high-rise blocks.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 16</div>
+      <div class="question">Residents have been consulted about their views on the suburban rail line in Dar es Salaam.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The rail line is described as tiny, but there is no mention of consulting residents.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 17</div>
+      <div class="question">The majority of the present residential development in Dar es Salaam is unplanned.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">“Nearly all the expansion is happening on the periphery, and nearly all takes place informally without any agreed strategy.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 18</div>
+      <div class="question">Dar es Salaam’s authorities have decided to follow the public transport plan adopted by a large number of African cities.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">“Unlike many cities on the continent,” Dar es Salaam is not building a metro but has chosen buses.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 19–26</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Dar es Salaam’s DART Bus Rapid Transit system</b></p><p><i>Features</i><br>• the buses use designated <b>19 ………</b> to cut down on delays<br>• passengers pay fares before <b>20 ………</b><br>• passengers in <b>21 ………</b> can use every part of the system</p><p><i>Problems</i><br>• temperature control sometimes not activated in order to reduce <b>22 ………</b> use<br>• insufficient vehicles due to the effects of a severe <b>23 ………</b><br>• passengers unable to use <b>24 ………</b> because some equipment is out of action<br>• tickets have to be checked manually at station <b>25 ………</b><br>• <b>26 ………</b> frequently build up during rush hours</p></div>
+<div class="q-block">
+      <div class="q-num">Question 19</div>
+      <div class="question">The buses use designated <b>19 ………</b> to cut down on delays.</div>
+      <span class="answer ans-letter">lanes</span>
+      <div class="explanation">The system runs on “bus lanes separated from other traffic.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 20</div>
+      <div class="question">Passengers pay fares before <b>20 ………</b>.</div>
+      <span class="answer ans-letter">boarding</span>
+      <div class="explanation">“Ticket purchase and control takes place at stations prior to boarding.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 21</div>
+      <div class="question">Passengers in <b>21 ………</b> can use every part of the system.</div>
+      <span class="answer ans-letter">wheelchairs</span>
+      <div class="explanation">The buses are step-free, so “the entire route is accessible to people using wheelchairs.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 22</div>
+      <div class="question">The air conditioning is sometimes not switched on to reduce <b>22 ………</b> use.</div>
+      <span class="answer ans-letter">fuel</span>
+      <div class="explanation">Drivers “often refuse to turn on the air conditioning to save fuel.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 23</div>
+      <div class="question">Not enough vehicles are available due to a severe <b>23 ………</b>.</div>
+      <span class="answer ans-letter">flood</span>
+      <div class="explanation">A shortage of buses followed “a serious flood at the main depot.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 24</div>
+      <div class="question">Passengers cannot use <b>24 ………</b> because some equipment is out of action.</div>
+      <span class="answer ans-letter">smartcards</span>
+      <div class="explanation">“Smartcards can’t be used as the mechanical readers aren’t working.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 25</div>
+      <div class="question">Tickets have to be checked manually at station <b>25 ………</b>.</div>
+      <span class="answer ans-letter">gates</span>
+      <div class="explanation">“Staff stand by the gates and tear tickets as people enter.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 26</div>
+      <div class="question"><b>26 ………</b> frequently build up during rush hours.</div>
+      <span class="answer ans-letter">queues</span>
+      <div class="explanation">“Queues are considerable at peak times.”</div>
+    </div>
+<div class="divider"></div>
+<div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Choose the correct letter, <b>A, B, C or D</b>.</p></div>
+<div class="q-block">
+      <div class="q-num">Question 27</div>
+      <div class="question">What is the writer doing in the second paragraph?<ul class="opts"><li><b>A</b> pinpointing some key changes in our understanding of prehistory</li><li><b>B</b> outlining some aspects of prehistory which are still poorly understood</li><li><b>C</b> summarising some attitudes towards recent archaeological revelations</li><li><b>D</b> giving an overview of some current disagreements among archaeologists</li></ul><div class="yng">Choose A, B, C or D</div></div>
+      <span class="answer ans-letter">A</span>
+      <div class="explanation">The writer picks out two overall messages: ‘advanced’ behaviours go back much further than thought, and gender roles were misunderstood.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 28</div>
+      <div class="question">In the sixth paragraph, the writer mentions mobile phones to make the point that<ul class="opts"><li><b>A</b> most developments happen in a gradual way.</li><li><b>B</b> innovation can come from a variety of sources.</li><li><b>C</b> not all technological advancements are positive.</li><li><b>D</b> the path of evolution can often be unpredictable.</li></ul><div class="yng">Choose A, B, C or D</div></div>
+      <span class="answer ans-letter">A</span>
+      <div class="explanation">Early birds and early phones were poor at their jobs, showing that evolution and technology proceed by “incremental steps.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 29</div>
+      <div class="question">In the seventh paragraph, the phrase ‘unpick this stuff’ refers to the task of<ul class="opts"><li><b>A</b> assessing the impact of certain recent research findings.</li><li><b>B</b> questioning the authenticity of evidence used in earlier research.</li><li><b>C</b> conducting research into how prehistoric societies were organised.</li><li><b>D</b> reevaluating research influenced by outdated beliefs about society.</li></ul><div class="yng">Choose A, B, C or D</div></div>
+      <span class="answer ans-letter">D</span>
+      <div class="explanation">Early archaeologists’ patriarchal views “fed into their research”; today’s researchers are trying to unpick that influence.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 30</div>
+      <div class="question">What does the writer suggest in the final paragraph?<ul class="opts"><li><b>A</b> Studying past societies could help us create a fairer society today.</li><li><b>B</b> We should not judge past societies by the standards of modern society.</li><li><b>C</b> We still have much to learn about how societies have evolved over history.</li><li><b>D</b> There is more than one way to interpret evidence about societies in prehistoric times.</li></ul><div class="yng">Choose A, B, C or D</div></div>
+      <span class="answer ans-letter">A</span>
+      <div class="explanation">“Inequality, authoritarianism and patriarchy aren’t inevitable… prehistory shows us that we can choose differently.”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 31–34</div><p>Complete each sentence with the correct ending, <b>A–F</b>.</p><ul class="opts"><li><b>A</b> <em>Homo sapiens</em> emerged at an earlier point in time than experts previously believed.</li><li><b>B</b> previous assumptions about who had power in the prehistoric world were inaccurate.</li><li><b>C</b> gender roles in extinct hominin species were different from those in <em>Homo sapiens</em> societies.</li><li><b>D</b> experts may have been mistaken about who looked for food in early human communities.</li><li><b>E</b> <em>Homo sapiens</em> was probably not the only species capable of sophisticated workmanship.</li><li><b>F</b> other species managed to survive in harsh environments before the arrival of <em>Homo sapiens</em>.</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 31</div>
+      <div class="question">The findings at Kalambo Falls revealed that…<div class="yng">Match with A–F</div></div>
+      <span class="answer ans-letter">E</span>
+      <div class="explanation">Interlocking, tool-shaped logs 476,000 years old predate <em>Homo sapiens</em>, so sophisticated workmanship was not ours alone.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 32</div>
+      <div class="question">Evidence from high-altitude regions suggests that…<div class="yng">Match with A–F</div></div>
+      <span class="answer ans-letter">F</span>
+      <div class="explanation">Denisovans lived on frozen heights 200,000 years ago, long before modern humans settled such places.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 33</div>
+      <div class="question">An academic publication from June 2023 shows that…<div class="yng">Match with A–F</div></div>
+      <span class="answer ans-letter">D</span>
+      <div class="explanation">The meta-analysis found women hunted in 80% of foraging societies, undermining ‘Man the Hunter.’</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 34</div>
+      <div class="question">Analysis of a 4000-year-old Iberian leader indicates that…<div class="yng">Match with A–F</div></div>
+      <span class="answer ans-letter">B</span>
+      <div class="explanation">The leader proved to be female, not male “as many had assumed,” so assumptions about who held power were wrong.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 35–40</div><p>Do the following statements agree with the views of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the views of the writer<br><b>NO</b> if the statement contradicts the views of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block">
+      <div class="q-num">Question 35</div>
+      <div class="question">It seems likely that the Neanderthals’ cave paintings were the first examples of artwork ever created.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">Even earlier species such as <em>Homo erectus</em> “may also have made art,” so Neanderthal paintings were probably not the first.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 36</div>
+      <div class="question">It is very rare to find prehistoric artwork carved onto shells.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">Shell engravings by <em>Homo erectus</em> are mentioned, but how rare or common they are is not.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 37</div>
+      <div class="question">The methods which the researchers used to examine the Rising Star cave system were rather unconventional.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The unconventional element is the journal in which results were published; the methods used in the cave are not described.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 38</div>
+      <div class="question">It is unclear how old the etchings in the Rising Star cave system are.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">The etchings “have yet to be firmly dated,” and the writer wants more evidence “with regard to the dating of the etchings.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 39</div>
+      <div class="question">The means used to publicise the findings from the Rising Star cave system added to the controversy that surrounds them.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">“The dispute has only been heightened by the way the results were released, in a non-traditional journal.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 40</div>
+      <div class="question">The size of <em>H. naledi</em> brains is a key factor in the question of whether these hominins were able to produce art.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">The writer thinks “the species’ small brains are a distraction”; internal wiring may matter more.</div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>
