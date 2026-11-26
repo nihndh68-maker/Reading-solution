@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 20 – Reading Test 4</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head><body>
+<header><h1>Cambridge IELTS 20 – Reading Test 4</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">Georgia O’Keeffe</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> For seven decades, Georgia O’Keeffe (1887-1986) was a major figure in American art. Remarkably, <span class="hl">she remained independent from shifting art trends and her work stayed true to her own vision</span><span class="mark">8</span>, which was based on finding the essential, abstract forms in nature. With exceptionally keen powers of observation and great finesse with a paintbrush, she recorded subtle nuances of colour, shape, and light that enlivened her paintings and attracted a wide audience.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Born in 1887 near Sun Prairie, Wisconsin to cattle breeders Francis and Ida O’Keeffe, Georgia was raised on their farm along with her six siblings. <span class="hl">By the time she graduated from high school in 1905, she had determined to make her way as an artist</span><span class="mark">9</span>. She studied the techniques of traditional painting at the Art Institute of Chicago school (1905) and the Art Students League of New York (1907-8). After attending university and then training college, <span class="hl">she became an art teacher and taught in elementary schools, high schools, and colleges</span><span class="mark">1</span> in Virginia, Texas, and South Carolina from 1911 to 1918.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> During this period, <span class="hl">O’Keeffe began to experiment with creating abstract compositions in charcoal</span><span class="mark">2</span>, and produced a series of innovative drawings that led her art in a new direction. <span class="hl">She sent some of these drawings to a friend in New York, who showed them to art collector and photographer Alfred Stieglitz</span><span class="mark">10</span> in January 1916. Stieglitz was impressed, and exhibited the drawings later that year at his gallery on Fifth Avenue, New York City, where the works of many avant-garde artists and photographers were introduced to the American public.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> With Stieglitz’s encouragement and promise of financial support, O’Keeffe arrived in New York in June 1918 to begin a career as an artist. For the next three decades, Stieglitz vigorously promoted her work in twenty-two solo exhibitions and numerous group installations. The two were married in 1924. The ups and downs of their personal and professional relationship were <span class="hl">recorded in Stieglitz’s celebrated black-and-white portraits of O’Keeffe, taken over the course of twenty years</span><span class="mark">11</span> (1917-37).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> By the mid-1920s, O’Keeffe was recognized as one of America’s most important and successful artists, <span class="hl">widely known for the architectural pictures that dramatically depict the soaring skyscrapers of New York</span><span class="mark">3</span>. But most often, she painted botanical subjects, inspired by annual trips to the Stieglitz family summer home. <span class="hl">In her magnified images depicting flowers, begun in 1924</span><span class="mark">4</span>, O’Keeffe brings the viewer right into the picture.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Enlarging the tiniest details to fill an entire metre-wide canvas emphasized their shapes and lines and made them appear abstract. Such daring compositions helped establish O’Keeffe’s reputation as an innovative modernist.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> In 1929, O’Keeffe made her first extended trip to the state of New Mexico. It was a visit that had a lasting impact on her life, and an immediate effect on her work. Over the next two decades she made almost annual trips to New Mexico, staying up to six months there, painting in relative solitude, then returning to New York each winter to exhibit the new work at Stieglitz’s gallery. This pattern continued until she moved permanently to New Mexico in 1949.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> There, O’Keeffe found new inspiration: at first, <span class="hl">it was the numerous sun-bleached bones she came across in the state’s rugged terrain that sparked her imagination</span><span class="mark">5</span>. Two of her earliest and most celebrated Southwestern paintings exquisitely reproduce a cow skull’s weathered surfaces, jagged edges, and irregular openings. Later, she also explored another variation on this theme in her large series of Pelvis pictures, which focused on the contrasts between convex and concave surfaces, and solid and open spaces.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> However, <span class="hl">it was the region’s spectacular landscape, with its unusual geological formations, vivid colours, clarity of light, and exotic vegetation, that held the artist’s imagination for more than four decades</span><span class="mark">6</span>. Often, she painted the rocks, cliffs, and mountains in striking close-up, just as she had done with her botanical subjects.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> O’Keeffe eventually owned two homes in New Mexico – the first, her summer retreat at Ghost Ranch, was nestled beneath 200-metre cliffs, while the second, used as her winter residence, was in the small town of Abiquiú. While both locales provided a wealth of imagery for her paintings, <span class="hl">one feature of the Abiquiú house – the large walled patio with its black door – was particularly inspirational</span><span class="mark">12</span>. In more than thirty pictures between 1946 and 1960, she reinvented the patio into an abstract arrangement of geometric shapes.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> <span class="hl">From the 1950s into the 1970s, O’Keeffe travelled widely, making trips to Asia, the Middle East, and Europe</span><span class="mark">13</span>. Flying in planes inspired her last two major series – <span class="hl">aerial views of rivers and expansive paintings of the sky viewed from just above clouds</span><span class="mark">7</span>. In both series, O’Keeffe increased the size of her canvases, sometimes to mural proportions, reflecting perhaps her newly expanded view of the world. When in 1965 she successfully translated one of her cloud motifs to a monumental canvas measuring 6 metres in length (with the help of assistants), it was an enormous challenge and a special feat for an artist nearing eighty years of age.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶12</strong> The last two decades of the artist’s life were relatively unproductive as ill health and blindness hindered her ability to work. O’Keeffe died in 1986 at the age of ninety-eight, but her rich legacy of some 900 paintings has continued to attract subsequent generations of artists and art lovers who derive inspiration from these very American images.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">Adapting to the effects of climate change</div>
+<p class="para"><strong>A</strong> All around the world, nations are already preparing for, and adapting to, climate change and its impacts. Even if we stopped all CO2 emissions tomorrow, we would continue to see the impact of the CO2 already released since industrial times, with <span class="hl">scientists forecasting that global warming would continue for around 40 years</span><span class="mark">15</span>. In the meantime, ice caps would continue to melt and sea levels rise. Some countries and regions will suffer more extreme impacts from these changes than others. It’s in these places that innovation is thriving.</p>
+<p class="para"><strong>B</strong> In Miami Beach, Florida, USA, seawater isn’t just breaching the island city’s walls, it’s seeping up through the ground, so the only way to save the city is to lift it up above sea level. Starting in the lowest and most vulnerable neighbourhoods, roads have been raised by as much as 61 centimetres. The elevation work was carried out as part of Miami Beach’s ambitious but much-needed stormwater-management programme. In addition to the road adaptations, <span class="hl">the city has set up new pumps that can remove up to 75,000 litres of water per minute</span><span class="mark">18</span>. In the face of floods, climate-mitigation strategies have often been overlooked, says Yanira Pineda, a senior sustainability coordinator. She knows that they’re essential and that the job is far from over. ‘<span class="hl">We know that in 20, 30, 40 years, we’ll need to go back in there and adjust to the changing environment</span><span class="mark">25</span>,’ she says.</p>
+<p class="para"><strong>C</strong> Seawalls are a staple strategy for many coastal communities, but on the soft, muddy northern shores of Java, Indonesia, they frequently collapse, further exacerbating coastal erosion. There have been many attempts to restore the island’s coastal mangroves: <span class="hl">ecosystems of trees and shrubs that help defend coastal areas by trapping sediment in their net-like root systems</span><span class="mark">14</span>, elevating the sea bed and dampening the energy of waves and tidal currents. But Susanna Tol of the not-for-profit organisation Wetlands International says that, while hugely popular, the majority of mangrove-planting projects fail. So, Wetlands International started out with a different approach, <span class="hl">building semi-permeable dams, made from bamboo poles and brushwood, to mimic the role of mangrove roots</span><span class="mark">19</span> and create favourable conditions for mangroves to grow back naturally. The programme has seen moderate success, mainly in areas with less subsidence. “Unfortunately, traditional infrastructure is often single-solution focused,’ says Tol. ‘For long-term success, <span class="hl">it’s critical that we transition towards multifunctional approaches that embed natural processes and that engage and benefit communities and local decision-makers</span><span class="mark">23</span>.”</p>
+<p class="para"><strong>D</strong> As the floodwaters rose in the rice fields of the Mekong Delta in September 2018, four small houses rose with them. <span class="hl">Homes in this part of Vietnam are traditionally built on stilts but these ones had been built to float.</span><span class="mark">20</span> The modifications were made by the Buoyant Foundation Project, a not-for-profit organisation that has been researching and retrofitting amphibious houses since 2006. ‘When I started this,’ explains founder Elizabeth English, ‘climate change was not on the tip of everybody’s tongue,&#x27; but <span class="hl">this technology is becoming necessary in places that didn’t previously need it</span><span class="mark">26</span>. <span class="hl">It’s much cheaper than permanently elevating houses, English explains – about a third of what it would cost to completely replace a building’s foundations</span><span class="mark">16</span>. It also avoids the problem of taller houses being at greater risk from wind damage. Another plus comes from the fact that amphibious structures can be sensitively adapted to meet cultural needs and match the kind of houses that are already common in a community.</p>
+<p class="para"><strong>E</strong> Bangladesh is especially vulnerable to climate change. Most of the country is less than a metre above sea level and 80 per cent of its land lies on floodplains. ‘Almost 35 million people living on the coastal belt of Bangladesh are currently affected by soil and water salinity,’ says Raisa Chowdhury of the international development organisation ICCO Cooperation. Rather than fighting against it, one project is helping communities adapt to salt-affected soils. ICCO Cooperation has been working with 10,000 farmers in Bangladesh <span class="hl">to start cultivating naturally salt-tolerant crops in the region</span><span class="mark">21</span>. Certain varieties of carrot, potato, kohlrabi, cabbage and beetroot have been found to be better suited to salty soil than the rice and wheat that is typically grown there. Chowdhury says that the results are very visible, comparing a barren plot of land to the ‘beautiful, lush green vegetable garden’ sitting beside it, in which he and his team have been working with the farmers. Since the project began, farmers trained in saline agriculture have reported increases of two to three more harvests per year.</p>
+<p class="para"><strong>F</strong> Greg Spotts from Los Angeles (LA) in the USA is chief sustainability officer of the city’s street services department. He leads the Cool Streets LA programme, a series of pilot projects, which include <span class="hl">the planting of trees and the installation of a ‘cool pavement’ system</span><span class="mark">22</span>, designed to help reach the city’s goal of bringing down its average temperature by 1.5°C. ‘<span class="hl">Urban cooling is literally a matter of life and death for our future in LA</span><span class="mark">24</span>,’ says Spotts. <span class="hl">Using a Geographic Information System data mapping tool, the programme identified streets with low tree canopy cover</span><span class="mark">17</span> in three of the city’s neighbourhoods and covered them with a light-grey, light-reflecting coating, which had already been shown to lower road surface temperature in Los Angeles by 6°C. Spotts says one of these streets, in the Winnetka neighbourhood of San Fernando Valley, can now be seen as a pale crescent, the only cool spot on an otherwise red thermal image, from the International Space Station.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">A new role for livestock guard dogs</div>
+<p class="para"><strong>A</strong> For thousands of years, livestock guard dogs worked alongside shepherds to protect their sheep, goats and cattle from predators such as wolves and bears. But in the 19th and 20th centuries, when such predators were largely exterminated, most guard dogs lost their jobs. In recent years, however, as increased efforts have been made to protect wild animals, predators have become more widespread again. As a result, farmers once more need to protect their livestock, and guard dogs are enjoying an unexpected revival.</p>
+<p class="para"><strong>B</strong> Today there are around 50 breeds of guard dogs on duty in various parts of the world. <span class="hl">These dogs are raised from an early age with the animals they will be watching</span><span class="mark">31</span> and eventually these animals become the dog’s family. <span class="hl">The dogs will place themselves between the livestock and any threat, barking loudly.</span><span class="mark">29</span> If necessary, they will chase away predators, but often their mere presence is sufficient. ‘<span class="hl">Their initial training is to make them understand that livestock is going to be their life</span><span class="mark">36</span>,’ says Dan Macon, a shepherd with three guard dogs. ‘A fluffy white puppy is fun to be around, but too much human affection makes it a great dog for guarding the front porch, rather than a great livestock guard dog.’</p>
+<p class="para"><strong>C</strong> The evidence indicates that guard dogs are highly effective. For example, in Portugal, biologist Silvia Ribeiro has found that <span class="hl">more than 90 per cent of the farmers participating in a programme to train and use guard dogs to protect their herds against attack from wolves rate the performance of the dogs as very good or excellent</span><span class="mark">30</span>. In a study carried out in Australia by Linda van Bommel and Chris Johnson at the University of Tasmania, more than 65 per cent of herders reported that predation stopped completely after they got the dogs, and almost all the rest saw a decrease in attacks. ‘<span class="hl">If they are managed and used properly, livestock guard dogs are the most efficient control method that we have</span><span class="mark">35</span> in terms of the amount of livestock that they save from predation,’ says van Bommel.</p>
+<p class="para"><strong>D</strong> But today’s guard dogs also have a new role – to help preserve the predators. It is hoped that reductions in livestock losses can make farmers more tolerant of predators and less likely to kill them. In Namibia, more than 90 per cent of cheetahs live outside protected areas, close to humans raising livestock. As a result, the cheetahs are often held responsible for animal losses, and large numbers have been killed by farmers. When guard dogs were introduced, <span class="hl">more than 90 per cent of farmers reported a dramatic reduction in livestock losses, and said that as a result they were less likely to kill predators</span><span class="mark">27</span>. Julie Young, at Utah State University in the US, believes this result applies widely. “<span class="hl">There is common ground from the livestock perspective and from the conservation perspective</span><span class="mark">32</span>,’ she says. ‘If ranchers don’t have a dead cow, they will not make a call to apply for a permit to kill a wolf.&#x27;</p>
+<p class="para"><strong>E</strong> Looking at all the published evidence, Bethany Smith at Nottingham Trent University in the UK found that up to 88 per cent of farmers said they no longer killed predators after using dogs – but <span class="hl">warned that such self-reported results must be taken with a pinch of salt</span><span class="mark">33</span>. What’s more, it is possible that livestock guard dogs merely displace predators to unprotected neighbouring properties, where their fate isn’t recorded. ‘In some regions, we work with almost every farmer, but in others only one or two have dogs,’ says Ribeiro. ‘<span class="hl">If we are not working with everybody, we are transferring the wolf pressure to the neighbour’s herd</span><span class="mark">34</span> and he can use poison and kill an entire pack of wolves.’</p>
+<p class="para"><strong>F</strong> Another concern is whether there may be unintended ecological effects of using guard dogs. Studies suggest that reducing deaths of one type of predator may have a negative impact on other species. The extent of this problem isn’t known, but the consequences are clear in Namibia. Cheetahs aren’t the only species that cause sheep and goat losses there: other predators also attack livestock. In 2015, researchers reported that in spite of the impact farmers obtaining guard dogs had on cheetahs, <span class="hl">the number of jackals killed by dogs and people actually increased</span><span class="mark">37</span>. Guard dogs have other ecological impacts too. <span class="hl">They have been found to spread diseases to wild animals</span><span class="mark">38</span>, including endangered Ethiopian wolves. <span class="hl">They may also compete with other carnivores for food</span><span class="mark">39</span>. And by creating a ‘landscape of fear’, their mere presence can influence the behaviour of prey animals.</p>
+<p class="para"><strong>G</strong> The evidence so far, however, indicates that these consequences aren’t always negative. Guard dogs can deliver unexpected benefits by protecting vulnerable wildlife from predators. For example, their presence has been found to protect <span class="hl">birds which build their nests on the ground in fields, where foxes would normally raid them</span><span class="mark">40</span>. Indeed, Australian researchers are now using dogs to enhance biodiversity and create refuges for species threatened by predation. So if we can get this right, <span class="hl">there may be a bright future for guard dogs in promoting harmonious coexistence between humans and wildlife</span><span class="mark">28</span>.</p>
+</div><div class="column right">
+<div class="hint">💡 Click any question card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1&ndash;7</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>The Life and Work of Georgia O’Keeffe</b></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Studied art, then worked as a ____ in various places in the USA.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">teacher</span><div class="explanation">‘she became an art <b>teacher</b> and taught in elementary schools, high schools, and colleges’.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Created drawings using ____ which were exhibited in New York City.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">charcoal</span><div class="explanation">‘O’Keeffe began to experiment with creating abstract compositions in <b>charcoal</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Moved to New York and became famous for her paintings of the city’s ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">skyscrapers</span><div class="explanation">‘the architectural pictures that dramatically depict the soaring <b>skyscrapers</b> of New York’.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Produced a series of innovative close-up paintings of ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">flowers</span><div class="explanation">‘In her magnified images depicting <b>flowers</b>, begun in 1924, O’Keeffe brings the viewer right into the picture’.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Went to New Mexico and was initially inspired to paint the many ____ that could be found there.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">bones</span><div class="explanation">‘it was the numerous sun-bleached <b>bones</b> she came across in the state’s rugged terrain that sparked her imagination’.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Continued to paint various features that together formed the dramatic ____ of New Mexico for over forty years.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">landscape</span><div class="explanation">‘the region’s spectacular <b>landscape</b> … held the artist’s imagination for more than four decades’.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Travelled widely by plane in later years, and painted pictures of clouds and ____ seen from above.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">rivers</span><div class="explanation">‘aerial views of <b>rivers</b> and expansive paintings of the sky viewed from just above clouds’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Georgia O’Keeffe’s style was greatly influenced by the changing fashions in art over the seven decades of her career.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The opposite: ‘she remained independent from shifting art trends’.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">When O’Keeffe finished high school, she had already made her mind up about the career that she wanted.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘By the time she graduated from high school in 1905, she had determined to make her way as an artist’.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Alfred Stieglitz first discovered O’Keeffe’s work when she sent some abstract drawings to his gallery in New York City.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">She sent them to a friend, who showed them to Stieglitz – not to his gallery.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">O’Keeffe was the subject of Stieglitz’s photographic work for many years.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘Stieglitz’s celebrated black-and-white portraits of O’Keeffe, taken over the course of twenty years (1917-37)’.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">O’Keeffe’s paintings of the patio of her house in Abiquiu were among the artist’s favourite works.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The patio pictures are described, but nothing says they were her favourites. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">O’Keeffe produced a greater quantity of work during the 1950s to 1970s than at any other time in her life.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Her travels and large canvases of that period are described, but no comparison of output is made. Nearest text highlighted.</div></div>
+<div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14&ndash;17</div><p>Reading Passage 2 has six paragraphs, <b>A&ndash;F</b>. Which paragraph contains the following information?</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">how a type of plant functions as a natural protection for coastlines<div class="yng">A–F</div></div><span class="answer ans-letter">C</span><div class="explanation">Paragraph C: mangroves ‘help defend coastal areas by trapping sediment in their net-like root systems’.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">a prediction about how long it could take to stop noticing the effects of climate change<div class="yng">A–F</div></div><span class="answer ans-letter">A</span><div class="explanation">Paragraph A: ‘scientists forecasting that global warming would continue for around 40 years’.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">a reference to the fact that a solution is particularly cost-effective<div class="yng">A–F</div></div><span class="answer ans-letter">D</span><div class="explanation">Paragraph D: amphibious houses cost ‘about a third of what it would cost to completely replace a building’s foundations’.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">a mention of a technology used to locate areas most in need of intervention<div class="yng">A–F</div></div><span class="answer ans-letter">F</span><div class="explanation">Paragraph F: ‘Using a Geographic Information System data mapping tool, the programme identified streets with low tree canopy cover’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18&ndash;22</div><p>Complete the sentences below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">The stormwater-management programme in Miami Beach has involved the installation of efficient ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">pumps</span><div class="explanation">‘the city has set up new <b>pumps</b> that can remove up to 75,000 litres of water per minute’.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">The construction of ____ was the first stage of a project to ensure the success of mangroves in Indonesia.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">dams</span><div class="explanation">‘building semi-permeable <b>dams</b>, made from bamboo poles and brushwood, to mimic the role of mangrove roots’.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">As a response to rising floodwaters in the Mekong Delta, a not-for-profit organisation has been building houses that can ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">float</span><div class="explanation">‘these ones had been built to <b>float</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Rising sea levels in Bangladesh have made it necessary to introduce various ____ that are suitable for areas of high salt content.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">crops</span><div class="explanation">‘start cultivating naturally salt-tolerant <b>crops</b> in the region’.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">A project in LA has increased the number of ____ on the city’s streets.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">trees</span><div class="explanation">The pilot projects include ‘the planting of <b>trees</b> and the installation of a ‘cool pavement’ system’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 23&ndash;26</div><p>Look at the following statements and the list of people below. Match each statement with the correct person, <b>A&ndash;E</b>.</p><ul class="opts"><li><b>A</b> Yanira Pineda</li><li><b>B</b> Susanna Tol</li><li><b>C</b> Elizabeth English</li><li><b>D</b> Raisa Chowdhury</li><li><b>E</b> Greg Spotts</li></ul></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">It is essential to adopt strategies which involve and help residents of the region.<div class="yng">A–E</div></div><span class="answer ans-letter">B</span><div class="explanation">Susanna Tol: ‘it’s critical that we transition towards multifunctional approaches … that engage and benefit communities’.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Interventions which reduce heat are absolutely vital for our survival in this location.<div class="yng">A–E</div></div><span class="answer ans-letter">E</span><div class="explanation">Greg Spotts: ‘Urban cooling is literally a matter of life and death for our future in LA’.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">More work will need to be done in future decades to deal with the impact of rising water levels.<div class="yng">A–E</div></div><span class="answer ans-letter">A</span><div class="explanation">Yanira Pineda: ‘in 20, 30, 40 years, we’ll need to go back in there and adjust to the changing environment’.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">The number of locations requiring action to adapt to flooding has grown in recent years.<div class="yng">A–E</div></div><span class="answer ans-letter">C</span><div class="explanation">Elizabeth English: ‘this technology is becoming necessary in places that didn’t previously need it’.</div></div>
+<div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27&ndash;31</div><p>Reading Passage 3 has seven paragraphs, <b>A&ndash;G</b>. Which paragraph contains the following information? <i>NB You may use any letter more than once.</i></p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">An example of how one predator has been protected by the introduction of livestock guard dogs<div class="yng">A–G</div></div><span class="answer ans-letter">D</span><div class="explanation">Paragraph D: in Namibia guard dogs reduced losses, so farmers were ‘less likely to kill predators’, protecting cheetahs.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">An optimistic suggestion about the possible positive developments in the use of livestock guard dogs<div class="yng">A–G</div></div><span class="answer ans-letter">G</span><div class="explanation">Paragraph G: ‘there may be a bright future for guard dogs in promoting harmonious coexistence between humans and wildlife’.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">A description of how the methods used by livestock guard dogs help to keep predators away<div class="yng">A–G</div></div><span class="answer ans-letter">B</span><div class="explanation">Paragraph B: ‘The dogs will place themselves between the livestock and any threat, barking loudly’.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Claims by different academics that the use of livestock guard dogs is a successful way of protecting farmers’ herds<div class="yng">A–G</div></div><span class="answer ans-letter">C</span><div class="explanation">Paragraph C reports Ribeiro’s 90% approval and van Bommel’s Australian study.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">A reference to how livestock guard dogs gain their skills<div class="yng">A–G</div></div><span class="answer ans-letter">B</span><div class="explanation">Paragraph B: ‘These dogs are raised from an early age with the animals they will be watching’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 32&ndash;36</div><p>Look at the following statements and the list of people below. Match each statement with the correct person, <b>A&ndash;E</b>.</p><ul class="opts"><li><b>A</b> Dan Macon</li><li><b>B</b> Silvia Ribeiro</li><li><b>C</b> Linda van Bommel</li><li><b>D</b> Julie Young</li><li><b>E</b> Bethany Smith</li></ul></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">The use of guard dogs may save the lives of both livestock and wild animals.<div class="yng">A–E</div></div><span class="answer ans-letter">D</span><div class="explanation">Julie Young: ‘There is common ground from the livestock perspective and from the conservation perspective’.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">Claims of a change in behaviour from those using livestock guard dogs may not be totally accurate.<div class="yng">A–E</div></div><span class="answer ans-letter">E</span><div class="explanation">Bethany Smith warns that ‘such self-reported results must be taken with a pinch of salt’.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">There may be negative results if the use of livestock guard dogs is not sufficiently widespread.<div class="yng">A–E</div></div><span class="answer ans-letter">B</span><div class="explanation">Silvia Ribeiro: ‘If we are not working with everybody, we are transferring the wolf pressure to the neighbour’s herd’.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Livestock guard dogs are the best way of protecting farm animals, as long as the dogs are appropriately handled.<div class="yng">A–E</div></div><span class="answer ans-letter">C</span><div class="explanation">Linda van Bommel: ‘If they are managed and used properly, livestock guard dogs are the most efficient control method that we have’.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Teaching a livestock guard dog how to do its work needs a different focus from teaching a house guard dog.<div class="yng">A–E</div></div><span class="answer ans-letter">A</span><div class="explanation">Dan Macon: training must make the dog understand that livestock is its life – ‘too much human affection makes it a great dog for guarding the front porch’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 37&ndash;40</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Unintended Ecological Effects of Using Guard Dogs</b></p><p style="font-size:.84rem;color:#4a5568;">In Namibia, livestock guard dogs have been used to protect domestic animals from attacks by cheetahs. This has led to a rise in the deaths of other predators, particularly ___. In addition, it has been suggested that the dogs could have ___ which may affect other species, and that they may reduce the amount of ___ available to certain wild animals. On the other hand, these dogs may help birds by protecting their nests. These might otherwise be threatened by predators such as ___.</p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">This has led to a rise in the deaths of other predators, particularly ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">jackals</span><div class="explanation">‘the number of <b>jackals</b> killed by dogs and people actually increased’.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">It has been suggested that the dogs could have ____ which may affect other species.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">diseases</span><div class="explanation">‘They have been found to spread <b>diseases</b> to wild animals’.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">They may reduce the amount of ____ available to certain wild animals.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">food</span><div class="explanation">‘They may also compete with other carnivores for <b>food</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Birds’ nests might otherwise be threatened by predators such as ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">foxes</span><div class="explanation">‘birds which build their nests on the ground in fields, where <b>foxes</b> would normally raid them’.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body></html>

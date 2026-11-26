@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 20 – Reading Test 3</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head><body>
+<header><h1>Cambridge IELTS 20 – Reading Test 3</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">Frozen Food</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> At some point in history, humans discovered that ice preserved food. There is evidence that winter ice was stored to preserve food in the summer as far back as 10,000 years ago. Two thousand years ago, the inhabitants of South America’s Andean mountains <span class="hl">had a unique means of conserving potatoes for later consumption</span><span class="mark">1</span>. They froze them overnight, then trampled them to squeeze out the moisture, then dried them in the sun. This preserved their nutritional value - if not their aesthetic appeal.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Natural ice remained the main form of refrigeration until late in the 19th century. In the early 1800s, <span class="hl">ship owners from Boston, USA, had enormous blocks of Arctic ice towed all over the Atlantic</span><span class="mark">8</span> for the purpose of food preservation. In 1851, <span class="hl">railroads first began putting blocks of ice in insulated rail cars to send butter from Ogdensburg, New York, to Boston</span><span class="mark">2</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Finally, in 1870, Australian inventors found a way to make ‘mechanical ice’. They used a compressor to force a gas – ammonia at first and later Freon – through a condenser. The compressed gas gave up some of its heat as it moved through the condenser. Then the gas was released quickly into a low-pressure evaporator coil where it became liquid and cold. Air was blown over the evaporator coil and then this cooled air passed into an insulated compartment, lowering its temperature to freezing point.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Initially, this process was invented to keep Australian beer cool even in hot weather. But Australian cattlemen were quick to realize that, if they could put this new invention on a ship, they could export meat across the oceans. In 1880, <span class="hl">a shipment of Australian beef and mutton was sent, frozen, to England</span><span class="mark">3</span>. While the food frozen this way was still palatable, there was some deterioration. During the freezing process, <span class="hl">crystals formed within the cells of the food, and when the ice expanded and the cells burst, this spoilt the flavor and texture of the food</span><span class="mark">4</span><span class="mark">9</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> The modern frozen food industry began with the indigenous Inuit people of Canada. In 1912, a biology student in Massachusetts, USA, named Clarence Birdseye, <span class="hl">ran out of money and went to Labrador in Canada to trap and trade furs</span><span class="mark">10</span>. While he was there, he became fascinated with how the Inuit would quickly freeze fish in the Arctic air. The fish looked and tasted fresh even months later.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Birdseye returned to the USA in 1917 and began developing mechanical freezers capable of quick-freezing food. Birdseye methodically kept inventing better freezers and gradually built a business selling frozen fish from Gloucester, Massachusetts. In 1929, his business was sold and became General Foods, but he stayed with the company as director of research, and his division continued to innovate.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Birdseye was responsible for several key innovations that made the frozen food industry possible. He developed quick-freezing techniques that reduced the damage that crystals caused, as well as the technique of freezing the product in the package it was to be sold in. <span class="hl">He also introduced the use of cellophane, the first transparent material for food packaging</span><span class="mark">5</span>, which allowed consumers to see the quality of the product. Birdseye products also came in convenient size packages that could be prepared with a minimum of effort.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> But there were still obstacles. In the 1930s, few grocery stores could afford to buy freezers for a market that wasn’t established yet. So, Birdseye leased inexpensive freezer cases to them. He also leased insulated railroad cars so that he could ship his products nationwide. However, few consumers had freezers large enough or efficient enough to take advantage of the products.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Sales increased in the early 1940s, when World War II gave a boost to the frozen food industry because <span class="hl">tin was being used for munitions</span><span class="mark">6</span>. Canned foods were rationed to save tin for the war effort, while frozen foods were abundant and cheap. Finally, by the 1950s, refrigerator technology had developed far enough to make these appliances affordable for the average family. <span class="hl">By 1953, 33 million US families owned a refrigerator</span><span class="mark">7</span>, and manufacturers were gradually increasing the size of the freezer compartments in them.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> 1950s families were also looking for convenience at mealtimes, so the moment was right for the arrival of the ‘TV Dinner’. Swanson Foods was a large, nationally recognized producer of canned and frozen poultry. In 1954, the company adapted some of Birdseye&#x27;s freezing techniques, and <span class="hl">with the help of a clever name and a huge advertising budget</span><span class="mark">11</span>, it launched the first ‘TV Dinner’. This consisted of frozen turkey, potatoes and vegetables <span class="hl">served in the same segmented aluminum tray that was used by airlines</span><span class="mark">12</span>. The product was an instant success. Within a year, Swanson had sold 13 million TV dinners. American consumers couldn’t resist the combination of a trusted brand name, a single-serving package and the convenience of a meal that could be ready after only 25 minutes in a hot oven. By 1959, Americans were spending $2.7 billion annually on frozen foods, and half a billion of that was spent on ready-prepared meals such as the TV Dinner.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> <span class="hl">Today, the US frozen food industry has a turnover of over $67 billion annually</span><span class="mark">13</span>, with $26.6 billion of that sold to consumers for home consumption. The remaining $40 billion in frozen food sales come through restaurants, cafeterias, hospitals and schools, and that represents a third of the total food service sales.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">Can the planet’s coral reefs be saved?</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Conservationists have put the final touches to a giant artificial reef they have been assembling at the world-renowned Zoological Society of London (London Zoo). Samples of the planet’s most spectacular corals – vivid green branching coral, yellow scroll, blue ridge and many more species – have been added to the giant tank along with fish that thrive in their presence: blue tang, clownfish and many others. The reef is in the zoo’s new gallery, Tiny Giants, which is dedicated to the minuscule invertebrate creatures that sustain life across the planet. The coral reef tank and its seven-metre-wide window form the core of the exhibition.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> ‘<span class="hl">Coral reefs are the most diverse ecosystems on Earth and we want to show people how wonderful they are</span><span class="mark">14</span>,’ said Paul Pearce-Kelly, senior curator of invertebrates and fish at the Zoological Society of London. ‘However, <span class="hl">we also want to highlight the research and conservation efforts that are now being carried out</span><span class="mark">14</span> to try to save them from the threat of global warming.’ They want people to see what is being done to try to save these wonders.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Corals are composed of tiny animals, <span class="hl">known as polyps, with tentacles for capturing small marine creatures in the sea water</span><span class="mark">24</span>. These polyps are transparent but get their brilliant tones of pink, orange, blue, green, etc. from <span class="hl">algae that live within them, which in turn get protection</span><span class="mark">25</span>, while their photosynthesising of the sun’s rays provides nutrients for the polyps. <span class="hl">This comfortable symbiotic relationship has led to the growth of coral reefs</span><span class="mark">15</span> that cover 0.1% of the planet’s ocean bed while providing homes for more than 25% of marine species, including fish, molluscs, sponges and shellfish.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> As a result, <span class="hl">coral reefs are often described as the ‘rainforests of the sea’, though the comparison is dismissed by some naturalists, including David Attenborough</span><span class="mark">16</span>. ‘People say you cannot beat the rainforest,’ Attenborough has stated. ‘But that is simply not true. You go there and the first thing you think is: where are the birds? Where are the animals? They are hiding in the trees, of course. No, if you want beauty and wildlife, you want a coral reef. Put on a mask and stick your head under the water. The sight is mindblowing.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Unfortunately, these majestic sights are now under very serious threat, with the most immediate problem coming in the form of thermal stress. Rising ocean temperatures are triggering <span class="hl">bleaching events that strip reefs of their colour and eventually kill them</span><span class="mark">26</span>. And that is just the start. Other menaces include ocean acidification, sea level increase, <span class="hl">pollution by humans</span><span class="mark">20</span>, deoxygenation and <span class="hl">ocean current changes</span><span class="mark">21</span>, while the climate crisis is also increasing habitat destruction. As a result, vast areas – including massive chunks of Australia’s Great Barrier Reef – have already been destroyed, and scientists advise that <span class="hl">more than 90% of reefs could be lost by 2050 unless urgent action is taken</span><span class="mark">17</span> to tackle global heating and greenhouse gas emissions.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Pearce-Kelly says that coral reefs have to survive really harsh conditions – wave erosion and other factors. And ‘when things start to go wrong in the oceans, then corals will be the first to react. And that is exactly what we are seeing now. Coral reefs are dying and they are telling us that all is not well with our planet.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> However, <span class="hl">scientists are trying to pinpoint hardy types of coral that could survive our overheated oceans</span><span class="mark">18</span>, and some of this research will be carried out at London Zoo. ‘Behind our … coral reef tank we have built laboratories where scientists will be studying coral species,’ said Pearce-Kelly. One aim will be to carry out research on species to <span class="hl">find those that can survive best in warm, acidic waters</span><span class="mark">22</span>. <span class="hl">Another will be to try to increase coral breeding rates</span><span class="mark">23</span>. ‘Coral spawn just once a year,’ he added. ‘However, aquarium-based research has enabled some corals to spawn artificially, which can assist coral reef restoration efforts. And if this can be extended for all species, we could consider the launching of coral-spawning programmes several times a year. That would be a big help in restoring blighted reefs.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Research in these fields is being conducted in laboratories around the world, with the London Zoo centre linked to this global network. Studies carried out in one centre can then be tested in others. The resulting young coral can then be displayed in the tank in Tiny Giants. ‘The crucial point is that the progress we make in making coral better able to survive in a warming world <span class="hl">can be shown to the public and encourage them to believe that we can do something to save the planet’s reefs</span><span class="mark">19</span>,’ said Pearce-Kelly. ‘Saving our coral reefs is now a critically important ecological goal.’</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">Robots and us</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> When asked ‘Should robots be used to colonise other planets?’, cosmology and astrophysics Professor Martin Rees said he believed the solar system would be mapped by robotic craft by the end of the century. ‘The next step would be mining of asteroids, enabling fabrication of large structures in space without having to bring all the raw materials from Earth…. I think this is more realistic and benign than the … “terraforming”* of planets.’ He maintains that colonised planets ‘<span class="hl">should be preserved with a status that is analogous to Antarctica here on Earth</span><span class="mark">34</span>.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> On the question of using robots to colonise other planets and exploit mineral resources, engineering Professor Daniel Wolpert replied, ‘I don’t see a pressing need to colonise other planets unless we can bring [these] resources back to Earth. The vast majority of Earth is currently inaccessible to us. <span class="hl">Using robots to gather resources nearer to home would seem to be a better use of our robotic tools</span><span class="mark">31</span>.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Meanwhile, for anthropology Professor Kathleen Richardson, <span class="hl">the idea of ‘colonisation’ of other planets seemed morally dubious</span><span class="mark">34</span>: ‘I think whether we do something on Earth or on Mars we should always do it in the spirit of a genuine interest in “the Other”, not to impose a particular model, but to meet “the Other”.&#x27;</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> In response to the second question, ‘How soon will machine intelligence outstrip human intelligence?’, Rees mentions robots that are advanced enough to beat humans at chess, but then goes on to say, ‘Robots are still limited in their ability to sense their environment: they can’t yet recognise and move the pieces on a real chessboard as cleverly as a child can. Later this century, however, their more advanced successors may relate to their surroundings, and to people, as adeptly as we do. Moral questions then arise. … <span class="hl">Should we feel guilty about exploiting [sophisticated robots]?</span><span class="mark">30</span> Should we fret if they are underemployed, frustrated, or bored?’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Wolpert’s response to the question about machine intelligence outstripping human intelligence was this: ‘<span class="hl">In a limited sense it already has.</span><span class="mark">35</span> Machines can already navigate, remember and search for items with an ability that far outstrips humans. However, there is no machine that can identify visual objects or speech with the reliability and flexibility of humans…. <span class="hl">Expecting a machine close to the creative intelligence of a human within the next 50 years would be highly ambitious</span><span class="mark">29</span>.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Richardson believes that our fear of machines becoming too advanced has more to do with human nature than anything intrinsic to the machines themselves. In her view, <span class="hl">it stems from humans’ tendency to personify inanimate objects</span><span class="mark">37</span>: we create machines based on representations of ourselves, imagine that machines think and behave as we do, and therefore see them as an autonomous threat. ‘One of the consequences of thinking that the problem lies with machines is that we tend to imagine they are greater and more powerful than they really are and subsequently they become so.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> This led on to the third question, ‘Should we be scared by advances in artificial intelligence?’ To this question, Rees replied, ‘Those who should be worried are the futurologists who believe in the so-called “singularity”.** … And another worry is that we are increasingly dependent on computer networks, and that <span class="hl">these could behave like a single “brain” with a mind of its own, and with goals that may be contrary to human welfare</span><span class="mark">38</span>. <span class="hl">I think we should ensure that robots remain as no more than “idiot savants” lacking the capacity to outwit us</span><span class="mark">27</span>, even though they may greatly surpass us in the ability to calculate and process information.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Wolpert’s response was to say that <span class="hl">we have already seen the damaging effects of artificial intelligence in the form of computer viruses</span><span class="mark">36</span>. ‘But in this case,’ he says, ‘the real intelligence is the malicious designer. Critically, the benefits of computers outweigh the damage that computer viruses cause. Similarly, while there may be misuses of robotics in the near future, the benefits that they will bring are likely to outweigh these negative aspects.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Richardson’s response to this question was this: ‘We need to ask why fears of artificial intelligence and robots persist; <span class="hl">none have in fact risen up and challenged human supremacy</span><span class="mark">28</span>.’ She believes that <span class="hl">as robots have never shown themselves to be a threat to humans</span><span class="mark">36</span>, it seems unlikely that they ever will. In fact, she went on, ‘<span class="hl">Not all fear [robots]; many people welcome machine intelligence</span><span class="mark">33</span>.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> In answer to the fourth question, ‘What can science fiction tell us about robotics?’, Rees replied, ‘I sometimes advise students that <span class="hl">it’s better to read first-rate science fiction than second-rate science - more stimulating, and perhaps no more likely to be wrong</span><span class="mark">32</span>.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> As his response, Wolpert commented, ‘Science fiction has often been remarkable at predicting the future. Science fiction has painted a vivid spectrum of possible futures, from cute and helpful robots to dystopian robotic societies. <span class="hl">Interestingly, almost no science fiction envisages a future without robots.</span><span class="mark">39</span>’ Finally, on the question of science fiction, Richardson pointed out that in modern society, people tend to think there is reality on the one hand, and fiction and fantasy on the other. She then explained that the division did not always exist, and that scientists and technologists made this separation because they wanted to carve out the sphere of their work. ‘But the divide is not so clear cut, and that is why the worlds seem to collide at times,’ she said. ‘In some cases, <span class="hl">we need to bring these different understandings together to get a whole perspective</span><span class="mark">40</span>. Perhaps then, we won’t be so frightened that something we create as a copy of ourselves will be a threat to us.’</p>
+</div><div class="column right">
+<div class="hint">💡 Click any question card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1&ndash;7</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>The history of frozen food</b></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">2,000 years ago, South America – People conserved the nutritional value of ____, using a method of freezing then drying.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">potatoes</span><div class="explanation">Andean people conserved <b>potatoes</b>: ‘They froze them overnight, then trampled them … then dried them in the sun’.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">1851, USA – ____ was kept cool by ice during transportation in specially adapted trains.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">butter</span><div class="explanation">‘railroads first began putting blocks of ice in insulated rail cars to send <b>butter</b> from Ogdensburg … to Boston’.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">1880, Australia – Two kinds of ____ were the first frozen food shipped to England.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">meat</span><div class="explanation">‘a shipment of Australian beef and mutton was sent, frozen, to England’ – two kinds of <b>meat</b>.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Quick-freezing methods, so that ____ did not spoil the food.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">crystals</span><div class="explanation">‘crystals formed within the cells of the food … this spoilt the flavor and texture’ – quick-freezing reduced the damage.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Packaging products with ____, so the product was visible.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">cellophane</span><div class="explanation">‘the use of <b>cellophane</b>, the first transparent material for food packaging’.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Early 1940s, USA – Frozen food became popular because of a shortage of ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">tin</span><div class="explanation">‘<b>tin</b> was being used for munitions. Canned foods were rationed to save tin’.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">1950s, USA – A large number of homes now had a ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">refrigerator</span><div class="explanation">‘By 1953, 33 million US families owned a <b>refrigerator</b>’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">The ice transportation business made some Boston ship owners very wealthy in the early 1800s.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The Boston ice trade is described, but the ship owners’ profits are never mentioned. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">A disadvantage of the freezing process invented in Australia was that it affected the taste of food.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘While the food frozen this way was still palatable, there was some deterioration … this spoilt the flavor and texture’.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Clarence Birdseye travelled to Labrador in order to learn how the Inuit people froze fish.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">He went for money, not research: ‘ran out of money and went to Labrador in Canada to trap and trade furs’.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Swanson Foods invested a great deal of money in the promotion of the TV Dinner.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Swanson used ‘a clever name and a huge advertising budget’.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">Swanson Foods developed a new style of container for the launch of the TV Dinner.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The tray was not new: it was ‘the same segmented aluminum tray that was used by airlines’.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">The US frozen food industry is currently the largest in the world.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The size of the US industry is given, but it is never compared with other countries. Nearest text highlighted.</div></div>
+<div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14&ndash;19</div><p>Reading Passage 2 has six sections, <b>A&ndash;F</b>. Choose the correct heading for each section from the list of headings below.</p><ul class="opts"><li><b>i</b> Tried and tested solutions</li><li><b>ii</b> Cooperation beneath the waves</li><li><b>iii</b> Working to lessen the problems</li><li><b>iv</b> Disagreement about the accuracy of a certain phrase</li><li><b>v</b> Two clear educational goals</li><li><b>vi</b> Promoting hope</li><li><b>vii</b> A warning of further trouble ahead</li></ul></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Section A<div class="yng">i–vii</div></div><span class="answer ans-letter">v</span><div class="explanation">Section A gives the zoo’s two aims: to show people how wonderful reefs are, and to highlight the research trying to save them.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Section B<div class="yng">i–vii</div></div><span class="answer ans-letter">ii</span><div class="explanation">Section B explains the symbiosis between polyps and the algae living inside them.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Section C<div class="yng">i–vii</div></div><span class="answer ans-letter">iv</span><div class="explanation">Section C questions the phrase ‘rainforests of the sea’ – Attenborough says the comparison is wrong.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Section D<div class="yng">i–vii</div></div><span class="answer ans-letter">vii</span><div class="explanation">Section D warns that more than 90% of reefs could be lost by 2050 unless urgent action is taken.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Section E<div class="yng">i–vii</div></div><span class="answer ans-letter">iii</span><div class="explanation">Section E describes the work to lessen the problems: finding hardy species and increasing breeding rates.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Section F<div class="yng">i–vii</div></div><span class="answer ans-letter">vi</span><div class="explanation">Section F is about giving people hope that the reefs can be saved.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 20&ndash;21</div><p>Choose <b>TWO</b> letters, <b>A&ndash;E</b>.</p><p style="font-size:.84rem;color:#4a5568;">Which TWO of these causes of damage to coral reefs are mentioned by the writer of the text?</p></div>
+<div class="q-block"><div class="q-num">Questions 20 &amp; 21</div><div class="question">Which TWO of these causes of damage to coral reefs are mentioned by the writer of the text?<ul class='opts'><li><b>A</b> a rising number of extreme storms</li><li><b>B</b> the removal of too many fish from the sea</li><li><b>C</b> the contamination of the sea from waste</li><li><b>D</b> increased disease among marine species</li><li><b>E</b> alterations in the usual flow of water in the seas</li></ul><div class="yng">TWO letters, A–E</div></div><span class="answer ans-letter">C and E</span><div class="explanation"><b>C</b>: ‘pollution by humans’. <b>E</b>: ‘ocean current changes’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 22&ndash;23</div><p>Choose <b>TWO</b> letters, <b>A&ndash;E</b>.</p><p style="font-size:.84rem;color:#4a5568;">Which TWO of the following statements are true of the researchers at London Zoo?</p></div>
+<div class="q-block"><div class="q-num">Questions 22 &amp; 23</div><div class="question">Which TWO of the following statements are true of the researchers at London Zoo?<ul class='opts'><li><b>A</b> They are hoping to expand the numbers of different corals being bred in laboratories.</li><li><b>B</b> They want to identify corals that can cope well with the changed sea conditions.</li><li><b>C</b> They are looking at ways of creating artificial reefs that corals could grow on.</li><li><b>D</b> They are trying out methods that would speed up reproduction in some corals.</li><li><b>E</b> They are investigating materials that might protect reefs from higher temperatures.</li></ul><div class="yng">TWO letters, A–E</div></div><span class="answer ans-letter">B and D</span><div class="explanation"><b>B</b>: they want to ‘find those that can survive best in warm, acidic waters’. <b>D</b>: another aim is to ‘increase coral breeding rates’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 24&ndash;26</div><p>Complete the sentences below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Corals have a number of ____ which they use to collect their food.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">tentacles</span><div class="explanation">‘polyps, with <b>tentacles</b> for capturing small marine creatures’.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Algae gain ____ from being inside the coral.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">protection</span><div class="explanation">‘algae that live within them, which in turn get <b>protection</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Increases in the warmth of the sea water can remove the ____ from coral.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">colour</span><div class="explanation">‘bleaching events that strip reefs of their <b>colour</b>’.</div></div>
+<div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27&ndash;33</div><p>Look at the following statements and the list of experts below. Match each statement with the correct expert, <b>A</b>, <b>B</b> or <b>C</b>. <i>NB You may use any letter more than once.</i></p><ul class="opts"><li><b>A</b> Martin Rees – cosmology and astrophysics</li><li><b>B</b> Daniel Wolpert – engineering</li><li><b>C</b> Kathleen Richardson – anthropology</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">For our own safety, humans will need to restrict the abilities of robots.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Martin Rees: robots should remain ‘no more than “idiot savants” lacking the capacity to outwit us’.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">The risk of robots harming us is less serious than humans believe it to be.<div class="yng">A / B / C</div></div><span class="answer ans-letter">C</span><div class="explanation">Kathleen Richardson: ‘none have in fact risen up and challenged human supremacy’.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">It will take many decades for robot intelligence to be as imaginative as human intelligence.<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">Daniel Wolpert: ‘Expecting a machine close to the creative intelligence of a human within the next 50 years would be highly ambitious’.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">We may have to start considering whether we are treating robots fairly.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Rees: ‘Should we feel guilty about exploiting [sophisticated robots]?’</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Robots are probably of more help to us on Earth than in space.<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">Wolpert: ‘Using robots to gather resources nearer to home would seem to be a better use of our robotic tools’.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">The ideas in high-quality science fiction may prove to be just as accurate as those found in the work of mediocre scientists.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Rees: ‘better to read first-rate science fiction than second-rate science – more stimulating, and perhaps no more likely to be wrong’.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">There are those who look forward to robots developing greater intelligence.<div class="yng">A / B / C</div></div><span class="answer ans-letter">C</span><div class="explanation">Richardson: ‘Not all fear [robots]; many people welcome machine intelligence’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 34&ndash;36</div><p>Complete each sentence with the correct ending, <b>A&ndash;D</b>, below.</p><ul class="opts"><li><b>A</b> robots to explore outer space.</li><li><b>B</b> advances made in machine intelligence so far.</li><li><b>C</b> changes made to other planets for our own benefit.</li><li><b>D</b> the harm already done by artificial intelligence.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Richardson and Rees express similar views regarding the ethical aspect of<div class="yng">A–D</div></div><span class="answer ans-letter">C</span><div class="explanation">Both discuss the morality of altering other planets: Rees says colonised planets ‘should be preserved’, Richardson calls colonisation ‘morally dubious’.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Rees and Wolpert share an opinion about the extent of<div class="yng">A–D</div></div><span class="answer ans-letter">B</span><div class="explanation">Both agree machines already outperform humans in limited ways – Wolpert: ‘In a limited sense it already has’.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Wolpert disagrees with Richardson on the question of<div class="yng">A–D</div></div><span class="answer ans-letter">D</span><div class="explanation">Wolpert cites the damage done by computer viruses; Richardson insists robots ‘have never shown themselves to be a threat’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 37&ndash;40</div><p>Choose the correct letter, <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b>.</p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">What point does Richardson make about fear of machines?<ul class='opts'><li><b>A</b> It has grown alongside the development of ever more advanced robots.</li><li><b>B</b> It is the result of our inclination to attribute human characteristics to non-human entities.</li><li><b>C</b> It has its origins in basic misunderstandings about how inanimate objects function.</li><li><b>D</b> It demonstrates a key difference between human intelligence and machine intelligence.</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">B</span><div class="explanation">The fear ‘stems from humans’ tendency to personify inanimate objects’.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">What potential advance does Rees see as a cause for concern?<ul class='opts'><li><b>A</b> robots outnumbering people</li><li><b>B</b> robots having abilities which humans do not</li><li><b>C</b> artificial intelligence developing independent thought</li><li><b>D</b> artificial intelligence taking over every aspect of our lives</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">C</span><div class="explanation">Computer networks ‘could behave like a single “brain” with a mind of its own, and with goals that may be contrary to human welfare’.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">What does Wolpert emphasize in his response to the question about science fiction?<ul class='opts'><li><b>A</b> how science fiction influences our attitudes to robots</li><li><b>B</b> how fundamental robots are to the science fiction genre</li><li><b>C</b> how the image of robots in science fiction has changed over time</li><li><b>D</b> how reactions to similar portrayals of robots in science fiction may vary</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">B</span><div class="explanation">‘almost no science fiction envisages a future without robots’ – robots are central to the genre.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">What is Richardson doing in her comment about reality and fantasy?<ul class='opts'><li><b>A</b> warning people not to confuse one with the other</li><li><b>B</b> outlining ways in which one has impacted on the other</li><li><b>C</b> recommending a change of approach in how people view them</li><li><b>D</b> explaining why scientists have a different perspective on them from other people</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">C</span><div class="explanation">She says ‘we need to bring these different understandings together to get a whole perspective’ – a change of approach.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body></html>

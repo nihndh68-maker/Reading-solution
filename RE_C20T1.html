@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 20 – Reading Test 1</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head><body>
+<header><h1>Cambridge IELTS 20 – Reading Test 1</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">The kéképé</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> The kakapo is a nocturnal, flightless parrot that is critically endangered and one of New Zealand’s unique treasures.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> The kakapo, also known as the owl parrot, is a large, forest-dwelling bird, with a pale owl-like face. Up to 64 cm in length, it has predominantly yellow-green feathers, forward-facing eyes, a large grey beak, large blue feet, and relatively short wings and tail. <span class="hl">It is the world’s only flightless parrot</span><span class="mark">1</span>, and is also possibly one of the world’s longest-living birds, with a reported lifespan of up to 100 years.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Kakapo are solitary birds and tend to occupy the same home range for many years. They forage on the ground and climb high into trees. They often leap from trees and flap their wings, but at best manage a controlled descent to the ground. They are entirely vegetarian, with their diet including the leaves, roots and bark of trees <span class="hl">as well as bulbs, and fern fronds</span><span class="mark">7</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> <span class="hl">Kakapo breed in summer and autumn, but only in years when food is plentiful.</span><span class="mark">2</span> <span class="hl">Males play no part in incubation or chick-rearing</span><span class="mark">3</span> - females alone incubate eggs and feed the chicks. <span class="hl">The 1-4 eggs are laid in soil</span><span class="mark">8</span>, which is repeatedly turned over before and during incubation. The female kakapo has to spend long periods away from the nest searching for food, which leaves the unattended eggs and chicks particularly vulnerable to predators.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Before humans arrived, kakapo were common throughout New Zealand’s forests. However, this all changed with the arrival of the first Polynesian settlers about 700 years ago. For the early settlers, the flightless kakapo was easy prey. <span class="hl">They ate its meat and used its feathers to make soft cloaks</span><span class="mark">9</span>. <span class="hl">With them came the Polynesian dog and rat, which also preyed on kakapo</span><span class="mark">4</span>. By the time European colonisers arrived in the early 1800s, kakapo had become confined to the central North Island and forested parts of the South Island. The fall in kakapo numbers was accelerated by European colonisation. A great deal of habitat was lost through forest clearance, and <span class="hl">introduced species such as deer depleted the remaining forests of food</span><span class="mark">10</span>. Other predators such as cats, stoats and two more species of rat were also introduced. The kakapo were in serious trouble.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> In 1894, the New Zealand government launched its first attempt to save the kakapo. Conservationist Richard Henry led an effort to relocate several hundred of the birds to predator-free Resolution Island in Fiordland. Unfortunately, the island didn’t remain predator free – stoats arrived within six years, eventually destroying the kakapo population. By the mid-1900s, the kakapo was practically a lost species. Only a few clung to life in the most isolated parts of New Zealand.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> From 1949 to 1973, the newly formed New Zealand Wildlife Service made over 60 expeditions to find kakapo, focusing mainly on Fiordland. Six were caught, but there were no females amongst them and all but one died within a few months of captivity.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> In 1974, a new initiative was launched, and by 1977, 18 more kakapo were found in Fiordland. However, there were still no females. In 1977, a large population of males was spotted in Rakiura – a large island free from stoats, ferrets and weasels. There were about 200 individuals, and <span class="hl">in 1980 it was confirmed females were also present</span><span class="mark">11</span>. These birds have been the foundation of all subsequent work in managing the species.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Unfortunately, <span class="hl">predation by feral cats on Rakiura Island led to a rapid decline in kakapo numbers. As a result, during 1980-97, the surviving population was evacuated to three island sanctuaries</span><span class="mark">5</span>: Codfish Island, Maud Island and Little Barrier Island. However, breeding success was hard to achieve. Rats were found to be a major predator of kakapo chicks, and an insufficient number of chicks survived to offset adult mortality. By 1995, although at least 12 chicks had been produced on the islands, only three had survived.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> The kakapo population had dropped to 51 birds.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> The critical situation prompted an urgent review of kakapo management in New Zealand. In 1996, a new Recovery Plan was launched, together with <span class="hl">a specialist advisory group called the Kakapo Scientific and Technical Advisory Committee and a higher amount of funding</span><span class="mark">12</span>. Renewed steps were taken to control predators on the three islands. Cats were eradicated from Little Barrier Island in 1980, and possums were eradicated from Codfish Island by 1986. However, the population did not start to increase until rats were removed from all three islands, and the birds were more intensively managed. This involved moving the birds between islands, supplementary feeding of adults, and <span class="hl">rescuing and hand-raising any failing chicks</span><span class="mark">6</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶12</strong> After the first five years of the Recovery Plan, the population was on target. By 2000, five new females had been produced, and the total population had grown to 62 birds. For the first time, there was cautious optimism for the future of kakapo, and by June 2020, a total of 210 birds was recorded.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶13</strong> Today, kakapo management continues to be guided by the kakapo Recovery Plan. Its key goals are: minimise the loss of genetic diversity in the kakapo population, restore or maintain sufficient habitat to accommodate the expected increase in the kakapo population, and <span class="hl">ensure stakeholders continue to be fully engaged in the preservation of the species</span><span class="mark">13</span>.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">Return of the elm: reintroducing the beloved tree to Britain</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Around 25 million elms, accounting for 90% of all elm trees in the UK, died during the 1960s and ’70s of Dutch elm disease. In the aftermath, the elm, once so dominant in the British landscape, was largely forgotten. However, there’s now hope the elm may be reintroduced to the countryside of central and southern England. Any reintroduction will start from a very low base. ‘The impact of the disease is difficult to picture if you hadn’t seen what was there before,’ says Matt Elliot of the Woodland Trust. ‘<span class="hl">You look at old photographs from the 1960s and it’s only then that you realise the impact</span><span class="mark">23</span> [elms had]. They were significant, large trees then they were gone.’</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> The disease is caused by a fungus that blocks the elms’ vascular (water, nutrient and food transport) system, causing branches to wilt and die. A first epidemic, which occurred in the 1920s, gradually died down, but in the &#x27;70s <span class="hl">a second epidemic was triggered by shipments of elm from Canada</span><span class="mark">16</span>. The wood came in the form of logs destined for boat building and its intact bark was perfect for the elm bark beetles that spread the deadly fungus. This time, the beetles carried a much more virulent strain that destroyed the vast majority of British elms.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Today, elms still exist in the southern English countryside but mostly only in low hedgerows between fields. ‘We have millions of small elms in hedgerows but they get targeted by the beetle as soon as they reach a certain size,’ says Karen Russell, co-author of the report Where we are with elm. <span class="hl">Once the trunk of the elm reaches 10-15 centimetres or so in diameter, it becomes a perfect size for beetles to lay eggs and for the fungus to take hold</span><span class="mark">18</span>. Yet mature specimens have been identified, in counties such as Cambridgeshire, that are hundreds of years old, and have mysteriously escaped the epidemic.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> The key, Russell says, is to identify and study those trees that have survived and work out why they stood tall when millions of others succumbed. Nevertheless, <span class="hl">opportunities are limited as the number of these mature survivors is relatively small</span><span class="mark">14</span>. &#x27;<span class="hl">What are the reasons for their survival?</span><span class="mark">21</span>&#x27; asks Russell. &#x27;Avoidance, tolerance, resistance? We don&#x27;t know where the balance lies between the three. I don&#x27;t see how it can be entirely down to luck.&#x27;</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> For centuries, <span class="hl">elm ran a close second to oak as the hardwood tree of choice</span><span class="mark">24</span> in Britain and was in many instances the most prominent tree in the landscape. Not only was elm common in European forests, it became a key component of birch, ash and hazel woodlands. The use of elm is thought to go back to the Bronze Age, when it was widely used for tools. Elm was also the preferred material for shields and early swords. In the 18th century, it was planted more widely and <span class="hl">its wood was used for items such as storage crates and flooring</span><span class="mark">25</span>. It was also suitable for items that experienced high levels of impact and was <span class="hl">used to build the keel of the 19th-century sailing ship Cutty Sark</span><span class="mark">26</span> as well as mining equipment.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Given how ingrained elm is in British culture, it’s unsurprising the tree has many advocates. Amongst them is Peter Bourne of the National Elm Collection in Brighton. ‘I saw Dutch elm disease unfold as a small boy,’ he says. ‘The elm seemed to be part of rural England, but I remember watching trees just lose their leaves and that really stayed with me.’ Today, the city of Brighton’s elms total about 17,000. Local factors appear to have contributed to their survival. <span class="hl">Strong winds from the sea make it difficult for the determined elm bark beetle to attack this coastal city’s elm population</span><span class="mark">17</span>. However, the situation is precarious. ‘<span class="hl">The beetles can just march in if we’re not careful, as the threat is right on our doorstep</span><span class="mark">22</span>,’ says Bourne.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Any prospect of the elm returning relies heavily on trees being either resistant to, or tolerant of, the disease. This means a widespread reintroduction would involve existing or new hybrid strains derived from resistant, generally non-native elm species. A new generation of seedlings have been bred and tested to see if they can withstand the fungus by cutting a small slit on the bark and injecting a tiny amount of the pathogen. &#x27;<span class="hl">The effects are very quick</span><span class="mark">19</span>,&#x27; says Russell. &#x27;You return in four to six weeks and trees that are resistant show no symptoms, whereas those that are susceptible show leaf loss and may even have died completely.&#x27;</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> All of this raises questions of social acceptance, acknowledges Russell. ‘If we’re putting elm back into the landscape, a small element of it is not native - are we bothered about that?’ <span class="hl">For her, the environmental case for reintroducing elm is strong</span><span class="mark">15</span>. &#x27;They will host wildlife, which is a good thing.&#x27; Others are more wary. ‘On the face of it, it seems like a good idea,’ says Elliot. The problem, he suggests, is that, ‘<span class="hl">You’re replacing a native species with a horticultural analogue</span><span class="mark">15</span>. You’re effectively cloning.’ There’s also the risk of introducing new diseases. Rather than plant new elms, the Woodland Trust emphasises providing space to those elms that have survived independently. ‘<span class="hl">Sometimes the best thing you can do is just give nature time to recover</span><span class="mark">20</span> over time, you might get resistance,’ says Elliot.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">How Stress Affects Our Judgement</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Some of the most important decisions of our lives occur while we’re feeling stressed and anxious. From medical decisions to financial and professional ones, <span class="hl">we are all sometimes required to weigh up information under stressful conditions</span><span class="mark">27</span>. But do we become better or worse at processing and using information under such circumstances?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> My colleague and I, both neuroscientists, wanted to investigate how the mind operates under stress, so we visited some local fire stations. Firefighters’ workdays vary quite a bit. Some are pretty relaxed, they’ll spend their time washing the truck, cleaning equipment, cooking meals and reading. Other days can be hectic, with numerous life-threatening incidents to attend to, they’ll enter burning homes to rescue trapped residents, and assist with medical emergencies. <span class="hl">These ups and downs presented the perfect setting for an experiment on how people’s ability to use information changes when they feel under pressure</span><span class="mark">28</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> We found that perceived threat acted as a trigger for a stress reaction that made the task of processing information easier for the firefighters – but only as long as it conveyed bad news.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> <span class="hl">This is how we arrived at these results.</span><span class="mark">29</span> We asked the firefighters to estimate their likelihood of experiencing 40 different adverse events in their life, such as being involved in an accident or becoming a victim of card fraud. We then gave them either good news (that their likelihood of experiencing these events was lower than they’d thought) or bad news (that it was higher) and asked them to provide new estimates.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> People are normally quite optimistic -<span class="hl">they will ignore bad news and embrace the good</span><span class="mark">31</span>. This is what happened when the firefighters were relaxed, but <span class="hl">when they were under stress, a different pattern emerged</span><span class="mark">35</span>. Under these conditions, <span class="hl">they became hyper-vigilant to bad news</span><span class="mark">32</span>, even when it had nothing to do with their job (such as learning that the likelihood of card fraud was higher than they’d thought), and altered their beliefs in response. <span class="hl">In contrast, stress didn’t change how they responded to good news</span><span class="mark">33</span> (such as learning that the likelihood of card fraud was lower than they’d thought).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Back in our lab, we observed the same pattern in <span class="hl">students who were told they had to give a surprise public speech</span><span class="mark">34</span>, which would be judged by a panel, recorded and posted online. Sure enough, <span class="hl">their cortisol levels spiked, their heart rates went up</span><span class="mark">34</span> and they suddenly became better at processing unrelated, yet alarming, information about rates of disease and violence.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> When we experience stressful events, a physiological change is triggered that causes us to take in warnings and focus on what might go wrong. Brain imaging reveals that <span class="hl">this ‘switch’ is related to a sudden boost in a neural signal important for learning, specifically in response to unexpected warning signs</span><span class="mark">30</span>, such as faces expressing fear.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Such neural engineering could have helped prehistoric humans to survive. When our ancestors found themselves surrounded by hungry animals, they would have benefited from an increased ability to learn about hazards. In a safe environment, however, it would have been wasteful to be on high alert constantly. So, a neural switch that automatically increases or decreases our ability to process warnings in response to changes in our environment could have been useful. In fact, people with clinical depression and anxiety seem unable to switch away from a state in which they absorb all the negative messages around them.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> It is also important to realise that stress travels rapidly from one person to the next. If a co-worker is stressed, we are more likely to tense up and feel stressed ourselves. We don’t even need to be in the same room with someone for their emotions to influence our behaviour. Studies show that if we observe positive feeds on social media, such as images of a pink sunset, we are more likely to post uplifting messages ourselves. <span class="hl">If we observe negative posts, such as complaints about a long queue at the coffee shop, we will in turn create more negative posts.</span><span class="mark">36</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> In some ways, many of us now live as if we are in danger, constantly ready to tackle demanding emails and text messages, and respond to news alerts and comments on social media. <span class="hl">Repeatedly checking your phone, according to a survey conducted by the American Psychological Association, is related to stress</span><span class="mark">37</span>. In other words, a pre-programmed physiological reaction, which evolution has equipped us with to help us avoid famished predators, is now being triggered by an online post. Social media posting, according to one study, raises your pulse, makes you sweat, and enlarges your pupils more than most daily activities.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> The fact that stress increases the likelihood that we will focus more on alarming messages, together with the fact that it spreads extremely rapidly, can create collective fear that is not always justified. After a stressful public event, such as a natural disaster or major financial crash, there is often a wave of alarming information in traditional and social media, which individuals become very aware of. But that has the effect of exaggerating existing danger. And so, a reliable pattern emerges – stress is triggered, spreading from one person to the next, <span class="hl">which temporarily enhances the likelihood that people will take in negative reports</span><span class="mark">38</span>, which increases stress further. As a result, <span class="hl">trips are cancelled, even if the disaster took place across the globe, stocks are sold, even when holding on is the best thing to do</span><span class="mark">39</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶12</strong> The good news, however, is that <span class="hl">positive emotions, such as hope, are contagious too, and are powerful in inducing people to act to find solutions</span><span class="mark">40</span>. Being aware of the close relationship between people’s emotional state and how they process information can help us frame our messages more effectively and become conscientious agents of change.</p>
+</div><div class="column right">
+<div class="hint">💡 Click any question card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–6</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">There are other parrots that share the kakapo’s inability to fly.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The passage says the opposite: ‘It is the world’s only flightless parrot’.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Adult kakapo produce chicks every year.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">They breed only in good years: ‘Kakapo breed in summer and autumn, but only in years when food is plentiful’.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Adult male kakapo bring food back to nesting females.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">‘Males play no part in incubation or chick-rearing – females alone incubate eggs and feed the chicks’.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">The Polynesian rat was a greater threat to the kakapo than Polynesian settlers.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Both the settlers and the rats they brought are named as threats, but their impact is never compared. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Kakapo were transferred from Rakiura Island to other locations because they were at risk from feral cats.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">‘predation by feral cats on Rakiura Island led to a rapid decline … the surviving population was evacuated to three island sanctuaries’.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">One Recovery Plan initiative that helped increase the kakapo population size was caring for struggling young birds.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Intensive management included ‘rescuing and hand-raising any failing chicks’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 7&ndash;13</div><p>Complete the notes below. Choose <b>ONE WORD AND/OR A NUMBER</b> from the passage for each answer.</p><p><b>New Zealand’s kakapo</b></p></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Diet consists of fern fronds, various parts of a tree and ____.<div class="yng">ONE WORD AND/OR A NUMBER</div></div><span class="answer ans-letter">bulbs</span><div class="explanation">‘their diet including the leaves, roots and bark of trees as well as <b>bulbs</b>, and fern fronds’.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Nests are created in ____ where eggs are laid.<div class="yng">ONE WORD AND/OR A NUMBER</div></div><span class="answer ans-letter">soil</span><div class="explanation">‘The 1-4 eggs are laid in <b>soil</b>, which is repeatedly turned over’.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">The ____ of the kakapo were used to make clothes.<div class="yng">ONE WORD AND/OR A NUMBER</div></div><span class="answer ans-letter">feathers</span><div class="explanation">‘They ate its meat and used its <b>feathers</b> to make soft cloaks’.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">____ were an animal which they introduced that ate the kakapo’s food sources.<div class="yng">ONE WORD AND/OR A NUMBER</div></div><span class="answer ans-letter">deer</span><div class="explanation">‘introduced species such as <b>deer</b> depleted the remaining forests of food’.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">A definite sighting of female kakapo on Rakiura Island was reported in the year ____.<div class="yng">ONE WORD AND/OR A NUMBER</div></div><span class="answer ans-letter">1980</span><div class="explanation">‘in <b>1980</b> it was confirmed females were also present’.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">The Recovery Plan included an increase in ____.<div class="yng">ONE WORD AND/OR A NUMBER</div></div><span class="answer ans-letter">funding</span><div class="explanation">The 1996 plan came ‘together with … a higher amount of <b>funding</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">A current goal of the Recovery Plan is to maintain the involvement of ____ in kakapo protection.<div class="yng">ONE WORD AND/OR A NUMBER</div></div><span class="answer ans-letter">stakeholders</span><div class="explanation">‘ensure <b>stakeholders</b> continue to be fully engaged in the preservation of the species’.</div></div>
+<div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14&ndash;18</div><p>Reading Passage 2 has seven sections, <b>A&ndash;G</b>. Which section contains the following information? <i>NB You may use any letter more than once.</i></p><p style="font-size:.82rem;color:#4a5568;">The section letters follow the printed test. The sentence that gives each answer is highlighted in the passage.</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Reference to the research problems that arise from there being only a few surviving large elms<div class="yng">Section A–G</div></div><span class="answer ans-letter">C</span><div class="explanation">‘opportunities are limited as the number of these mature survivors is relatively small’.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Details of a difference of opinion about the value of reintroducing elms to Britain<div class="yng">Section A–G</div></div><span class="answer ans-letter">G</span><div class="explanation">Russell thinks ‘the environmental case for reintroducing elm is strong’, while Elliot warns ‘You’re replacing a native species with a horticultural analogue’.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Reference to how Dutch elm disease was brought into Britain<div class="yng">Section A–G</div></div><span class="answer ans-letter">B</span><div class="explanation">A second epidemic ‘was triggered by shipments of elm from Canada’ – logs whose bark carried the beetles.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">A description of the conditions that have enabled a location in Britain to escape Dutch elm disease<div class="yng">Section A–G</div></div><span class="answer ans-letter">E</span><div class="explanation">In Brighton, ‘Strong winds from the sea make it difficult for the determined elm bark beetle to attack’.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Reference to the stage at which young elms become vulnerable to Dutch elm disease<div class="yng">Section A–G</div></div><span class="answer ans-letter">C</span><div class="explanation">‘Once the trunk of the elm reaches 10-15 centimetres or so in diameter, it becomes a perfect size for beetles to lay eggs’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 19&ndash;23</div><p>Look at the following statements and the list of people below. Match each statement with the correct person, <b>A</b>, <b>B</b> or <b>C</b>. <i>NB You may use any letter more than once.</i></p><ul class="opts"><li><b>A</b> Matt Elliot</li><li><b>B</b> Karen Russell</li><li><b>C</b> Peter Bourne</li></ul></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">If a tree gets infected with Dutch elm disease, the damage rapidly becomes visible.<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">Karen Russell: ‘The effects are very quick … You return in four to six weeks and trees that are resistant show no symptoms’.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">It may be better to wait and see if the mature elms that have survived continue to flourish.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Matt Elliot: ‘Sometimes the best thing you can do is just give nature time to recover’.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">There must be an explanation for the survival of some mature elms.<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">Karen Russell: ‘What are the reasons for their survival? … I don’t see how it can be entirely down to luck’.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">We need to be aware that insects carrying Dutch elm disease are not very far away.<div class="yng">A / B / C</div></div><span class="answer ans-letter">C</span><div class="explanation">Peter Bourne: ‘The beetles can just march in if we’re not careful, as the threat is right on our doorstep’.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">You understand the effect Dutch elm disease has had when you see evidence of how prominent the tree once was.<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Matt Elliot: ‘You look at old photographs from the 1960s and it’s only then that you realise the impact’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 24&ndash;26</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Uses of a Popular Tree</b></p><p style="font-size:.84rem;color:#4a5568;">For hundreds of years, the only tree that was more popular in Britain than elm was ___. Starting in the Bronze Age, many tools were made from elm, and people also used it to make weapons. In the 18th century, it was grown to provide wood for boxes and ___. Due to its strength, elm was often used for mining equipment, and the Cutty Sark’s ___ was also constructed from elm.</p></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">The only tree that was more popular in Britain than elm was ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">oak</span><div class="explanation">‘elm ran a close second to <b>oak</b> as the hardwood tree of choice’.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">In the 18th century, it was grown to provide wood for boxes and ____.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">flooring</span><div class="explanation">‘used for items such as storage crates and <b>flooring</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">The Cutty Sark’s ____ was also constructed from elm.<div class="yng">ONE WORD ONLY</div></div><span class="answer ans-letter">keel</span><div class="explanation">‘used to build the <b>keel</b> of the 19th-century sailing ship Cutty Sark’.</div></div>
+<div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27&ndash;30</div><p>Choose the correct letter, <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b>.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">In the first paragraph, the writer introduces the topic of the text by<ul class='opts'><li><b>A</b> defining some commonly used terms.</li><li><b>B</b> questioning a widely held assumption.</li><li><b>C</b> mentioning a challenge faced by everyone.</li><li><b>D</b> specifying a situation which makes us most anxious.</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">C</span><div class="explanation">The opening notes that ‘we are all sometimes required to weigh up information under stressful conditions’ – a challenge everyone faces.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">What point does the writer make about firefighters in the second paragraph?<ul class='opts'><li><b>A</b> The regular changes of stress levels in their working lives make them ideal study subjects.</li><li><b>B</b> The strategies they use to handle stress are of particular interest to researchers.</li><li><b>C</b> The stressful nature of their job is typical of many public service professions.</li><li><b>D</b> Their personalities make them especially well-suited to working under stress.</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">A</span><div class="explanation">‘These ups and downs presented the perfect setting for an experiment’ – their alternating calm and hectic days made them ideal.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">What is the writer doing in the fourth paragraph?<ul class='opts'><li><b>A</b> Explaining their findings</li><li><b>B</b> Justifying their approach</li><li><b>C</b> Setting out their objectives</li><li><b>D</b> Describing their methodology</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">D</span><div class="explanation">‘This is how we arrived at these results. We asked the firefighters to estimate …’ – the procedure is set out step by step.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">In the seventh paragraph, the writer describes a mechanism in the brain which<ul class='opts'><li><b>A</b> Enables people to respond more quickly to stressful situations.</li><li><b>B</b> Results in increased ability to control our levels of anxiety.</li><li><b>C</b> Produces heightened sensitivity to indications of external threats.</li><li><b>D</b> Is activated when there is a need to communicate a sense of danger.</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">C</span><div class="explanation">A ‘switch’ linked to ‘a sudden boost in a neural signal important for learning, specifically in response to unexpected warning signs’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 31&ndash;35</div><p>Complete each sentence with the correct ending, <b>A&ndash;G</b>, below.</p><ul class="opts"><li><b>A</b> made them feel optimistic.</li><li><b>B</b> took relatively little notice of bad news.</li><li><b>C</b> responded to negative and positive information in the same way.</li><li><b>D</b> were feeling under stress.</li><li><b>E</b> put them in a stressful situation.</li><li><b>F</b> behaved in a similar manner, regardless of the circumstances.</li><li><b>G</b> thought it more likely that they would experience something bad.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">At times when they were relaxed, the firefighters usually<div class="yng">A–G</div></div><span class="answer ans-letter">B</span><div class="explanation">‘People are normally quite optimistic – they will ignore bad news and embrace the good. This is what happened when the firefighters were relaxed’.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">The researchers noted that when the firefighters were stressed, they<div class="yng">A–G</div></div><span class="answer ans-letter">G</span><div class="explanation">Under stress ‘they became hyper-vigilant to bad news … and altered their beliefs in response’ – they expected bad things to happen.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">When the firefighters were told good news, they always<div class="yng">A–G</div></div><span class="answer ans-letter">F</span><div class="explanation">‘stress didn’t change how they responded to good news’ – they reacted the same way whatever their condition.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">The students’ cortisol levels and heart rates were affected when the researchers<div class="yng">A–G</div></div><span class="answer ans-letter">E</span><div class="explanation">Students were ‘told they had to give a surprise public speech … their cortisol levels spiked, their heart rates went up’.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">In both experiments, negative information was processed better when the subjects<div class="yng">A–G</div></div><span class="answer ans-letter">D</span><div class="explanation">In both the fire station and the lab, alarming information was taken in more readily ‘when they were under stress’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 36–40</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">The tone of the content we post on social media tends to reflect the nature of the posts in our feeds.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">‘If we observe negative posts … we will in turn create more negative posts’ – and the same for positive ones.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Phones have a greater impact on our stress levels than other electronic media devices.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Repeatedly checking your phone is linked to stress, but phones are never compared with other devices. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">The more we read about a stressful public event on social media, the less able we are to take the information in.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The opposite: after a stressful event people ‘become very aware of’ alarming information, and stress ‘enhances the likelihood that people will take in negative reports’.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Stress created by social media posts can lead us to take unnecessary precautions.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">‘trips are cancelled, even if the disaster took place across the globe, stocks are sold, even when holding on is the best thing to do’.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Our tendency to be affected by other people’s moods can be used in a positive way.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">‘positive emotions, such as hope, are contagious too, and are powerful in inducing people to act to find solutions’.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body></html>
