@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 10 – Reading Test 2</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head><body>
+<header><h1>Cambridge IELTS 10 – Reading Test 2</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">Tea and the Industrial Revolution</div>
+<p class="para"><strong>A</strong> Alan Macfarlane, professor of anthropological science at King’s College, Cambridge has, like other historians, spent decades wrestling with the enigma of the Industrial Revolution. <span class="hl">Why did this particular Big Bang – the world-changing birth of industry – happen in Britain? And why did it strike at the end of the 18th century?</span><span class="mark">1</span></p>
+<p class="para"><strong>B</strong> Macfarlane compares the puzzle to a combination lock. ‘There are about 20 different factors and all of them need to be present before the revolution can happen,’ he says. For industry to take off, <span class="hl">there needs to be the technology and power to drive factories, large urban populations to provide cheap labour, easy transport to move goods around</span><span class="mark">2</span>, an affluent middle-class willing to buy mass-produced objects, a market-driven economy and a political system that allows this to happen. While this was the case for England, other nations, such as Japan, the Netherlands and France also met some of these criteria but were not industrialising. All these factors must have been necessary but not sufficient to cause the revolution, says Macfarlane. ‘<span class="hl">After all, Holland had everything except coal while China also had many of these factors.</span><span class="mark">8</span> Most historians are convinced there are one or two missing factors that you need to open the lock.’</p>
+<p class="para"><strong>C</strong> The missing factors, he proposes, are to be found in almost every kitchen cupboard. <span class="hl">Tea and beer, two of the nation’s favourite drinks, fuelled the revolution.</span><span class="mark">3</span> <span class="hl">The antiseptic properties of tannin, the active ingredient in tea, and of hops in beer – plus the fact that both are made with boiled water – allowed urban communities to flourish at close quarters without succumbing to water-borne diseases such as dysentery.</span><span class="mark">9</span> The theory sounds eccentric but once he starts to explain the detective work that went into his deduction, the scepticism gives way to wary admiration. Macfarlane’s case has been strengthened by support from notable quarters – <span class="hl">Roy Porter, the distinguished medical historian, recently wrote a favourable appraisal of his research</span><span class="mark">10</span>.</p>
+<p class="para"><strong>D</strong> <span class="hl">Macfarlane had wondered for a long time how the Industrial Revolution came about. Historians had alighted on one interesting factor around the mid-18th century that required explanation.</span><span class="mark">4</span> <span class="hl">Between about 1650 and 1740, the population in Britain was static. But then there was a burst in population growth.</span><span class="mark">11</span> Macfarlane says: ‘The infant mortality rate halved in the space of 20 years, and this happened in both rural areas and cities, and across all classes. People suggested four possible causes. Was there a sudden change in the viruses and bacteria around? Unlikely. Was there a revolution in medical science? But this was a century before Lister’s revolution*. Was there a change in environmental conditions? There were improvements in agriculture that wiped out malaria, but these were small gains. Sanitation did not become widespread until the 19th century. The only option left is food. But the height and weight statistics show a decline. So the food must have got worse. Efforts to explain this sudden reduction in child deaths appeared to draw a blank.’</p>
+<p class="para"><strong>E</strong> This population burst seemed to happen at just the right time to provide labour for the Industrial Revolution. ‘When you start moving towards an industrial revolution, it is economically efficient to have people living close together,’ says Macfarlane. ‘But then you get disease, particularly from human waste.’ Some digging around in historical records revealed that there was a change in the incidence of water-borne disease at that time, especially dysentery. Macfarlane deduced that whatever the British were drinking must have been important in regulating disease. He says, ‘<span class="hl">We drank beer. For a long time, the English were protected by the strong antibacterial agent in hops</span><span class="mark">12</span>, which were added to help preserve the beer. But in the late 17th century <span class="hl">a tax was introduced on malt, the basic ingredient of beer. The poor turned to water and gin and in the 1720s the mortality rate began to rise again</span><span class="mark">5</span><span class="mark">13</span>. Then it suddenly dropped again. What caused this?’</p>
+<p class="para"><strong>F</strong> <span class="hl">Macfarlane looked to Japan, which was also developing large cities about the same time</span><span class="mark">6</span>, and also had no sanitation. Water-borne diseases had a much looser grip on the Japanese population than those in Britain. Could it be the prevalence of tea in their culture? Macfarlane then noted that the history of tea in Britain provided an extraordinary coincidence of dates. Tea was relatively expensive until Britain started a direct clipper trade with China in the early 18th century. By the 1740s, about the time that infant mortality was dipping, the drink was common. Macfarlane guessed that the fact that water had to be boiled, together with the stomach-purifying properties of tea meant that the breast milk provided by mothers was healthier than it had ever been. No other European nation sipped tea like the British, which, by Macfarlane’s logic, pushed these other countries out of contention for the revolution.</p>
+<p class="para"><strong>G</strong> But, if tea is a factor in the combination lock, why didn’t Japan forge ahead in a tea-soaked industrial revolution of its own? Macfarlane notes that even though 17th-century Japan had large cities, high literacy rates, even a futures market, <span class="hl">it had turned its back on the essence of any work-based revolution by giving up labour-saving devices such as animals, afraid that they would put people out of work</span><span class="mark">7</span>. So, the nation that we now think of as one of the most technologically advanced entered the 19th century having ‘abandoned the wheel’.</p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* Joseph Lister was the first doctor to use antiseptic techniques during surgical operations to prevent infections.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">Gifted children and learning</div>
+<p class="para"><strong>A</strong> Internationally, ‘giftedness’ is most frequently determined by a score on a general intelligence test, known as an IQ test, which is above a chosen cutoff point, usually at around the top 2-5%. Children’s educational environment contributes to the IQ score and the way intelligence is used. For example, a very close positive relationship was found when <span class="hl">children’s IQ scores were compared with their home educational provision</span><span class="mark">14</span> (Freeman, 2010). The higher the children’s IQ scores, especially over IQ 130, <span class="hl">the better the quality of their educational backup, measured in terms of reported verbal interactions with parents</span><span class="mark">21</span>, <span class="hl">number of books and activities in their home</span><span class="mark">23</span> etc. Because IQ tests are decidedly influenced by what the child has learned, they are to some extent measures of current achievement based on age-norms; that is, how well the children have learned to manipulate their knowledge and know-how within the terms of the test. The vocabulary aspect, for example, is dependent on having heard those words. But IQ tests can neither identify the processes of learning and thinking nor predict creativity.</p>
+<p class="para"><strong>B</strong> Excellence does not emerge without appropriate help. To reach an exceptionally high standard in any area very able children need the means to learn, which includes material to work with and focused challenging tuition – and the encouragement to follow their dream. There appears to be a qualitative difference in the way the intellectually highly able think, compared with more average-ability or older pupils, <span class="hl">for whom external regulation by the teacher often compensates for lack of internal regulation</span><span class="mark">24</span>. To be at their most effective in their self-regulation, all children can be helped to identify their own ways of learning – metacognition – which will include strategies of planning, monitoring, evaluation, and choice of what to learn. <span class="hl">Emotional awareness is also part of metacognition</span><span class="mark">25</span>, so children should be helped to be aware of their feelings around the area to be learned, feelings of curiosity or confidence, for example.</p>
+<p class="para"><strong>C</strong> High achievers have been found to use self-regulatory learning strategies more often and more effectively than lower achievers, and are better able to transfer these strategies to deal with unfamiliar tasks. This happens to such a high degree in some children that they appear to be demonstrating talent in particular areas. Overviewing research on the thinking process of highly able children, (Shore and Kanevsky, 1993) put the instructor’s problem succinctly: ‘If they [the gifted] merely think more quickly, then we need only teach more quickly. <span class="hl">If they merely make fewer errors, then we can shorten the practice</span><span class="mark">18</span>’. But of course, this is not entirely the case; adjustments have to be made in methods of learning and teaching, to take account of the many ways individuals think.</p>
+<p class="para"><strong>D</strong> Yet in order to learn by themselves, the gifted do need some support from their teachers. Conversely, teachers who have a tendency to ‘overdirect’ can diminish their gifted pupils’ learning autonomy. <span class="hl">Although ‘spoon-feeding’ can produce extremely high examination results</span><span class="mark">26</span>, these are not always followed by equally impressive life successes. <span class="hl">Too much dependence on the teachers risks loss of autonomy and motivation to discover.</span><span class="mark">15</span> However, when teachers help pupils to reflect on their own learning and thinking activities, they increase their pupils’ self-regulation. For a young child, it may be just the simple question ‘What have you learned today?’ which helps them to recognise what they are doing. Given that a fundamental goal of education is to transfer the control of learning from teachers to pupils, improving pupils’ learning to learn techniques should be a major outcome of the school experience, especially for the highly competent. There are quite a number of new methods which can help, such as child-initiated learning, ability-peer tutoring, etc. <span class="hl">Such practices have been found to be particularly useful for bright children from deprived areas.</span><span class="mark">17</span></p>
+<p class="para"><strong>E</strong> But scientific progress is not all theoretical, knowledge is also vital to outstanding performance: <span class="hl">individuals who know a great deal about a specific domain will achieve at a higher level than those who do not</span><span class="mark">22</span> (Elshout, 1995). Research with creative scientists by Simonton (1988) brought him to the conclusion that above a certain high level, <span class="hl">characteristics such as independence seemed to contribute more to reaching the highest levels of expertise than intellectual skills</span><span class="mark">19</span>, due to the great demands of effort and time needed for learning and practice. Creativity in all forms can be seen as expertise mixed with a high level of motivation (Weisberg, 1993).</p>
+<p class="para"><strong>F</strong> To sum up, learning is affected by emotions of both the individual and significant others. Positive emotions facilitate the creative aspects of learning and negative emotions inhibit it. <span class="hl">Fear, for example, can limit the development of curiosity</span><span class="mark">16</span>, which is a strong force in scientific advance, because it motivates problem-solving behaviour. In Boekaerts’ (1991) review of emotion in the learning of very high IQ and highly achieving children, <span class="hl">she found emotional forces in harness</span><span class="mark">20</span>. They were not only curious, but often had a strong desire to control their environment, improve their learning efficiency and increase their own learning resources.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">Museums of fine art and their public</div>
+<p class="para"><strong>A</strong> The fact that people go to the Louvre museum in Paris to see the original painting Mona Lisa when they can see a reproduction anywhere leads us to question some assumptions about the role of museums of fine art in today’s world</p>
+<p class="para"><strong>B</strong> One of the most famous works of art in the world is Leonardo da Vinci’s Mona Lisa. Nearly everyone who goes to see the original will already be familiar with it from reproductions, but they accept that fine art is more rewardingly viewed in its original form.</p>
+<p class="para"><strong>C</strong> However, if Mona Lisa was a famous novel, few people would bother to go to a museum to read the writer’s actual manuscript rather than a printed reproduction. This might be explained by the fact that <span class="hl">the novel has evolved precisely because of technological developments that made it possible to print out huge numbers of texts</span><span class="mark">27</span>, whereas oil paintings have always been produced as unique objects. In addition, it could be argued that the practice of interpreting or ‘reading’ each medium follows different conventions. With novels, <span class="hl">the reader attends mainly to the meaning of words rather than the way they are printed on the page</span><span class="mark">28</span>, whereas the ‘reader’ of a painting must attend just as closely to the material form of marks and shapes in the picture as to any ideas they may signify.</p>
+<p class="para"><strong>D</strong> Yet it has always been possible to make very accurate facsimiles of pretty well any fine art work. The seven surviving versions of Mona Lisa bear witness to the fact that in the 16th century, <span class="hl">artists seemed perfectly content to assign the reproduction of their creations to their workshop apprentices</span><span class="mark">29</span> as regular ‘bread and butter’ work. And today the task of reproducing pictures is incomparably more simple and reliable, with reprographic techniques that allow the production of high-quality prints <span class="hl">made exactly to the original scale, with faithful colour values, and even with duplication of the surface relief of the painting</span><span class="mark">30</span>.</p>
+<p class="para"><strong>E</strong> But despite an implicit recognition that the spread of good reproductions can be culturally valuable, museums continue to promote the special status of original work.</p>
+<p class="para"><strong>F</strong> Unfortunately, this seems to place severe limitations on the kind of experience offered to visitors.</p>
+<p class="para"><strong>G</strong> One limitation is related to the way the museum presents its exhibits. As repositories of unique historical objects, art museums are often called ‘treasure houses’. We are reminded of this even before we view a collection by the presence of security guards, attendants, ropes and display cases to keep us away from the exhibits. In many cases, the architectural style of the building further reinforces that notion. In addition, a major collection like that of London’s National Gallery is housed in numerous rooms, each with dozens of works, any one of which is likely to be worth more than all the average visitor possesses. In a society that judges the personal status of the individual so much by their material worth, <span class="hl">it is therefore difficult not to be impressed by one’s own relative ‘worthlessness’ in such an environment</span><span class="mark">32</span>.</p>
+<p class="para"><strong>H</strong> Furthermore, consideration of the ‘value’ of the original work in its treasure house setting impresses upon the viewer that, since these works were originally produced, they have been assigned a huge monetary value by some person or institution more powerful than themselves. Evidently, <span class="hl">nothing the viewer thinks about the work is going to alter that value, and so today’s viewer is deterred</span><span class="mark">33</span> from trying to extend that spontaneous, immediate, self-reliant kind of reading which would originally have met the work.</p>
+<p class="para"><strong>I</strong> The visitor may then be struck by the strangeness of <span class="hl">seeing such diverse paintings, drawings and sculptures brought together in an environment for which they were not originally created</span><span class="mark">34</span>. <span class="hl">This ‘displacement effect’ is further heightened by the sheer volume of exhibits.</span><span class="mark">34</span> In the case of a major collection, there are probably more works on display than we could realistically view in weeks or even months.</p>
+<p class="para"><strong>J</strong> This is particularly distressing because time seems to be a vital factor in the appreciation of all art forms. A fundamental difference between paintings and other art forms is that there is no prescribed time over which a painting is viewed. By contrast, the audience encounters an opera or a play over a specific time, which is the duration of the performance. Similarly novels and poems are read in a prescribed temporal sequence, whereas <span class="hl">a picture has no clear place at which to start viewing, or at which to finish</span><span class="mark">35</span>. Thus art works themselves encourage us to view them superficially, without appreciating the richness of detail and labour that is involved.</p>
+<p class="para"><strong>K</strong> Consequently, the dominant critical approach becomes that of the art historian, <span class="hl">a specialised academic approach devoted to ‘discovering the meaning’ of art within the cultural context of its time</span><span class="mark">36</span>. <span class="hl">This is in perfect harmony with the museum’s function</span><span class="mark">37</span>, since the approach is dedicated to seeking out and conserving ‘authentic’, original, readings of the exhibits. Again, this seems to put paid to that spontaneous, participatory criticism which can be found in abundance in criticism of classic works of literature, but is absent from most art history.</p>
+<p class="para"><strong>L</strong> The displays of art museums serve as a warning of what critical practices can emerge when spontaneous criticism is suppressed. <span class="hl">The museum public, like any other audience, experience art more rewardingly when given the confidence to express their views.</span><span class="mark">38</span> <span class="hl">If appropriate works of fine art could be rendered permanently accessible to the public by means of high-fidelity reproductions</span><span class="mark">31</span>, as literature and music already are, <span class="hl">the public may feel somewhat less in awe of them</span><span class="mark">39</span>. <span class="hl">Unfortunately, that may be too much to ask from those who seek to maintain and control the art establishment.</span><span class="mark">40</span></p>
+</div><div class="column right">
+<div class="hint">💡 Click any question card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1&ndash;7</div><p>Reading Passage 1 has seven paragraphs, <b>A&ndash;G</b>. Choose the correct heading for each paragraph from the list of headings below.</p><ul class="opts"><li><b>i</b> The search for the reasons for an increase in population</li><li><b>ii</b> Industrialisation and the fear of unemployment</li><li><b>iii</b> The development of cities in Japan</li><li><b>iv</b> The time and place of the Industrial Revolution</li><li><b>v</b> The cases of Holland, France and China</li><li><b>vi</b> Changes in drinking habits in Britain</li><li><b>vii</b> Two keys to Britain's industrial revolution</li><li><b>viii</b> Conditions required for industrialisation</li><li><b>ix</b> Comparisons with Japan lead to the answer</li></ul></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Paragraph A<div class="yng">i–ix</div></div><span class="answer ans-letter">iv</span><div class="explanation">Paragraph A asks why the Industrial Revolution happened in Britain, and why at the end of the 18th century – the time and the place.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Paragraph B<div class="yng">i–ix</div></div><span class="answer ans-letter">viii</span><div class="explanation">Paragraph B lists everything industry needs – technology, labour, transport, a middle class, a market economy – the conditions required.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Paragraph C<div class="yng">i–ix</div></div><span class="answer ans-letter">vii</span><div class="explanation">Paragraph C names the two missing ingredients – tea and beer – the keys to the revolution.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Paragraph D<div class="yng">i–ix</div></div><span class="answer ans-letter">i</span><div class="explanation">Paragraph D hunts for the reasons behind the sudden population growth – infant mortality, disease, food.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Paragraph E<div class="yng">i–ix</div></div><span class="answer ans-letter">vi</span><div class="explanation">Paragraph E traces what the British drank – beer, then water and gin after the malt tax – so it is about changing drinking habits.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Paragraph F<div class="yng">i–ix</div></div><span class="answer ans-letter">ix</span><div class="explanation">Paragraph F compares Britain with Japan and concludes that tea was the British answer.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Paragraph G<div class="yng">i–ix</div></div><span class="answer ans-letter">ii</span><div class="explanation">Paragraph G explains that Japan rejected labour-saving devices for fear of putting people out of work.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">China’s transport system was not suitable for industry in the 18th century.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">China is said to have had ‘many of these factors’, but nothing is said about its transport system. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">Tea and beer both helped to prevent dysentery in Britain.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Tannin in tea and hops in beer, plus boiling the water, kept water-borne diseases such as dysentery at bay.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Roy Porter disagrees with Professor Macfarlane’s findings.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Roy Porter supported him – he ‘recently wrote a favourable appraisal of his research’, so he agrees rather than disagrees.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">After 1740, there was a reduction in population in Britain.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The population was static until 1740 and then there was ‘a burst in population growth’ – an increase, not a reduction.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">People in Britain used to make beer at home.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The passage says the British drank beer, but never says where it was made. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">The tax on malt indirectly caused a rise in the death rate.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">The malt tax pushed the poor onto water and gin, and ‘in the 1720s the mortality rate began to rise again’.</div></div>
+<div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14&ndash;17</div><p>Reading Passage 2 has six paragraphs, <b>A&ndash;F</b>. Which paragraph contains the following information?</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">a reference to the influence of the domestic background on the gifted child<div class="yng">A–F</div></div><span class="answer ans-letter">A</span><div class="explanation">Paragraph A links IQ scores to ‘home educational provision’ – books, activities and talk with parents.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">reference to what can be lost if learners are given too much guidance<div class="yng">A–F</div></div><span class="answer ans-letter">D</span><div class="explanation">Paragraph D: too much direction from teachers ‘risks loss of autonomy and motivation to discover’.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">a reference to the damaging effects of anxiety<div class="yng">A–F</div></div><span class="answer ans-letter">F</span><div class="explanation">Paragraph F: ‘Fear … can limit the development of curiosity’.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">examples of classroom techniques which favour socially-disadvantaged children<div class="yng">A–F</div></div><span class="answer ans-letter">D</span><div class="explanation">Paragraph D: child-initiated learning and peer tutoring are ‘particularly useful for bright children from deprived areas’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18&ndash;22</div><p>Look at the following statements and the list of people below. Match each statement with the correct person, <b>A&ndash;E</b>. <i>NB You may use any letter more than once.</i></p><ul class="opts"><li><b>A</b> Freeman</li><li><b>B</b> Shore and Kanevsky</li><li><b>C</b> Elshout</li><li><b>D</b> Simonton</li><li><b>E</b> Boekaerts</li></ul></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Less time can be spent on exercises with gifted pupils who produce accurate work.<div class="yng">A–E</div></div><span class="answer ans-letter">B</span><div class="explanation">Shore and Kanevsky: ‘If they merely make fewer errors, then we can shorten the practice’.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Self-reliance is a valuable tool that helps gifted students reach their goals.<div class="yng">A–E</div></div><span class="answer ans-letter">D</span><div class="explanation">Simonton found that ‘independence seemed to contribute more to reaching the highest levels of expertise’.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Gifted children know how to channel their feelings to assist their learning.<div class="yng">A–E</div></div><span class="answer ans-letter">E</span><div class="explanation">Boekaerts found ‘emotional forces in harness’ – the children’s feelings worked with their learning.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">The very gifted child benefits from appropriate support from close relatives.<div class="yng">A–E</div></div><span class="answer ans-letter">A</span><div class="explanation">Freeman: the higher the IQ, the better the home provision, ‘measured in terms of reported verbal interactions with parents’.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Really successful students have learnt a considerable amount about their subject.<div class="yng">A–E</div></div><span class="answer ans-letter">C</span><div class="explanation">Elshout: ‘individuals who know a great deal about a specific domain will achieve at a higher level’.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 23&ndash;26</div><p>Complete the sentences below. Choose <b>NO MORE THAN THREE WORDS</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">One study found a strong connection between children’s IQ and the availability of books and ____ at home.<div class="yng">NO MORE THAN THREE WORDS</div></div><span class="answer ans-letter">books and activities</span><div class="explanation">The home provision was measured by ‘number of books and <b>activities</b> in their home’. (The key also accepts the full phrase ‘books and activities’.)</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Children of average ability seem to need more direction from teachers because they do not have ____.<div class="yng">NO MORE THAN THREE WORDS</div></div><span class="answer ans-letter">internal regulation</span><div class="explanation">For average-ability pupils, external regulation by the teacher ‘compensates for lack of <b>internal regulation</b>’.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Meta-cognition involves children understanding their own learning strategies, as well as developing ____.<div class="yng">NO MORE THAN THREE WORDS</div></div><span class="answer ans-letter">emotional awareness</span><div class="explanation">‘<b>Emotional awareness</b> is also part of metacognition’.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Teachers who rely on what is known as ____ often produce sets of impressive grades in class tests.<div class="yng">NO MORE THAN THREE WORDS</div></div><span class="answer ans-letter">spoon-feeding</span><div class="explanation">‘<b>Spoon-feeding</b> can produce extremely high examination results’.</div></div>
+<div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27&ndash;31</div><p>Complete the summary using the list of words, <b>A&ndash;L</b>, below.</p><ul class="opts"><li><b>A</b> institution</li><li><b>B</b> mass production</li><li><b>C</b> mechanical processes</li><li><b>D</b> public</li><li><b>E</b> paints</li><li><b>F</b> artist</li><li><b>G</b> size</li><li><b>H</b> underlying ideas</li><li><b>I</b> basic technology</li><li><b>J</b> readers</li><li><b>K</b> picture frames</li><li><b>L</b> assistants</li></ul><p style="margin-top:.5rem;"><i>The value attached to original works of art</i></p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">… the availability of novels has depended on ____ for so long.<div class="yng">A–L</div></div><span class="answer ans-letter">B</span><div class="explanation">Novels exist in huge numbers because of printing – ‘<b>mass production</b>’ – which oil paintings never had.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">… and also because with novels, the ____ are the most important thing.<div class="yng">A–L</div></div><span class="answer ans-letter">H</span><div class="explanation">With novels ‘the reader attends mainly to the meaning of words’ – the <b>underlying ideas</b>, not the printed surface.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">In historical times artists such as Leonardo were happy to instruct ____ to produce copies of their work.<div class="yng">A–L</div></div><span class="answer ans-letter">L</span><div class="explanation">Artists assigned reproduction ‘to their workshop apprentices’ – their <b>assistants</b>.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">… new methods of reproduction allow excellent replication of surface relief features as well as colour and ____.<div class="yng">A–L</div></div><span class="answer ans-letter">G</span><div class="explanation">Prints are made ‘exactly to the original scale’ – so colour and <b>size</b> are replicated too.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Museums still promote the superiority of original works, since this may not be in the interests of the ____.<div class="yng">A–L</div></div><span class="answer ans-letter">D</span><div class="explanation">The passage ends by wishing fine art could be made accessible to ‘the <b>public</b>’, as literature and music already are.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 32&ndash;35</div><p>Choose the correct letter, <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b>.</p></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">The writer mentions London’s National Gallery to illustrate<ul class='opts'><li><b>A</b> the undesirable cost to a nation of maintaining a huge collection of art.</li><li><b>B</b> the conflict that may arise in society between financial and artistic values.</li><li><b>C</b> the negative effect a museum can have on visitors’ opinions of themselves.</li><li><b>D</b> the need to put individual well-being above large-scale artistic schemes.</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">C</span><div class="explanation">In such a collection ‘it is therefore difficult not to be impressed by one’s own relative “worthlessness”’ – the museum makes visitors feel small.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">The writer says that today, viewers may be unwilling to criticise a work because<ul class='opts'><li><b>A</b> they lack the knowledge needed to support an opinion.</li><li><b>B</b> they fear it may have financial implications.</li><li><b>C</b> they have no real concept of the work’s value.</li><li><b>D</b> they feel their personal reaction is of no significance.</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">D</span><div class="explanation">‘nothing the viewer thinks about the work is going to alter that value’ – so the viewer’s own reaction seems pointless.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">According to the writer, the ‘displacement effect’ on the visitor is caused by<ul class='opts'><li><b>A</b> the variety of works on display and the way they are arranged.</li><li><b>B</b> the impossibility of viewing particular works of art over a long period.</li><li><b>C</b> the similar nature of the paintings and the lack of great works.</li><li><b>D</b> the inappropriate nature of the individual works selected for exhibition.</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">A</span><div class="explanation">It comes from seeing ‘such diverse paintings … brought together in an environment for which they were not originally created’, and is heightened by ‘the sheer volume of exhibits’.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">The writer says that unlike other forms of art, a painting does not<ul class='opts'><li><b>A</b> involve direct contact with an audience.</li><li><b>B</b> require a specific location for a performance.</li><li><b>C</b> need the involvement of other professionals.</li><li><b>D</b> have a specific beginning or end.</li></ul><div class="yng">A / B / C / D</div></div><span class="answer ans-letter">D</span><div class="explanation">‘a picture has no clear place at which to start viewing, or at which to finish’ – unlike an opera or a play, which last a set time.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 36–40</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Art history should focus on discovering the meaning of art using a range of media.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The writer describes art history as devoted to ‘discovering the meaning’ of art, but never discusses which media it should use. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">The approach of art historians conflicts with that of art museums.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The opposite: the art historian’s approach ‘is in perfect harmony with the museum’s function’.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">People should be encouraged to give their opinions openly on works of art.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">The public ‘experience art more rewardingly when given the confidence to express their views’.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Reproductions of fine art should only be sold to the public if they are of high quality.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Quality of reproductions is discussed, but never any rule about selling them only if they are good. Nearest text highlighted.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">In the future, those with power are likely to encourage more people to enjoy art.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The writer doubts it: that ‘may be too much to ask from those who seek to maintain and control the art establishment’.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body></html>
