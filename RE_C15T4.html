@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 15 – Reading Test 4 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 15 – Reading Test 4</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">The return of the huarango</div>
+<p class="para" style="font-style:italic;color:var(--muted);">The arid valleys of southern Peru are welcoming the return of a native plant</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> The south coast of Peru is a narrow, 2,000-kilometre-long strip of desert squeezed between the Andes and the Pacific Ocean. It is also one of the most fragile ecosystems on Earth. It hardly ever rains there, and <span class="hl">the only year-round source of water is located tens of metres below the surface.</span><span class="mark">1</span> This is why the huarango tree is so suited to life there: it has the longest roots of any tree in the world. They stretch down 50-80 metres and, as well as sucking up water for the tree, they bring it into the higher subsoil, creating a water source for other plant life.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Dr David Beresford-Jones, archaeobotanist at Cambridge University, has been studying the role of the huarango tree in landscape change in the Lower Ica Valley in southern Peru. He believes <span class="hl">the huarango was key to the ancient people's diet</span><span class="mark">2</span> and, because <span class="hl">it could reach deep water sources,</span><span class="mark">1</span> it allowed local people to <span class="hl">withstand years of drought when their other crops failed.</span><span class="mark">3</span> But over the centuries huarango trees were gradually replaced with crops. <span class="hl">Cutting down native woodland leads to erosion,</span><span class="mark">4</span> as there is nothing to keep the soil in place. So <span class="hl">when the huarangos go, the land turns into a desert.</span><span class="mark">5</span> Nothing grows at all in the Lower Ica Valley now.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> For centuries the huarango tree was vital to the people of the neighbouring Middle Ica Valley too. They grew vegetables under it and ate products made from its seed pods. <span class="hl">Its leaves and bark were used for herbal remedies,</span><span class="mark">7</span> while <span class="hl">its branches were used for charcoal for cooking and heating,</span><span class="mark">6</span> and <span class="hl">its trunk was used to build houses.</span><span class="mark">8</span> But now it is disappearing rapidly. The majority of the huarango forests in the valley have already been cleared for fuel and agriculture – initially, these were smallholdings, but now they're huge farms producing crops for the international market.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> 'Of the forests that were here 1,000 years ago, 99 per cent have already gone,' says botanist Oliver Whaley from Kew Gardens in London, who, together with ethnobotanist Dr William Milliken, is running a pioneering project to protect and restore the rapidly disappearing habitat. In order to succeed, Whaley needs to get the local people on board, and that has meant overcoming local prejudices. 'Increasingly aspirational communities think that if you plant food trees in your home or street, it shows you are poor, and still need to grow your own food,' he says. In order to stop the Middle Ica Valley going the same way as the Lower Ica Valley, Whaley is encouraging locals to love the huarangos again. 'It's a process of cultural resuscitation,' he says. He has already set up a huarango festival to reinstate a sense of pride in their eco-heritage, and has helped local schoolchildren plant thousands of trees.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> 'In order to get people interested in habitat restoration, you need to plant a tree that is useful to them,' says Whaley. So, <span class="hl">he has been working with local families to attempt to create a sustainable income from the huarangos by turning their products into foodstuffs.</span><span class="mark">9</span> 'Boil up the beans and you get this thick brown syrup like molasses. You can also use it in drinks, soups or stews.' The pods can be ground into flour to make cakes, and the seeds roasted into a sweet, chocolatey 'coffee'. 'It's packed full of vitamins and minerals,' Whaley says.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> And some farmers are already planting huarangos. Alberto Benevides, owner of Ica Valley's only certified organic farm, which Whaley helped set up, has been planting the tree for 13 years. He produces syrup and flour, and sells these products at an organic farmers' market in Lima. <span class="hl">His farm is relatively small and doesn't yet provide him with enough to live on,</span><span class="mark">10</span> but he hopes this will change. 'The organic market is growing rapidly in Peru,' Benevides says. 'I am investing in the future.'</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> But even if Whaley can convince the local people to fall in love with the huarango again, there is still the threat of the larger farms. Some of these cut across the forests and break up the corridors that allow the essential movement of mammals, birds and pollen up and down the narrow forest strip. In the hope of counteracting this, <span class="hl">he's persuading farmers to let him plant forest corridors on their land.</span><span class="mark">11</span> He believes the extra woodland will also benefit the farms by reducing their water usage through a lowering of evaporation and providing a refuge for bio-control insects.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> 'If we can record biodiversity and see how it all works, then we're in a good position to move on from there. <span class="hl">Desert habitats can reduce down to very little,</span><span class="mark">12</span>' Whaley explains. '<span class="hl">It's not like a rainforest that needs to have this huge expanse.</span><span class="mark">12</span> Life has always been confined to corridors and islands here. If you just have a few trees left, the population can grow up quickly because it's used to exploiting water when it arrives.' <span class="hl">He sees his project as a model that has the potential to be rolled out across other arid areas around the world.</span><span class="mark">13</span> 'If we can do it here, in the most fragile system on Earth, then that's a real message of hope for lots of places, including Africa, where there is drought and they just can't afford to wait for rain.'</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Silbo Gomero – the whistle 'language' of the Canary Islands</div>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> La Gomera is one of the Canary Islands situated in the Atlantic Ocean off the northwest coast of Africa. <span class="hl">This small volcanic island is mountainous, with steep rocky slopes and deep, wooded ravines, rising to 1,487 metres at its highest peak.</span><span class="mark">14</span> It is also home to the best known of the world's whistle 'languages', a means of transmitting information over long distances which is perfectly adapted to the extreme terrain of the island.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> This 'language', known as 'Silbo' or 'Silbo Gomero' – from the Spanish word for 'whistle' – is now shedding light on the language-processing abilities of the human brain, according to scientists. Researchers say that Silbo activates parts of the brain normally associated with spoken language, suggesting that the brain is remarkably flexible in its ability to interpret sounds as language.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> 'Science has developed the idea of brain areas that are dedicated to language, and we are starting to understand the scope of signals that can be recognised as language,' says David Corina, co-author of a recent study and associate professor of psychology at the University of Washington in Seattle.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Silbo is a substitute for Spanish, with <span class="hl">individual words recoded into whistles which have high- and low-frequency tones.</span><span class="mark">20</span> A whistler – or <em>silbador</em> – <span class="hl">puts a finger in his or her mouth to increase the whistle's pitch,</span><span class="mark">21</span> while <span class="hl">the other hand can be cupped to adjust the direction of the sound.</span><span class="mark">22</span> 'There is much more ambiguity in the whistled signal than in the spoken signal,' explains lead researcher Manuel Carreiras, psychology professor at the University of La Laguna on the Canary island of Tenerife. Because whistled 'words' can be hard to distinguish, silbadores rely on repetition, as well as awareness of context, to make themselves understood.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> The silbadores of Gomera are traditionally shepherds and other isolated mountain folk, and their novel means of staying in touch allows them to communicate over distances of up to 10 kilometres. Carreiras explains that silbadores are able to pass a surprising amount of information via their whistles. 'In daily life they use whistles <span class="hl">to communicate short commands,</span><span class="mark">23</span> but <span class="hl">any Spanish sentence could be whistled.</span><span class="mark">15</span>' Silbo has proved particularly useful <span class="hl">when fires have occurred on the island and rapid communication across large areas has been vital.</span><span class="mark">24</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> The study team used neuroimaging equipment to contrast the brain activity of silbadores while listening to whistled and spoken Spanish. Results showed the left temporal lobe of the brain, which is usually associated with spoken language, was engaged during the processing of Silbo. The researchers found that other key regions in the brain's frontal lobe also responded to the whistles, including those activated in response to sign language among deaf people. <span class="hl">When the experiments were repeated with non-whistlers, however, activation was observed in all areas of the brain.</span><span class="mark">16</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> 'Our results provide more evidence about the flexibility of human capacity for language in a variety of forms,' Corina says. 'These data suggest that left-hemisphere language regions are uniquely adapted for communicative purposes, independent of the modality of signal. The non-Silbo speakers were not recognising Silbo as a language. They had nothing to grab onto, so multiple areas of their brains were activated.'</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Carreiras says the origins of Silbo Gomero remain obscure, but that <span class="hl">indigenous Canary Islanders, who were of North African origin, already had a whistled language when Spain conquered the volcanic islands in the 15th century.</span><span class="mark">17</span> Whistled languages survive today in Papua New Guinea, Mexico, Vietnam, Guyana, China, Nepal, Senegal, and a few mountainous pockets in southern Europe. There are thought to be as many as 70 whistled languages still in use, though <span class="hl">only 12 have been described and studied scientifically.</span><span class="mark">18</span> This form of communication is an adaptation found among cultures where people are often isolated from each other, according to Julien Meyer, a researcher at the Institute of Human Sciences in Lyon, France. 'They are mostly used in mountains or dense forests,' he says. 'Whistled languages are quite clearly defined and represent an original adaptation of the spoken language for the needs of isolated human groups.'</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> But with <span class="hl">modern communication technology now widely available,</span><span class="mark">25</span> researchers say whistled languages like Silbo are threatened with extinction. With dwindling numbers of Gomera islanders still fluent in the language, Canaries' authorities are taking steps to try to ensure its survival. <span class="hl">Since 1999, Silbo Gomero has been taught in all of the island's elementary schools.</span><span class="mark">19</span> In addition, locals are seeking assistance from the United Nations Educational, Scientific and Cultural Organization (UNESCO). 'The local authorities are trying to <span class="hl">get an award from the organisation</span><span class="mark">26</span> to declare [Silbo Gomero] as something that should be preserved for humanity,' Carreiras adds.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Environmental practices of big businesses</div>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> The environmental practices of big businesses are shaped by a fundamental fact that for many of us offends our sense of justice. <span class="hl">Depending on the circumstances, a business may maximize the amount of money it makes, at least in the short term, by damaging the environment and hurting people.</span><span class="mark">27</span> That is still the case today for <span class="hl">fishermen in an unmanaged fishery without quotas,</span><span class="mark">30</span> and for <span class="hl">international logging companies with short-term leases on tropical rainforest land</span><span class="mark">31</span> in places with corrupt officials and unsophisticated landowners. When government regulation is effective, and when the public is environmentally aware, environmentally clean big businesses may out-compete dirty ones, but the reverse is likely to be true <span class="hl">if government regulation is ineffective</span><span class="mark">28</span> and <span class="hl">if the public doesn't care.</span><span class="mark">29</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> It is easy for the rest of us to blame a business for helping itself by hurting other people. <span class="hl">But blaming alone is unlikely to produce change.</span><span class="mark">40</span> It ignores the fact that businesses are not charities but profit-making companies, and that publicly owned companies with shareholders are under obligation to those shareholders to maximize profits, provided that they do so by legal means. US laws make a company's directors legally liable for something termed 'breach of fiduciary responsibility' if they knowingly manage a company in a way that reduces profits. The car manufacturer Henry Ford was in fact successfully sued by shareholders in 1919 for raising the minimum wage of his workers to $5 per day: the courts declared that, while Ford's humanitarian sentiments about his employees were nice, his business existed to make profits for its stockholders.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Our blaming of businesses also ignores the ultimate responsibility of the public for creating the condition that let a business profit through destructive environmental policies. <span class="hl">In the long run, it is the public, either directly or through its politicians, that has the power to make such destructive policies unprofitable and illegal, and to make sustainable environmental policies profitable.</span><span class="mark">32</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> The public can do that by suing businesses for harming them, as happened after the Exxon Valdez disaster, in which over 40,000 m³ of oil were spilled off the coast of Alaska. <span class="hl">The public may also make their opinion felt by preferring to buy sustainably harvested products; by making employees of companies with poor track records feel ashamed of their company and complain to their own management; by preferring their governments to award valuable contracts to businesses with a good environmental track record; and by pressing their governments to pass and enforce laws and regulations requiring good environmental practices.</span><span class="mark">33</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> In turn, big businesses can exert powerful pressure on any suppliers that might ignore public or government pressure. For instance, after the US public became concerned about the spread of a disease known as BSE, which was transmitted to humans through infected meat, the US government's Food and Drug Administration introduced rules demanding that the meat industry abandon practices associated with the risk of the disease spreading. But for five years the meat packers refused to follow these, claiming that they would be too expensive to obey. However, <span class="hl">when a major fast-food company then made the same demands after customer purchases of its hamburgers plummeted, the meat industry complied within weeks.</span><span class="mark">34</span> The public's task is therefore to identify which links in the supply chain are sensitive to public pressure: for instance, fast-food chains or jewelry stores, but not meat packers or gold miners.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Some readers may be disappointed or outraged that I place the ultimate responsibility for business practices harming the public on the public itself. I also believe that <span class="hl">the public must accept the necessity for higher prices for products to cover the added costs, if any, of sound environmental practices.</span><span class="mark">35</span> My views may seem to ignore the belief that <span class="hl">businesses should act in accordance with moral principles even if this leads to a reduction in their profits.</span><span class="mark">36</span> But I think we have to recognize that, throughout human history, in all politically complex human societies, government regulation has arisen precisely because it was found that <span class="hl">not only did moral principles need to be made explicit, they also needed to be enforced.</span><span class="mark">37</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> To me, <span class="hl">the conclusion that the public has the ultimate responsibility for the behavior of even the biggest businesses</span><span class="mark">40</span> is empowering and hopeful, rather than disappointing. My conclusion is not a moralistic one about who is right or wrong, admirable or selfish, a good guy or a bad guy. <span class="hl">In the past, businesses have changed when the public came to expect and require different behavior, to reward businesses for behavior that the public wanted, and to make things difficult for businesses practicing behaviors that the public didn't want.</span><span class="mark">38</span> <span class="hl">I predict that in the future, just as in the past, changes in public attitudes will be essential for changes in businesses' environmental practices.</span><span class="mark">39</span></p>
+
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–5</div><p>Complete the notes. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>The importance of the huarango tree</b></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">can access <b>1 ………</b> deep below the surface</div><span class="answer ans-letter">water</span><div class="explanation">The only year-round source of water is tens of metres down, and the huarango 'could reach deep water sources'.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">was a crucial part of local inhabitants' <b>2 ………</b> a long time ago</div><span class="answer ans-letter">diet</span><div class="explanation">The huarango 'was key to the ancient people's diet'.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">helped people to survive periods of <b>3 ………</b></div><span class="answer ans-letter">drought</span><div class="explanation">It allowed people 'to withstand years of drought when their other crops failed'.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">prevents <b>4 ………</b> of the soil</div><span class="answer ans-letter">erosion</span><div class="explanation">'Cutting down native woodland leads to erosion, as there is nothing to keep the soil in place.'</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">prevents land from becoming a <b>5 ………</b></div><span class="answer ans-letter">desert</span><div class="explanation">'When the huarangos go, the land turns into a desert.'</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 6–8</div><p>Complete the table. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p><p><b>Traditional uses of the huarango tree</b></p></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Part of tree: <b>6 ………</b> – Traditional use: Fuel</div><span class="answer ans-letter">(its / the) branches</span><div class="explanation">'Its branches were used for charcoal for cooking and heating.'</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Part of tree: <b>7 ………</b> and <b>………</b> – Traditional use: Medicine</div><span class="answer ans-letter">leaves (and) bark (either order)</span><div class="explanation">'Its leaves and bark were used for herbal remedies.'</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Part of tree: <b>8 ………</b> – Traditional use: construction</div><span class="answer ans-letter">(its / the) trunk</span><div class="explanation">'Its trunk was used to build houses.'</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 9–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">Local families have told Whaley about some traditional uses of huarango products.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Whaley works with local families to turn huarango products into foodstuffs, but the passage never says they told him about traditional uses.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Farmer Alberto Benevides is now making a good profit from growing huarangos.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">His farm 'doesn't yet provide him with enough to live on'.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Whaley needs the co-operation of farmers to help preserve the area's wildlife.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">He is 'persuading farmers to let him plant forest corridors on their land' so mammals, birds and pollen can move along the forest strip.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">For Whaley's project to succeed, it needs to be extended over a very large area.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Desert habitats 'can reduce down to very little' and, unlike a rainforest, do not need 'this huge expanse'.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">Whaley has plans to go to Africa to set up a similar project.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">He sees the project as a model that could be rolled out elsewhere, including Africa, but there is no mention of plans to go there himself.</div></div>
+
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–19</div><p>Do the following statements agree with the information given in Reading Passage 2?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">La Gomera is the most mountainous of all the Canary Islands.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The island is described as mountainous, but it is never compared with the other Canary Islands.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Silbo is only appropriate for short and simple messages.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">'Any Spanish sentence could be whistled' – it is not limited to short, simple messages.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">In the brain-activity study, silbadores and non-whistlers produced different results.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Silbadores engaged language regions, but with non-whistlers 'activation was observed in all areas of the brain'.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">The Spanish introduced Silbo to the islands in the 15th century.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Indigenous Canary Islanders already had a whistled language when Spain conquered the islands in the 15th century.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">There is precise data available regarding all of the whistle languages in existence today.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">There may be up to 70 whistled languages, but 'only 12 have been described and studied scientifically'.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">The children of Gomera now learn Silbo.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">'Since 1999, Silbo Gomero has been taught in all of the island's elementary schools.'</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 20–26</div><p>Complete the notes. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Silbo Gomero</b></p></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">high- and low-frequency tones represent different sounds in Spanish <b>20 ………</b></div><span class="answer ans-letter">words</span><div class="explanation">Individual Spanish words are recoded into whistles with high and low tones.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">pitch of whistle is controlled using silbador's <b>21 ………</b></div><span class="answer ans-letter">finger</span><div class="explanation">A silbador 'puts a finger in his or her mouth to increase the whistle's pitch'.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question"><b>22 ………</b> is changed with a cupped hand</div><span class="answer ans-letter">direction</span><div class="explanation">The other hand is cupped 'to adjust the direction of the sound'.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">in everyday use for the transmission of brief <b>23 ………</b></div><span class="answer ans-letter">commands</span><div class="explanation">'In daily life they use whistles to communicate short commands.'</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">can relay essential information quickly, e.g. to inform people about <b>24 ………</b></div><span class="answer ans-letter">fires</span><div class="explanation">Silbo is particularly useful 'when fires have occurred on the island'.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">future under threat because of new <b>25 ………</b></div><span class="answer ans-letter">technology</span><div class="explanation">Whistled languages are threatened with extinction as 'modern communication technology' becomes widely available.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Canaries' authorities hoping to receive a UNESCO <b>26 ………</b> to help preserve it</div><span class="answer ans-letter">award</span><div class="explanation">Local authorities are trying 'to get an award from the organisation'.</div></div>
+
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–31</div><p>Complete the summary using the list of words. <b>Big businesses</b></p><ul class='opts'><li><b>A</b> funding</li><li><b>B</b> trees</li><li><b>C</b> rare species</li><li><b>D</b> moral standards</li><li><b>E</b> control</li><li><b>F</b> involvement</li><li><b>G</b> flooding</li><li><b>H</b> overfishing</li><li><b>I</b> worker support</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">…they appear to have no <b>27 ………</b></div><span class="answer ans-letter">D – moral standards</span><div class="explanation">A business may maximise profit by damaging the environment and hurting people – behaviour that 'offends our sense of justice'.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Lack of <b>28 ………</b> by governments…</div><span class="answer ans-letter">E – control</span><div class="explanation">Dirty businesses win out 'if government regulation is ineffective' – i.e. lack of control.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">…and lack of public <b>29 ………</b></div><span class="answer ans-letter">F – involvement</span><div class="explanation">The same happens 'if the public doesn't care' – lack of public involvement.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">…environmental problems such as <b>30 ………</b></div><span class="answer ans-letter">H – overfishing</span><div class="explanation">Example: fishermen in an unmanaged fishery without quotas.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">…or the destruction of <b>31 ………</b></div><span class="answer ans-letter">B – trees</span><div class="explanation">Example: logging companies on tropical rainforest land.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 32–34</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">The main idea of the third paragraph is that environmental damage<ul class='opts'><li><b>A</b> requires political action if it is to be stopped.</li><li><b>B</b> is the result of ignorance on the part of the public.</li><li><b>C</b> could be prevented by the action of ordinary people.</li><li><b>D</b> can only be stopped by educating business leaders.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">The public, directly or through politicians, has the power to make destructive policies unprofitable and illegal.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">In the fourth paragraph, the writer describes ways in which the public can<ul class='opts'><li><b>A</b> reduce their own individual impact on the environment.</li><li><b>B</b> learn more about the impact of business on the environment.</li><li><b>C</b> raise awareness of the effects of specific environmental disasters.</li><li><b>D</b> influence the environmental policies of businesses and governments.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">The paragraph lists public actions – suing, buying choices, shaming employers, pressing governments for laws – that influence businesses and governments.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">What pressure was exerted by big business in the case of the disease BSE?<ul class='opts'><li><b>A</b> Meat packers stopped supplying hamburgers to fast-food chains.</li><li><b>B</b> A fast-food company forced their meat suppliers to follow the law.</li><li><b>C</b> Meat packers persuaded the government to reduce their expenses.</li><li><b>D</b> A fast-food company encouraged the government to introduce legislation.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">A major fast-food company made the same demands as the FDA's rules, and the meat industry complied within weeks.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 35–39</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">The public should be prepared to fund good environmental practices.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">The writer believes the public must accept higher prices to cover the added costs of sound environmental practices.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">There is a contrast between the moral principles of different businesses.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The writer discusses whether businesses should follow moral principles, but never compares the principles of different businesses.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">It is important to make a clear distinction between acceptable and unacceptable behaviour.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The writer says moral principles need to be made explicit <i>and enforced</i> by regulation, and his conclusion is 'not a moralistic one about who is right or wrong'.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">The public have successfully influenced businesses in the past.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">'In the past, businesses have changed when the public came to expect and require different behavior.'</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">In the future, businesses will show more concern for the environment.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The writer predicts that changes in public attitudes will be essential for changes in business practices, but does not claim businesses will show more concern.</div></div>
+
+<div class="qintro"><div class="qintro-t">Question 40</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">What would be the best subheading for this passage?<ul class='opts'><li><b>A</b> Will the world survive the threat caused by big businesses?</li><li><b>B</b> How can big businesses be encouraged to be less driven by profit?</li><li><b>C</b> What environmental dangers are caused by the greed of businesses?</li><li><b>D</b> Are big businesses to blame for the damage they cause the environment?</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">The passage asks whether blaming businesses is the right response, arguing that ultimate responsibility lies with the public.</div></div>
+
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

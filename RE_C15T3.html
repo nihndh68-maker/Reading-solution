@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 15 – Reading Test 3 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 15 – Reading Test 3</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Henry Moore (1898-1986)</div>
+<p class="para" style="font-style:italic;color:var(--muted);">The British sculptor Henry Moore was a leading figure in the 20th-century art world</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Henry Moore was born in Castleford, a small town near Leeds in the north of England. He was the seventh child of Raymond Moore and his wife Mary Baker. He studied at Castleford Grammar School from 1909 to 1915, where his early interest in art was encouraged by his teacher Alice Gostick. After leaving school, Moore hoped to become a sculptor, but instead <span class="hl">he complied with his father's wish that he train as a schoolteacher.</span><span class="mark">1</span> He had to abandon his training in 1917 when he was sent to France to fight in the First World War.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> After the war, Moore enrolled at the Leeds School of Art, where he studied for two years. In his first year, he spent most of his time drawing. <span class="hl">Although he wanted to study sculpture, no teacher was appointed until his second year.</span><span class="mark">2</span> At the end of that year, he passed the sculpture examination and was <span class="hl">awarded a scholarship to the Royal College of Art in London.</span><span class="mark">3</span> In September 1921, he moved to London and began three years of advanced study in sculpture.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Alongside the instruction he received at the Royal College, Moore visited many of the London museums, particularly the British Museum, which had a wide-ranging collection of ancient sculpture. <span class="hl">During these visits, he discovered the power and beauty of ancient Egyptian and African sculpture.</span><span class="mark">4</span> As he became increasingly interested in these 'primitive' forms of art, he turned away from European sculptural traditions.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> After graduating, Moore spent the first six months of 1925 travelling in France. When he visited the Trocadero Museum in Paris, <span class="hl">he was impressed by a cast of a Mayan* sculpture of the rain spirit.</span><span class="mark">5</span> It was a male reclining figure with its knees drawn up together, and its head at a right angle to its body. Moore became fascinated with this stone sculpture, which he thought had <span class="hl">a power and originality that no other stone sculpture possessed.</span><span class="mark">6</span> He himself started carving a variety of subjects in stone, including depiction of reclining women, mother-and-child groups, and masks.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Moore's exceptional talent soon gained recognition, and in 1926 he started work as a sculpture instructor at the Royal College. In 1933, he became a member of a group of young artists called Unit One. <span class="hl">The aim of the group was to convince the English public of the merits of the emerging international movement in modern art and architecture.</span><span class="mark">7</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Around this time, Moore moved away from the human figure to experiment with abstract shapes. In 1931, he held an exhibition at the Leicester Galleries in London. His work was enthusiastically welcomed by fellow sculptors, but the reviews in the press were extremely negative and turned Moore into a notorious figure. <span class="hl">There were calls for his resignation from the Royal College,</span><span class="mark">8</span> and the following year, when his contract expired, he left to start a sculpture department at the Chelsea School of Art in London.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Throughout the 1930s, Moore did not show any inclination to please the British public. He became interested in the paintings of the Spanish artist Pablo Picasso, whose work inspired him to distort the human body in a radical way. At times, he seemed to abandon the human figure altogether. The pages of his sketchbooks from this period show his ideas for abstract sculptures that bore little resemblance to the human form.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> In 1940, during the Second World War, Moore stopped teaching at the Chelsea School and moved to a farmhouse about 20 miles north of London. <span class="hl">A shortage of materials forced him to focus on drawing.</span><span class="mark">9</span> He did numerous small sketches of Londoners, later turning these ideas into large coloured drawings in his studio. In 1942, he returned to Castleford to make a series of <span class="hl">sketches of the miners who worked there.</span><span class="mark">10</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> In 1944, Harlow, a town near London, offered Moore <span class="hl">a commission for a sculpture depicting a family.</span><span class="mark">11</span> The resulting work signifies a dramatic change in Moore's style, away from the experimentation of the 1930s towards a more natural and humanistic subject matter. He did dozens of studies in clay for the sculpture, and these were cast in bronze and issued in editions of seven to nine copies each. In this way, Moore's work became <span class="hl">available to collectors all over the world.</span><span class="mark">12</span> <span class="hl">The boost to his income enabled him to take on ambitious projects</span><span class="mark">13</span> and start working on the scale he felt his sculpture demanded.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> Critics who had begun to think that Moore had become less revolutionary were proven wrong by the appearance, in 1950, of the first of Moore's series of standing figures in bronze, with their harsh and angular pierced forms and distinct impression of menace. Moore also varied his subject matter in the 1950s with such works as <em>Warrior with Shield</em> and <em>Falling Warrior</em>. These were rare examples of Moore's use of the male figure and owe something to his visit to Greece in 1951, when he had the opportunity to study ancient works of art.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> In his final years, Moore created the Henry Moore Foundation to promote art appreciation and to display his work. Moore was the first modern English sculptor to achieve international critical acclaim and he is still regarded as one of the most important sculptors of the 20th century.</p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* Mayan: belonging to an ancient civilisation that inhabited parts of current-day Mexico, Guatemala, Belize, El Salvador and Honduras.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">The Desolenator: producing clean water</div>
+
+<p class="para"><strong>A</strong> Travelling around Thailand in the 1990s, William Janssen was impressed with the basic rooftop solar heating systems that were on many homes, where energy from the sun was absorbed by a plate and then used to heat water for domestic use. <span class="hl">Two decades later Janssen developed that basic idea he saw in Southeast Asia into a portable device that uses the power from the sun to purify water.</span><span class="mark">14</span></p>
+
+<p class="para"><strong>B</strong> The Desolenator operates as a mobile desalination unit that <span class="hl">can take water from different places, such as the sea, rivers, boreholes and rain, and purify it for human consumption.</span><span class="mark">15</span> It is particularly valuable in regions where natural groundwater reserves have been polluted, or where seawater is the only water source available. Janssen saw that there was a need for a sustainable way to clean water in both the developing and the developed countries when he moved to the United Arab Emirates and saw large-scale water processing. 'I was confronted with the enormous carbon footprint that the Gulf nations have because of all of the desalination that they do,' he says.</p>
+
+<p class="para"><strong>C</strong> The Desolenator can produce 15 litres of drinking water per day, enough to sustain a family for cooking and drinking. <span class="hl">Its main selling point is that unlike standard desalination techniques, it doesn't require a generated power supply: just sunlight.</span><span class="mark">16</span> It measures 120 cm by 90 cm, and is <span class="hl">easy to transport, thanks to its two wheels.</span><span class="mark">21</span> Water enters through a pipe, and <span class="hl">flows as a thin film</span><span class="mark">22</span> between a sheet of double glazing and the surface of a solar panel, where it is heated by the sun. The warm water flows into a small boiler (heated by a solar-powered battery) where it is converted to steam. When the steam cools, it becomes distilled water. The device has <span class="hl">a very simple filter to trap particles,</span><span class="mark">23</span> and this can easily be shaken to remove them. There are two tubes for liquid coming out: <span class="hl">one for the waste – salt from seawater, fluoride, etc.</span><span class="mark">24</span> – and another for the distilled water. <span class="hl">The performance of the unit is shown on an LCD screen</span><span class="mark">25</span> and <span class="hl">transmitted to the company which provides servicing when necessary.</span><span class="mark">26</span></p>
+
+<p class="para"><strong>D</strong> <span class="hl">A recent analysis found that at least two-thirds of the world's population lives with severe water scarcity for at least a month every year. Janssen says that by 2030 half of the world's population will be living with water stress</span><span class="mark">17</span> – where the demand exceeds the supply over a certain period of time. 'It is really important that a sustainable solution is brought to the market that is able to help these people,' he says. Many countries 'don't have the money for desalination plants, which are very expensive to build. They don't have the money to operate them, they are very maintenance intensive, and they don't have the money to buy the diesel to run the desalination plants, so it is a really bad situation.'</p>
+
+<p class="para"><strong>E</strong> <span class="hl">The device is aimed at a wide variety of users – from homeowners in the developing world who do not have a constant supply of water to people living off the grid in rural parts of the US.</span><span class="mark">18</span> The first commercial versions of the Desolenator are expected to be in operation in India early next year, after field tests are carried out. The market for the self-sufficient devices in developing countries is twofold – those who cannot afford the money for the device outright and pay through microfinance, and middle-income homes that can lease their own equipment. 'People in India don't pay for a fridge outright; they pay for it over six months. They would put the Desolenator on their roof and hook it up to their municipal supply and they would get very reliable drinking water on a daily basis,' Janssen says. In the developed world, it is aimed at niche markets where tap water is unavailable – for camping, on boats, or for the military, for instance.</p>
+
+<p class="para"><strong>F</strong> Prices will vary according to where it is bought. In the developing world, the price will depend on what deal aid organisations can negotiate. In developed countries, it is likely to come in at $1,000 (£685) a unit, said Janssen. '<span class="hl">We are a venture with a social mission. We are aware that the product we have envisioned is mainly finding application in the developing world and humanitarian sector</span><span class="mark">19</span> and that this is the way we will proceed. We do realise, though, that to be a viable company there is a bottom line to keep in mind,' he says.</p>
+
+<p class="para"><strong>G</strong> The company itself is based at Imperial College London, although Janssen, its chief executive, still lives in the UAE. <span class="hl">It has raised £340,000 in funding so far.</span><span class="mark">20</span> Within two years, he says, the company aims to be selling 1,000 units a month, mainly in the humanitarian field. They are expected to be sold in areas such as Australia, northern Chile, Peru, Texas and California.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Why fairy tales are really scary tales</div>
+<p class="para" style="font-style:italic;color:var(--muted);">Some people think that fairy tales are just stories to amuse children, but their universal and enduring appeal may be due to more serious reasons</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> People of every culture tell each other fairy tales but <span class="hl">the same story often takes a variety of forms in different parts of the world.</span><span class="mark">27</span> In the story of <em>Little Red Riding Hood</em> that European children are familiar with, a young girl on the way to see her grandmother meets a wolf and tells him where she is going. The wolf runs on ahead and disposes of the grandmother, then gets into bed dressed in the grandmother's clothes to wait for Little Red Riding Hood. You may think you know the story – but which version? In some versions, the wolf swallows up the grandmother, while in others it locks her in a cupboard. In some stories Red Riding Hood gets the better of the wolf on her own, while in others a hunter or a woodcutter hears her cries and comes to her rescue.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> <span class="hl">The universal appeal of these tales is frequently attributed to the idea that they contain cautionary messages:</span><span class="mark">28</span> in the case of <em>Little Red Riding Hood</em>, to listen to your mother, and avoid talking to strangers. 'It might be what we find interesting about this story is that it's got this survival-relevant information in it,' says anthropologist Jamie Tehrani at Durham University in the UK. But his research suggests otherwise. 'We have this huge gap in our knowledge about the history and prehistory of storytelling, despite the fact that we know this genre is an incredibly ancient one,' he says. <span class="hl">That hasn't stopped anthropologists, folklorists* and other academics devising theories to explain the importance of fairy tales in human society.</span><span class="mark">29</span> <span class="hl">Now Tehrani has found a way to test these ideas, borrowing a technique from evolutionary biologists.</span><span class="mark">30</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> To work out the evolutionary history, development and relationships among groups of organisms, biologists compare the characteristics of living species in a process called 'phylogenetic analysis'. <span class="hl">Tehrani has used the same approach to compare related versions of fairy tales to discover how they have evolved and which elements have survived longest.</span><span class="mark">30</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Tehrani's analysis focused on <em>Little Red Riding Hood</em> in its many forms, which include another Western fairy tale known as <em>The Wolf and the Kids</em>. <span class="hl">Checking for variants of these two tales and similar stories from Africa, East Asia and other regions, he ended up with 58 stories</span><span class="mark">37</span> <span class="hl">recorded from oral traditions.</span><span class="mark">31</span> Once his phylogenetic analysis had <span class="hl">established that they were indeed related,</span><span class="mark">32</span> he used the same methods to explore how they have developed and altered over time.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> First he tested some assumptions about <span class="hl">which aspects of the story alter least as it evolves,</span><span class="mark">33</span> indicating their importance. Folklorists believe that what happens in a story is more central to the story than the characters in it – that visiting a relative, only to be met by a scary animal in disguise, is more fundamental than whether the visitor is a little girl or three siblings, or the animal is a tiger instead of a wolf.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> However, <span class="hl">Tehrani found no significant difference in the rate of evolution of incidents compared with that of characters.</span><span class="mark">34</span> 'Certain episodes are very stable because they are crucial to the story, but there are lots of other details that can evolve quite freely,' he says. Neither did his analysis support the theory that the central section of a story is the most conserved part. He found no significant difference in the flexibility of events there compared with the beginning or the end.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> But the really big surprise came when he looked at the cautionary elements of the story. 'Studies on hunter-gatherer folk tales suggest that these narratives include really important information about the environment and the possible dangers that may be faced there – stuff that's relevant to survival,' he says. <span class="hl">Yet in his analysis such elements were just as flexible as seemingly trivial details.</span><span class="mark">28</span><span class="mark">35</span> What, then, is important enough to be reproduced from generation to generation?</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> The answer, it would appear, is fear – <span class="hl">blood-thirsty and gruesome aspects of the story, such as the eating of the grandmother by the wolf, turned out to be the best preserved of all.</span><span class="mark">36</span> Why are these details retained by generations of storytellers, when other features are not? Tehrani has an idea: 'In an oral context, a story won't survive because of one great teller. It also needs to be interesting when it's told by someone who's not necessarily a great storyteller.' Maybe being swallowed whole by a wolf, then cut out of its stomach alive is so gripping that it helps the story remain popular, no matter how badly it's told.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Jack Zipes at the University of Minnesota, Minneapolis, is unconvinced by Tehrani's views on fairy tales. '<span class="hl">Even if they're gruesome, they won't stick unless they matter,</span><span class="mark">38</span>' he says. He believes the perennial theme of women as victims in stories like <em>Little Red Riding Hood</em> explains why they continue to feel relevant. <span class="hl">But Tehrani points out that although this is often the case in Western versions, it is not always true elsewhere. In Chinese and Japanese versions, often known as <em>The Tiger Grandmother</em>, the villain is a woman, and in both Iran and Nigeria, the victim is a boy.</span><span class="mark">39</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> Mathias Clasen at Aarhus University in Denmark isn't surprised by Tehrani's findings. 'Habits and morals change, but the things that scare us, and the fact that we seek out entertainment that's designed to scare us – those are constant,' he says. Clasen believes that <span class="hl">scary stories teach us what it feels like to be afraid without having to experience real danger, and so build up resistance to negative emotions.</span><span class="mark">40</span></p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* Folklorists: those who study traditional stories</p>
+
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–7</div><p>Do the following statements agree with the claims of the writer in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">On leaving school, Moore did what his father wanted him to do.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">After leaving school, Moore 'complied with his father's wish that he train as a schoolteacher'.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Moore began studying sculpture in his first term at the Leeds School of Art.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">In his first year he mostly drew; no sculpture teacher was appointed until his second year.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">When Moore started at the Royal College of Art, its reputation for teaching sculpture was excellent.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The passage says he won a scholarship to the Royal College, but says nothing about its reputation for teaching sculpture.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Moore became aware of ancient sculpture as a result of visiting London museums.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">During his museum visits, especially the British Museum, he discovered ancient Egyptian and African sculpture.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">The Trocadero Museum's Mayan sculpture attracted a lot of public interest.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Moore was impressed by the sculpture, but nothing is said about public interest in it.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Moore thought the Mayan sculpture was similar in certain respects to other stone sculptures.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">He thought it had 'a power and originality that no other stone sculpture possessed'.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">The artists who belonged to Unit One wanted to make modern art and architecture more popular.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">The group aimed 'to convince the English public of the merits of the emerging international movement in modern art and architecture'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Complete the notes. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Moore's career as an artist</b></p></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">1930s: Moore is urged to offer his <b>8 ………</b> and leave the Royal College</div><span class="answer ans-letter">resignation</span><div class="explanation">'There were calls for his resignation from the Royal College.'</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">1940s: Moore turns to drawing because <b>9 ………</b> for sculpting are not readily available</div><span class="answer ans-letter">materials</span><div class="explanation">'A shortage of materials forced him to focus on drawing.'</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">While visiting his hometown, Moore does some drawings of <b>10 ………</b></div><span class="answer ans-letter">miners</span><div class="explanation">In 1942 he returned to Castleford to sketch 'the miners who worked there'.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Moore is employed to produce a sculpture of a <b>11 ………</b></div><span class="answer ans-letter">family</span><div class="explanation">Harlow offered a commission 'for a sculpture depicting a family'.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question"><b>12 ………</b> start to buy Moore's work</div><span class="answer ans-letter">collectors</span><div class="explanation">His bronzes 'became available to collectors all over the world'.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">Moore's increased <b>13 ………</b> makes it possible for him to do more ambitious sculptures</div><span class="answer ans-letter">income</span><div class="explanation">'The boost to his income enabled him to take on ambitious projects.'</div></div>
+
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–20</div><p>Reading Passage 2 has seven paragraphs, A–G. Choose the correct heading for each section from the list of headings below.</p><ul class='opts'><li><b>i</b> Getting the finance for production</li><li><b>ii</b> An unexpected benefit</li><li><b>iii</b> From initial inspiration to new product</li><li><b>iv</b> The range of potential customers for the device</li><li><b>v</b> What makes the device different from alternatives</li><li><b>vi</b> Cleaning water from a range of sources</li><li><b>vii</b> Overcoming production difficulties</li><li><b>viii</b> Profit not the primary goal</li><li><b>ix</b> A warm welcome for the device</li><li><b>x</b> The number of people affected by water shortages</li></ul></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Section A</div><span class="answer ans-letter">iii – From initial inspiration to new product</span><div class="explanation">Janssen was inspired by Thai rooftop solar heaters and later developed the idea into a portable solar water purifier.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Section B</div><span class="answer ans-letter">vi – Cleaning water from a range of sources</span><div class="explanation">The device can purify water from the sea, rivers, boreholes and rain.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Section C</div><span class="answer ans-letter">v – What makes the device different from alternatives</span><div class="explanation">Unlike standard desalination, it needs no generated power supply – only sunlight – and the paragraph explains how it works.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Section D</div><span class="answer ans-letter">x – The number of people affected by water shortages</span><div class="explanation">It gives statistics on severe water scarcity and predicted water stress by 2030.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Section E</div><span class="answer ans-letter">iv – The range of potential customers for the device</span><div class="explanation">Users range from homeowners in the developing world and off-grid Americans to campers, boat owners and the military.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Section F</div><span class="answer ans-letter">viii – Profit not the primary goal</span><div class="explanation">Janssen stresses 'a venture with a social mission' aimed mainly at the developing world and humanitarian sector.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Section G</div><span class="answer ans-letter">i – Getting the finance for production</span><div class="explanation">The company has raised £340,000 in funding and has sales targets.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 21–26</div><p>Complete the summary. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>How the Desolenator works</b></p></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">The device can be used in different locations, as it has <b>21 ………</b></div><span class="answer ans-letter">wheels</span><div class="explanation">It is easy to transport 'thanks to its two wheels'.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">…a <b>22 ………</b> of water flows over a solar panel</div><span class="answer ans-letter">film</span><div class="explanation">Water 'flows as a thin film' over the solar panel.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Any particles in the water are caught in a <b>23 ………</b></div><span class="answer ans-letter">filter</span><div class="explanation">The device has 'a very simple filter to trap particles'.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">…and all types of <b>24 ………</b> come out through another [tube]</div><span class="answer ans-letter">waste</span><div class="explanation">One tube is 'for the waste – salt from seawater, fluoride, etc.'</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">A screen displays the <b>25 ………</b> of the device</div><span class="answer ans-letter">performance</span><div class="explanation">'The performance of the unit is shown on an LCD screen.'</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">…so that they know when the Desolenator requires <b>26 ………</b></div><span class="answer ans-letter">servicing</span><div class="explanation">The data goes to the company, 'which provides servicing when necessary'.</div></div>
+
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–31</div><p>Complete each sentence with the correct ending, A–F.</p><ul class='opts'><li><b>A</b> may be provided through methods used in biological research.</li><li><b>B</b> are the reason for their survival.</li><li><b>C</b> show considerable global variation.</li><li><b>D</b> contain animals which transform to become humans.</li><li><b>E</b> were originally spoken rather than written.</li><li><b>F</b> have been developed without factual basis.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">In fairy tales, details of the plot …</div><span class="answer ans-letter">C</span><div class="explanation">The same story 'often takes a variety of forms in different parts of the world' – with versions differing in who is eaten, who rescues, and so on.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Tehrani rejects the idea that the useful lessons for life in fairy tales …</div><span class="answer ans-letter">B</span><div class="explanation">The popular view is that cautionary, survival-relevant messages explain the tales' appeal; Tehrani found such elements were just as changeable as trivial details, so they are not why the stories survive.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Various theories about the social significance of fairy tales …</div><span class="answer ans-letter">F</span><div class="explanation">Given the 'huge gap in our knowledge', academics have devised theories without solid evidence.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Insights into the development of fairy tales …</div><span class="answer ans-letter">A</span><div class="explanation">Tehrani borrowed phylogenetic analysis, a technique from evolutionary biology, to study how tales developed.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">All the fairy tales analysed by Tehrani …</div><span class="answer ans-letter">E</span><div class="explanation">His 58 stories were all 'recorded from oral traditions'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 32–36</div><p>Complete the summary using the list of words, A–I. <b>Phylogenetic analysis of Little Red Riding Hood</b></p><ul class='opts'><li><b>A</b> ending</li><li><b>B</b> events</li><li><b>C</b> warning</li><li><b>D</b> links</li><li><b>E</b> records</li><li><b>F</b> variations</li><li><b>G</b> horror</li><li><b>H</b> people</li><li><b>I</b> plot</li></ul></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">…find out if <b>32 ………</b> existed among 58 stories from around the world</div><span class="answer ans-letter">D – links</span><div class="explanation">His analysis 'established that they were indeed related' – i.e. links existed among them.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">…which aspects of the stories had fewest <b>33 ………</b></div><span class="answer ans-letter">F – variations</span><div class="explanation">He tested 'which aspects of the story alter least as it evolves'.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">…some <b>34 ………</b> that were included in a story tended to change over time</div><span class="answer ans-letter">B – events</span><div class="explanation">There was no significant difference in the rate of evolution of incidents (events) and characters – many details evolve freely.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">…parts of a story which seemed to provide some sort of <b>35 ………</b> were unimportant</div><span class="answer ans-letter">C – warning</span><div class="explanation">Cautionary elements were 'just as flexible as seemingly trivial details'.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">The aspect that he found most important in a story's survival was <b>36 ………</b></div><span class="answer ans-letter">G – horror</span><div class="explanation">The gruesome, blood-thirsty aspects were 'the best preserved of all'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">What method did Jamie Tehrani use to test his ideas about fairy tales?<ul class='opts'><li><b>A</b> He compared oral and written forms of the same stories.</li><li><b>B</b> He looked at many different forms of the same basic story.</li><li><b>C</b> He looked at unrelated stories from many different countries.</li><li><b>D</b> He contrasted the development of fairy tales with that of living creatures.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">He gathered variants of Little Red Riding Hood and similar tales – 58 related stories from various regions.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">When discussing Tehrani's views, Jack Zipes suggests that<ul class='opts'><li><b>A</b> Tehrani ignores key changes in the role of women.</li><li><b>B</b> stories which are too horrific are not always taken seriously.</li><li><b>C</b> Tehrani overemphasises the importance of violence in stories.</li><li><b>D</b> features of stories only survive if they have a deeper significance.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">Zipes: 'Even if they're gruesome, they won't stick unless they matter.'</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Why does Tehrani refer to Chinese and Japanese fairy tales?<ul class='opts'><li><b>A</b> to indicate that Jack Zipes' theory is incorrect</li><li><b>B</b> to suggest that crime is a global problem</li><li><b>C</b> to imply that all fairy tales have a similar meaning</li><li><b>D</b> to add more evidence for Jack Zipes' ideas</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Zipes says women-as-victims explains the tales' relevance; Tehrani counters that in Chinese and Japanese versions the villain is a woman, and elsewhere the victim is a boy.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">What does Mathias Clasen believe about fairy tales?<ul class='opts'><li><b>A</b> They are a safe way of learning to deal with fear.</li><li><b>B</b> They are a type of entertainment that some people avoid.</li><li><b>C</b> They reflect the changing values of our society.</li><li><b>D</b> They reduce our ability to deal with real-world problems.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Scary stories 'teach us what it feels like to be afraid without having to experience real danger, and so build up resistance to negative emotions'.</div></div>
+
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

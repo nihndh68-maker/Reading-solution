@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 15 – Reading Test 2 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 15 – Reading Test 2</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Could urban engineers learn from dance?</div>
+
+<p class="para"><strong>A</strong> <span class="hl">The way we travel around cities has a major impact on whether they are sustainable.</span><span class="mark">6</span> Transportation is estimated to account for 30% of energy consumption in most of the world's most developed nations, so lowering the need for energy-using vehicles is essential for decreasing the environmental impact of mobility. But as more and more people move to cities, it is important to think about other kinds of sustainable travel too. <span class="hl">The ways we travel affect our physical and mental health, our social lives, our access to work and culture, and the air we breathe.</span><span class="mark">6</span> Engineers are tasked with changing how we travel round cities through urban design, but the engineering industry still works on the assumptions that led to the creation of the energy-consuming transport systems we have now: the emphasis placed solely on efficiency, speed, and quantitative data. We need radical changes, to make it healthier, more enjoyable, and less environmentally damaging to travel around cities.</p>
+
+<p class="para"><strong>B</strong> Dance might hold some of the answers. <span class="hl">That is not to suggest everyone should dance their way to work, however healthy and happy it might make us,</span><span class="mark">1</span> but rather that the techniques used by choreographers to experiment with and design movement in dance could provide engineers with tools to stimulate new ideas in city-making. Richard Sennett, an influential urbanist and sociologist who has transformed ideas about the way cities are made, argues that urban design has suffered from a separation between mind and body since the introduction of the architectural blueprint.</p>
+
+<p class="para"><strong>C</strong> <span class="hl">Whereas medieval builders improvised and adapted construction through their intimate knowledge of materials and personal experience of the conditions on a site, building designs are now conceived and stored in media technologies that detach the designer from the physical and social realities they are creating.</span><span class="mark">2</span> While the design practices created by these new technologies are essential for managing the technical complexity of the modern city, they have the drawback of simplifying reality in the process.</p>
+
+<p class="para"><strong>D</strong> To illustrate, Sennett discusses the Peachtree Center in Atlanta, USA, a development typical of the modernist approach to urban planning prevalent in the 1970s. Peachtree created a grid of streets and towers intended as a new pedestrian-friendly downtown for Atlanta. According to Sennett, this failed because its designers had invested too much faith in computer-aided design to tell them how it would operate. <span class="hl">They failed to take into account that purpose-built street cafés could not operate in the hot sun without the protective awnings common in older buildings, and would need energy-consuming air conditioning instead,</span><span class="mark">4</span> or that its giant car park would feel so unwelcoming that it would put people off getting out of their cars. What seems entirely predictable and controllable on screen has unexpected results when translated into reality.</p>
+
+<p class="para"><strong>E</strong> The same is true in transport engineering, which uses models to predict and shape the way people move through the city. Again, these models are necessary, but they are built on specific world views in which certain forms of efficiency and safety are considered and other experience of the city ignored. Designs that seem logical in models appear counter-intuitive in the actual experience of their users. The guard rails that will be familiar to anyone who has attempted to cross a British road, for example, were <span class="hl">an engineering solution to pedestrian safety</span><span class="mark">7</span> based on models that prioritise <span class="hl">the smooth flow of traffic</span><span class="mark">8</span>. On wide major roads, they often guide pedestrians to specific crossing points and slow down their progress across the road by using staggered access points to divide the crossing into two – <span class="hl">one for each carriageway</span><span class="mark">9</span>. In doing so they make crossings feel longer, introducing psychological barriers greatly impacting <span class="hl">those that are the least mobile</span><span class="mark">10</span>, and <span class="hl">encouraging others to make dangerous crossings</span><span class="mark">11</span> to get around the guard rails. These barriers don't just make it harder to cross the road: <span class="hl">they divide communities</span><span class="mark">12</span> and <span class="hl">decrease opportunities for healthy transport</span><span class="mark">13</span>. <span class="hl">As a result, many are now being removed, causing disruption, cost, and waste.</span><span class="mark">5</span></p>
+
+<p class="para"><strong>F</strong> If their designers had had the tools to think with their bodies – like dancers – and imagine how these barriers would feel, there might have been a better solution. In order to bring about fundamental changes to the ways we use our cities, engineering will need to develop a richer understanding of why people move in certain ways, and how this movement affects them. Choreography may not seem an obvious choice for tackling this problem. <span class="hl">Yet it shares with engineering the aim of designing patterns of movement within limitations of space.</span><span class="mark">3</span> It is an art form developed almost entirely by trying out ideas with the body, and gaining instant feedback on how the results feel. Choreographers have deep understanding of the psychological, aesthetic, and physical implications of different ways of moving.</p>
+
+<p class="para"><strong>G</strong> Observing the choreographer Wayne McGregor, cognitive scientist David Kirsh described how he 'thinks with the body'. Kirsh argues that by using the body to simulate outcomes, McGregor is able to imagine solutions that would not be possible using purely abstract thought. This kind of physical knowledge is valued in many areas of expertise, but currently has no place in formal engineering design processes. A suggested method for transport engineers is to improvise design solutions and get instant feedback about how they would work from their own experience of them, or model designs at full scale in the way choreographers experiment with groups of dancers. Above all, perhaps, they might learn to design for emotional as well as functional effects.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Should we try to bring extinct species back to life?</div>
+
+<p class="para"><strong>A</strong> The passenger pigeon was a legendary species. Flying in vast numbers across North America, with potentially many millions within a single flock, their migration was once one of nature's great spectacles. Sadly, the passenger pigeon's existence came to an end on <span class="hl">1 September 1914</span><span class="mark">17</span>, when the last living specimen died at Cincinnati Zoo. Geneticist Ben Novak is lead researcher on an ambitious project which now aims to bring the bird back to life through a process known as 'de-extinction'. <span class="hl">The basic premise involves using cloning technology to turn the DNA of extinct animals into a fertilised embryo, which is carried by the nearest relative still in existence</span><span class="mark">15</span> – in this case, the abundant band-tailed pigeon – before being born as a living, breathing animal. Passenger pigeons are one of the pioneering species in this field, but they are far from the only ones on which this cutting-edge technology is being trialled.</p>
+
+<p class="para"><strong>B</strong> In Australia, the thylacine, more commonly known as the Tasmanian tiger, is another extinct creature which genetic scientists are striving to bring back to life. 'There is no carnivore now in Tasmania that fills the niche which thylacines once occupied,' explains Michael Archer of the University of New South Wales. He points out that in the decades since the thylacine went extinct, there has been a spread in a 'dangerously debilitating' facial tumour syndrome which threatens the existence of the Tasmanian devils, the island's other notorious resident. Thylacines would have prevented this spread because they would have killed significant numbers of Tasmanian devils. 'If that contagious cancer had popped up previously, it would have burned out in whatever region it started. <span class="hl">The return of thylacines to Tasmania could help to ensure that devils are never again subjected to risks of this kind.</span><span class="mark">23</span>'</p>
+
+<p class="para"><strong>C</strong> If extinct species can be brought back to life, can humanity begin to correct the damage it has caused to the natural world over the past few millennia? 'The idea of de-extinction is that we can reverse this process, bringing species that no longer exist back to life,' says Beth Shapiro of University of California Santa Cruz's Genomics Institute. 'I don't think that we can do this. There is no way to bring back something that is 100 per cent identical to a species that went extinct a long time ago.' A more practical approach for long-extinct species is to take the DNA of existing species as a template, ready for the insertion of strands of extinct animal DNA to create something new; a hybrid, based on the living species, but which looks and/or acts like the animal which died out.</p>
+
+<p class="para"><strong>D</strong> This complicated process and questionable outcome begs the question: what is the actual point of this technology? 'For us, the goal has always been replacing the extinct species with a suitable replacement,' explains Novak. 'When it comes to breeding, band-tailed pigeons scatter and make maybe one or two nests per hectare, whereas passenger pigeons were very social and would make 10,000 or more nests in one hectare.' <span class="hl">Since the disappearance of this key species, ecosystems in the eastern US have suffered, as the lack of disturbance caused by thousands of passenger pigeons wrecking trees and branches means there has been minimal need for regrowth. This has left forests stagnant and therefore unwelcoming to the plants and animals which evolved to help regenerate the forest after a disturbance.</span><span class="mark">16</span> According to Novak, <span class="hl">a hybridized band-tailed pigeon, with the added nesting habits of a passenger pigeon, could, in theory, re-establish that forest disturbance, thereby creating a habitat necessary for a great many other native species to thrive.</span><span class="mark">25</span></p>
+
+<p class="para"><strong>E</strong> Another popular candidate for this technology is the woolly mammoth. George Church, professor at Harvard Medical School and leader of the Woolly Mammoth Revival Project, has been focusing on cold resistance, the main way in which the extinct woolly mammoth and its nearest living relative, the Asian elephant, differ. By <span class="hl">pinpointing which genetic traits</span><span class="mark">18</span> made it possible for mammoths to survive the icy climate of the tundra, the project's goal is to return mammoths, or a mammoth-like species, to the area. 'My highest priority would be preserving the endangered Asian elephant,' says Church, 'expanding their range to the huge ecosystem of the tundra. Necessary adaptations would include <span class="hl">smaller ears</span><span class="mark">20</span>, thicker hair, and <span class="hl">extra insulating fat</span><span class="mark">21</span>, all for the purpose of reducing <span class="hl">heat loss</span><span class="mark">19</span> in the tundra, and all traits found in the now extinct woolly mammoth.' This repopulation of the tundra and boreal forests of Eurasia and North America with large mammals could also be a useful factor in reducing carbon emissions – elephants punch holes through snow and knock down trees, which encourages grass growth. This grass growth would reduce temperature, and <span class="hl">mitigate emissions from melting permafrost</span><span class="mark">22</span>.</p>
+
+<p class="para"><strong>F</strong> While the prospect of bringing extinct animals back to life might capture imaginations, it is, of course, far easier to try to save an existing species which is merely threatened with extinction. 'Many of the technologies that people have in mind when they think about de-extinction can be used as a form of "genetic rescue",' explains Shapiro. She prefers to focus the debate on <span class="hl">how this emerging technology could be used to fully understand why various species went extinct in the first place</span><span class="mark">24</span>, and therefore how we could use it to <span class="hl">make genetic modifications which could prevent mass extinctions in the future</span><span class="mark">14</span>. 'I would also say there's an incredible moral hazard to not do anything at all,' she continues. '<span class="hl">We know that what we are doing today is not enough,</span><span class="mark">26</span> and we have to be willing to take some calculated and measured risks.'</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Having a laugh</div>
+<p class="para" style="font-style:italic;color:var(--muted);">The findings of psychological scientists reveal the importance of humour</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Humans start developing a sense of humour as early as six weeks old, when babies begin to laugh and smile in response to stimuli. Laughter is universal across all human cultures and even exists in some form in rats, chimps, and bonobos. Like other human emotions and expressions, <span class="hl">laughter and humour provide psychological scientists with rich resources for studying human psychology,</span><span class="mark">27</span> ranging from the development of language to the neuroscience of social perception.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Theories focusing on the evolution of laughter point to it as an important adaptation for social communication. Take, for example, the recorded laughter in TV comedy shows. <span class="hl">Back in 1950, US sound engineer Charley Douglass hated dealing with the unpredictable laughter of live audiences, so started recording his own 'laugh tracks'.</span><span class="mark">37</span> <span class="hl">These were intended to help people at home feel like they were in a social situation, such as a crowded theatre.</span><span class="mark">28</span> Douglass even recorded various types of laughter, as well as mixtures of laughter from men, women, and children. In doing so, he picked up on a quality of laughter that is now interesting researchers: a simple 'haha' communicates a remarkable amount of socially relevant information.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> In one study conducted in 2016, samples of laughter from pairs of English-speaking students were recorded at the University of California, Santa Cruz. A team made up of more than 30 psychological scientists, anthropologists, and biologists then played these recordings to listeners from <span class="hl">24 diverse societies, from indigenous tribes in New Guinea to city-dwellers in India and Europe.</span><span class="mark">29</span> Participants were asked whether they thought the people laughing were friends or strangers. <span class="hl">On average, the results were remarkably consistent: worldwide, people's guesses were correct approximately 60% of the time.</span><span class="mark">29</span><span class="mark">38</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Researchers have also found that different types of laughter serve as codes to complex human social hierarchies. A team led by Christopher Oveis from the University of California, San Diego, found that high-status individuals had different laughs from low-status individuals, and that strangers' judgements of an individual's social status were influenced by the dominant or submissive quality of their laughter. In their study, 48 male college students were randomly assigned to groups of four, with each group composed of two low-status members, who had just joined their college fraternity group, and two high-status members, older students. <span class="hl">Each student took a turn at being teased by the others, involving the use of mildly insulting nicknames.</span><span class="mark">30</span> Analysis revealed that, as expected, high-status individuals produced more dominant laughs and fewer submissive laughs relative to the low-status individuals. Meanwhile, low-status individuals were more likely to change their laughter based on their position of power; that is, <span class="hl">the newcomers produced more dominant laughs when they were in the 'powerful' role of teasers.</span><span class="mark">30</span> Dominant laughter was higher in pitch, louder, and more variable in tone than submissive laughter.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> A random group of volunteers then listened to an equal number of dominant and submissive laughs from both the high- and low-status individuals, and were asked to estimate the social status of the laugher. In line with predictions, laughers producing dominant laughs were perceived to be significantly higher in status than laughers producing submissive laughs. 'This was particularly true for low-status individuals, who were rated as significantly higher in status when displaying a dominant versus submissive laugh,' Oveis and colleagues note. 'Thus, by strategically displaying more dominant laughter when the context allows, low-status individuals may achieve higher status in the eyes of others.' <span class="hl">However, high-status individuals were rated as high-status whether they produced their natural dominant laugh or tried to do a submissive one.</span><span class="mark">31</span><span class="mark">39</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Another study, conducted by David Cheng and Lu Wang of Australian National University, was based on the hypothesis that <span class="hl">humour might provide a respite from tedious situations in the workplace.</span><span class="mark">32</span> This 'mental break' might facilitate the replenishment of mental resources. To test this theory, the researchers recruited 74 business students, ostensibly for an experiment on perception. First, <span class="hl">the students performed a tedious task in which they had to cross out every instance of the letter 'e' over two pages of text.</span><span class="mark">33</span> The students then were randomly assigned to watch a video clip eliciting either humour, contentment, or neutral feelings. Some watched a clip of the BBC comedy <em>Mr. Bean</em>, others a relaxing scene with dolphins swimming in the ocean, and others a factual video about the management profession.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> The students then completed <span class="hl">a task requiring persistence</span><span class="mark">34</span> in which they were asked to guess the potential performance of employees based on provided profiles, and were told that making 10 correct assessments in a row would lead to a win. However, <span class="hl">the software was programmed such that it was nearly impossible to achieve 10 consecutive correct answers.</span><span class="mark">35</span> Participants were allowed to quit the task at any point. <span class="hl">Students who had watched the <em>Mr. Bean</em> video ended up spending significantly more time working on the task, making twice as many predictions as the other two groups.</span><span class="mark">34</span><span class="mark">40</span></p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Cheng and Wang then replicated these results in a second study, during which they had participants <span class="hl">complete long multiplication questions by hand.</span><span class="mark">36</span> Again, participants who watched the humorous video spent significantly more time working on this tedious task and completed more questions correctly than did the students in either of the other groups.</p>
+
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> 'Although humour has been found to help relieve stress and facilitate social relationships, traditional view of task performance implies that individuals should avoid things such as humour that may distract them from the accomplishment of task goals,' Cheng and Wang conclude. 'We suggest that humour is not only enjoyable but more importantly, energising.'</p>
+
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–6</div><p>Reading Passage 1 has seven paragraphs, A–G. Which paragraph contains the following information? <i>Write the correct letter, A–G.</i></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">reference to an appealing way of using dance that the writer is not proposing<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">B</span><div class="explanation">The writer says it is 'not to suggest everyone should dance their way to work, however healthy and happy it might make us' – an appealing idea that is explicitly not being proposed.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">an example of a contrast between past and present approaches to building<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">C</span><div class="explanation">Medieval builders improvised using intimate knowledge of materials and sites, whereas modern designs are stored in media technologies that detach designers from physical reality.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">mention of an objective of both dance and engineering<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">F</span><div class="explanation">Choreography 'shares with engineering the aim of designing patterns of movement within limitations of space'.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">reference to an unforeseen problem arising from ignoring the climate<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">D</span><div class="explanation">At Peachtree Center, designers ignored the hot sun: cafés lacked protective awnings and so needed energy-consuming air conditioning.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">why some measures intended to help people are being reversed<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">E</span><div class="explanation">Guard rails, meant to improve pedestrian safety, create psychological barriers, encourage dangerous crossings and divide communities – so 'many are now being removed'.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">reference to how transport has an impact on human lives<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">A</span><div class="explanation">Travel affects 'our physical and mental health, our social lives, our access to work and culture, and the air we breathe'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 7–13</div><p>Complete the summary. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Guard rails</b></p></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Guard rails were introduced on British roads to improve the <b>7 ………</b> of pedestrians</div><span class="answer ans-letter">safety</span><div class="explanation">Guard rails were 'an engineering solution to pedestrian safety'.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">…while ensuring that the movement of <b>8 ………</b> is not disrupted</div><span class="answer ans-letter">traffic</span><div class="explanation">The models 'prioritise the smooth flow of traffic'.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">Pedestrians are led to access points, and encouraged to cross one <b>9 ………</b> at a time</div><span class="answer ans-letter">carriageway</span><div class="explanation">Staggered access points divide the crossing into two – 'one for each carriageway'.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">…psychological difficulties in crossing the road, particularly for less <b>10 ………</b> people</div><span class="answer ans-letter">mobile</span><div class="explanation">The barriers greatly impact 'those that are the least mobile'.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Another result is that some people cross the road in a <b>11 ………</b> way</div><span class="answer ans-letter">dangerous</span><div class="explanation">The rails encourage 'others to make dangerous crossings to get around the guard rails'.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">The guard rails separate <b>12 ………</b></div><span class="answer ans-letter">communities</span><div class="explanation">'…they divide communities and decrease opportunities for healthy transport.'</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">…make it more difficult to introduce forms of transport that are <b>13 ………</b></div><span class="answer ans-letter">healthy</span><div class="explanation">They 'decrease opportunities for healthy transport'.</div></div>
+
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? <i>NB You may use any letter more than once.</i></p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">a reference to how further disappearance of multiple species could be avoided<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">F</span><div class="explanation">Shapiro says the technology could be used for genetic modifications that 'prevent mass extinctions in the future'.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">explanation of a way of reproducing an extinct animal using the DNA of only that species<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">A</span><div class="explanation">Cloning turns the DNA of the extinct animal into a fertilised embryo carried by its nearest living relative. (Paragraph C, by contrast, describes a hybrid using DNA of living species.)</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">reference to a habitat which has suffered following the extinction of a species<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">D</span><div class="explanation">Since passenger pigeons disappeared, eastern US forests have become stagnant and unwelcoming to the plants and animals that regenerate them.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">mention of the exact point at which a particular species became extinct<div class="yng">Which paragraph (A–F)?</div></div><span class="answer ans-letter">A</span><div class="explanation">The passenger pigeon's existence ended on '1 September 1914', when the last specimen died.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 18–22</div><p>Complete the summary. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p><p><b>The woolly mammoth revival project</b></p></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Church and his team are trying to identify the <b>18 ………</b> which enabled mammoths to live in the tundra</div><span class="answer ans-letter">genetic traits</span><div class="explanation">The project is 'pinpointing which genetic traits made it possible for mammoths to survive the icy climate of the tundra'.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">…physical adaptations to minimise <b>19 ………</b></div><span class="answer ans-letter">heat loss</span><div class="explanation">The adaptations are 'all for the purpose of reducing heat loss in the tundra'.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">…thicker hair, <b>20 ………</b> of a reduced size</div><span class="answer ans-letter">ears</span><div class="explanation">Necessary adaptations include 'smaller ears'.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">…and more <b>21 ………</b></div><span class="answer ans-letter">(insulating) fat</span><div class="explanation">'…and extra insulating fat' – 'fat' or 'insulating fat' is accepted.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">…help to reduce temperatures and decrease <b>22 ………</b></div><span class="answer ans-letter">(carbon) emissions</span><div class="explanation">Grass growth would reduce temperature and 'mitigate emissions from melting permafrost'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 23–26</div><p>Match each statement with the correct person, A, B or C. <i>You may use any letter more than once.</i></p><ul class='opts'><li><b>A</b> Ben Novak</li><li><b>B</b> Michael Archer</li><li><b>C</b> Beth Shapiro</li></ul></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Reintroducing an extinct species to its original habitat could improve the health of a particular species living there.<div class="yng">Which person?</div></div><span class="answer ans-letter">B – Michael Archer</span><div class="explanation">Returning thylacines to Tasmania could protect Tasmanian devils from the contagious facial tumour disease.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">It is important to concentrate on the causes of an animal's extinction.<div class="yng">Which person?</div></div><span class="answer ans-letter">C – Beth Shapiro</span><div class="explanation">She prefers to focus on using the technology to fully understand why species went extinct in the first place.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">A species brought back from extinction could have an important beneficial impact on the vegetation of its habitat.<div class="yng">Which person?</div></div><span class="answer ans-letter">A – Ben Novak</span><div class="explanation">A hybridised pigeon could re-establish forest disturbance, creating the habitat that regenerating plants and other native species need.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Our current efforts at preserving biodiversity are insufficient.<div class="yng">Which person?</div></div><span class="answer ans-letter">C – Beth Shapiro</span><div class="explanation">'We know that what we are doing today is not enough.'</div></div>
+
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–31</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">When referring to laughter in the first paragraphs, the writer emphasises<ul class='opts'><li><b>A</b> its impact on language.</li><li><b>B</b> its function in human culture.</li><li><b>C</b> its value to scientific research.</li><li><b>D</b> its universality in animal societies.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">Laughter and humour 'provide psychological scientists with rich resources for studying human psychology'.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">What does the writer suggest about Charley Douglass?<ul class='opts'><li><b>A</b> He understood the importance of enjoying humour in a group setting.</li><li><b>B</b> He believed that TV viewers at home needed to be told when to laugh.</li><li><b>C</b> He wanted his shows to appeal to audiences across the social spectrum.</li><li><b>D</b> He preferred shows where audiences were present in the recording studio.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">His laugh tracks were meant to help people at home feel they were in a social situation, such as a crowded theatre. (D is wrong: he hated live audiences' unpredictable laughter.)</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">What makes the Santa Cruz study particularly significant?<ul class='opts'><li><b>A</b> the various different types of laughter that were studied</li><li><b>B</b> the similar results produced by a wide range of cultures</li><li><b>C</b> the number of different academic disciplines involved</li><li><b>D</b> the many kinds of people whose laughter was recorded</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">Listeners from 24 diverse societies gave 'remarkably consistent' results – about 60% correct worldwide.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Which of the following happened in the San Diego study?<ul class='opts'><li><b>A</b> Some participants became very upset.</li><li><b>B</b> Participants exchanged roles.</li><li><b>C</b> Participants who had not met before became friends.</li><li><b>D</b> Some participants were unable to laugh.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">Each student took a turn being teased by the others, and newcomers took the 'powerful' role of teasers – so roles were exchanged.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">In the fifth paragraph, what did the results of the San Diego study suggest?<ul class='opts'><li><b>A</b> It is clear whether a dominant laugh is produced by a high- or low-status person.</li><li><b>B</b> Low-status individuals in a position of power will still produce submissive laughs.</li><li><b>C</b> The submissive laughs of low- and high-status individuals are surprisingly similar.</li><li><b>D</b> High-status individuals can always be identified by their way of laughing.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">High-status individuals were rated as high-status whether they produced their natural dominant laugh or tried a submissive one.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 32–36</div><p>Complete the summary using the list of words, A–H. <b>The benefits of humour</b></p><ul class='opts'><li><b>A</b> boredom</li><li><b>B</b> long</li><li><b>C</b> repeated</li><li><b>D</b> difficult</li><li><b>E</b> failure</li><li><b>F</b> persistence</li><li><b>G</b> interesting</li><li><b>H</b> simple</li></ul></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">…humour can help people's minds recover from <b>32 ………</b></div><span class="answer ans-letter">A – boredom</span><div class="explanation">Humour might provide a respite from tedious situations – i.e. boredom.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">…a group of business students to do a <b>33 ………</b> task</div><span class="answer ans-letter">H – simple</span><div class="explanation">Crossing out every letter 'e' in two pages of text was a simple but tedious task.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">…twice as long on a <b>34 ………</b> task which required them to keep trying</div><span class="answer ans-letter">F – persistence</span><div class="explanation">The second task was 'a task requiring persistence'; Mr. Bean viewers made twice as many predictions.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">…keep trying despite <b>35 ………</b></div><span class="answer ans-letter">E – failure</span><div class="explanation">The software made it nearly impossible to get 10 correct answers in a row, so participants kept failing.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">…performed better on a <b>36 ………</b> task involving long multiplication questions</div><span class="answer ans-letter">B – long</span><div class="explanation">The second study used long multiplication questions done by hand.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">One of the purposes of Charley Douglass's research was to make TV more enjoyable for non-native speakers of English.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">His motives (dealing with unpredictable live laughter, helping home viewers feel part of a crowd) are described, but non-native speakers are never mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Scientists believe that people of all cultures find it easier to distinguish friends from strangers when they hear them laughing.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Listeners from 24 diverse societies identified friends versus strangers correctly about 60% of the time, with remarkably consistent results worldwide.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">The San Diego study found that high-status individuals' attempts to sound low-status were unsuccessful.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Contradicts the passage: they were still rated high-status even when they tried a submissive laugh – so their attempts to sound low-status did not work. </div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">The results of the Australian National University study were not as expected.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The results supported the researchers' hypothesis: humour boosted persistence and performance, and the result was replicated in a second study.</div></div>
+
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>
