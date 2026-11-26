@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Academic Reading Test 3 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+
+  /* ===== extras for tables / notes (same palette) ===== */
+  .qintro table { border-collapse: collapse; width: 100%; font-size: .85rem; margin-top: .45rem; background:#fff; }
+  .qintro th, .qintro td { border: 1px solid var(--border); padding: .35rem .6rem; text-align: left; vertical-align: top; }
+  .qintro th { background: #e2e8f0; color: var(--primary); }
+  .qintro .tbl-t { font-weight: 700; color: var(--primary); margin: .5rem 0 .1rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>IELTS Academic Reading Test 3</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <!-- ===================== LEFT: PASSAGES WITH HIGHLIGHTS ===================== -->
+  <div class="column left">
+    <div class="section-title">READING PASSAGE 1</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+    <div class="passage-title">The Story of Silk</div>
+
+    <p class="para">Silk is a fine, smooth material produced from the cocoons – soft protective shells – that are made by mulberry silkworms (insect larvae). Legend has it that it was Lei Tzu, wife of the Yellow Emperor, ruler of China in about 3000 BC, who discovered silkworms. One account of the story goes that as she was taking a walk in her husband's gardens, she discovered that silkworms were responsible for the destruction of several mulberry trees. She collected a number of cocoons and sat down to have a rest. It just so happened that <span class="hl">while she was sipping some tea, one of the cocoons that she had collected landed in the hot tea and started to unravel into a fine thread</span><span class="mark">1</span>. Lei Tzu found that she could wind this thread around her fingers. Subsequently, she persuaded her husband to allow her to rear silkworms on a grove of mulberry trees. <span class="hl">She also devised a special reel to draw the fibres from the cocoon into a single thread</span><span class="mark">2</span> so that they would be strong enough to be woven into fabric. While it is unknown just how much of this is true, it is certainly known that silk cultivation has existed in China for several millennia.</p>
+
+    <p class="para"><span class="hl">Originally, silkworm farming was solely restricted to women</span><span class="mark">3</span>, and it was they who were responsible for the growing, harvesting and weaving. Silk quickly grew into a symbol of status, and <span class="hl">originally, only royalty were entitled to have clothes made of silk</span><span class="mark">4</span>. The rules were gradually relaxed over the years until finally during the Qing Dynasty (1644-1911 AD), even peasants, the lowest caste, were also entitled to wear silk. Sometime during the Han Dynasty (206 BC-220 AD), <span class="hl">silk was so prized that it was also used as a unit of currency</span><span class="mark">5</span>. Government officials were paid their salary in silk, and farmers paid their taxes in grain and silk. Silk was also used as diplomatic gifts by the emperor. Fishing lines, bowstrings, musical instruments and paper were all made using silk. <span class="hl">The earliest indication of silk paper being used was discovered in the tomb of a noble who is estimated to have died around 168 AD</span><span class="mark">6</span>.</p>
+
+    <p class="para">Demand for this exotic fabric eventually created the lucrative trade route now known as the Silk Road, <span class="hl">taking silk westward and bringing gold, silver and wool to the East</span><span class="mark">7</span>. <span class="hl">It was named the Silk Road after its most precious commodity, which was considered to be worth more than gold</span><span class="mark">10</span>. The Silk Road stretched over 6,000 kilometres from Eastern China to the Mediterranean Sea, following the Great Wall of China, climbing the Pamir mountain range, crossing modern-day Afghanistan and going on to the Middle East, with a major trading market in Damascus. From there, the merchandise was shipped across the Mediterranean Sea. <span class="hl">Few merchants travelled the entire route; goods were handled mostly by a series of middlemen</span><span class="mark">11</span>.</p>
+
+    <p class="para">With the mulberry silkworm being native to China, the country was the world's sole producer of silk for many hundreds of years. The secret of silk-making eventually reached the rest of the world via the Byzantine Empire, which ruled over the Mediterranean region of southern Europe, North Africa and the Middle East during the period 330-1453 AD. According to another legend, <span class="hl">monks working for the Byzantine emperor Justinian smuggled silkworm eggs to Constantinople (Istanbul in modern-day Turkey) in 550 AD, concealed inside hollow bamboo walking canes</span><span class="mark">8</span>. <span class="hl">The Byzantines were as secretive as the Chinese, however, and for many centuries the weaving and trading of silk fabric was a strict imperial monopoly. Then in the seventh century, the Arabs conquered Persia, capturing their magnificent silks in the process. Silk production thus spread through Africa, Sicily and Spain as the Arabs swept through these lands</span><span class="mark">12</span>. Andalusia in southern Spain was Europe's main silk-producing centre in the tenth century. By the thirteenth century, however, Italy had become Europe's leader in silk production and export. Venetian merchants traded extensively in silk and encouraged silk growers to settle in Italy. Even now, silk processed in the province of Como in northern Italy enjoys an esteemed reputation.</p>
+
+    <p class="para">The nineteenth century and industrialisation saw the downfall of the European silk industry. Cheaper Japanese silk, trade in which was greatly facilitated by the opening of the Suez Canal, was one of the many factors driving the trend. Then in the twentieth century, <span class="hl">new manmade fibres, such as nylon, started to be used in what had traditionally been silk products</span><span class="mark">9</span>, such as stockings and parachutes. The two world wars, which interrupted the supply of raw material from Japan, also stifled the European silk industry. After the Second World War, Japan's silk production was restored, with improved production and quality of raw silk. Japan was to remain the world's biggest producer of raw silk, and practically the only major exporter of raw silk, until the 1970s. However, in more recent decades, China has gradually recaptured its position as the world's biggest producer and exporter of raw silk and silk yarn. Today, around 125,000 metric tons of silk are produced in the world, and almost two thirds of that production takes place in China.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-title">READING PASSAGE 2</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+    <div class="passage-title">Great Migrations</div>
+
+    <p class="para">Animal migration, however it is defined, is far more than just the movement of animals. It can loosely be described as travel that takes place at regular intervals – often in an annual cycle – that may involve many members of a species, and is rewarded only after a long journey. It suggests inherited instinct. The biologist Hugh Dingle has identified five characteristics that apply, in varying degrees and combinations, to all migrations. They are prolonged movements that carry animals outside familiar habitats; <span class="hl">they tend to be linear, not zigzaggy</span><span class="mark">19</span>; they involve special behaviours concerning preparation (such as overfeeding) and arrival; they demand special allocations of energy. And one more: <span class="hl">migrating animals maintain an intense attentiveness to the greater mission, which keeps them undistracted by temptations and undeterred by challenges that would turn other animals aside</span><span class="mark">21</span>.</p>
+
+    <p class="para">An arctic tern, on its 20,000 km flight from the extreme south of South America to the Arctic circle, <span class="hl">will take no notice of a nice smelly herring offered from a bird-watcher's boat along the way</span><span class="mark">22</span>. <span class="hl">While local gulls will dive voraciously for such handouts, the tern flies on</span><span class="mark">14</span><span class="mark">22</span>. Why? The arctic tern resists distraction because it is driven at that moment by an instinctive sense of something we humans find admirable: larger purpose. In other words, it is determined to reach its destination. The bird senses that it can eat, rest and mate later. Right now it is totally focused on the journey; its undivided intent is arrival.</p>
+
+    <p class="para">Reaching some gravelly coastline in the Arctic, upon which other arctic terns have converged, will serve its larger purpose as shaped by evolution: finding a place, a time, and a set of circumstances in which it can successfully hatch and rear offspring.</p>
+
+    <p class="para"><span class="hl">But migration is a complex issue, and biologists define it differently, depending in part on what sorts of animals they study</span><span class="mark">15</span>. Joe Berger, of the University of Montana, who works on the American pronghorn and other large terrestrial mammals, prefers what he calls a simple, practical definition suited to his beasts: 'movements from a seasonal home area away to another home area and back again'. Generally the reason for such seasonal back-and-forth movement is to seek resources that aren't available within a single area year-round.</p>
+
+    <p class="para">But daily vertical movements by zooplankton in the ocean – upward by night to seek food, downward by day to escape predators – can also be considered migration. So can the movement of aphids when, having depleted the young leaves on one food plant, their offspring then fly onward to a different host plant, with no one aphid ever returning to where it started.</p>
+
+    <p class="para">Dingle is an evolutionary biologist who studies insects. His definition is more intricate than Berger's, citing those five features that distinguish migration from other forms of movement. They allow for the fact that, for example, <span class="hl">aphids will become sensitive to blue light (from the sky) when it's time for takeoff on their big journey, and sensitive to yellow light (reflected from tender young leaves) when it's appropriate to land</span><span class="mark">17</span>. <span class="hl">Birds will fatten themselves with heavy feeding in advance of a long migrational flight</span><span class="mark">20</span>. <span class="hl">The value of his definition, Dingle argues, is that it focuses attention on what the phenomenon of wildebeest migration shares with the phenomenon of the aphids</span><span class="mark">18</span>, and therefore helps guide researchers towards understanding how evolution has produced them all.</p>
+
+    <p class="para">Human behaviour, however, is having a detrimental impact on animal migration. The pronghorn, which resembles an antelope, though they are unrelated, is the fastest land mammal of the New World. One population, which spends the summer in the mountainous Grand Teton National Park of the western USA, follows a narrow route from its summer range in the mountains, across a river, and <span class="hl">down onto the plains. Here they wait out the frozen months, feeding mainly on sagebrush blown clear of snow</span><span class="mark">24</span>. These pronghorn are notable for the invariance of their migration route and <span class="hl">the severity of its constriction at three bottlenecks</span><span class="mark">25</span>. If they can't pass through each of the three during their spring migration, they can't reach their bounty of summer grazing; if they can't pass through again in autumn, escaping south onto those windblown plains, they are likely to die trying to overwinter in the deep snow. <span class="hl">Pronghorn, dependent on distance vision and speed to keep safe from predators</span><span class="mark">23</span>, traverse high, open shoulders of land, where they can see and run. At one of the bottlenecks, forested hills rise to form a V, <span class="hl">leaving a corridor of open ground only about 150 metres wide, filled with private homes</span><span class="mark">26</span>. Increasing development is leading toward a crisis for the pronghorn, threatening to choke off their passageway.</p>
+
+    <p class="para">Conservation scientists, along with some biologists and land managers within the USA's National Park Service and other agencies, are now working to preserve migrational behaviours, not just species and habitats. A National Forest has recognised the path of the pronghorn, much of which passes across its land, as a protected migration corridor. But neither the Forest Service nor the Park Service can control what happens on private land at a bottleneck. And with certain other migrating species, the challenge is complicated further – by vastly greater distances traversed, more jurisdictions, more borders, more dangers along the way. We will require wisdom and resoluteness to ensure that migrating species can continue their journeying a while longer.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-title">READING PASSAGE 3</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+    <div class="passage-title">Preface to ‘How the other half thinks: Adventures in mathematical reasoning’</div>
+
+    <p class="para"><strong>A</strong> Occasionally, in some difficult musical compositions, there are beautiful, but easy parts – <span class="hl">parts so simple a beginner could play them</span><span class="mark">35</span>. So it is with mathematics as well. There are some discoveries in advanced mathematics that do not depend on specialized knowledge, not even on algebra, geometry, or trigonometry. <span class="hl">Instead they may involve, at most, a little arithmetic</span><span class="mark">36</span>, such as 'the sum of two odd numbers is even', and common sense. Each of the eight chapters in this book illustrates this phenomenon. <span class="hl">Anyone can understand every step in the reasoning</span><span class="mark">33</span>.</p>
+
+    <p class="para">The thinking in each chapter uses at most only elementary arithmetic, and sometimes not even that. Thus all readers will have the chance to participate in a mathematical experience, to appreciate the beauty of mathematics, and to <span class="hl">become familiar with its logical, yet intuitive, style of thinking</span><span class="mark">37</span>.</p>
+
+    <p class="para"><strong>B</strong> One of my purposes in writing this book is to give readers who haven't had the opportunity to see and enjoy real mathematics the chance to appreciate the mathematical way of thinking. I want to reveal not only some of the fascinating discoveries, but, more importantly, the reasoning behind them.</p>
+
+    <p class="para"><span class="hl">In that respect, this book differs from most books on mathematics written for the general public</span><span class="mark">28</span>. <span class="hl">Some present the lives of colorful mathematicians. Others describe important applications of mathematics. Yet others go into mathematical procedures, but assume that the reader is adept in using algebra</span><span class="mark">31</span>.</p>
+
+    <p class="para"><strong>C</strong> I hope this book will help bridge that notorious gap that separates the two cultures: the humanities and the sciences, or should I say the right brain (intuitive) and the left brain (analytical, numerical). As the chapters will illustrate, <span class="hl">mathematics is not restricted to the analytical and numerical; intuition plays a significant role</span><span class="mark">37</span>. The alleged gap can be narrowed or completely overcome by anyone, in part because each of us is far from using the full capacity of either side of the brain. To illustrate our human potential, I cite <span class="hl">a structural engineer who is an artist, an electrical engineer who is an opera singer, an opera singer who published mathematical research, and a mathematician who publishes short stories</span><span class="mark">30</span>.</p>
+
+    <p class="para"><strong>D</strong> <span class="hl">Other scientists have written books to explain their fields to non-scientists, but have necessarily had to omit the mathematics, although it provides the foundation of their theories</span><span class="mark">27</span><span class="mark">38</span>. The reader must remain a tantalized spectator rather than an involved participant, since the appropriate language for describing the details in much of science is mathematics, whether the subject is expanding universe, subatomic particles, or chromosomes. Though the broad outline of a scientific theory can be sketched intuitively, when a part of the physical universe is finally understood, its description often looks like a page in a mathematics text.</p>
+
+    <p class="para"><strong>E</strong> Still, the non-mathematical reader can go far in understanding mathematical reasoning. This book presents the details that illustrate the mathematical style of thinking, which involves sustained, step-by-step analysis, experiments, and insights. <span class="hl">You will turn these pages much more slowly than when reading a novel or a newspaper</span><span class="mark">32</span>. <span class="hl">It may help to have a pencil and paper ready to check claims and carry out experiments</span><span class="mark">39</span>.</p>
+
+    <p class="para"><strong>F</strong> As I wrote, <span class="hl">I kept in mind two types of readers: those who enjoyed mathematics until they were turned off by an unpleasant episode, usually around fifth grade, and mathematics aficionados</span><span class="mark">34</span>, who will find much that is new throughout the book.</p>
+
+    <p class="para">This book also serves readers who simply want to sharpen their analytical skills. Many careers, such as law and medicine, require extended, precise analysis. Each chapter offers practice in following a sustained and closely argued line of thought. That mathematics can develop this skill is shown by these two testimonials:</p>
+
+    <p class="para"><strong>G</strong> A physician wrote, '<span class="hl">The discipline of analytical thought processes [in mathematics] prepared me extremely well for medical school</span><span class="mark">29</span>. In medicine one is faced with a problem which must be thoroughly analyzed before a solution can be found. The process is similar to doing mathematics.'</p>
+
+    <p class="para">A lawyer made the same point, 'Although I had no background in law – not even one political science course – <span class="hl">I did well at one of the best law schools</span><span class="mark">29</span>. <span class="hl">I attribute much of my success there to having learned, through the study of mathematics, and, in particular, theorems, how to analyze complicated principles</span><span class="mark">40</span>. Lawyers who have studied mathematics can master the legal principles in a way that most others cannot.'</p>
+
+    <p class="para">I hope you will share my delight in watching as simple, even naive, questions lead to remarkable solutions and purely theoretical discoveries find unanticipated applications.</p>
+
+  </div>
+
+  <!-- ===================== RIGHT: FULL QUESTIONS + ANSWERS ===================== -->
+  <div class="column right">
+    <div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+    <div class="section-title">Reading Passage 1 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 1–9</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>The story of silk</b></p><p><b>Early silk production in China</b><br>Around 3000 BC, according to legend: silkworm cocoon fell into emperor’s wife’s <b>1 ………</b>; emperor’s wife invented a <b>2 ………</b> to pull out silk fibres.<br>Only <b>3 ………</b> were allowed to produce silk. Only <b>4 ………</b> were allowed to wear silk. Silk used as a form of <b>5 ………</b> (e.g. farmers’ taxes consisted partly of silk). Silk used for many purposes, e.g. evidence found of <b>6 ………</b> made from silk around 168 AD.</p><p><b>Silk reaches rest of world</b><br>Merchants use Silk Road to take silk westward and bring back <b>7 ………</b> and precious metals. 550 AD: <b>8 ………</b> hide silkworm eggs in canes and take them to Constantinople. Silk production spreads across Middle East and Europe. 20th century: <b>9 ………</b> and other manmade fibres cause decline in silk production.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 1</div>
+      <div class="question">Silkworm cocoon fell into the emperor’s wife’s <b>1 ………</b>.</div>
+      <span class="answer ans-letter">tea</span>
+      <div class="explanation">Legend says Lei Tzu was sipping tea when a cocoon landed in the hot tea and began to unravel into a fine thread.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 2</div>
+      <div class="question">The emperor’s wife invented a <b>2 ………</b> to pull out silk fibres.</div>
+      <span class="answer ans-letter">reel</span>
+      <div class="explanation">She “devised a special reel to draw the fibres from the cocoon into a single thread”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 3</div>
+      <div class="question">Only <b>3 ………</b> were allowed to produce silk.</div>
+      <span class="answer ans-letter">women</span>
+      <div class="explanation">Silkworm farming was originally restricted solely to women, who did the growing, harvesting and weaving.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 4</div>
+      <div class="question">Only <b>4 ………</b> were allowed to wear silk.</div>
+      <span class="answer ans-letter">royalty</span>
+      <div class="explanation">Silk was a symbol of status and originally only royalty were entitled to wear it.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 5</div>
+      <div class="question">Silk used as a form of <b>5 ………</b> (e.g. farmers’ taxes consisted partly of silk).</div>
+      <span class="answer ans-letter">currency</span>
+      <div class="explanation">During the Han Dynasty silk was so prized it was used as a unit of currency; officials were paid in silk and farmers paid taxes in grain and silk.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 6</div>
+      <div class="question">Evidence found of <b>6 ………</b> made from silk around 168 AD.</div>
+      <span class="answer ans-letter">paper</span>
+      <div class="explanation">The earliest indication of silk paper was found in the tomb of a noble who died around 168 AD.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 7</div>
+      <div class="question">Merchants take silk westward and bring back <b>7 ………</b> and precious metals.</div>
+      <span class="answer ans-letter">wool</span>
+      <div class="explanation">The Silk Road took silk west and brought gold, silver and wool to the East. Gold and silver are the precious metals, so the answer is wool.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 8</div>
+      <div class="question">550 AD: <b>8 ………</b> hide silkworm eggs in canes and take them to Constantinople.</div>
+      <span class="answer ans-letter">monks</span>
+      <div class="explanation">Monks working for the Byzantine emperor Justinian smuggled eggs inside hollow bamboo walking canes.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 9</div>
+      <div class="question">20th century: <b>9 ………</b> and other manmade fibres cause decline in silk production.</div>
+      <span class="answer ans-letter">nylon</span>
+      <div class="explanation">Manmade fibres such as nylon replaced silk in products like stockings and parachutes.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 10–13</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 10</div>
+      <div class="question">Gold was the most valuable material transported along the Silk Road.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">The road was named after silk, its most precious commodity, which was considered worth more than gold.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 11</div>
+      <div class="question">Most tradesmen only went along certain sections of the Silk Road.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">Few merchants travelled the whole route; goods were mostly handled by a series of middlemen.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 12</div>
+      <div class="question">The Byzantines spread the practice of silk production across the West.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">The Byzantines kept silk weaving and trading a strict imperial monopoly. It was the Arabs who spread production through Africa, Sicily and Spain.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 13</div>
+      <div class="question">Silk yarn makes up the majority of silk currently exported from China.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">China is said to be the biggest exporter of raw silk and silk yarn, but no proportion of its exports is given.</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">Reading Passage 2 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 14–18</div><p>Do the following statements agree with the information given in Reading Passage 2?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 14</div>
+      <div class="question">Local gulls and migrating arctic terns behave in the same way when offered food.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">Local gulls dive voraciously for handouts, but the migrating tern ignores the herring and flies on.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 15</div>
+      <div class="question">Experts’ definitions of migration tend to vary according to their area of study.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">The writer says biologists define migration differently, depending partly on the sorts of animals they study.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 16</div>
+      <div class="question">Very few experts agree that the movement of aphids can be considered migration.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The passage says aphid movement “can also be considered migration”, but never says how many experts agree.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 17</div>
+      <div class="question">Aphids’ journeys are affected by changes in the light that they perceive.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">Aphids become sensitive to blue light when it is time to take off and to yellow light when it is time to land.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 18</div>
+      <div class="question">Dingle’s aim is to distinguish between the migratory behaviours of different species.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">Dingle’s definition focuses attention on what different migrations (e.g. wildebeest and aphids) have in common, to understand how evolution produced them all.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 19–22</div><p>Complete each sentence with the correct ending, A–G, below.</p><ul class="opts"><li><b>A</b> be discouraged by difficulties</li><li><b>B</b> travel on open land where they can look out for predators</li><li><b>C</b> eat more than they need for immediate purposes</li><li><b>D</b> be repeated daily</li><li><b>E</b> ignore distractions</li><li><b>F</b> be governed by the availability of water</li><li><b>G</b> follow a straight line</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 19</div>
+      <div class="question">According to Dingle, migratory routes are likely to</div>
+      <span class="answer ans-letter">G – follow a straight line</span>
+      <div class="explanation">One of Dingle’s five characteristics is that migrations “tend to be linear, not zigzaggy”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 20</div>
+      <div class="question">To prepare for migration, animals are likely to</div>
+      <span class="answer ans-letter">C – eat more than they need for immediate purposes</span>
+      <div class="explanation">Birds fatten themselves with heavy feeding before a long flight (the “overfeeding” in Dingle’s characteristics).</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 21</div>
+      <div class="question">During migration, animals are unlikely to</div>
+      <span class="answer ans-letter">A – be discouraged by difficulties</span>
+      <div class="explanation">Migrating animals are “undeterred by challenges that would turn other animals aside”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 22</div>
+      <div class="question">Arctic terns illustrate migrating animals’ ability to</div>
+      <span class="answer ans-letter">E – ignore distractions</span>
+      <div class="explanation">The tern takes no notice of the herring offered along the way and flies on, showing its resistance to distraction.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 23–26</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>The migration of pronghorns</b></p><p>Pronghorns rely on their eyesight and <b>23 ………</b> to avoid predators. One particular population’s summer habitat is a national park, and their winter home is on the <b>24 ………</b>, where they go to avoid the danger presented by the snow at that time of year. However, their route between these two areas contains three <b>25 ………</b>. One problem is the construction of new homes in a narrow <b>26 ………</b> of land on the pronghorns’ route.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 23</div>
+      <div class="question">Pronghorns rely on their eyesight and <b>23 ………</b> to avoid predators.</div>
+      <span class="answer ans-letter">speed</span>
+      <div class="explanation">Pronghorn depend on distance vision and speed to keep safe from predators.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 24</div>
+      <div class="question">Their winter home is on the <b>24 ………</b>.</div>
+      <span class="answer ans-letter">plains</span>
+      <div class="explanation">After the mountains and the river, they go “down onto the plains”, where sagebrush is blown clear of snow.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 25</div>
+      <div class="question">Their route contains three <b>25 ………</b>.</div>
+      <span class="answer ans-letter">bottlenecks</span>
+      <div class="explanation">The route is severely constricted at three bottlenecks.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 26</div>
+      <div class="question">New homes are being built in a narrow <b>26 ………</b> of land on their route.</div>
+      <span class="answer ans-letter">corridor</span>
+      <div class="explanation">At one bottleneck there is a corridor of open ground only about 150 metres wide, filled with private homes.</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">Reading Passage 3 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 27–34</div><p>Reading Passage 3 has seven sections, A–G. Which section contains the following information? <i>Write the correct letter, A–G.</i> <b>NB</b> You may use any letter more than once.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 27</div>
+      <div class="question">a reference to books that assume a lack of mathematical knowledge</div>
+      <span class="answer ans-letter">D</span>
+      <div class="explanation">Section D says other scientists have written books for non-scientists, which had to leave out the mathematics behind their theories.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 28</div>
+      <div class="question">the way in which this is not a typical book about mathematics</div>
+      <span class="answer ans-letter">B</span>
+      <div class="explanation">Section B says “this book differs from most books on mathematics written for the general public”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 29</div>
+      <div class="question">personal examples of being helped by mathematics</div>
+      <span class="answer ans-letter">G</span>
+      <div class="explanation">Section G gives two testimonials: a physician and a lawyer who say studying mathematics prepared them for medical school and law school.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 30</div>
+      <div class="question">examples of people who each had abilities that seemed incompatible</div>
+      <span class="answer ans-letter">C</span>
+      <div class="explanation">Section C lists a structural engineer who is an artist, an electrical engineer who is an opera singer, an opera singer who published mathematical research, and a mathematician who writes short stories.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 31</div>
+      <div class="question">mention of different focuses of books about mathematics</div>
+      <span class="answer ans-letter">B</span>
+      <div class="explanation">Section B says some books present mathematicians’ lives, others describe applications, and others go into procedures assuming algebra skills.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 32</div>
+      <div class="question">a contrast between reading this book and reading other kinds of publication</div>
+      <span class="answer ans-letter">E</span>
+      <div class="explanation">Section E says you will turn these pages much more slowly than when reading a novel or a newspaper.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 33</div>
+      <div class="question">a claim that the whole of the book is accessible to everybody</div>
+      <span class="answer ans-letter">A</span>
+      <div class="explanation">Section A says each chapter illustrates easy parts of mathematics and “anyone can understand every step in the reasoning”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 34</div>
+      <div class="question">a reference to different categories of intended readers of this book</div>
+      <span class="answer ans-letter">F</span>
+      <div class="explanation">Section F says the writer had two types of readers in mind: those turned off by an unpleasant maths episode, and maths aficionados.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 35–40</div><p>Complete the sentences below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 35</div>
+      <div class="question">Some areas of both music and mathematics are suitable for someone who is a <b>35 ………</b>.</div>
+      <span class="answer ans-letter">beginner</span>
+      <div class="explanation">Some difficult compositions have easy parts “so simple a beginner could play them”, and mathematics is the same.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 36</div>
+      <div class="question">It is sometimes possible to understand advanced mathematics using no more than a limited knowledge of <b>36 ………</b>.</div>
+      <span class="answer ans-letter">arithmetic</span>
+      <div class="explanation">Some advanced discoveries need at most a little arithmetic and common sense, not even algebra, geometry or trigonometry.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 37</div>
+      <div class="question">The writer intends to show that mathematics requires <b>37 ………</b> thinking, as well as analytical skills.</div>
+      <span class="answer ans-letter">intuitive</span>
+      <div class="explanation">The book shows mathematics’ “logical, yet intuitive, style of thinking”, and says mathematics is not restricted to the analytical because intuition plays a significant role.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 38</div>
+      <div class="question">Some books written by <b>38 ………</b> have had to leave out the mathematics that is central to their theories.</div>
+      <span class="answer ans-letter">scientists</span>
+      <div class="explanation">Other scientists have written books for non-scientists but had to omit the mathematics that underlies their theories.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 39</div>
+      <div class="question">The writer advises non-mathematical readers to perform <b>39 ………</b> while reading the book.</div>
+      <span class="answer ans-letter">experiments</span>
+      <div class="explanation">It may help to have pencil and paper ready “to check claims and carry out experiments”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 40</div>
+      <div class="question">A lawyer found that studying <b>40 ………</b> helped even more than other areas of mathematics in the study of law.</div>
+      <span class="answer ans-letter">theorems</span>
+      <div class="explanation">The lawyer credits success at law school to learning, “through the study of mathematics, and, in particular, theorems”, how to analyse complicated principles.</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>

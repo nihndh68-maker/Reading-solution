@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Academic Reading Test 79 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+
+  /* ===== extras for tables / notes (same palette) ===== */
+  .qintro table { border-collapse: collapse; width: 100%; font-size: .85rem; margin-top: .45rem; background:#fff; }
+  .qintro th, .qintro td { border: 1px solid var(--border); padding: .35rem .6rem; text-align: left; vertical-align: top; }
+  .qintro th { background: #e2e8f0; color: var(--primary); }
+  .qintro .tbl-t { font-weight: 700; color: var(--primary); margin: .5rem 0 .1rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>IELTS Academic Reading Test 79</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <!-- ===================== LEFT: PASSAGES WITH HIGHLIGHTS ===================== -->
+  <div class="column left">
+    <div class="section-title">READING PASSAGE 1</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+    <div class="passage-title">Raising the Mary Rose</div>
+
+    <p class="para">On 19 July 1545, English and French fleets were engaged in a sea battle off the coast of southern England in the area of water called the Solent, between Portsmouth and the Isle of Wight. Among the English vessels was a warship by the name of Mary Rose. Built in Portsmouth some 35 years earlier, she had had a long and successful fighting career, and was a favourite of King Henry VIII. <span class="hl">Accounts of what happened to the ship vary: while witnesses agree that she was not hit by the French, some maintain that she was outdated, overladen and sailing too low in the water, others that she was mishandled by undisciplined crew</span><span class="mark">1</span>. What is undisputed, however, is that the Mary Rose sank into the Solent that day, taking at least 500 men with her. After the battle, attempts were made to recover the ship, but these failed.</p>
+
+    <p class="para">The Mary Rose came to rest on the seabed, lying on her starboard (right) side at an angle of approximately 60 degrees. The hull (the body of the ship) acted as a trap for the sand and mud carried by Solent currents. As a result, the starboard side filled rapidly, leaving the exposed port (left) side to be eroded by marine organisms and mechanical degradation. <span class="hl">Because of the way the ship sank, nearly all of the starboard half survived intact</span><span class="mark">3</span>. During the seventeenth and eighteenth centuries, the entire site became covered with a layer of hard grey clay, which minimised further erosion.</p>
+
+    <p class="para">Then, <span class="hl">on 16 June 1836, some fishermen in the Solent found that their equipment was caught on an underwater obstruction, which turned out to be the Mary Rose</span><span class="mark">8</span>. Diver John Deane happened to be exploring another sunken ship nearby, and the fishermen approached him, asking him to free their gear. Deane dived down, and found the equipment caught on a timber protruding slightly from the seabed. Exploring further, he uncovered several other timbers and a bronze gun. <span class="hl">Deane continued diving on the site intermittently until 1840</span><span class="mark">6</span>, recovering several more guns, two bows, various timbers, part of a pump and various other small finds.</p>
+
+    <p class="para">The Mary Rose then faded into obscurity for another hundred years. But <span class="hl">in 1965, military historian and amateur diver Alexander McKee, in conjunction with the British Sub-Aqua Club, initiated a project</span><span class="mark">5</span> called 'Solent Ships'. While on paper this was a plan to examine a number of known wrecks in the Solent, what McKee really hoped for was to find the Mary Rose. Ordinary search techniques proved unsatisfactory, so McKee entered into collaboration with Harold E. Edgerton, professor of electrical engineering at the Massachusetts Institute of Technology. In 1967, Edgerton's side-scan sonar systems revealed a large, unusually shaped object, which McKee believed was the Mary Rose.</p>
+
+    <p class="para">Further excavations revealed stray pieces of timber and an iron gun. But the climax to the operation came when, on 5 May 1971, part of the ship's frame was uncovered. <span class="hl">McKee and his team now knew for certain that they had found the wreck, but were as yet unaware that it also housed a treasure trove of beautifully preserved artefacts</span><span class="mark">4</span>. Interest in the project grew, and in 1979, The Mary Rose Trust was formed, with Prince Charles as its President and Dr Margaret Rule its Archaeological Director. The decision whether or not to salvage the wreck was not an easy one, although an excavation in 1978 had shown that it might be possible to raise the hull. While the original aim was to raise the hull if at all feasible, <span class="hl">the operation was not given the go-ahead until January 1982, when all the necessary information was available</span><span class="mark">7</span>.</p>
+
+    <p class="para">An important factor in trying to salvage the Mary Rose was that the remaining hull was an open shell. This led to an important decision being taken: namely to carry out the lifting operation in three very distinct stages. The hull was attached to a lifting frame via a network of bolts and lifting wires. The problem of the hull being sucked back downwards into the mud was overcome by using 12 hydraulic jacks. These raised it a few centimetres over a period of several days, as the lifting frame rose slowly up its four legs. It was only when the hull was hanging freely from the lifting frame, clear of the seabed and the suction effect of the surrounding mud, that the salvage operation progressed to the second stage. In this stage, the lifting frame was fixed to a hook attached to a crane, and the hull was lifted completely clear of the seabed and transferred underwater into the lifting cradle. This required precise positioning to locate the legs into the 'stabbing guides' of the lifting cradle. The lifting cradle was designed to fit the hull using archaeological survey drawings, and was fitted with air bags to provide additional cushioning for the hull's delicate timber framework. The third and final stage was to lift the entire structure into the air, by which time the hull was also supported from below. Finally, on 11 October 1982, millions of people around the world held their breath as the timber skeleton of the Mary Rose was lifted clear of the water, ready to be returned home to Portsmouth.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-title">READING PASSAGE 2</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+    <div class="passage-title">What destroyed the civilization of Easter Island?</div>
+
+    <p class="para"><strong>A</strong> Easter Island, or Rapu Nui as it is known locally, is home to several hundred ancient human statues – the moai. After this remote Pacific island was settled by the Polynesians, it remained isolated for centuries. All the energy and resources that went into the moai – some of which are ten metres tall and weigh over 7,000 kilos – came from the island itself. Yet when Dutch explorers landed in 1722, they met a Stone Age culture. The moai were carved with stone tools, then transported for many kilometres, without the use of animals or wheels, to massive stone platforms. The identity of the moai builders was in doubt until well into the twentieth century. Thor Heyerdahl, the Norwegian ethnographer and adventurer, thought the statues had been created by pre-Inca peoples from Peru. Bestselling Swiss author Erich von Daniken believed they were built by stranded extraterrestrials. <span class="hl">Modern science – linguistic, archaeological and genetic evidence – has definitively proved the moai builders were Polynesians</span><span class="mark">14</span>, but not how they moved their creations. Local folklore maintains that the statues walked, while researchers have tended to assume the ancestors dragged the statues somehow, using ropes and logs.</p>
+
+    <p class="para"><strong>B</strong> When the Europeans arrived, Rapa Nui was grassland, with only a few scrawny trees. In the 1970s and 1980s, though, researchers found pollen preserved in lake sediments, which proved the island had been covered in lush palm forests for thousands of years. Only after the Polynesians arrived did those forests disappear. US scientist Jared Diamond believes that the Rapanui people – descendants of Polynesian settlers – wrecked their own environment. They had unfortunately settled on an extremely fragile island – dry, cool, and too remote to be properly fertilised by windblown volcanic ash. <span class="hl">When the islanders cleared the forests for firewood and farming</span><span class="mark">21</span>, the forests didn't grow back. <span class="hl">As trees became scarce and they could no longer construct wooden canoes for fishing, they ate birds. Soil erosion decreased their crop yields</span><span class="mark">15</span><span class="mark">22</span><span class="mark">23</span>. Before Europeans arrived, the Rapanui had descended into civil war and cannibalism, he maintains. The collapse of their isolated civilisation, Diamond writes, is a 'worst-case scenario for what may lie ahead of us in our own future'.</p>
+
+    <p class="para"><strong>C</strong> <span class="hl">The moai, he thinks, accelerated the self-destruction</span><span class="mark">16</span>. <span class="hl">Diamond interprets them as power displays by rival chieftains who, trapped on a remote little island, lacked other ways of asserting their dominance</span><span class="mark">26</span>. They competed by building ever bigger figures. <span class="hl">Diamond thinks they laid the moai on wooden sledges, hauled over log rails, but that required both a lot of wood and a lot of people</span><span class="mark">24</span><span class="mark">25</span>. To feed the people, even more land had to be cleared. When the wood was gone and civil war began, the islanders began toppling the moai. By the nineteenth century none were standing.</p>
+
+    <p class="para"><strong>D</strong> Archaeologists Terry Hunt of the University of Hawaii and Carl Lipo of California State University agree that Easter Island lost its lush forests and that it was an 'ecological catastrophe' – but they believe the islanders themselves weren't to blame. And the moai certainly weren't. Archaeological excavations indicate that <span class="hl">the Rapanui went to heroic efforts to protect the resources of their wind-lashed, infertile fields</span><span class="mark">17</span>. They built thousands of circular stone windbreaks and gardened inside them, and used broken volcanic rocks to keep the soil moist. In short, Hunt and Lipo argue, <span class="hl">the prehistoric Rapanui were pioneers of sustainable farming</span><span class="mark">17</span>.</p>
+
+    <p class="para"><strong>E</strong> <span class="hl">Hunt and Lipo contend that moai-building was an activity that helped keep the peace between islanders</span><span class="mark">26</span>. They also believe that <span class="hl">moving the moai required few people and no wood, because they were walked upright</span><span class="mark">25</span>. <span class="hl">On that issue, Hunt and Lipo say, archaeological evidence backs up Rapanui folklore</span><span class="mark">18</span>. Recent experiments indicate that as few as 18 people could, with three strong ropes and a bit of practice, easily manoeuvre a 1,000 kg moai replica a few hundred metres. The figures' fat bellies tilted them forward, and a D-shaped base allowed handlers to roll and rock them side to side.</p>
+
+    <p class="para"><strong>F</strong> Moreover, Hunt and Lipo are convinced that the settlers were not wholly responsible for the loss of the island's trees. Archaeological finds of nuts from the extinct Easter Island palm show tiny grooves, made by the teeth of Polynesian rats. <span class="hl">The rats arrived along with the settlers, and in just a few years, Hunt and Lipo calculate, they would have overrun the island</span><span class="mark">19</span>. They would have prevented the reseeding of the slow-growing palm trees and thereby doomed Rapa Nui's forest, even without the settlers' campaign of deforestation. No doubt the rats ate birds' eggs too. Hunt and Lipo also see no evidence that Rapanui civilisation collapsed when the palm forest did. They think its population grew rapidly and then remained more or less stable until the arrival of <span class="hl">the Europeans, who introduced deadly diseases to which islanders had no immunity. Then in the nineteenth century slave traders decimated the population</span><span class="mark">19</span>, which shrivelled to 111 people by 1877.</p>
+
+    <p class="para"><strong>G</strong> <span class="hl">Hunt and Lipo's vision, therefore, is one of an island populated by peaceful and ingenious moai builders and careful stewards of the land, rather than by reckless destroyers ruining their own environment and society</span><span class="mark">20</span>. 'Rather than a case of abject failure, Rapu Nui is an unlikely story of success', they claim. Whichever is the case, there are surely some valuable lessons which the world at large can learn from the story of Rapa Nui.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-title">READING PASSAGE 3</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+    <div class="passage-title">Neuroaesthetics</div>
+
+    <p class="para"><span class="hl">An emerging discipline called neuroaesthetics is seeking to bring scientific objectivity to the study of art, and has already given us a better understanding of many masterpieces</span><span class="mark">40</span>. <span class="hl">The blurred imagery of Impressionist paintings seems to stimulate the brain's amygdala, for instance. Since the amygdala plays a crucial role in our feelings</span><span class="mark">31</span>, that finding might explain why many people find these pieces so moving.</p>
+
+    <p class="para">Could the same approach also shed light on abstract twentieth-century pieces, from Mondrian's geometrical blocks of colour, to Pollock's seemingly haphazard arrangements of splashed paint on canvas? Sceptics believe that people claim to like such works simply because they are famous. <span class="hl">We certainly do have an inclination to follow the crowd. When asked to make simple perceptual decisions such as matching a shape to its rotated image, for example, people often choose a definitively wrong answer if they see others doing the same</span><span class="mark">27</span>. It is easy to imagine that this mentality would have even more impact on a fuzzy concept like art appreciation, where there is no right or wrong answer.</p>
+
+    <p class="para">Angelina Hawley-Dolan, of Boston College, Massachusetts, responded to this debate by asking volunteers to view pairs of paintings – either the creations of famous abstract artists or the doodles of infants, chimps and elephants. They then had to judge which they preferred. A third of the paintings were given no captions, while many were labelled incorrectly – volunteers might think they were viewing a chimp's messy brushstrokes when they were actually seeing an acclaimed masterpiece. In each set of trials, <span class="hl">volunteers generally preferred the work of renowned artists, even when they believed it was by an animal or a child. It seems that the viewer can sense the artist's vision in paintings, even if they can't explain why</span><span class="mark">28</span>.</p>
+
+    <p class="para">Robert Pepperell, an artist based at Cardiff University, creates ambiguous works that are neither entirely abstract nor clearly representational. In one study, Pepperell and his collaborators asked volunteers to decide how 'powerful' they considered an artwork to be, and whether they saw anything familiar in the piece. The longer they took to answer these questions, the more highly they rated the piece under scrutiny, and the greater their neural activity. <span class="hl">It would seem that the brain sees these images as puzzles, and the harder it is to decipher the meaning, the more rewarding is the moment of recognition</span><span class="mark">29</span>.</p>
+
+    <p class="para">And what about artists such as Mondrian, whose paintings consist exclusively of horizontal and vertical lines encasing blocks of colour? <span class="hl">Mondrian's works are deceptively simple, but eye-tracking studies confirm that they are meticulously composed</span><span class="mark">30</span>, and that simply rotating a piece radically changes the way we view it. With the originals, volunteers' eyes tended to stay longer on certain places in the image, but with the altered versions they would flit across a piece more rapidly. As a result, the volunteers considered the altered versions less pleasurable when they later rated the work.</p>
+
+    <p class="para">In a similar study, Oshin Vartanian of Toronto University asked volunteers to compare original paintings with ones which he had altered by moving objects around within the frame. He found that almost everyone preferred the original, whether it was a Van Gogh still life or an abstract by Miro. Vartanian also found that changing the composition of the paintings reduced activation in those brain areas linked with meaning and interpretation.</p>
+
+    <p class="para">In another experiment, Alex Forsythe of the University of Liverpool analysed the visual intricacy of different pieces of art, and her results suggest that <span class="hl">many artists use a key level of detail to please the brain. Too little and the work is boring, but too much results in a kind of</span><span class="mark">32</span> 'perceptual overload', according to Forsythe. What's more, appealing pieces both abstract and representational, show signs of 'fractals' – <span class="hl">repeated motifs recurring in different scales. Fractals are common throughout nature, for example in the shapes of mountain peaks or the branches of trees</span><span class="mark">33</span>. It is possible that our visual system, which evolved in the great outdoors, finds it easier to process such patterns.</p>
+
+    <p class="para">It is also intriguing that the brain appears to process movement when we see a handwritten letter, as if we are replaying the writer's moment of creation. This has led some to wonder whether Pollock's works feel so dynamic because the brain reconstructs the energetic actions the artist used as he painted. This may be down to our brain's 'mirror neurons', which are known to mimic others' actions. <span class="hl">The hypothesis will need to be thoroughly tested, however</span><span class="mark">35</span>. It might even be the case that we could use neuroaesthetic studies to understand the longevity of some pieces of artwork. <span class="hl">While the fashions of the time might shape what is currently popular, works that are best adapted to our visual system may be the most likely to linger once the trends of previous generations have been forgotten</span><span class="mark">36</span>.</p>
+
+    <p class="para">It's still early days for the field of neuroaesthetics – and these studies are probably only a taste of what is to come. <span class="hl">It would, however, be foolish to reduce art appreciation to a set of scientific laws</span><span class="mark">37</span>. <span class="hl">We shouldn't underestimate the importance of the style of a particular artist, their place in history and the artistic environment of their time</span><span class="mark">38</span>. <span class="hl">Abstract art offers both a challenge and the freedom to play with different interpretations. In some ways, it's not so different to science, where we are constantly looking for systems and decoding meaning</span><span class="mark">39</span> so that we can view and appreciate the world in a new way.</p>
+
+  </div>
+
+  <!-- ===================== RIGHT: FULL QUESTIONS + ANSWERS ===================== -->
+  <div class="column right">
+    <div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+    <div class="section-title">Reading Passage 1 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 1–4</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 1</div>
+      <div class="question">There is some doubt about what caused the Mary Rose to sink.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">The writer says accounts vary: some witnesses blame the ship being outdated, overladen and too low in the water, others blame the crew. Only the fact that she sank is undisputed.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 2</div>
+      <div class="question">The Mary Rose was the only ship to sink in the battle of 19 July 1545.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The passage only describes the Mary Rose sinking. It does not say whether other ships were lost in the battle.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 3</div>
+      <div class="question">Most of one side of the Mary Rose lay undamaged under the sea.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">The ship lay on her starboard side, which filled with sand and mud, so “nearly all of the starboard half survived intact”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 4</div>
+      <div class="question">Alexander McKee knew that the wreck would contain many valuable historical objects.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">When the frame was uncovered, McKee’s team knew they had found the wreck but were “as yet unaware” of the treasure trove of preserved artefacts inside.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 5–8</div><p>Look at the following statements (Questions 5–8) and the list of dates below. Match each statement with the correct date, A–G. <i>Write the correct letter, A–G.</i></p><p><b>List of dates</b></p><ul class="opts"><li><b>A</b> 1836</li><li><b>B</b> 1840</li><li><b>C</b> 1965</li><li><b>D</b> 1967</li><li><b>E</b> 1971</li><li><b>F</b> 1979</li><li><b>G</b> 1982</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 5</div>
+      <div class="question">A search for the Mary Rose was launched.</div>
+      <span class="answer ans-letter">C – 1965</span>
+      <div class="explanation">In 1965 Alexander McKee started the “Solent Ships” project, which was really a plan to find the Mary Rose.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 6</div>
+      <div class="question">One person's exploration of the Mary Rose site stopped.</div>
+      <span class="answer ans-letter">B – 1840</span>
+      <div class="explanation">Diver John Deane explored the site intermittently until 1840.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 7</div>
+      <div class="question">It was agreed that the hull of the Mary Rose should be raised.</div>
+      <span class="answer ans-letter">G – 1982</span>
+      <div class="explanation">The salvage operation was only given the go-ahead in January 1982, when all the necessary information was available.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 8</div>
+      <div class="question">The site of the Mary Rose was found by chance.</div>
+      <span class="answer ans-letter">A – 1836</span>
+      <div class="explanation">In 1836 fishermen’s gear snagged on an underwater obstruction that turned out to be the Mary Rose.</div>
+    </div>
+
+    <div class="hint">ℹ️ Questions 9–13 (the rest of Passage 1) were not included in the supplied material, so they are not shown here.</div>
+
+    <div class="divider"></div>
+    <div class="section-title">Reading Passage 2 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 14–20</div><p>Reading Passage 2 has seven paragraphs, A–G. Choose the correct heading for each paragraph from the list of headings below. <i>Write the correct number, i–ix.</i></p><p><b>List of Headings</b></p><ul class="opts"><li><b>i</b> Evidence of innovative environment management practices</li><li><b>ii</b> An undisputed answer to a question about the moai</li><li><b>iii</b> The future of the moai statues</li><li><b>iv</b> A theory which supports a local belief</li><li><b>v</b> The future of Easter Island</li><li><b>vi</b> Two opposing views about the Rapanui people</li><li><b>vii</b> Destruction outside the inhabitants' control</li><li><b>viii</b> How the statues made a situation worse</li><li><b>ix</b> Diminishing food resources</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 14 – Paragraph A</div>
+      <div class="question">Choose the correct heading for <b>Paragraph A</b>.</div>
+      <span class="answer ans-letter">ii – An undisputed answer to a question about the moai</span>
+      <div class="explanation">Paragraph A reviews wild theories about who made the moai (Peruvians, extraterrestrials), then states that modern science has “definitively proved” they were Polynesians. This is the undisputed answer.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 15 – Paragraph B</div>
+      <div class="question">Choose the correct heading for <b>Paragraph B</b>.</div>
+      <span class="answer ans-letter">ix – Diminishing food resources</span>
+      <div class="explanation">Paragraph B explains how food sources dwindled: with the trees gone there were no canoes for fishing, so the islanders ate birds, and soil erosion cut crop yields. (The supplied answer key gives vi here, but Paragraph B only presents Diamond’s view, so ix is the heading that fits the text.)</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 16 – Paragraph C</div>
+      <div class="question">Choose the correct heading for <b>Paragraph C</b>.</div>
+      <span class="answer ans-letter">viii – How the statues made a situation worse</span>
+      <div class="explanation">Diamond thinks the moai “accelerated the self-destruction”: hauling them needed wood and people, so even more land was cleared to feed the workers.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 17 – Paragraph D</div>
+      <div class="question">Choose the correct heading for <b>Paragraph D</b>.</div>
+      <span class="answer ans-letter">i – Evidence of innovative environment management practices</span>
+      <div class="explanation">Hunt and Lipo describe thousands of stone windbreaks and the use of broken volcanic rock to keep soil moist. These are innovative ways of managing the environment.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 18 – Paragraph E</div>
+      <div class="question">Choose the correct heading for <b>Paragraph E</b>.</div>
+      <span class="answer ans-letter">iv – A theory which supports a local belief</span>
+      <div class="explanation">Hunt and Lipo’s theory that the moai were “walked” upright is backed by archaeological evidence and matches local folklore that the statues walked.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 19 – Paragraph F</div>
+      <div class="question">Choose the correct heading for <b>Paragraph F</b>.</div>
+      <span class="answer ans-letter">vii – Destruction outside the inhabitants' control</span>
+      <div class="explanation">Rats, European diseases and slave traders are all causes of destruction that were outside the control of the islanders themselves.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 20 – Paragraph G</div>
+      <div class="question">Choose the correct heading for <b>Paragraph G</b>.</div>
+      <span class="answer ans-letter">vi – Two opposing views about the Rapanui people</span>
+      <div class="explanation">Paragraph G contrasts Hunt and Lipo’s picture of peaceful, careful stewards with the view of reckless destroyers, i.e. two opposing views of the Rapanui. (The supplied answer key gives v here, but the paragraph is about contrasting views, not the future of the island.)</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 21–24</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Jared Diamond’s view</b></p><p>Diamond believes that the Polynesian settlers on Rapa Nui destroyed its forests, cutting down its trees for fuel and clearing land for <b>21 ………</b>. Twentieth-century discoveries of pollen prove that Rapu Nui had once been covered in palm forests, which had turned into grassland by the time the Europeans arrived on the island. When the islanders were no longer able to build the <b>22 ………</b> they needed to go fishing, they began using the island’s <b>23 ………</b> as a food source, according to Diamond. Diamond also claims that the moai were built to show the power of the island’s chieftains, and that the methods of transporting the statues needed not only a great number of people, but also a great deal of <b>24 ………</b>.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 21</div>
+      <div class="question">Clearing land for <b>21 ………</b>.</div>
+      <span class="answer ans-letter">farming</span>
+      <div class="explanation">When the islanders cleared the forests for firewood and farming, the forests did not grow back.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 22</div>
+      <div class="question">No longer able to build the <b>22 ………</b> they needed to go fishing.</div>
+      <span class="answer ans-letter">canoes</span>
+      <div class="explanation">As trees became scarce, they could no longer construct wooden canoes for fishing.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 23</div>
+      <div class="question">They began using the island’s <b>23 ………</b> as a food source.</div>
+      <span class="answer ans-letter">birds</span>
+      <div class="explanation">Without canoes for fishing, “they ate birds”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 24</div>
+      <div class="question">Transporting the statues needed a great number of people and a great deal of <b>24 ………</b>.</div>
+      <span class="answer ans-letter">wood</span>
+      <div class="explanation">Diamond thinks the moai were hauled on wooden sledges over log rails, which needed “a lot of wood and a lot of people”.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 25 & 26</div><p>Choose <b>TWO</b> letters, A–E. On what points do Hunt and Lipo disagree with Diamond?</p><ul class="opts"><li><b>A</b> the period when the moai were created</li><li><b>B</b> how the moai were transported</li><li><b>C</b> the impact of the moai on Rapanui society</li><li><b>D</b> how the moai were carved</li><li><b>E</b> the origins of the people who made the moai</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Questions 25 &amp; 26</div>
+      <div class="question">On what points do Hunt and Lipo disagree with Diamond?</div>
+      <span class="answer ans-letter">B and C (in either order)</span>
+      <div class="explanation">B: Diamond says the moai were hauled on sledges over log rails using lots of wood and people, while Hunt and Lipo say they were walked upright by few people and no wood. C: Diamond says the moai fuelled rivalry and self-destruction, while Hunt and Lipo say moai-building helped keep the peace.</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">Reading Passage 3 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Choose the correct letter, <b>A, B, C or D</b>.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 27</div>
+      <div class="question">In the second paragraph, the writer refers to a shape-matching test in order to illustrate<ul class="opts"><li><b>A</b> the subjective nature of art appreciation</li><li><b>B</b> the reliance of modern art on abstract forms</li><li><b>C</b> our tendency to be influenced by the opinions of others</li><li><b>D</b> a common problem encountered when processing visual data</li></ul></div>
+      <span class="answer ans-letter">C – our tendency to be influenced by the opinions of others</span>
+      <div class="explanation">The test shows that people often choose a wrong answer if they see others doing the same, which supports the point that “we have an inclination to follow the crowd”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 28</div>
+      <div class="question">Angelina Hawley-Dolan’s findings indicate that people<ul class="opts"><li><b>A</b> mostly favour works of art which they know well</li><li><b>B</b> hold fixed ideas about what makes a good work of art</li><li><b>C</b> are often misled by their initial expectations of a work of art</li><li><b>D</b> have the ability to perceive the intention behind works of art</li></ul></div>
+      <span class="answer ans-letter">D – have the ability to perceive the intention behind works of art</span>
+      <div class="explanation">Volunteers preferred the renowned artists’ work even when it was labelled as an animal’s or child’s, so “the viewer can sense the artist’s vision”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 29</div>
+      <div class="question">Results of studies involving Robert Pepperell’s pieces suggest that people<ul class="opts"><li><b>A</b> can appreciate a painting without fully understanding it</li><li><b>B</b> find it satisfying to work out what a painting represents</li><li><b>C</b> vary widely in the time they spend looking at paintings</li><li><b>D</b> generally prefer representational art to abstract art</li></ul></div>
+      <span class="answer ans-letter">B – find it satisfying to work out what a painting represents</span>
+      <div class="explanation">The harder the meaning was to decipher, the more rewarding the moment of recognition, so working out what a painting shows is satisfying.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 30</div>
+      <div class="question">What do the experiments described in the fifth paragraph suggest about the paintings of Mondrian?<ul class="opts"><li><b>A</b> They are more carefully put together than they appear</li><li><b>B</b> They can be interpreted in a number of different ways</li><li><b>C</b> They challenge our assumptions about shape and colour</li><li><b>D</b> They are easier to appreciate than many other abstract works</li></ul></div>
+      <span class="answer ans-letter">A – They are more carefully put together than they appear</span>
+      <div class="explanation">Mondrian’s works are “deceptively simple”, but eye-tracking studies show they are meticulously composed, and rotating one radically changes how we view it.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 31–33</div><p>Complete the summary using the list of words, A–H, below.</p><p><b>Art and the brain</b></p><p>The discipline of neuroaesthetics aims to bring scientific objectivity to the study of art. Neurological studies of the brain, for example, demonstrate the impact which Impressionist paintings have on our <b>31 ………</b>. Alex Forsythe of the University of Liverpool believes many artists give their works the precise degree of <b>32 ………</b> which most appeals to the viewer’s brain. She also observes that pleasing works of art often contain certain repeated <b>33 ………</b> which occur frequently in the natural world.</p><ul class="opts"><li><b>A</b> interpretation</li><li><b>B</b> complexity</li><li><b>C</b> emotions</li><li><b>D</b> movements</li><li><b>E</b> skill</li><li><b>F</b> layout</li><li><b>G</b> concern</li><li><b>H</b> images</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 31</div>
+      <div class="question">impact of Impressionist paintings on our …</div>
+      <span class="answer ans-letter">C – emotions</span>
+      <div class="explanation">Impressionist imagery stimulates the amygdala, which plays a crucial role in our feelings.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 32</div>
+      <div class="question">the precise degree of … which most appeals to the brain</div>
+      <span class="answer ans-letter">B – complexity</span>
+      <div class="explanation">Forsythe says artists use a key level of detail: too little is boring and too much causes “perceptual overload”, so the right level of visual intricacy (complexity) pleases the brain.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 33</div>
+      <div class="question">certain repeated … which occur frequently in nature</div>
+      <span class="answer ans-letter">H – images</span>
+      <div class="explanation">Appealing pieces show “fractals”, repeated motifs recurring at different scales, which are common throughout nature.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 34–39</div><p>Do the following statements agree with the views of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the views of the writer<br><b>NO</b> if the statement contradicts the views of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 34</div>
+      <div class="question">Forsythe’s findings contradicted previous beliefs on the function of ‘fractals’ in art.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">Fractals are mentioned as a feature of appealing art, but the passage never says what was previously believed about them.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 35</div>
+      <div class="question">Certain ideas regarding the link between ‘mirror neurons’ and art appreciation require further verification.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">After describing the mirror-neuron idea, the writer says the hypothesis “will need to be thoroughly tested”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 36</div>
+      <div class="question">People’s taste in paintings depends entirely on the current artistic trends of the period.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">Fashions may shape what is currently popular, but works best adapted to our visual system are the most likely to last once trends are forgotten.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 37</div>
+      <div class="question">Scientists should seek to define the precise rules which govern people’s reactions to works of art.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">The writer says it would be “foolish to reduce art appreciation to a set of scientific laws”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 38</div>
+      <div class="question">Art appreciation should always involve taking into consideration the cultural context in which an artist worked.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">The writer says we should not underestimate the artist’s style, their place in history and the artistic environment of their time.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 39</div>
+      <div class="question">It is easier to find meaning in the field of science than in that of art.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">The writer says abstract art offers freedom to play with interpretations, and is “not so different to science”, where we also decode meaning. No ease difference is claimed.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Question 40</div><p>Choose the correct letter, <b>A, B, C or D</b>.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 40</div>
+      <div class="question">What would be the most appropriate subtitle for the article?<ul class="opts"><li><b>A</b> Some scientific insights into how the brain responds to abstract art</li><li><b>B</b> Recent studies focusing on the neural activity of abstract artists</li><li><b>C</b> A comparison of the neurological bases of abstract and representational art</li><li><b>D</b> How brain research has altered public opinion about abstract art</li></ul></div>
+      <span class="answer ans-letter">A – Some scientific insights into how the brain responds to abstract art</span>
+      <div class="explanation">The article reviews several studies on how the brain reacts to (mostly abstract) art. It is not about artists’ own neural activity, a comparison of abstract and representational art, or changes in public opinion.</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>

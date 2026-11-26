@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Academic Reading Test 4 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+
+  /* ===== extras for tables / notes (same palette) ===== */
+  .qintro table { border-collapse: collapse; width: 100%; font-size: .85rem; margin-top: .45rem; background:#fff; }
+  .qintro th, .qintro td { border: 1px solid var(--border); padding: .35rem .6rem; text-align: left; vertical-align: top; }
+  .qintro th { background: #e2e8f0; color: var(--primary); }
+  .qintro .tbl-t { font-weight: 700; color: var(--primary); margin: .5rem 0 .1rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>IELTS Academic Reading Test 4</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <!-- ===================== LEFT: PASSAGES WITH HIGHLIGHTS ===================== -->
+  <div class="column left">
+    <div class="section-title">READING PASSAGE 1</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+    <div class="passage-title">Research using twins</div>
+
+    <p class="para">To biomedical researchers all over the world, twins offer a precious opportunity to untangle the influence of genes and the environment – of nature and nurture. Because identical twins come from a single fertilized egg that splits into two, they share virtually the same genetic code. <span class="hl">Any differences between them – one twin having younger looking skin, for example – must be due to environmental factors such as less time spent in the sun</span><span class="mark">1</span>.</p>
+
+    <p class="para">Alternatively, by comparing the experiences of identical twins with those of fraternal twins, who come from separate eggs and share on average half their DNA, researchers can quantify the extent to which our genes affect our lives. If identical twins are more similar to each other with respect to an ailment than fraternal twins are, then vulnerability to the disease must be rooted at least in part in heredity.</p>
+
+    <p class="para">These two lines of research – studying the differences between identical twins to pinpoint the influence of environment, and comparing identical twins with fraternal ones to measure the role of inheritance – have been crucial to understanding the interplay of nature and nurture in determining our personalities, behavior, and vulnerability to disease.</p>
+
+    <p class="para">The idea of using twins to measure the influence of heredity dates back to 1875, when <span class="hl">the English scientist Francis Galton first suggested the approach (and coined the phrase 'nature and nurture')</span><span class="mark">5</span><span class="mark">8</span>. But twin studies took a surprising twist in the 1980s, <span class="hl">with the arrival of studies into identical twins who had been separated at birth and reunited as adults. Over two decades 137 sets of twins eventually visited Thomas Bouchard's lab</span><span class="mark">9</span> in what became known as the Minnesota Study of Twins Reared Apart. Numerous tests were carried out on the twins, and they were each asked more than 15,000 questions.</p>
+
+    <p class="para">Bouchard and his colleagues used this mountain of data to identify how far twins were affected by their genetic makeup. <span class="hl">The key to their approach was a statistical concept called heritability</span><span class="mark">7</span>. In broad terms, the heritability of a trait measures the extent to which differences among members of a population can be explained by differences in their genetics. And wherever Bouchard and other scientists looked, it seemed, they found the invisible hand of genetic influence helping to shape our lives.</p>
+
+    <p class="para">Lately, however, twin studies have helped lead scientists to a radical new conclusion: that nature and nurture are not the only elemental forces at work. According to a recent field called epigenetics, there is a third factor also in play, one that in some cases serves as a bridge between the environment and our genes, and in others operates on its own to shape who we are.</p>
+
+    <p class="para"><span class="hl">Epigenetic processes are chemical reactions tied to neither nature nor nurture but representing what researchers have called a 'third component'</span><span class="mark">4</span><span class="mark">10</span>. <span class="hl">These reactions influence how our genetic code is expressed: how each gene is strengthened or weakened, even turned on or off, to build our bones, brains and all the other parts of our bodies</span><span class="mark">10</span><span class="mark">11</span>.</p>
+
+    <p class="para">If you think of our DNA as an immense piano keyboard and our genes as the keys – each key symbolizing a segment of DNA responsible for a particular note, or trait, and all the keys combining to make us who we are – then epigenetic processes determine when and how each key can be struck, changing the tune being played.</p>
+
+    <p class="para"><span class="hl">One way the study of epigenetics is revolutionizing our understanding of biology is by revealing a mechanism by which the environment directly impacts on genes</span><span class="mark">12</span>. Studies of animals, for example, have shown that <span class="hl">when a rat experiences stress during pregnancy, it can cause epigenetic changes in a fetus that lead to behavioral problems as the rodent grows up</span><span class="mark">13</span>. Other epigenetic processes appear to occur randomly, while others are normal, such as those that guide embryonic cells as they become heart, brain, or liver cells, for example.</p>
+
+    <p class="para">Geneticist Danielle Reed has worked with many twins over the years and thought deeply about what twin studies have taught us. 'It's very clear when you look at twins that much of what they share is hardwired,' she says. 'Many things about them are absolutely the same and unalterable. But it's also clear, when you get to know them, that other things about them are different. Epigenetics is the origin of a lot of those differences, in my view.'</p>
+
+    <p class="para">Reed credits Thomas Bouchard's work for today's surge in twin studies. 'He was the trailblazer,' she says. 'We forget that 50 years ago things like heart disease were thought to be caused entirely by lifestyle. Schizophrenia was thought to be due to poor mothering. Twin studies have allowed us to be more reflective about what people are actually born with and what's caused by experience.'</p>
+
+    <p class="para">Having said that, Reed adds, <span class="hl">the latest work in epigenetics promises to take our understanding even further</span><span class="mark">6</span>. 'What I like to say is that nature writes some things in pencil and some things in pen,' she says. Things written in pen you can't change. That's DNA. But things written in pencil you can. That's epigenetics. Now that we're actually able to look at the DNA and see where the pencil writings are, it's sort of a whole new world.'</p>
+
+    <div class="divider"></div>
+
+    <div class="section-title">READING PASSAGE 2</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+    <div class="passage-title">An introduction to film sound</div>
+
+    <p class="para">Though we might think of film as an essentially visual experience, <span class="hl">we really cannot afford to underestimate the importance of film sound</span><span class="mark">14</span>. A meaningful sound track is often as complicated as the image on the screen, and is ultimately just as much the responsibility of the director. The entire sound track consists of three essential ingredients: the human voice, sound effects and music. <span class="hl">These three tracks must be mixed and balanced so as to produce the necessary emphases which in turn create desired effects</span><span class="mark">24</span>. Topics which essentially refer to the three previously mentioned tracks are discussed below. They include dialogue, synchronous and asynchronous sound effects, and music.</p>
+
+    <p class="para">Let us start with dialogue. As is the case with stage drama, <span class="hl">dialogue serves to tell the story and expresses feelings and motivations of characters as well</span><span class="mark">25</span>. <span class="hl">Often with film characterization the audience perceives little or no difference between the character and the actor. Thus, for example, the actor Humphrey Bogart is the character Sam Spade; film personality and life personality seem to merge</span><span class="mark">15</span>. Perhaps this is because the very texture of a performer's voice supplies an element of character.</p>
+
+    <p class="para"><span class="hl">When voice textures fit the performer's physiognomy and gestures, a whole and very realistic persona emerges</span><span class="mark">26</span>. The viewer sees not an actor working at his craft, but another human being struggling with life. It is interesting to note that how dialogue is used and the very amount of dialogue used varies widely among films. For example, in the highly successful science-fiction film 2001, <span class="hl">little dialogue was evident, and most of it was banal and of little intrinsic interest. In this way the film-maker was able to portray what Thomas Sobochack and Vivian Sobochack call, in An Introduction to Film, the 'inadequacy of human responses when compared with the magnificent technology created by man and the visual beauties of the universe'</span><span class="mark">16</span>.</p>
+
+    <p class="para">The comedy Bringing Up Baby, on the other hand, presents practically non-stop dialogue delivered at breakneck speed. <span class="hl">This use of dialogue underscores not only the dizzy quality of the character played by Katherine Hepburn, but also the absurdity of the film itself and thus its humor</span><span class="mark">17</span>. The audience is bounced from gag to gag and conversation to conversation; there is no time for audience reflection. The audience is caught up in a whirlwind of activity in simply managing to follow the plot. This film presents pure escapism – largely due to its frenetic dialogue.</p>
+
+    <p class="para">Synchronous sound effects are those sounds which are synchronized or matched with what is viewed. For example, if the film portrays a character playing the piano, the sounds of the piano are projected. Synchronous sounds contribute to the realism of film and also help to create a particular atmosphere. For example, the 'click' of a door being opened may simply serve to convince the audience that the image portrayed is real, and the audience may only subconsciously note the expected sound. However, <span class="hl">if the 'click' of an opening door is part of an ominous action such as a burglary, the sound mixer may call attention to the 'click' with an increase in volume; this helps to engage the audience in a moment of suspense</span><span class="mark">18</span>.</p>
+
+    <p class="para">Asynchronous sound effects, on the other hand, are not matched with a visible source of the sound on screen. Such sounds are included so as to provide an appropriate emotional nuance, and they may also add to the realism of the film. For example, a film-maker might opt to include the background sound of an ambulance's siren while the foreground sound and image portrays an arguing couple. The asynchronous ambulance siren underscores the psychic injury incurred in the argument; at the same time the noise of the siren adds to the realism of the film by acknowledging the film's city setting.</p>
+
+    <p class="para">We are probably all familiar with <span class="hl">background music in films, which has become so ubiquitous as to be noticeable in its absence</span><span class="mark">19</span>. We are aware that it is used to add emotion and rhythm. <span class="hl">Usually not meant to be noticeable, it often provides a tone or an emotional attitude toward the story and/or the characters depicted</span><span class="mark">23</span>. In addition, <span class="hl">background music often foreshadows a change in mood</span><span class="mark">20</span>. For example, dissonant music may be used in film to indicate an approaching (but not yet visible) menace or disaster.</p>
+
+    <p class="para"><span class="hl">Background music may aid viewer understanding by linking scenes</span><span class="mark">22</span>. For example, a particular musical theme associated with an individual character or situation may be repeated at various points in a film in order to remind the audience of salient motives or ideas.</p>
+
+    <p class="para">Film sound comprises conventions and innovations. We have come to expect an acceleration of music during car chases and creaky doors in horror films. Yet, it is important to note as well that sound is often brilliantly conceived. <span class="hl">The effects of sound are often largely subtle and often are noted by only our subconscious minds</span><span class="mark">23</span>. We need to foster an awareness of film sound as well as film space so as to truly appreciate an art form that sprang to life during the twentieth century – the modern film.</p>
+
+    <div class="divider"></div>
+
+    <div class="section-title">READING PASSAGE 3</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+    <div class="passage-title">This Marvelous Invention</div>
+
+    <p class="para"><strong>A</strong> Of all mankind's manifold creations, language must take pride of place. <span class="hl">Other inventions – the wheel, agriculture, sliced bread – may have transformed our material existence</span><span class="mark">33</span>, but <span class="hl">the advent of language is what made us human</span><span class="mark">34</span>. <span class="hl">Compared to language, all other inventions pale in significance, since everything we have ever achieved depends on language and originates from it</span><span class="mark">27</span>. <span class="hl">Without language, we could never have embarked on our ascent to unparalleled power over all other animals, and even over nature itself</span><span class="mark">37</span>.</p>
+
+    <p class="para"><strong>B</strong> But language is foremost not just because it came first. <span class="hl">In its own right it is a tool of extraordinary sophistication, yet based on an idea of ingenious simplicity</span><span class="mark">35</span>: 'this marvellous invention of composing out of twenty-five or thirty sounds that infinite variety of expressions which, whilst having in themselves no likeness to what is in our mind, allow us to disclose to others its whole secret, and to make known to those who cannot penetrate it all that we imagine, and all the various stirrings of our soul'. This was how, in 1660, the renowned French grammarians of the Port-Royal abbey near Versailles distilled the essence of language, and <span class="hl">no one since has celebrated more eloquently the magnitude of its achievement. Even so, there is just one flaw in all these hymns of praise, for the homage to language's unique accomplishment conceals a simple yet critical incongruity</span><span class="mark">38</span>. <span class="hl">Language is mankind's greatest invention – except, of course, that it was never invented</span><span class="mark">28</span>. This apparent paradox is at the core of our fascination with language, and it holds many of its secrets.</p>
+
+    <p class="para"><strong>C</strong> Language often seems so skillfully drafted that one can hardly imagine it as anything other than the perfected handiwork of a master craftsman. How else could this instrument make so much out of barely three dozen measly morsels of sound? In themselves, these configurations of mouth – p,f,b,v,t,d,k,g,s,h,a,e and so on – amount to nothing more than a few haphazard spits and splutters, random noises with no meaning, no ability to express, no power to explain. <span class="hl">But run them through the cogs and wheels of the language machine, let it arrange them in some very special orders, and there is nothing that these meaningless streams of air cannot do</span><span class="mark">29</span>: from sighing the interminable boredom of existence to unravelling the fundamental order of the universe.</p>
+
+    <p class="para"><strong>D</strong> <span class="hl">The most extraordinary thing about language, however, is that one doesn't have to be a genius to set its wheels in motion</span><span class="mark">36</span>. <span class="hl">The language machine allows just about everybody – from pre-modern foragers in the subtropical savannah, to post-modern philosophers in the suburban sprawl – to tie these meaningless sounds together into an infinite variety of subtle senses</span><span class="mark">30</span>, and all apparently without the slightest exertion. Yet it is precisely this deceptive ease which makes language a victim of its own success, since in everyday life its triumphs are usually taken for granted. The wheels of language run so smoothly that one rarely bothers to stop and think about all the resourcefulness and expertise that must have gone into making it tick. Language conceals art.</p>
+
+    <p class="para"><strong>E</strong> <span class="hl">Often, it is only the estrangement of foreign tongues, with their many exotic and outlandish features, that brings home the wonder of language's design</span><span class="mark">31</span>. One of the showiest stunts that some languages can pull off is an ability to build up words of breath-breaking length, and thus express in one word what English takes a whole sentence to say. The Turkish word fehirliliftiremediklerimizdensiniz, to take one example, means nothing less than 'you are one of those whom we can't turn into a town-dweller'. (In case you were wondering, this monstrosity really is one word, not merely many different words squashed together – most of its components cannot even stand up on their own.)</p>
+
+    <p class="para"><strong>F</strong> And if that sounds like some one-off freak, then consider Sumerian, the language spoken on the banks of the Euphrates some 5,000 years ago by <span class="hl">the people who invented writing and thus enabled the documentation of history</span><span class="mark">40</span>. A Sumerian word like munintuma'a ('when he had made it suitable for her') might seem rather trim compared to the Turkish colossus above. What is so impressive about it, however, is not its lengthiness but rather the reverse – the thrifty compactness of its construction. The word is made up of different slots, each corresponding to a particular portion of meaning. This sleek design allows single sounds to convey useful information, and in fact <span class="hl">even the absence of a sound has been enlisted to express something specific</span><span class="mark">32</span>. If you were to ask which bit in the Sumerian word corresponds to the pronoun 'it' in the English translation 'when he had made it suitable for her', then the answer would have to be nothing. Mind you, a very particular kind of nothing: the nothing that stands in the empty slot in the middle. The technology is so fine-tuned then that even a non-sound, when carefully placed in a particular position, has been invested with a specific function. Who could possibly have come up with such a nifty contraption?</p>
+
+  </div>
+
+  <!-- ===================== RIGHT: FULL QUESTIONS + ANSWERS ===================== -->
+  <div class="column right">
+    <div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+    <div class="section-title">Reading Passage 1 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 1–4</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 1</div>
+      <div class="question">There may be genetic causes for the differences in how young the skin of identical twins looks.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">Identical twins share virtually the same genetic code, so any differences between them, such as younger-looking skin, “must be due to environmental factors”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 2</div>
+      <div class="question">Twins are at greater risk of developing certain illnesses than non-twins.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The passage compares identical and fraternal twins on vulnerability to disease, but never compares twins with non-twins.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 3</div>
+      <div class="question">Bouchard advertised in newspapers for twins who had been separated at birth.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">We are told 137 sets of separated twins visited Bouchard’s lab, but not how he found them.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 4</div>
+      <div class="question">Epigenetic processes are different from both genetic and environmental processes.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">They are chemical reactions “tied to neither nature nor nurture”, i.e. a “third component”.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 5–9</div><p>Look at the following statements (Questions 5–9) and the list of researchers below. Match each statement with the correct researcher, A, B or C. <i>Write the correct letter.</i> <b>NB</b> You may use any letter more than once.</p><p><b>List of researchers</b></p><ul class="opts"><li><b>A</b> Francis Galton</li><li><b>B</b> Thomas Bouchard</li><li><b>C</b> Danielle Reed</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 5</div>
+      <div class="question">invented a term used to distinguish two factors affecting human characteristics</div>
+      <span class="answer ans-letter">A – Francis Galton</span>
+      <div class="explanation">Galton coined the phrase “nature and nurture”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 6</div>
+      <div class="question">expressed the view that the study of epigenetics will increase our knowledge</div>
+      <span class="answer ans-letter">C – Danielle Reed</span>
+      <div class="explanation">Reed says the latest work in epigenetics “promises to take our understanding even further”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 7</div>
+      <div class="question">developed a mathematical method of measuring genetic influences</div>
+      <span class="answer ans-letter">B – Thomas Bouchard</span>
+      <div class="explanation">Bouchard and his colleagues used the statistical concept of heritability to identify how far twins were affected by their genes.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 8</div>
+      <div class="question">pioneered research into genetics using twins</div>
+      <span class="answer ans-letter">A – Francis Galton</span>
+      <div class="explanation">The idea of using twins to measure the influence of heredity dates back to 1875, when Galton first suggested the approach.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 9</div>
+      <div class="question">carried out research into twins who had lived apart</div>
+      <span class="answer ans-letter">B – Thomas Bouchard</span>
+      <div class="explanation">Bouchard’s lab ran the Minnesota Study of Twins Reared Apart, with identical twins separated at birth and reunited as adults.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 10–13</div><p>Complete the summary using the list of words, A–F, below.</p><p><b>Epigenetic processes</b></p><p>In epigenetic processes, <b>10 ………</b> influence the activity of our genes, for example in creating our internal <b>11 ………</b>. The study of epigenetic processes is uncovering a way in which our genes can be affected by our <b>12 ………</b>. One example is that if a pregnant rat suffers stress, the new-born rat may later show problems in its <b>13 ………</b>.</p><ul class="opts"><li><b>A</b> Nurture</li><li><b>B</b> Organs</li><li><b>C</b> Code</li><li><b>D</b> Chemicals</li><li><b>E</b> Environment</li><li><b>F</b> behaviour</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 10</div>
+      <div class="question">In epigenetic processes, … influence the activity of our genes</div>
+      <span class="answer ans-letter">D – Chemicals</span>
+      <div class="explanation">Epigenetic processes are chemical reactions that influence how our genes are expressed.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 11</div>
+      <div class="question">… for example in creating our internal …</div>
+      <span class="answer ans-letter">B – Organs</span>
+      <div class="explanation">These reactions help build “our bones, brains and all the other parts of our bodies”, i.e. our internal organs.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 12</div>
+      <div class="question">our genes can be affected by our …</div>
+      <span class="answer ans-letter">E – Environment</span>
+      <div class="explanation">Epigenetics reveals a mechanism by which the environment directly impacts on genes.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 13</div>
+      <div class="question">the new-born rat may later show problems in its …</div>
+      <span class="answer ans-letter">F – behaviour</span>
+      <div class="explanation">Stress during pregnancy can cause epigenetic changes in the fetus that lead to behavioural problems.</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">Reading Passage 2 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 14–18</div><p>Choose the correct letter, <b>A, B, C or D</b>.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 14</div>
+      <div class="question">In the first paragraph, the writer makes a point that<ul class="opts"><li><b>A</b> the director should plan the sound track at an early stage in filming.</li><li><b>B</b> it would be wrong to overlook the contribution of sound to the artistry of films.</li><li><b>C</b> the music industry can have a beneficial influence on sound in film.</li><li><b>D</b> it is important for those working on the sound in a film to have sole responsibility for it.</li></ul></div>
+      <span class="answer ans-letter">B – it would be wrong to overlook the contribution of sound to the artistry of films</span>
+      <div class="explanation">The writer says “we really cannot afford to underestimate the importance of film sound”, and that a sound track is often as complicated as the image.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 15</div>
+      <div class="question">One reason that the writer refers to Humphrey Bogart is to exemplify<ul class="opts"><li><b>A</b> the importance of the actor and the character appearing to have similar personalities.</li><li><b>B</b> the audience’s wish that actors are visually appropriate for their roles.</li><li><b>C</b> the value of the actor having had similar feelings to the character.</li><li><b>D</b> the audience’s preference for dialogue to be as authentic as possible.</li></ul></div>
+      <span class="answer ans-letter">A – the importance of the actor and the character appearing to have similar personalities</span>
+      <div class="explanation">Audiences often see little difference between character and actor: Bogart “is” Sam Spade, as film personality and life personality merge.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 16</div>
+      <div class="question">In the third paragraph, the writer suggests that<ul class="opts"><li><b>A</b> audiences are likely to be critical of film dialogue that does not reflect their own experience.</li><li><b>B</b> film dialogue that appears to be dull may have a specific purpose.</li><li><b>C</b> filmmakers vary considerably in the skill with which they handle dialogue.</li><li><b>D</b> the most successful films are those with dialogue of a high quality.</li></ul></div>
+      <span class="answer ans-letter">B – film dialogue that appears to be dull may have a specific purpose</span>
+      <div class="explanation">The banal dialogue in 2001 was deliberate: it let the film-maker portray the inadequacy of human responses compared with technology and the visual beauty of the universe.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 17</div>
+      <div class="question">What does the writer suggest about Bringing Up Baby?<ul class="opts"><li><b>A</b> The plot suffers from the filmmaker’s wish to focus on humorous dialogue.</li><li><b>B</b> The dialogue helps to make it one of the best comedy films ever produced.</li><li><b>C</b> There is a mismatch between the speed of the dialogue and the speed of actions.</li><li><b>D</b> The nature of the dialogue emphasises key elements of the film.</li></ul></div>
+      <span class="answer ans-letter">D – The nature of the dialogue emphasises key elements of the film</span>
+      <div class="explanation">The non-stop, fast dialogue underscores the dizzy quality of Katharine Hepburn’s character and the absurdity, and so the humour, of the film.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 18</div>
+      <div class="question">The writer refers to the ‘click’ of a door to make the point that realistic sounds<ul class="opts"><li><b>A</b> are often used to give the audience a false impression of events in the film.</li><li><b>B</b> may be interpreted in different ways by different members of the audience.</li><li><b>C</b> may be modified in order to manipulate the audience’s response to the film.</li><li><b>D</b> tend to be more significant in films presenting realistic situations.</li></ul></div>
+      <span class="answer ans-letter">C – may be modified in order to manipulate the audience’s response to the film</span>
+      <div class="explanation">In a burglary scene the sound mixer may increase the volume of the click to draw attention to it and engage the audience in suspense.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 19–23</div><p>Do the following statements agree with the information given in Reading Passage 2?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 19</div>
+      <div class="question">Audiences are likely to be surprised if a film lacks background music.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">Background music is so ubiquitous that it is “noticeable in its absence”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 20</div>
+      <div class="question">Background music may anticipate a development in a film.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">Background music often foreshadows a change in mood, e.g. dissonant music indicating an approaching menace.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 21</div>
+      <div class="question">Background music has more effect on some people than on others.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The passage never compares how different people respond to background music.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 22</div>
+      <div class="question">Background music may help the audience to make certain connections within the film.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-yes">TRUE</span>
+      <div class="explanation">It may aid understanding by linking scenes, e.g. a theme repeated to remind the audience of motives or ideas.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 23</div>
+      <div class="question">Audiences tend to be aware of how the background music is affecting them.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+      <span class="answer ans-no">FALSE</span>
+      <div class="explanation">Background music is “usually not meant to be noticeable”, and the effects of sound are often noted only by our subconscious minds.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 24–26</div><p>Complete each sentence with the correct ending, A–E, below.</p><ul class="opts"><li><b>A</b> when the audience listens to the dialogue</li><li><b>B</b> if the film reflects the audience’s own concerns</li><li><b>C</b> if voice, sound and music are combined appropriately</li><li><b>D</b> when the director is aware of how the audience will respond</li><li><b>E</b> when the actor’s appearance, voice and moves are consistent with each other</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 24</div>
+      <div class="question">The audience’s response to different parts of a film can be controlled</div>
+      <span class="answer ans-letter">C – if voice, sound and music are combined appropriately</span>
+      <div class="explanation">The three tracks must be mixed and balanced to produce the necessary emphases, which create the desired effects.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 25</div>
+      <div class="question">The feelings and motivations of characters become clear</div>
+      <span class="answer ans-letter">A – when the audience listens to the dialogue</span>
+      <div class="explanation">Dialogue tells the story and expresses the characters’ feelings and motivations.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 26</div>
+      <div class="question">A character seems to be a real person rather than an actor</div>
+      <span class="answer ans-letter">E – when the actor’s appearance, voice and moves are consistent with each other</span>
+      <div class="explanation">When voice textures fit the performer’s physiognomy and gestures, a whole and realistic persona emerges, so the viewer sees a human being, not an actor.</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">Reading Passage 3 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 27–32</div><p>Reading Passage 3 has six paragraphs, A–F. Choose the correct heading for paragraphs A–F from the list of headings below. <i>Write the correct number, i–vii.</i></p><p><b>List of Headings</b></p><ul class="opts"><li><b>i</b> Differences between languages highlight their impressiveness</li><li><b>ii</b> The way in which a few sounds are organised to convey a huge range of meaning</li><li><b>iii</b> Why the sounds used in different languages are not identical</li><li><b>iv</b> Apparently incompatible characteristics of language</li><li><b>v</b> Even silence can be meaningful</li><li><b>vi</b> Why language is the most important invention of all</li><li><b>vii</b> The universal ability to use language</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 27 – Paragraph A</div>
+      <div class="question">Choose the correct heading for <b>Paragraph A</b>.</div>
+      <span class="answer ans-letter">vi – Why language is the most important invention of all</span>
+      <div class="explanation">Paragraph A argues that language comes first among inventions: everything we have achieved depends on it, and “all other inventions pale in significance”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 28 – Paragraph B</div>
+      <div class="question">Choose the correct heading for <b>Paragraph B</b>.</div>
+      <span class="answer ans-letter">iv – Apparently incompatible characteristics of language</span>
+      <div class="explanation">Paragraph B points out the paradox that language is “mankind’s greatest invention – except, of course, that it was never invented”, i.e. two characteristics that appear incompatible.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 29 – Paragraph C</div>
+      <div class="question">Choose the correct heading for <b>Paragraph C</b>.</div>
+      <span class="answer ans-letter">ii – The way in which a few sounds are organised to convey a huge range of meaning</span>
+      <div class="explanation">Paragraph C shows how barely three dozen meaningless sounds, arranged in special orders, can express anything from boredom to the order of the universe.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 30 – Paragraph D</div>
+      <div class="question">Choose the correct heading for <b>Paragraph D</b>.</div>
+      <span class="answer ans-letter">vii – The universal ability to use language</span>
+      <div class="explanation">Paragraph D stresses that you need not be a genius to use language: everyone, from foragers to philosophers, can do it.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 31 – Paragraph E</div>
+      <div class="question">Choose the correct heading for <b>Paragraph E</b>.</div>
+      <span class="answer ans-letter">i – Differences between languages highlight their impressiveness</span>
+      <div class="explanation">Paragraph E uses exotic foreign languages, such as the Turkish super-long word, to bring home the wonder of language’s design.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 32 – Paragraph F</div>
+      <div class="question">Choose the correct heading for <b>Paragraph F</b>.</div>
+      <span class="answer ans-letter">v – Even silence can be meaningful</span>
+      <div class="explanation">Paragraph F finishes with Sumerian, where even a non-sound (“a very particular kind of nothing”) in an empty slot carries specific meaning.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 33–36</div><p>Complete the summary using the list of words, A–G, below.</p><p><b>The importance of language</b></p><p>The wheel is one invention that has had a major impact on <b>33 ………</b> aspects of life, but no impact has been as <b>34 ………</b> as that of language. Language is very <b>35 ………</b>, yet composed of just a small number of sounds. Language appears to be <b>36 ………</b> to use. However its sophistication is often overlooked.</p><ul class="opts"><li><b>A</b> Difficult</li><li><b>B</b> Complex</li><li><b>C</b> Original</li><li><b>D</b> Admired</li><li><b>E</b> Material</li><li><b>F</b> Easy</li><li><b>G</b> Fundamental</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 33</div>
+      <div class="question">a major impact on … aspects of life</div>
+      <span class="answer ans-letter">E – Material</span>
+      <div class="explanation">Other inventions such as the wheel “may have transformed our material existence”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 34</div>
+      <div class="question">no impact has been as … as that of language</div>
+      <span class="answer ans-letter">G – Fundamental</span>
+      <div class="explanation">Language is “what made us human” and everything we have achieved depends on it and originates from it, so its impact is fundamental.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 35</div>
+      <div class="question">Language is very …, yet composed of just a small number of sounds</div>
+      <span class="answer ans-letter">B – Complex</span>
+      <div class="explanation">Language is “a tool of extraordinary sophistication” yet based on an idea of ingenious simplicity: a few dozen sounds.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 36</div>
+      <div class="question">Language appears to be … to use</div>
+      <span class="answer ans-letter">F – Easy</span>
+      <div class="explanation">One doesn’t have to be a genius to use it, and it works “without the slightest exertion” and with “deceptive ease”.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Do the following statements agree with the views of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the views of the writer<br><b>NO</b> if the statement contradicts the views of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 37</div>
+      <div class="question">Human beings might have achieved their present position without language.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">The writer says that without language “we could never have embarked on our ascent to unparalleled power over all other animals”.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 38</div>
+      <div class="question">The Port-Royal grammarians did justice to the nature of language.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">The writer says no one has celebrated language’s achievement more eloquently, but adds that their praise conceals a critical incongruity: language was never invented. So they did not capture its true nature.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 39</div>
+      <div class="question">A complex idea can be explained more clearly in a sentence than in a single word.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">Some languages can express in one word what English needs a sentence for, but the writer says nothing about which is clearer.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 40</div>
+      <div class="question">The Sumerians were responsible for starting the recording of events.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">The Sumerians “invented writing and thus enabled the documentation of history”.</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>
