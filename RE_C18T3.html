@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 18 – Reading Test 3 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cambridge IELTS 18 – Reading Test 3</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <div class="column left">
+    <div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Materials to take us beyond concrete</div>
+<p class="para" style="font-style:italic;color:var(--muted);">Concrete is everywhere, but it's bad for the planet, generating large amounts of carbon dioxide – alternatives are being developed</p>
+<p class="para"><strong>A</strong> Concrete is the second most used substance in the global economy, after water – and one of the world’s biggest single sources of greenhouse gas emissions. The chemical process by which cement, the key ingredient of concrete, is created results in large quantities of carbon dioxide. The UN estimates that there will be 9.8 billion people living on the planet by mid-century. They will need somewhere to live. If concrete is the only answer to the construction of new cities, then carbon emissions will soar, aggravating global warming. And so scientists have started innovating with other materials, in a scramble for alternatives to a universal commodity that has underpinned our modem life for many years.</p>
+<p class="para"><strong>B</strong> The problem with replacing concrete is that it is so very good at what it does. Chris Cheeseman, an engineering professor at Imperial College London, says the key thing to consider is the extent to which concrete is used around the world, and is likely to continue to be used. ‘Concrete is not a high-carbon product. Cement is high carbon, but concrete is not. <span class="hl">But it is the scale on which it is used that makes it high carbon.</span><span class="mark">13</span> The sheer scale of manufacture is so huge, that is the issue.’</p>
+<p class="para"><strong>C</strong> Not only are <span class="hl">the ingredients of concrete relatively cheap and found in abundance in most places around the globe</span><span class="mark">3</span>, the stuff itself has marvellous properties: Portland cement, the vital component of concrete, is mouldable and pourable, but quickly sets hard. Cheeseman also notes another advantage: concrete and steel have similar thermal expansion properties, so steel can be used to reinforce concrete, making it far stronger and more flexible as a building material than it could be on its own. According to Cheeseman, all these factors together make concrete hard to beat. ‘Concrete is amazing stuff. <span class="hl">Making anything with similar properties is going to be very difficult.</span><span class="mark">10</span>’</p>
+<p class="para"><strong>D</strong> A possible alternative to concrete is wood. Making buildings from wood may seem like a rather medieval idea, but <span class="hl">climate change is driving architects to turn to treated timber as a possible resource</span><span class="mark">5</span>. Recent years have seen the emergence of tall buildings constructed almost entirely from timber. <span class="hl">Vancouver, Vienna and Brumunddal in Norway are all home to constructed tall, wooden buildings.</span><span class="mark">2</span></p>
+<p class="para"><strong>E</strong> Using wood to construct buildings, however, is not straightforward. <span class="hl">Wood expands as it absorbs moisture from the air</span><span class="mark">6</span> and is susceptible to pests, not to mention fire. But treating wood and combining it with other materials can improve its properties. Cross-laminated timber is engineered wood. <span class="hl">An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks.</span><span class="mark">7</span> This material is light but has the strength of concrete and steel. Construction experts say that <span class="hl">wooden buildings can be constructed at a greater speed than ones of concrete and steel and the process, it seems, is quieter</span><span class="mark">8</span>.</p>
+<p class="para"><strong>F</strong> Stora Enso is Europe’s biggest supplier of cross-laminated timber, and its vice-president Markus Mannstrom reports that <span class="hl">the company is seeing increasing demand globally for building in wood, with climate change concerns the key driver</span><span class="mark">11</span>. Finland, with its large forests, where Stora Enso is based, has been leading the way, but the company is seeing a rise in demand for its timber products across the world, including in Asia. Of course, using timber in a building also locks away the carbon that it absorbed as it grew. But even treated wood has its limitations and <span class="hl">only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings</span><span class="mark">4</span>.</p>
+<p class="para"><strong>G</strong> Fly ash and slag from iron ore are possible alternatives to cement in a concrete mix. <span class="hl">Fly ash, a byproduct of coal-burning power plants</span><span class="mark">1</span>, can be incorporated into concrete mixes to make up as much as 15 to 30% of the cement, without harming the strength or durability of the resulting mix. <span class="hl">Iron-ore slag, a byproduct of the iron-ore smelting process</span><span class="mark">1</span>, can be used in a similar way. Their incorporation into concrete mixes has the potential to reduce greenhouse gas emissions.</p>
+<p class="para">But Anna Surgenor, of the UK’s Green Building Council, notes that although these waste products can save carbon in the concrete mix, their use is not always straightforward. ‘It’s possible to replace the cement content in concrete with waste products to lower the overall carbon impact. But there are several calculations that need to be considered across the entire life cycle of the building- these include factoring in where these materials are being shipped from. <span class="hl">If they are transported over long distances, using fossil fuels, the use of alternative materials might not make sense from an overall carbon reduction perspective.</span><span class="mark">9</span>’</p>
+<p class="para"><strong>H</strong> While these technologies are all promising ideas, they are either unproven or based on materials that are not abundant. In their overview of innovation in the concrete industry, Felix Preston and Johanna Lehne of the UK’s Royal Institute of International Affairs reached the conclusion that, ‘Some novel cements have been discussed for more than a decade within the research community, without breaking through. At present, <span class="hl">these alternatives are rarely as cost-effective as conventional cement, and they face raw-material shortages and resistance from customers</span><span class="mark">12</span>.’</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">The steam car</div>
+<p class="para" style="font-style:italic;color:var(--muted);">The successes and failures of the Doble brothers and their steam cars</p>
+<p class="para"><strong>A</strong> When primitive automobiles first began to appear in the 1800s, their engines were based on steam power. Steam had already enjoyed a long and successful career in the railways, so it was only natural that the technology evolved into a miniaturized version which was separate from the trains. But <span class="hl">these early cars inherited steam’s weaknesses along with its strengths</span><span class="mark">14</span>. <span class="hl">The boilers had to be lit by hand, and they required about twenty minutes to build up pressure before they could be driven.</span><span class="mark">14</span> Furthermore, their water reservoirs only lasted for about thirty miles before needing replenishment. Despite such shortcomings, these newly designed self-propelled carriages offered quick transportation, and by the early 1900s it was not uncommon to see such machines shuttling wealthy citizens around town.</p>
+<p class="para"><strong>B</strong> <span class="hl">But the glory days of steam cars were few.</span><span class="mark">21</span> <span class="hl">A new technology called the Internal Combustion Engine soon appeared, which offered the ability to drive down the road just moments after starting up.</span><span class="mark">15</span> At first, these noisy gasoline cars were unpopular because they were more complicated to operate and they had difficult hand-crank starters, which were known to break arms when the engines backfired. But in 1912 General Motors introduced the electric starter, and <span class="hl">over the following few years steam power was gradually phased out</span><span class="mark">21</span>.</p>
+<p class="para"><strong>C</strong> Even as the market was declining, four brothers made one last effort to rekindle the technology. Between 1906 and 1909, while still attending high school, Abner Doble and his three brothers built their first steam car in their parents’ basement. It comprised parts taken from a wrecked early steam car but reconfigured to drive an engine of their own design. <span class="hl">Though it did not run well, the Doble brothers went on to build a second and third prototype in the following years.</span><span class="mark">22</span> Though the Doble boys’ third prototype, nicknamed the Model B, still lacked the convenience of an internal combustion engine, <span class="hl">it drew the attention of automobile trade magazines due to its numerous improvements over previous steam cars</span><span class="mark">16</span>. The Model B proved to be superior to gasoline automobiles in many ways. <span class="hl">Its high-pressure steam drove the engine pistons in virtual silence</span><span class="mark">16</span>, in contrast to clattering gas engines which emitted the aroma of burned hydrocarbons. Perhaps most impressively, the Model B was amazingly swift. It could accelerate from zero to sixty miles per hour in just fifteen seconds, a feat described as ‘remarkable acceleration’ by <em>Automobile</em> magazine in 1914.</p>
+<p class="para"><strong>D</strong> The following year Abner Doble drove the Model B from Massachusetts to Detroit <span class="hl">in order to seek investment in his automobile design, which he used to open the General Engineering Company</span><span class="mark">23</span>. He and his brothers immediately began working on the Model C, which was intended to expand upon the innovations of the Model B. The brothers added features such as a key-based ignition in the cabin, eliminating the need for the operator to manually ignite the boiler. With these enhancements, the Dobles' new car company promised a steam vehicle which would provide all of the convenience of a gasoline car, but with much greater speed, much simpler driving controls, and a virtually silent powerplant. <span class="hl">By the following April, the General Engineering Company had received 5,390 deposits for Doble Detroits</span><span class="mark">17</span>, which were scheduled for delivery in early 1918.</p>
+<p class="para"><strong>E</strong> Later that year Abner Doble delivered unhappy news to those eagerly awaiting the delivery of their modem new cars. <span class="hl">Those buyers who received the handful of completed cars complained that the vehicles were sluggish and erratic</span><span class="mark">18</span>, sometimes going in reverse when they should go forward. The new engine design, though innovative, was still plagued with serious glitches.</p>
+<p class="para"><strong>F</strong> The brothers made one final attempt to produce a viable steam automobile. In early 1924, the Doble brothers shipped a Model E to New York City to be road-tested by the Automobile Club of America. <span class="hl">After sitting overnight in freezing temperatures, the car was pushed out into the road and left to sit for over an hour in the frosty morning air.</span><span class="mark">19</span> At the turn of the key, the boiler lit and reached its operating pressure inside of forty seconds. As they drove the test vehicle further, they found that its evenly distributed weight lent it surprisingly good handling, even though it was so heavy. As the new Doble steamer was further developed and tested, <span class="hl">its maximum speed was pushed to over a hundred miles per hour</span><span class="mark">24</span>, and it achieved about fifteen miles per gallon of kerosene with negligible emissions.</p>
+<p class="para"><strong>G</strong> Sadly, the Dobles’ brilliant steam car never was a financial success. Priced at around $18,000 in 1924, it was popular only among the very wealthy. Plus, it is said that no two Model Es were quite the same, because Abner Doble tinkered endlessly with the design. By the time the company folded in 1931, <span class="hl">fewer than fifty of the amazing Model E steam cars had been produced</span><span class="mark">25</span>. For his whole career, until his death in 1961, Abner Doble remained adamant that steam-powered automobiles were at least equal to gasoline cars, if not superior. Given the evidence, he may have been right. Many of the Model E Dobles which have survived are still in good working condition, some having been driven over half a million miles with only normal maintenance. Astonishingly, <span class="hl">an unmodified Doble Model E runs clean enough to pass the emissions laws in California today, and they are pretty strict</span><span class="mark">26</span>. It is true that the technology poses some difficult problems, but <span class="hl">you cannot help but wonder how efficient a steam car might be with the benefit of modem materials and computers</span><span class="mark">20</span>. <span class="hl">Under the current pressure to improve automotive performance and reduce emissions, it is not unthinkable that the steam car may rise again.</span><span class="mark">20</span></p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">The case for mixed-ability classes</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Picture this scene. It’s an English literature lesson in a UK school, and the teacher has just read an extract from Shakespeare’s <em>Romeo and Juliet</em> with a class of 15-year-olds. He’s given some of the students copies of <em>No Fear Shakespeare</em>, a kid-friendly translation of the original. <span class="hl">For three students, even these literacy demands are beyond them. Another girl simply can’t focus and he gives her pens and paper to draw with.</span><span class="mark">27</span> The teacher can ask the <em>No Fear</em> group to identify the key characters and maybe provide a tentative plot summary. He can ask most of the class about character development, and five of them might be able to support their statements with textual evidence. Now two curious students are wondering whether Shakespeare advocates living a life of moderation or one of passionate engagement.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> As a teacher myself, <span class="hl">I’d think my lesson would be going rather well if the discussion went as described above</span><span class="mark">27</span>. But wouldn't this kind of class work better if there weren’t such a huge gap between the top and the bottom? If we put all the kids who needed literacy support into one class, and all the students who want to discuss the virtue of moderation into another?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> The practice of ‘streaming’, or ‘tracking’, involves separating students into classes depending on their diagnosed levels of attainment. At a macro level, it requires the establishment of academically selective schools for the brightest students, and comprehensive schools for the rest. Within schools, it means selecting students into a ‘stream’ of general ability, or ‘sets’ of subject-specific ability. <span class="hl">The practice is intuitively appealing to almost every stakeholder.</span><span class="mark">28</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> I have heard the mixed-ability model attacked by way of analogy: a group hike. The fittest in the group take the lead and set a brisk pace, only to have to stop and wait every 20 minutes. This is frustrating, and their enthusiasm wanes. Meanwhile, the slowest ones are not only embarrassed but physically struggling to keep up. What’s worse, they never get a long enough break. They honestly just want to quit. Hiking, they feel, is not for them.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Mixed-ability classes bore students, frustrate parents and bum out teachers. <span class="hl">The brightest ones will never summit Mount Qomolangma, and the stragglers won’t enjoy the lovely stroll in the park they are perhaps more suited to.</span><span class="mark">29</span> Individuals suffer at the demands of the collective, mediocrity prevails. So: is learning like hiking?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> The current pedagogical paradigm is arguably that of constructivism, which emerged out of the work of psychologist Lev Vygotsky. In the 1930s, Vygotsky emphasised the importance of targeting a student’s specific ‘zone of proximal development’ (ZPD). <span class="hl">This is the gap between what they can achieve only with support – teachers, textbooks, worked examples, parents and so on – and what they can achieve independently.</span><span class="mark">30</span> <span class="hl">The purpose of teaching is to provide and then gradually remove this ‘scaffolding’ until they are autonomous.</span><span class="mark">30</span> <span class="hl">If we accept this model, it follows that streaming students with similar ZPDs would be an efficient and effective solution.</span><span class="mark">36</span> And that forcing everyone on the same hike – regardless of aptitude – would be madness.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Despite all this, <span class="hl">there is limited empirical evidence to suggest that streaming results in better outcomes for students</span><span class="mark">31</span>. Professor John Hattie, director of the Melbourne Education Research Institute, notes that ‘<span class="hl">tracking has minimal effects on learning outcomes</span><span class="mark">31</span>’. What is more, <span class="hl">streaming appears to significantly – and negatively – affect those students assigned to the lowest sets</span><span class="mark">32</span>. <span class="hl">These students tend to have much higher representation of low socioeconomic class.</span><span class="mark">33</span> <span class="hl">Less significant is the small benefit for those lucky clever students in the higher sets.</span><span class="mark">34</span> The overall result is that the smart stay smart and the dumb get dumber, further entrenching the social divide.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> In the latest update of Hattie’s influential meta-analysis of factors influencing student achievement, one of the most significant factors is the teachers’ estimate of achievement. <span class="hl">Streaming students by diagnosed achievement automatically limits what the teacher feels the student is capable of.</span><span class="mark">35</span> Meanwhile, in a mixed environment, teachers’ estimates need to be more diverse and flexible.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> While streaming might seem to help teachers effectively target a student’s ZPD, it can underestimate the importance of peer-to-peer learning. A crucial aspect of constructivist theory is the role of the MKO – ‘more knowledgeable other’ – in knowledge construction. <span class="hl">While teachers are traditionally the MKOs in classrooms, the value of knowledgeable student peers must not go unrecognised either.</span><span class="mark">37</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> I find it amazing to watch students get over an idea to their peers in ways that I would never think of. They operate with different language tools and different social tools from teachers and, having just learnt it themselves, they possess similar cognitive structures to their struggling classmates. <span class="hl">There is also something exciting about passing on skills and knowledge that you yourself have just mastered – a certain pride and zeal</span><span class="mark">38</span>, a certain freshness to the interaction between ‘teacher’ and ‘learner’ that is often lost by the expert for whom the steps are obvious and the joy of discovery forgotten.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> Having a variety of different abilities in a collaborative learning environment provides valuable resources for helping students meet their learning needs, not to mention improving their communication and social skills. And today, more than ever, <span class="hl">we need the many to flourish – not suffer at the expense of a few bright stars</span><span class="mark">39</span>. <span class="hl">Once a year, I go on a hike with my class, a mixed bunch of students. It is challenging.</span><span class="mark">40</span> The fittest students realise they need to encourage the reluctant. There are lookouts who report back, and extra items to carry for others. <span class="hl">We make it – together.</span><span class="mark">40</span></p>
+  </div>
+
+  <div class="column right">
+    <div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–4</div><p>Reading Passage 1 has eight sections, <b>A–H</b>. Which section contains the following information? <i>Write the correct letter, A–H.</i></p></div>
+<div class="q-block">
+      <div class="q-num">Question 1</div>
+      <div class="question">an explanation of the industrial processes that create potential raw materials for concrete<div class="yng">Which section (A–H)?</div></div>
+      <span class="answer ans-letter">G</span>
+      <div class="explanation">Section G explains that fly ash is a byproduct of coal-burning power plants and iron-ore slag is a byproduct of the iron-ore smelting process. These industrial processes create materials that can replace part of the cement in concrete.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 2</div>
+      <div class="question">a reference to the various locations where high-rise wooden buildings can be found<div class="yng">Which section (A–H)?</div></div>
+      <span class="answer ans-letter">D</span>
+      <div class="explanation">Section D names the locations of tall wooden buildings: Vancouver, Vienna, and Brumunddal in Norway.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 3</div>
+      <div class="question">an indication of how widely available the raw materials of concrete are<div class="yng">Which section (A–H)?</div></div>
+      <span class="answer ans-letter">C</span>
+      <div class="explanation">Section C states that the ingredients of concrete are “relatively cheap and found in abundance in most places around the globe.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 4</div>
+      <div class="question">the belief that more high-rise wooden buildings are needed before wood can be regarded as a viable construction material<div class="yng">Which section (A–H)?</div></div>
+      <span class="answer ans-letter">F</span>
+      <div class="explanation">Section F ends with: “only when a wider range of construction projects has been proven in practice will it be possible to see wood as a real alternative to concrete in constructing tall buildings.”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 5–8</div><p>Complete the summary below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Making buildings with wood</b></p><p>Wood is a traditional building material, but current environmental concerns are encouraging <b>5 ………</b> to use wood in modern construction projects. Using wood, however, has its challenges. For example, as <b>6 ………</b> in the atmosphere enters wood, it increases in size. In addition, wood is prone to pests and the risk of fire is greater. However, wood can be turned into a better construction material if it is treated and combined with other materials. In one process, <b>7 ………</b> of solid wood are glued together to create building blocks. These blocks are lighter than concrete and steel but equal them in strength. Experts say that wooden buildings are an improvement on those made of concrete and steel in terms of the <b>8 ………</b> with which they can be constructed and how much noise is generated by the process.</p></div>
+<div class="q-block">
+      <div class="q-num">Question 5</div>
+      <div class="question">Wood is a traditional building material, but current environmental concerns are encouraging <b>5 ………</b> to use wood in modern construction projects.</div>
+      <span class="answer ans-letter">architects</span>
+      <div class="explanation">“climate change is driving architects to turn to treated timber as a possible resource.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 6</div>
+      <div class="question">For example, as <b>6 ………</b> in the atmosphere enters wood, it increases in size.</div>
+      <span class="answer ans-letter">moisture</span>
+      <div class="explanation">“Wood expands as it absorbs moisture from the air…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 7</div>
+      <div class="question">In one process, <b>7 ………</b> of solid wood are glued together to create building blocks.</div>
+      <span class="answer ans-letter">layers</span>
+      <div class="explanation">“An adhesive is used to stick layers of solid-sawn timber together, crosswise, to form building blocks.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 8</div>
+      <div class="question">Experts say that wooden buildings are an improvement on those made of concrete and steel in terms of the <b>8 ………</b> with which they can be constructed and how much noise is generated by the process.</div>
+      <span class="answer ans-letter">speed</span>
+      <div class="explanation">“wooden buildings can be constructed at a greater speed than ones of concrete and steel…”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 9–13</div><p>Look at the following statements and the list of people below. Match each statement with the correct person, A, B, C or D. <i>NB You may use any letter more than once.</i></p><p><b>List of People</b></p><ul class="opts"><li><b>A</b> Chris Cheeseman</li><li><b>B</b> Markus Mannstrom</li><li><b>C</b> Anna Surgenor</li><li><b>D</b> Felix Preston and Johanna Lehne</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 9</div>
+      <div class="question">The environmental advantage of cement alternatives may not be as great as initially assumed.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">C (Anna Surgenor)</span>
+      <div class="explanation">She notes that although waste products can save carbon, transportation over long distances using fossil fuels may cancel out the environmental benefit.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 10</div>
+      <div class="question">It would be hard to create a construction alternative to concrete that offers so many comparable benefits.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">A (Chris Cheeseman)</span>
+      <div class="explanation">He says concrete has so many advantages (cheap, abundant, mouldable, compatible with steel) that “Making anything with similar properties is going to be very difficult.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 11</div>
+      <div class="question">Worries about the environment have led to increased interest in wood as a construction material.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">B (Markus Mannstrom)</span>
+      <div class="explanation">He reports increasing global demand for wood in building “with climate change concerns the key driver.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 12</div>
+      <div class="question">Expense has been a factor in the negative response to the development of new cements.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">D (Felix Preston and Johanna Lehne)</span>
+      <div class="explanation">They conclude that novel cements “are rarely as cost-effective as conventional cement” and face resistance from customers.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 13</div>
+      <div class="question">The environmental damage caused by concrete is due to it being produced in large quantities.<div class="yng">Match with A, B, C or D</div></div>
+      <span class="answer ans-letter">A (Chris Cheeseman)</span>
+      <div class="explanation">He states that concrete itself is not high-carbon, but “it is the scale on which it is used that makes it high carbon.”</div>
+    </div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–20</div><p>Reading Passage 2 has seven paragraphs, <b>A–G</b>. Choose the correct heading for each paragraph from the list of headings below. <i>Write the correct number, i–viii.</i></p><p><b>List of Headings</b></p><ul class="opts"><li><b>i</b> A period in cold conditions before the technology is assessed</li><li><b>ii</b> Marketing issues lead to failure</li><li><b>iii</b> Good and bad aspects of steam technology are passed on</li><li><b>iv</b> A possible solution to the issues of today</li><li><b>v</b> Further improvements lead to commercial orders</li><li><b>vi</b> Positive publicity at last for this quiet, clean, fast vehicle</li><li><b>vii</b> A disappointing outcome for customers</li><li><b>viii</b> A better option than the steam car arises</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 14 – Paragraph A</div>
+      <div class="question">Choose the correct heading for <b>Paragraph A</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">iii – Good and bad aspects of steam technology are passed on</span>
+      <div class="explanation">Early steam cars inherited both the strengths and the weaknesses of steam technology (slow start-up, limited water range, etc.).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 15 – Paragraph B</div>
+      <div class="question">Choose the correct heading for <b>Paragraph B</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">viii – A better option than the steam car arises</span>
+      <div class="explanation">The internal combustion engine appeared and gradually replaced steam power.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 16 – Paragraph C</div>
+      <div class="question">Choose the correct heading for <b>Paragraph C</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">vi – Positive publicity at last for this quiet, clean, fast vehicle</span>
+      <div class="explanation">The Model B received positive attention for being quiet, clean, and very fast.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 17 – Paragraph D</div>
+      <div class="question">Choose the correct heading for <b>Paragraph D</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">v – Further improvements lead to commercial orders</span>
+      <div class="explanation">Improvements (key ignition, etc.) led to thousands of commercial deposits for the Doble Detroit.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 18 – Paragraph E</div>
+      <div class="question">Choose the correct heading for <b>Paragraph E</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">vii – A disappointing outcome for customers</span>
+      <div class="explanation">Customers who received the few completed cars found them sluggish and erratic.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 19 – Paragraph F</div>
+      <div class="question">Choose the correct heading for <b>Paragraph F</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">i – A period in cold conditions before the technology is assessed</span>
+      <div class="explanation">The Model E was left overnight in freezing temperatures and then tested successfully.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 20 – Paragraph G</div>
+      <div class="question">Choose the correct heading for <b>Paragraph G</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">iv – A possible solution to the issues of today</span>
+      <div class="explanation">The writer suggests that modern materials and computers could revive the steam car as a solution to today’s performance and emissions problems.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 21–23</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block">
+      <div class="q-num">Question 21</div>
+      <div class="question">What point does the writer make about the steam car in Paragraph B?<ul class="opts"><li><b>A</b> Its success was short-lived.</li><li><b>B</b> Not enough cars were made.</li><li><b>C</b> Car companies found them hard to sell.</li><li><b>D</b> People found them hard to drive.</li></ul></div>
+      <span class="answer ans-letter">A – Its success was short-lived.</span>
+      <div class="explanation">Paragraph B says “the glory days of steam cars were few” and that steam power was “gradually phased out.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 22</div>
+      <div class="question">When building their first steam car, the Doble brothers<ul class="opts"><li><b>A</b> constructed all the parts themselves.</li><li><b>B</b> made written notes at each stage of the construction.</li><li><b>C</b> needed several attempts to achieve a competitive model.</li><li><b>D</b> sought the advice of experienced people in the car industry.</li></ul></div>
+      <span class="answer ans-letter">C – needed several attempts to achieve a competitive model.</span>
+      <div class="explanation">They built a first car that “did not run well,” then a second and a third prototype (the Model B).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 23</div>
+      <div class="question">In order to produce the Model C, the Doble brothers<ul class="opts"><li><b>A</b> moved production to a different city.</li><li><b>B</b> raised financial capital.</li><li><b>C</b> employed an additional worker.</li><li><b>D</b> abandoned their earlier designs.</li></ul></div>
+      <span class="answer ans-letter">B – raised financial capital.</span>
+      <div class="explanation">Abner Doble drove the Model B to Detroit “in order to seek investment… which he used to open the General Engineering Company.”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 24–26</div><p>Complete the summary below. Choose <b>ONE WORD AND/OR A NUMBER</b> from the passage for each answer.</p><p><b>The Model E</b></p><p>The Model E was road-tested in 1924 by the Automobile Club of America. They found it easy to drive, despite its weight, and it impressed the spectators. A later version of the Model E raised its <b>24 ………</b>, while keeping its emissions extremely low.</p><p>The steam car was too expensive for many people and its design was constantly being altered. Under <b>25 ………</b> cars were produced before the company went out of business. However, even today, there are Model Es on the road in the US. They are straightforward to maintain, and they satisfy California’s <b>26 ………</b> emissions laws. Perhaps today’s technology and materials would help us revive the steam car.</p></div>
+<div class="q-block">
+      <div class="q-num">Question 24</div>
+      <div class="question">A later version of the Model E raised its <b>24 ………</b>, while keeping its emissions extremely low.</div>
+      <span class="answer ans-letter">speed</span>
+      <div class="explanation">“its maximum speed was pushed to over a hundred miles per hour…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 25</div>
+      <div class="question">Under <b>25 ………</b> cars were produced before the company went out of business.</div>
+      <span class="answer ans-letter">fifty / 50</span>
+      <div class="explanation">“fewer than fifty of the amazing Model E steam cars had been produced.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 26</div>
+      <div class="question">They are straightforward to maintain, and they satisfy California’s <b>26 ………</b> emissions laws.</div>
+      <span class="answer ans-letter">strict</span>
+      <div class="explanation">“an unmodified Doble Model E runs clean enough to pass the emissions laws in California today, and they are pretty strict.”</div>
+    </div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Choose the correct letter, A, B, C or D. <i>(Paragraph numbers ¶1–¶11 are added to the passage on the left for reference.)</i></p></div>
+<div class="q-block">
+      <div class="q-num">Question 27</div>
+      <div class="question">The writer describes the Romeo and Juliet lesson in order to demonstrate<ul class="opts"><li><b>A</b> how few students are interested in literature.</li><li><b>B</b> how a teacher handles a range of learning needs.</li><li><b>C</b> how unsuitable Shakespeare is for most teenagers.</li><li><b>D</b> how weaker students can disrupt their classmates’ learning.</li></ul></div>
+      <span class="answer ans-letter">B – how a teacher handles a range of learning needs.</span>
+      <div class="explanation">The opening scene shows a teacher adapting tasks for students of very different abilities (No Fear Shakespeare, drawing, plot summary, textual evidence, philosophical discussion).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 28</div>
+      <div class="question">What does the writer say about streaming in the third paragraph?<ul class="opts"><li><b>A</b> It has a very broad appeal.</li><li><b>B</b> It favours cleverer students.</li><li><b>C</b> It is relatively simple to implement.</li><li><b>D</b> It works better in some schools than others.</li></ul></div>
+      <span class="answer ans-letter">A – It has a very broad appeal.</span>
+      <div class="explanation">“The practice is intuitively appealing to almost every stakeholder.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 29</div>
+      <div class="question">What idea is suggested by the reference to Mount Qomolangma in the fifth paragraph?<ul class="opts"><li><b>A</b> students following unsuitable paths</li><li><b>B</b> students attempting interesting tasks</li><li><b>C</b> students not achieving their full potential</li><li><b>D</b> students not being aware of their limitations</li></ul></div>
+      <span class="answer ans-letter">C – students not achieving their full potential</span>
+      <div class="explanation">The brightest students “will never summit Mount Qomolangma” (i.e., they do not reach their full potential in a mixed-ability class).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 30</div>
+      <div class="question">What does the word ‘scaffolding’ in the sixth paragraph refer to?<ul class="opts"><li><b>A</b> the factors which prevent a student from learning effectively</li><li><b>B</b> the environment where most of a student’s learning takes place</li><li><b>C</b> the assistance given to a student in their initial stages of learning</li><li><b>D</b> the setting of appropriate learning targets for a student’s aptitude</li></ul></div>
+      <span class="answer ans-letter">C – the assistance given to a student in their initial stages of learning</span>
+      <div class="explanation">Scaffolding is the support (teachers, textbooks, etc.) that is gradually removed until the student becomes independent.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 31–35</div><p>Complete the summary using the list of phrases, A–I, below.</p><p><b>Is streaming effective?</b></p><p>According to Professor John Hattie of the Melbourne Education Research Institute there is very little indication that streaming leads to <b>31 ………</b>. He points out that, in schools which use streaming, the most significant impact is on those students placed in the <b>32 ………</b>, especially where a large proportion of them have <b>33 ………</b>. Meanwhile, for the <b>34 ………</b>, there appears to be only minimal advantage. A further issue is that teachers tend to have <b>35 ………</b> of students in streamed groups.</p><ul class="opts"><li><b>A</b> wrong classes</li><li><b>B</b> lower expectations</li><li><b>C</b> average learners</li><li><b>D</b> bottom sets</li><li><b>E</b> brightest pupils</li><li><b>F</b> disadvantaged backgrounds</li><li><b>G</b> weaker students</li><li><b>H</b> higher achievements</li><li><b>I</b> positive impressions</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 31</div>
+      <div class="question">According to Professor John Hattie of the Melbourne Education Research Institute there is very little indication that streaming leads to <b>31 ………</b>.<div class="yng">Choose A–I</div></div>
+      <span class="answer ans-letter">H (higher achievements)</span>
+      <div class="explanation">Hattie notes that tracking “has minimal effects on learning outcomes.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 32</div>
+      <div class="question">He points out that, in schools which use streaming, the most significant impact is on those students placed in the <b>32 ………</b>, especially where a large proportion of them have <b>33 ………</b>.<div class="yng">Choose A–I</div></div>
+      <span class="answer ans-letter">D (bottom sets)</span>
+      <div class="explanation">Streaming “significantly – and negatively – affect[s] those students assigned to the lowest sets.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 33</div>
+      <div class="question">He points out that, in schools which use streaming, the most significant impact is on those students placed in the <b>32 ………</b>, especially where a large proportion of them have <b>33 ………</b>.<div class="yng">Choose A–I</div></div>
+      <span class="answer ans-letter">F (disadvantaged backgrounds)</span>
+      <div class="explanation">These lowest-set students “tend to have much higher representation of low socioeconomic class.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 34</div>
+      <div class="question">Meanwhile, for the <b>34 ………</b>, there appears to be only minimal advantage.<div class="yng">Choose A–I</div></div>
+      <span class="answer ans-letter">E (brightest pupils)</span>
+      <div class="explanation">There is only a “small benefit for those lucky clever students in the higher sets.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 35</div>
+      <div class="question">A further issue is that teachers tend to have <b>35 ………</b> of students in streamed groups.<div class="yng">Choose A–I</div></div>
+      <span class="answer ans-letter">B (lower expectations)</span>
+      <div class="explanation">Streaming “automatically limits what the teacher feels the student is capable of.”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 36–40</div><p>Do the following statements agree with the views of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the views of the writer<br><b>NO</b> if the statement contradicts the views of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block">
+      <div class="q-num">Question 36</div>
+      <div class="question">The Vygotsky model of education supports the concept of a mixed-ability class.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">The writer says that if we accept Vygotsky’s model, streaming students with similar ZPDs “would be an efficient and effective solution” — i.e., it supports streaming, not mixed-ability classes.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 37</div>
+      <div class="question">Some teachers are uncertain about allowing students to take on MKO roles in the classroom.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The writer praises peer teaching (students as MKOs) but never mentions that some teachers feel uncertain about it.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 38</div>
+      <div class="question">It can be rewarding to teach knowledge which you have only recently acquired.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">“There is also something exciting about passing on skills and knowledge that you yourself have just mastered – a certain pride and zeal…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 39</div>
+      <div class="question">The priority should be to ensure that the highest-achieving students attain their goals.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">The writer explicitly says: “we need the many to flourish – not suffer at the expense of a few bright stars.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 40</div>
+      <div class="question">Taking part in collaborative outdoor activities with teachers and classmates can improve student outcomes in the classroom.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The writer describes an annual mixed-ability hike and says “We make it – together,” but does not claim that this improves classroom academic outcomes.</div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>

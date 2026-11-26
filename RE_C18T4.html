@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 18 – Reading Test 4 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 18 – Reading Test 4</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Green roofs</div>
+<p class="para"><strong>A</strong> Rooftops covered with grass, vegetable gardens and lush foliage are now a common sight in many cities around the world. More and more private companies and city authorities are investing in green roofs, drawn to their wide-ranging benefits. Among the benefits are <span class="hl">saving on energy costs</span><span class="mark">6</span>, mitigating the risk of floods, making habitats for urban wildlife, tackling air pollution and even <span class="hl">growing food</span><span class="mark">7</span>. These increasingly radical urban designs can help cities adapt to the monumental problems they face, such as access to resources and a lack of green space due to development. But the involvement of city authorities, businesses and other institutions is crucial to ensuring their success – as is research investigating different options to suit the variety of rooftop spaces found in cities. The UK is relatively new to developing green roofs, and local governments and institutions are playing a major role in spreading the practice. London is home to much of the UK's green roof market, mainly due to forward-thinking policies such as the London Plan, which has paved the way to more than doubling the area of green roofs in the capital.</p>
+<p class="para"><strong>B</strong> Ongoing research is showcasing how <span class="hl">green roofs in cities can integrate with 'living walls'</span><span class="mark">4</span>: environmentally friendly walls which are partially or completely covered with greenery, including a growing medium, such as soil or water. Research also indicates that <span class="hl">green roofs can be integrated with drainage systems on the ground, such as street trees</span><span class="mark">4</span>, so that the water is managed better and the built environment is made more sustainable. There is also evidence to demonstrate the social value of green roofs. <span class="hl">Doctors are increasingly prescribing time spent gardening outdoors for patients dealing with anxiety and depression.</span><span class="mark">8</span> And research has found that access to even the most basic green spaces can provide a better quality of life for dementia sufferers and <span class="hl">help people avoid obesity</span><span class="mark">9</span>.</p>
+<p class="para"><strong>C</strong> In North America, green roofs have become mainstream, with a wide array of expansive, accessible and food-producing roofs installed in buildings. Again, city leaders and authorities have helped push the movement forward – only recently, San Francisco, USA, created a policy requiring new buildings to have green roofs. <span class="hl">Toronto, Canada, has policies dating from the 1990s, encouraging the development of urban farms on rooftops.</span><span class="mark">2</span> These countries also benefit from having newer buildings than in many parts of the world, which makes it easier to install green roofs. Being able to keep enough water at roof height and distribute it right across the rooftop is crucial to maintaining the plants on any green roof – especially on 'edible roofs' where fruit and vegetables are farmed. And <span class="hl">it's much easier to do this in newer buildings, which can typically hold greater weight</span><span class="mark">10</span>, than to retro-fit old ones. <span class="hl">Having a stronger roof also makes it easier to grow a greater variety of plants, since the soil can be deeper.</span><span class="mark">11</span></p>
+<p class="para"><strong>D</strong> For green roofs to become the norm for new developments, there needs to be support from public authorities and private investors. <span class="hl">Those responsible for maintaining buildings may have to acquire new skills, such as landscaping, and in some cases, volunteers may be needed to help out. Other considerations include installing drainage paths, meeting health and safety requirements and perhaps allowing access for the public, as well as planning restrictions and disruption from regular activities in and around the buildings during installation.</span><span class="mark">1</span> <span class="hl">To convince investors and developers that installing green roofs is worthwhile, economic arguments are still the most important.</span><span class="mark">5</span> The term 'natural capital' has been developed to explain the economic value of nature; for example, measuring the money saved by installing natural solutions to protect against flood damage, adapt to climate change or help people lead healthier and happier lives.</p>
+<p class="para"><strong>E</strong> As the expertise about green roofs grows, official standards have been developed to ensure that they are designed, constructed and maintained properly, and function well. Improvements in the science and technology underpinning green roof development have also led to new variations in the concept. For example, 'blue roofs' enable buildings to hold water over longer periods of time, rather than draining it away quickly – crucial in times of heavier rainfall. There are also <span class="hl">combinations of green roofs with solar panels</span><span class="mark">13</span>, and <span class="hl">'brown roofs' which are wilder in nature and maximise biodiversity</span><span class="mark">12</span>. If the trend continues, it could create new jobs and a more vibrant and sustainable local food economy – alongside many other benefits. There are still barriers to overcome, but the evidence so far indicates that green roofs have the potential to transform cities and help them function sustainably long into the future. <span class="hl">The success stories need to be studied and replicated elsewhere</span><span class="mark">3</span>, to make green, blue, brown and food-producing roofs the norm in cities around the world.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">The growth mindset</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Over the past century, a powerful idea has taken root in the educational landscape. The concept of intelligence as something innate has been supplanted by the idea that intelligence is not fixed, and that, with the right training, we can be the authors of our own cognitive capabilities. <span class="hl">Psychologist Alfred Binet, the developer of the first intelligence tests, was one of many 19th-century scientists who held that earlier view and sought to quantify cognitive ability.</span><span class="mark">19</span> <span class="hl">Then, in the early 20th century, progressive thinkers revolted against the notion that inherent ability is destiny.</span><span class="mark">14</span> Instead, educators such as John Dewey argued that every child's intelligence could be developed, given the right environment.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> 'Growth mindset theory' is a relatively new – and extremely popular – version of this idea. In many schools today you will see hallways covered in motivational posters and hear speeches on the mindset of great sporting heroes who simply <em>believed</em> their way to the top. <span class="hl">A major focus of the growth mindset in schools is coaxing students away from seeing failure as an indication of their ability, and towards seeing it as a chance to improve that ability.</span><span class="mark">15</span> As educationalist Jeff Howard noted several decades ago: 'Smart is not something that you just are, smart is something that you can get.'</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> The idea of the growth mindset is based on the work of psychologist Carol Dweck in California in the 1990s. In one key experiment, Dweck divided a group of 10- to 12-year-olds into two groups. All were told that they had achieved a high score on a test but the first group were praised for their intelligence in achieving this, while the others were praised for their effort. The second group – those who had been instilled with a 'growth mindset' – were subsequently far more likely to put effort into future tasks. Meanwhile, <span class="hl">the former took on only those tasks that would not risk their sense of worth. This group had inferred that success or failure is due to innate ability, and this 'fixed mindset' had led them to fear of failure and lack of effort.</span><span class="mark">16</span> Praising ability actually made the students perform worse, while praising effort emphasised that change was possible.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> One of the greatest impediments to successfully implementing a growth mindset, however, is the education system itself: in many parts of the world, the school climate is obsessed with performance in the form of constant testing, analysing and ranking of students – a key characteristic of the fixed mindset. Nor is it unusual for schools to create a certain cognitive dissonance, when they applaud the benefits of a growth mindset but then hand out fixed target grades in lessons based on performance.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Aside from the implementation problem, the original growth mindset research has also received harsh criticism. The statistician Andrew Gelman claims that '<span class="hl">their research designs have enough degrees of freedom that they could take their data to support just about any theory at all</span><span class="mark">17</span>'. Professor of Psychology Timothy Bates, who has been trying to replicate Dweck's work, is finding that the results are repeatedly null. He notes that: 'People with a growth mindset don't cope any better with failure ... <span class="hl">Kids with the growth mindset aren't getting better grades, either before or after our intervention study.</span><span class="mark">22</span>'</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Much of this criticism is not lost on Dweck, and <span class="hl">she deserves great credit for responding to it and adapting her work accordingly</span><span class="mark">23</span>. In fact, <span class="hl">she argues that her work has been misunderstood and misapplied in a range of ways</span><span class="mark">18</span>. She has also expressed concerns that her theories are being misappropriated in schools by being conflated with the self-esteem movement: <span class="hl">'For me the growth mindset is a tool for learning and improvement. It's not just a vehicle for making children feel good.'</span><span class="mark">21</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> But there is another factor at work here. The failure to translate the growth mindset into the classroom might reflect a misunderstanding of the nature of teaching and learning itself. Growth mindset supporters David Yeager and Gregory Walton claim that <span class="hl">interventions should be delivered in a subtle way to maximise their effectiveness</span><span class="mark">20</span>. They say that if adolescents perceive a teacher's intervention as conveying that they are in need of help, this could undo its intended effects.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> A lot of what drives students is their innate beliefs and how they perceive themselves. There is a strong correlation between self-perception and achievement, but <span class="hl">there is evidence to suggest that the actual effect of achievement on self-perception is stronger than the other way round</span><span class="mark">24</span>. To stand up in a classroom and successfully deliver a good speech is a genuine achievement, and that is likely to be more powerfully motivating than vague notions of 'motivation' itself.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> <span class="hl">Recent evidence would suggest that growth mindset interventions are not the elixir of student learning that its proponents claim it to be.</span><span class="mark">25</span> The growth mindset appears to be a viable construct in the lab, which, when administered in the classroom via targeted interventions, doesn't seem to work. It is hard to dispute that having faith in the capacity to change is a good attribute for students. Paradoxically, however, that aspiration is not well served by direct interventions that try to instil it.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> <span class="hl">Motivational posters and talks are often a waste of time, and might well give students a deluded notion of what success actually means.</span><span class="mark">26</span> Teaching concrete skills such as how to write an effective introduction to an essay then praising students' effort in getting there is probably a far better way of improving confidence than telling them how unique they are, or indeed how capable they are of changing their own brains. Perhaps growth mindset works best as a philosophy and not an intervention.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Alfred Wegener: science, exploration and the theory of continental drift</div>
+<p class="para" style="font-style:italic;color:var(--muted);">by Mott T Greene</p>
+<p class="para"><strong>Introduction</strong></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> This is a book about the life and scientific work of Alfred Wegener, whose reputation today rests with his theory of continental displacements, better known as 'continental drift'. Wegener proposed this theory in 1912 and developed it extensively for nearly 20 years. His book on the subject, <em>The Origin of Continents and Oceans</em>, went through four editions and <span class="hl">was the focus of an international controversy in his lifetime and for some years after his death</span><span class="mark">27</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Wegener's basic idea was that <span class="hl">many mysteries about the Earth's history could be solved if one supposed that the continents moved laterally, rather than supposing that they remained fixed in place</span><span class="mark">28</span>. Wegener showed in great detail how such continental movements were plausible and how they worked, <span class="hl">using evidence from a large number of sciences including geology, geophysics, paleontology, and climatology</span><span class="mark">29</span>. Wegener's idea – that the continents move – is at the heart of the theory that guides Earth sciences today: namely plate tectonics. <span class="hl">Plate tectonics is in many respects quite different from Wegener's proposal</span><span class="mark">30</span>, in the same way that modern evolutionary theory is very different from the ideas Charles Darwin proposed in the 1850s about biological evolution. Yet plate tectonics is a descendant of Alfred Wegener's theory of continental drift, in quite the same way that modern evolutionary theory is a descendant of Darwin's theory of natural selection.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> When I started writing about Wegener's life and work, <span class="hl">one of the most intriguing things about him for me was that, although he came up with a theory on continental drift, he was not a geologist</span><span class="mark">31</span>. <span class="hl">He trained as an astronomer and pursued a career in atmospheric physics.</span><span class="mark">32</span> When he proposed the theory of continental displacements in 1912, he was a lecturer in physics and astronomy at the University of Marburg, in southern Germany. <span class="hl">However, he was not an 'unknown'.</span><span class="mark">33</span> In 1906 he had <span class="hl">set a world record (with his brother Kurt) for time aloft in a hot-air balloon: 52 hours</span><span class="mark">34</span>. Between 1906 and 1908 he had taken part in <span class="hl">a highly publicized and extremely dangerous expedition to the coast of northeast Greenland</span><span class="mark">35</span>. He had also made a name for himself amongst <span class="hl">a small circle of meteorologists and atmospheric physicists in Germany</span><span class="mark">36</span> as the author of a textbook, <em>Thermodynamics of the Atmosphere</em> (1911), and of a number of interesting scientific papers.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> As important as Wegener's work on continental drift has turned out to be, it was largely a sideline to his interest in atmospheric physics, geophysics, and paleoclimatology*, and thus I have been at great pains to put Wegener's work on continental drift in the larger context of his other scientific work, and in the even larger context of atmospheric sciences in his lifetime. This is a 'continental drift book' only to the extent that Wegener was interested in that topic and later became famous for it. My treatment of his other scientific work is no less detailed, though I certainly have devoted more attention to the reception of his ideas on continental displacement, as they were much more controversial than his other work.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Readers interested in the specific detail of Wegener's career will see that he often stopped pursuing a given line of investigation (sometimes for years on end), only to pick it up later. I have tried to provide guideposts to his rapidly shifting interests by characterizing different phases of his life as careers in different sciences, which is reflected in the titles of the chapters. Thus, the index should be a sufficient guide for those interested in a particular aspect of Wegener's life but perhaps not all of it. My own feeling, however, is that <span class="hl">the parts do not make as much sense on their own as do all of his activities taken together. In this respect I urge readers to try to experience Wegener's life as he lived it</span><span class="mark">37</span>, with all the interruptions, changes of mind, and renewed efforts this entailed.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Wegener left behind a few published works but, as was standard practice, these reported the results of his work – not the journey he took to reach that point. Only a few hundred of the many thousands of letters he wrote and received in his lifetime have survived and he didn't keep notebooks or diaries that recorded his life and activities. He was not active (with a few exceptions) in scientific societies, and <span class="hl">did not seek to find influence or advance his ideas through professional contacts and politics</span><span class="mark">38</span>, spending most of his time at home in his study reading and writing, or in the field collecting observations.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Some famous scientists, such as Newton, Darwin, and Einstein, left mountains of written material behind, hundreds of notebooks and letters numbering in the tens of thousands. Others, like Michael Faraday, left extensive journals of their thoughts and speculations, parallel to their scientific notebooks. <span class="hl">The more such material a scientist leaves behind, the better chance a biographer has of forming an accurate picture of how a scientist's ideas took shape and evolved.</span><span class="mark">39</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> I am firmly of the opinion that most of us, Wegener included, are not in any real sense the authors of our own lives. We plan, think, and act, often with apparent freedom, but most of the time <span class="hl">our lives 'happen to us'</span><span class="mark">40</span>, and we only retrospectively turn this happenstance into a coherent narrative of fulfilled intentions. This book, therefore, is a story both of the life and scientific work that Alfred Wegener planned and intended and of the life and scientific work that actually 'happened to him'. These are, as I think you will soon see, not always the same thing.</p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* Paleoclimatology – The study of past climates</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–5</div><p>Which paragraph contains the following information? <i>Write the correct letter, A–E. You may use any letter more than once.</i></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">mention of several challenges to be overcome before a green roof can be installed<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">D</span><div class="explanation">Paragraph D lists new skills such as landscaping, volunteers, drainage paths, health and safety, planning restrictions and disruption during installation.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">reference to a city where green roofs have been promoted for many years<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">C</span><div class="explanation">Toronto has had policies encouraging rooftop urban farms since the 1990s.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">a belief that existing green roofs should be used as a model for new ones<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">E</span><div class="explanation">'The success stories need to be studied and replicated elsewhere.'</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">examples of how green roofs can work in combination with other green urban initiatives<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">B</span><div class="explanation">Green roofs can integrate with living walls and with ground-level drainage such as street trees.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">the need to make a persuasive argument for the financial benefits of green roofs<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">D</span><div class="explanation">Economic arguments are 'still the most important' for convincing investors; 'natural capital' is introduced.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 6–9</div><p>Complete the summary. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Advantages of green roofs</b></p></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">reducing how much money is spent on <b>6 ………</b></div><span class="answer ans-letter">energy</span><div class="explanation">Green roofs bring 'saving on energy costs'.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">they can also be used for producing <b>7 ………</b></div><span class="answer ans-letter">food</span><div class="explanation">Benefits include 'growing food' and edible roofs.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">the medical profession recommends <b>8 ………</b> as an activity to help people cope with mental health issues</div><span class="answer ans-letter">gardening</span><div class="explanation">Doctors prescribe time spent gardening outdoors for anxiety and depression.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">availability of green spaces can prevent physical problems such as <b>9 ………</b></div><span class="answer ans-letter">obesity</span><div class="explanation">Access to green spaces can help people avoid obesity.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 10 & 11</div><p>Choose <b>TWO</b> letters, A–E. Which TWO advantages of using newer buildings for green roofs are mentioned in Paragraph C?</p><ul class='opts'><li><b>A</b> a longer growing season for edible produce</li><li><b>B</b> more economical use of water</li><li><b>C</b> greater water-storage capacity</li><li><b>D</b> ability to cultivate more plant types</li><li><b>E</b> a large surface area for growing plants</li></ul></div>
+<div class="q-block"><div class="q-num">Questions 10 &amp; 11</div><div class="question">Two advantages of newer buildings (Paragraph C)</div><span class="answer ans-letter">C and D</span><div class="explanation"><b>C</b>: newer buildings can hold greater weight, so keeping and distributing water at roof height is easier. <b>D</b>: a stronger roof allows deeper soil and a greater variety of plants.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 12 & 13</div><p>Choose <b>TWO</b> letters, A–E. Which TWO aims of new variations on green roofs are mentioned in Paragraph E?</p><ul class='opts'><li><b>A</b> to provide habitats for a wide range of species</li><li><b>B</b> to grow plants successfully even in the wettest climates</li><li><b>C</b> to regulate the temperature of the immediate environment</li><li><b>D</b> to generate power from a sustainable source</li><li><b>E</b> to collect water to supply other buildings</li></ul></div>
+<div class="q-block"><div class="q-num">Questions 12 &amp; 13</div><div class="question">Two aims of new variations (Paragraph E)</div><span class="answer ans-letter">A and D</span><div class="explanation"><b>A</b>: brown roofs maximise biodiversity. <b>D</b>: green roofs combined with solar panels generate sustainable power.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–16</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">What can we learn from the first paragraph?<ul class='opts'><li><b>A</b> where the notion of innate intelligence first began</li><li><b>B</b> when ideas about the nature of intelligence began to shift</li><li><b>C</b> how scientists have responded to changing views of intelligence</li><li><b>D</b> why thinkers turned away from the idea of intelligence being fixed</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">It describes the shift: in the early 20th century progressive thinkers rejected the idea that inherent ability is destiny.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">The second paragraph describes how schools encourage students to<ul class='opts'><li><b>A</b> identify their personal ambitions</li><li><b>B</b> help each other to realise their goals</li><li><b>C</b> have confidence in their potential to succeed</li><li><b>D</b> concentrate on where their particular strengths lie</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">Students are coaxed to see failure as a chance to improve their ability, i.e. to believe they can improve and succeed.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">In the third paragraph, the writer suggests that students with a fixed mindset<ul class='opts'><li><b>A</b> tend to be less competitive</li><li><b>B</b> generally have a low sense of self-esteem</li><li><b>C</b> will only work hard if they are given constant encouragement</li><li><b>D</b> are afraid to push themselves beyond what they see as their limitations</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">They took on only tasks that would not risk their sense of worth, and feared failure.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 17–22</div><p>Match each statement with the correct person, A–E. <i>You may use any letter more than once.</i></p><ul class='opts'><li><b>A</b> Alfred Binet</li><li><b>B</b> Carol Dweck</li><li><b>C</b> Andrew Gelman</li><li><b>D</b> Timothy Bates</li><li><b>E</b> David Yeager and Gregory Walton</li></ul></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">The methodology behind the growth mindset studies was not strict enough.<div class="yng">Which person?</div></div><span class="answer ans-letter">C</span><div class="explanation">Gelman: the research designs have so many degrees of freedom they could support just about any theory.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">The idea of the growth mindset has been incorrectly interpreted.<div class="yng">Which person?</div></div><span class="answer ans-letter">B</span><div class="explanation">Dweck argues her work has been misunderstood and misapplied.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Intellectual ability is an unchangeable feature of each individual.<div class="yng">Which person?</div></div><span class="answer ans-letter">A</span><div class="explanation">Binet held the earlier view that intelligence is innate and sought to quantify it.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">The growth mindset should be promoted without students being aware of it.<div class="yng">Which person?</div></div><span class="answer ans-letter">E</span><div class="explanation">They say interventions should be delivered subtly to maximise effectiveness.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">The growth mindset is not simply about boosting students' morale.<div class="yng">Which person?</div></div><span class="answer ans-letter">B</span><div class="explanation">Dweck: it is 'a tool for learning and improvement', not just a vehicle for making children feel good.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Research shows that the growth mindset has no effect on academic achievement.<div class="yng">Which person?</div></div><span class="answer ans-letter">D</span><div class="explanation">Bates's replication found null results: kids with the growth mindset aren't getting better grades.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 23–26</div><p>Do the following statements agree with the views of the writer in Reading Passage 2?</p><p><b>YES</b> if the statement agrees with the views/claims of the writer<br><b>NO</b> if the statement contradicts the views/claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Dweck has handled criticisms of her work in an admirable way.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">The writer says she 'deserves great credit' for responding and adapting her work.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Students' self-perception is a more effective driver of self-confidence than actual achievement is.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The writer says the effect of achievement on self-perception is stronger than the reverse.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Recent evidence about growth mindset interventions has attracted unfair coverage in the media.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Recent evidence is discussed, but media coverage is never mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Deliberate attempts to encourage students to strive for high achievement may have a negative effect.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Motivational posters and talks are often a waste of time and may give students a deluded notion of success.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the views/claims of the writer<br><b>NO</b> if the statement contradicts the views/claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Wegener's ideas about continental drift were widely disputed while he was alive.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">His book 'was the focus of an international controversy in his lifetime'.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">The idea that the continents remained fixed in place was defended in a number of respected scientific publications.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The fixed-continents view is mentioned, but no publications defending it are.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Wegener relied on a limited range of scientific fields to support his theory of continental drift.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">He used evidence from a large number of sciences: geology, geophysics, paleontology, climatology.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">The similarities between Wegener's theory of continental drift and modern-day plate tectonics are enormous.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Plate tectonics is 'in many respects quite different' from Wegener's proposal.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 31–36</div><p>Complete the summary using the list of phrases, A–J.</p><ul class='opts'><li><b>A</b> modest fame</li><li><b>B</b> vast range</li><li><b>C</b> record-breaking achievement</li><li><b>D</b> research methods</li><li><b>E</b> select group</li><li><b>F</b> professional interests</li><li><b>G</b> scientific debate</li><li><b>H</b> hazardous exploration</li><li><b>I</b> biographer's perspective</li><li><b>J</b> narrow investigation</li></ul></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">One of the remarkable things about Wegener from a <b>31 ………</b> is that he was not a geologist.</div><span class="answer ans-letter">I – biographer's perspective</span><div class="explanation">'One of the most intriguing things about him for me' – the writer is his biographer.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">His <b>32 ………</b> were limited to atmospheric physics.</div><span class="answer ans-letter">F – professional interests</span><div class="explanation">He trained as an astronomer and pursued a career in atmospheric physics.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">…he was already a person of <b>33 ………</b>.</div><span class="answer ans-letter">A – modest fame</span><div class="explanation">He was 'not an unknown', but known mainly in certain circles.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">…his <b>34 ………</b> of 52 hours in a hot-air balloon</div><span class="answer ans-letter">C – record-breaking achievement</span><div class="explanation">The 52-hour balloon flight was a world record.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">…well-publicised but <b>35 ………</b> of Greenland's coast</div><span class="answer ans-letter">H – hazardous exploration</span><div class="explanation">The expedition was 'extremely dangerous'.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">…come to the attention of a <b>36 ………</b> of German scientists</div><span class="answer ans-letter">E – select group</span><div class="explanation">He was known among 'a small circle' of meteorologists and atmospheric physicists.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">What is Mott T Greene doing in the fifth paragraph?<ul class='opts'><li><b>A</b> describing what motivated him to write the book</li><li><b>B</b> explaining why it is desirable to read the whole book</li><li><b>C</b> suggesting why Wegener pursued so many different careers</li><li><b>D</b> indicating what aspects of Wegener's life interested him most</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">He argues the parts make less sense alone and urges readers to experience Wegener's life as a whole.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">What is said about Wegener in the sixth paragraph?<ul class='opts'><li><b>A</b> He was not a particularly ambitious person.</li><li><b>B</b> He kept a record of all his scientific observations.</li><li><b>C</b> He did not adopt many of the scientific practices of the time.</li><li><b>D</b> He enjoyed discussing new discoveries with other scientists.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">He did not seek influence or advance his ideas through professional contacts and politics, working quietly at home or in the field.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">What does Greene say about some other famous scientists?<ul class='opts'><li><b>A</b> Their published works had a greater impact than Wegener's did.</li><li><b>B</b> They had fewer doubts about their scientific ideas than Wegener did.</li><li><b>C</b> Their scientific ideas were more controversial than Wegener's.</li><li><b>D</b> They are easier subjects to write about than Wegener.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">Scientists who leave more material give a biographer a better chance of an accurate picture.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">What is Greene's main point in the final paragraph?<ul class='opts'><li><b>A</b> It is not enough in life to have good intentions.</li><li><b>B</b> People need to plan carefully if they want to succeed.</li><li><b>C</b> People have little control over many aspects of their lives.</li><li><b>D</b> It is important that people ensure they have the freedom to act.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">Most of the time 'our lives happen to us'; we only later turn this into a coherent narrative.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>
