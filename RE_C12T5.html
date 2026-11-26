@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 12 – Reading Test 5 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 12 – Reading Test 5</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Cork</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Cork – the thick bark of the cork oak tree (Quercus suber) – is a remarkable material. It is tough, elastic, buoyant, and fire-resistant, and suitable for a wide range of purposes. It has also been used for millennia: the ancient Egyptians sealed their sarcophagi (stone coffins) with cork, while the ancient Greeks and Romans used it for anything from beehives to sandals.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> And the cork oak itself is an extraordinary tree. <span class="hl">Its bark grows up to 20 cm in thickness</span><span class="mark">1</span>, insulating the tree like a coat wrapped around the trunk and branches and keeping the inside at a constant 20°C all year round. Developed most probably as a defence against forest fires, the bark of the cork oak has a particular cellular structure – with about 40 million cells per cubic centimetre – <span class="hl">that technology has never succeeded in replicating</span><span class="mark">2</span>. The cells are filled with air, which is why cork is so buoyant. It also has an elasticity that means you can squash it and watch it spring back to its original size and shape when you release the pressure.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Cork oaks grow in a number of Mediterranean countries, including Portugal, Spain, Italy, Greece and Morocco. They flourish in warm, sunny climates where there is a minimum of 400 millimetres of rain per year, and not more than 800 millimetres. Like grape vines, the trees thrive in poor soil, putting down deep roots in search of moisture and nutrients. Southern Portugal's Alentejo region meets all of these requirements, which explains why, by the early 20th century, this region had become the world's largest producer of cork, and why today it accounts for roughly half of all cork production around the world.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Most cork forests are family-owned. Many of these family businesses, and indeed many of the trees themselves, are around 200 years old. Cork production is, above all, an exercise in patience. From the planting of a cork sapling to the first harvest takes 25 years, and <span class="hl">a gap of approximately a decade must separate harvests from an individual tree</span><span class="mark">3</span>. And for top-quality cork, it's necessary to wait a further 15 or 20 years. You even have to wait for the right kind of summer's day to harvest cork. <span class="hl">If the bark is stripped on a day when it's too cold – or when the air is damp – the tree will be damaged</span><span class="mark">4</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Cork harvesting is a very specialised profession. <span class="hl">No mechanical means of stripping cork bark has been invented</span><span class="mark">5</span>, so the job is done by teams of highly skilled workers. First, they make vertical cuts down the bark using small sharp axes, then lever it away in pieces as large as they can manage. The most skilful cork-strippers prise away a semi-circular husk that runs the length of the trunk from just above ground level to the first branches. It is then dried on the ground for about four months, before being taken to factories, where it is boiled to kill any insects that might remain in the cork. Over 60% of cork then goes on to be made into traditional bottle stoppers, with most of the remainder being used in the construction trade. Corkboard and cork tiles are ideal for thermal and acoustic insulation, while granules of cork are used in the manufacture of concrete.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Recent years have seen the end of the virtual monopoly of cork as the material for bottle stoppers, due to concerns about the effect it may have on the contents of the bottle. This is caused by a chemical compound called 2,4,6-trichloroanisole (TCA), which forms through the interaction of plant phenols, chlorine and mould. The tiniest concentrations – as little as three or four parts to a trillion – <span class="hl">can spoil the taste of the product contained in the bottle</span><span class="mark">6</span>. The result has been a gradual yet steady move first towards plastic stoppers and, more recently, to aluminium screw caps. <span class="hl">These substitutes are cheaper to manufacture</span><span class="mark">7</span> and, in the case of screw caps, <span class="hl">more convenient for the user</span><span class="mark">8</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> The classic cork stopper does have several advantages, however. Firstly, <span class="hl">its traditional image is more in keeping with that of the type of high quality goods</span><span class="mark">9</span> with which it has long been associated. Secondly – and very importantly – <span class="hl">cork is a sustainable product</span><span class="mark">10</span> <span class="hl">that can be recycled without difficulty</span><span class="mark">11</span>. Moreover, cork forests are a resource which <span class="hl">support local biodiversity</span><span class="mark">12</span>, and <span class="hl">prevent desertification in the regions where they are planted</span><span class="mark">13</span>. So, given the current concerns about environmental issues, the future of this ancient material once again looks promising.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Collecting as a hobby</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Collecting must be one of the most varied of human activities, and it's one that many of us psychologists find fascinating. Many forms of collecting have been dignified with a technical name: an archtophilist collects teddy bears, a philatelist collects postage stamps, and a deltiologist collects postcards. Amassing hundreds or even thousands of postcards, chocolate wrappers or whatever, takes time, energy and money that could surely be put to much more productive use. And yet there are millions of collectors around the world. Why do they do it?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> There are the people who collect because they want to make money – this could be called an instrumental reason for collecting; that is, collecting as a means to an end. <span class="hl">They'll look for, say, antiques that they can buy cheaply and expect to be able to sell at a profit</span><span class="mark">14</span>. But there may well be a psychological element, too – <span class="hl">buying cheap and selling dear can give the collector a sense of triumph</span><span class="mark">15</span>. And as selling online is so easy, more and more people are joining in.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Many collectors collect to develop their social life, <span class="hl">attending meetings of a group of collectors and exchanging information on items</span><span class="mark">16</span>. This is a variant on joining a bridge club or a gym, and similarly <span class="hl">brings them into contact with like-minded people</span><span class="mark">17</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Another motive for collecting is <span class="hl">the desire to find something special</span><span class="mark">18</span>, or a particular example of the collected item, such as a rare early recording by a particular singer.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> <span class="hl">Some may spend their whole lives in a hunt for this</span><span class="mark">18</span>. Psychologically, <span class="hl">this can give a purpose to a life that otherwise feels aimless</span><span class="mark">19</span>. There is a danger, though, that if the individual is ever lucky enough to find what they're looking for, rather than celebrating their success, they may feel empty, now that the goal that drove them on has gone.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> If you think about collecting postage stamps, another potential reason for it – or, perhaps, a result of collecting – <span class="hl">is its educational value</span><span class="mark">20</span>. Stamp collecting opens a window to other countries, and to the plants, animals, or famous people shown on their stamps. Similarly, in the 19th century, many collectors amassed fossils, animals and plants from around the globe, and their collections provided a vast amount of information about the natural world. Without those collections, our understanding would be greatly inferior to what it is.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> In the past – and nowadays, too, though to a lesser extent – a popular form of collecting, <span class="hl">particularly among boys and men, was trainspotting</span><span class="mark">21</span>. This might involve trying to see every locomotive of a particular type, using published data that identifies each one, and ticking off each engine as it is seen. Trainspotters exchange information, these days often by mobile phone, so they can work out where to go to, to see a particular engine. As a by-product, many practitioners of the hobby become very knowledgeable about railway operations, or the technical specifications of different engine types.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Similarly, people who collect dolls may go beyond simply enlarging their collection, and develop an interest in the way that dolls are made, or the materials that are used. <span class="hl">These have changed over the centuries from the wood that was standard in 16th century Europe</span><span class="mark">22</span>, <span class="hl">through the wax and porcelain of later centuries</span><span class="mark">23</span>, to the plastics of today's dolls. Or collectors might be inspired to study how dolls reflect notions of what children like, or ought to like.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Not all collectors are interested in learning from their hobby, though, so what we might call a psychological reason for collecting is the need for a sense of control, perhaps as a way of dealing with insecurity. Stamp collectors, for instance, arrange their stamps in albums, usually very neatly, organising their collection according to certain commonplace principles-<span class="hl">perhaps by country in alphabetical order, or grouping stamps by what they depict</span><span class="mark">24</span> – people, birds, maps, and so on.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> One reason, conscious or not, for what someone chooses to collect is to show the collector's individualism. Someone who decides to collect something as unexpected as dog collars, for instance, <span class="hl">may be conveying their belief that they must be interesting themselves</span><span class="mark">25</span>. And believe it or not, there is at least one dog collar museum in existence, and it grew out of a personal collection.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> Of course, all hobbies give pleasure, but the common factor in collecting is usually passion: pleasure is putting it far too mildly. <span class="hl">More than most other hobbies, collecting can be totally engrossing, and can give a strong sense of personal fulfilment</span><span class="mark">26</span>. To non-collectors it may appear an eccentric, if harmless, way of spending time, but potentially, collecting has a lot going for it.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">What's the purpose of gaining knowledge?</div>
+<p class="para"><strong>A</strong> 'I would found an institution where any person can find instruction in any subject.' That was the founder's motto for Cornell University, and it seems an apt characterization of the different university, also in the USA, where I currently teach philosophy. <span class="hl">A student can prepare for a career in resort management, engineering, interior design, accounting, music, law enforcement, you name it</span><span class="mark">37</span>. <span class="hl">But what would the founders of these two institutions have thought of a course called 'Arson for Profit'?</span><span class="mark">27</span> I kid you not: we have it on the books. <span class="hl">Any undergraduates who have met the academic requirements can sign up for the course in our program in 'fire science'</span><span class="mark">33</span>.</p>
+<p class="para"><strong>B</strong> Naturally, <span class="hl">the course is intended for prospective arson investigators</span><span class="mark">34</span>, who can learn all the tricks of the trade for detecting whether a fire was deliberately set, discovering who did it, and <span class="hl">establishing a chain of evidence</span><span class="mark">35</span> <span class="hl">for effective prosecution in a court of law</span><span class="mark">36</span>. <span class="hl">But wouldn't this also be the perfect course for prospective arsonists to sign up for?</span><span class="mark">28</span> <span class="hl">My point is not to criticize academic programs in fire science: they are highly welcome as part of the increasing professionalization of this and many other occupations</span><span class="mark">39</span>. <span class="hl">However, it's not unknown for a firefighter to torch a building. This example suggests how dishonest and illegal behavior, with the help of higher education, can creep into every aspect of public and business life.</span><span class="mark">38</span></p>
+<p class="para"><strong>C</strong> I realized this anew when I was invited to speak before a class in marketing, which is another of our degree programs. The regular instructor is a colleague who appreciates the kind of ethical perspective I can bring as a philosopher. There are endless ways I could have approached this assignment, but I took my cue from the title of the course: 'Principles of Marketing'. It made me think to ask the students, 'Is marketing principled?' After all, <span class="hl">a subject matter can have principles in the sense of being codified, having rules</span><span class="mark">29</span>, as with football or chess, without being principled in the sense of being ethical. Many of the students immediately assumed that the answer to my question about marketing principles was obvious: no. Just look at the ways in which everything under the sun has been marketed; obviously it need not be done in a principled (i.e. ethical) fashion.</p>
+<p class="para"><strong>D</strong> Is that obvious? I made the suggestion, which may sound downright crazy in light of the evidence, that perhaps marketing is by definition principled. <span class="hl">My inspiration for this judgement is the philosopher Immanuel Kant</span><span class="mark">30</span>, who argued that any body of knowledge consists of an end (or purpose) and a means.</p>
+<p class="para"><strong>E</strong> Let us apply both the terms 'means' and 'end' to marketing. The students have signed up for a course in order to learn how to market effectively. But to what end? There seem to be two main attitudes toward that question. One is that the answer is obvious: the purpose of marketing is to sell things and to make money. The other attitude is that the purpose of marketing is irrelevant: Each person comes to the program and course with his or her own plans, and these need not even concern the acquisition of marketing expertise as such. My proposal, which I believe would also be Kant's, is that <span class="hl">neither of these attitudes captures the significance of the end to the means for marketing</span><span class="mark">31</span>. A field of knowledge or a professional endeavor is defined by both the means and the end; hence both deserve scrutiny. Students need to study both how to achieve X, and also what X is.</p>
+<p class="para"><strong>F</strong> It is at this point that 'Arson for Profit' becomes supremely relevant. That course is presumably all about 'means', how to detect and prosecute criminal activity. It is therefore assumed that the end is good in an ethical sense. <span class="hl">When I ask fire science students to articulate the end, or purpose, of their field, they eventually generalize to something like, 'The safety and welfare of society'</span><span class="mark">40</span>, which seems right. As we have seen, someone could use the very same knowledge of means to achieve a much less noble end, such as personal profit via destructive, dangerous, reckless activity. But we would not call that firefighting. <span class="hl">We have a separate word for it: arson.</span><span class="mark">32</span> Similarly, if you employed the principles of marketing in an unprincipled way, you would not be doing marketing. <span class="hl">We have another term for it: fraud.</span><span class="mark">32</span> Kant gives the example of a doctor and a poisoner, who use the identical knowledge to achieve their divergent ends. We would say that one is practicing medicine, the other, murder.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–5</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">The cork oak has the thickest bark of any living tree.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The bark is said to grow 'up to 20 cm in thickness', but it is never compared with the bark of other trees.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Scientists have developed a synthetic cork with the same cellular structure as natural cork.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">The cellular structure is one that 'technology has never succeeded in replicating'.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Individual cork oak trees must be left for 25 years between the first and second harvest.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">25 years is the wait from planting to the <b>first</b> harvest; after that only 'approximately a decade' must separate harvests.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Cork bark should be stripped in dry atmospheric conditions.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Stripping the bark on a cold day or 'when the air is damp' damages the tree, so dry conditions are needed.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">The only way to remove the bark from cork oak trees is by hand.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">'No mechanical means of stripping cork bark has been invented', so skilled teams do it by hand.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 6–13</div><p>Complete the notes below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Comparison of aluminium screw caps and cork bottle stoppers</b></p></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question"><i>Advantages of aluminium screw caps:</i> do not affect the <b>6 ………</b> of the bottle contents</div><span class="answer ans-letter">taste</span><div class="explanation">TCA in cork can 'spoil the taste of the product contained in the bottle'; screw caps avoid this.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question"><i>Advantages of aluminium screw caps:</i> are <b>7 ………</b> to produce</div><span class="answer ans-letter">cheaper</span><div class="explanation">The substitutes 'are cheaper to manufacture'.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question"><i>Advantages of aluminium screw caps:</i> are <b>8 ………</b> to use</div><span class="answer ans-letter">convenient</span><div class="explanation">Screw caps are 'more convenient for the user'.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question"><i>Advantages of cork bottle stoppers:</i> suit the <b>9 ………</b> of quality products</div><span class="answer ans-letter">image</span><div class="explanation">Cork's 'traditional image' fits the high-quality goods it is associated with.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">made from a <b>10 ………</b> material</div><span class="answer ans-letter">sustainable</span><div class="explanation">Cork is 'a sustainable product'.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">easily <b>11 ………</b></div><span class="answer ans-letter">recycled</span><div class="explanation">It 'can be recycled without difficulty'.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">cork forests aid <b>12 ………</b></div><span class="answer ans-letter">biodiversity</span><div class="explanation">Cork forests 'support local biodiversity'.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">cork forests stop <b>13 ………</b> happening</div><span class="answer ans-letter">desertification</span><div class="explanation">They 'prevent desertification in the regions where they are planted'.</div></div>
+
+<div class="divider"></div>
+<div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–21</div><p>Complete the sentences below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">The writer mentions collecting <b>14 ………</b> as an example of collecting in order to make money.</div><span class="answer ans-letter">antiques</span><div class="explanation">Money-motivated collectors look for 'antiques that they can buy cheaply' and sell at a profit.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Collectors may get a feeling of <b>15 ………</b> from buying and selling items.</div><span class="answer ans-letter">triumph</span><div class="explanation">Buying cheap and selling dear 'can give the collector a sense of triumph'.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Collectors' clubs provide opportunities to share <b>16 ………</b>.</div><span class="answer ans-letter">information</span><div class="explanation">Members attend meetings and exchange 'information on items'.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Collectors' clubs offer <b>17 ………</b> with people who have similar interests.</div><span class="answer ans-letter">contact / meetings</span><div class="explanation">Clubs bring members 'into contact with like-minded people'. (<i>contact</i> and <i>meetings</i> are both accepted.)</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Collecting sometimes involves a life-long <b>18 ………</b> for a special item.</div><span class="answer ans-letter">hunt / desire</span><div class="explanation">Some people 'spend their whole lives in a hunt' for something special (the 'desire to find something special').</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Searching for something particular may prevent people from feeling their life is completely <b>19 ………</b>.</div><span class="answer ans-letter">aimless / empty</span><div class="explanation">The search can give 'a purpose to a life that otherwise feels aimless' (or 'empty' once the goal is reached).</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Stamp collecting may be <b>20 ………</b> because it provides facts about different countries.</div><span class="answer ans-letter">educational</span><div class="explanation">Stamp collecting has 'educational value' because it 'opens a window to other countries'.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question"><b>21 ………</b> tends to be mostly a male hobby.</div><span class="answer ans-letter">Trainspotting</span><div class="explanation">Trainspotting was popular 'particularly among boys and men'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 22–26</div><p>Do the following statements agree with the information given in Reading Passage 2?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">The number of people buying dolls has grown over the centuries.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The passage says the <i>materials</i> used for dolls have changed over the centuries, but says nothing about how many people buy them.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Sixteenth century European dolls were normally made of wax and porcelain.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Wood was standard in 16th-century Europe; wax and porcelain came in 'later centuries'.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Arranging a stamp collection by the size of the stamps is less common than other methods.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Arranging by country or by subject is mentioned, but size is never discussed.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Someone who collects unusual objects may want others to think he or she is also unusual.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">Collecting something like dog collars may convey a belief 'that they must be interesting themselves'.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Collecting gives a feeling that other hobbies are unlikely to inspire.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">'More than most other hobbies', collecting can be engrossing and give 'a strong sense of personal fulfilment'.</div></div>
+
+<div class="divider"></div>
+<div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–32</div><p>Reading Passage 3 has six sections, A–F. Choose the correct heading for each section from the list of headings below. <i>Write the correct number, i–viii.</i></p><p><b>List of Headings</b></p><ul class='opts'><li><b>i</b> Courses that require a high level of commitment</li><li><b>ii</b> A course title with two meanings</li><li><b>iii</b> The equal importance of two key issues</li><li><b>iv</b> Applying a theory in an unexpected context</li><li><b>v</b> The financial benefits of studying</li><li><b>vi</b> A surprising course title</li><li><b>vii</b> Different names for different outcomes</li><li><b>viii</b> The possibility of attracting the wrong kind of student</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Section A<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">vi – A surprising course title</span><div class="explanation">The writer is amazed that a course called 'Arson for Profit' exists – 'I kid you not'.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Section B<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">viii – The possibility of attracting the wrong kind of student</span><div class="explanation">The course is meant for arson investigators, but 'wouldn't this also be the perfect course for prospective arsonists?'</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Section C<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">ii – A course title with two meanings</span><div class="explanation">'Principles of Marketing' can mean 'having rules' or being 'principled' in the ethical sense.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Section D<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">iv – Applying a theory in an unexpected context</span><div class="explanation">The writer applies Kant's idea of 'an end (or purpose) and a means' to marketing.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Section E<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">iii – The equal importance of two key issues</span><div class="explanation">Neither attitude captures it: 'both deserve scrutiny' – students must study both the means and the end.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Section F<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">vii – Different names for different outcomes</span><div class="explanation">Misusing the means gives different names: arson (not firefighting), fraud (not marketing), murder (not medicine).</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 33–36</div><p>Complete the summary below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p><p><b>The 'Arson for Profit' course</b></p></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">This is a university course intended for undergraduates who are studying <b>33 ………</b></div><span class="answer ans-letter">fire science</span><div class="explanation">Undergraduates in the writer's 'fire science' program can sign up for it.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">The expectation is that they will become <b>34 ………</b> specialising in arson.</div><span class="answer ans-letter">investigators</span><div class="explanation">The course is 'intended for prospective arson investigators'.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">The course will help them to detect cases of arson and find <b>35 ………</b> of criminal intent…</div><span class="answer ans-letter">evidence</span><div class="explanation">They learn 'establishing a chain of evidence'.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">…leading to successful <b>36 ………</b> in the courts.</div><span class="answer ans-letter">prosecution</span><div class="explanation">The chain of evidence is for 'effective prosecution in a court of law'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Do the following statements agree with the views of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the views/claims of the writer<br><b>NO</b> if the statement contradicts the views/claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">It is difficult to attract students onto courses that do not focus on a career.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The writer lists many career-focused courses, but never says it is hard to attract students to other kinds of course.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">The 'Arson for Profit' course would be useful for people intending to set fire to buildings.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">The writer says dishonest behaviour 'with the help of higher education' can creep in – a firefighter might torch a building.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Fire science courses are too academic to help people to be good at the job of firefighting.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The writer says 'my point is not to criticize academic programs in fire science' – they are 'highly welcome'.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">The writer's fire science students provided a detailed definition of the purpose of their studies.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The students 'eventually generalize' to a short phrase – 'the safety and welfare of society' – which is not detailed.</div></div>
+
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

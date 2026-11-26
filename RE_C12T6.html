@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 12 – Reading Test 6 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 12 – Reading Test 6</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">The risks agriculture faces in developing countries</div>
+<p class="para" style="font-style:italic;color:var(--muted);">Synthesis of an online debate*</p>
+<p class="para"><strong>A</strong> <span class="hl">Two things distinguish food production from all other productive activities</span><span class="mark">1</span>: first, every single person needs food each day and has a right to it; and second, it is hugely dependent on nature. These two unique aspects, one political, the other natural, make food production highly vulnerable and different from any other business. At the same time, cultural values are highly entrenched in food and agricultural systems worldwide.</p>
+<p class="para"><strong>B</strong> Farmers everywhere face major risks, including extreme weather, long-term climate change, and price volatility in input and product markets. However, <span class="hl">smallholder farmers in developing countries must in addition deal with adverse environments</span><span class="mark">2</span>, both natural, in terms of soil quality, rainfall, etc., and human, in terms of infrastructure, financial systems, markets, knowledge and technology. Counter-intuitively, hunger is prevalent among many smallholder farmers in the developing world.</p>
+<p class="para"><strong>C</strong> Participants in the online debate argued that our biggest challenge is to address the underlying causes of the agricultural system's inability to ensure sufficient food for all, and they identified as drivers of this problem our dependency on fossil fuels and unsupportive government policies.</p>
+<p class="para"><strong>D</strong> On the question of mitigating the risks farmers face, most essayists called for greater state intervention. In his essay, Kanayo F. Nwanze, President of the International Fund for Agricultural Development, argued that <span class="hl">governments can significantly reduce risks for farmers by providing basic services like roads to get produce more efficiently to markets</span><span class="mark">9</span>, or water and food storage facilities to reduce losses. Sophia Murphy, senior advisor to the Institute for Agriculture and Trade Policy, suggested that <span class="hl">the procurement and holding of stocks by governments can also help mitigate wild swings in food prices</span><span class="mark">8</span> by alleviating uncertainties about market supply.</p>
+<p class="para"><strong>E</strong> Shenggen Fan, Director General of the International Food Policy Research Institute, <span class="hl">held up social safety nets and public welfare programmes in Ethiopia, Brazil and Mexico as valuable ways to address poverty among farming families</span><span class="mark">6</span> and reduce their vulnerability to agriculture shocks. However, some commentators responded that cash transfers to poor families do not necessarily translate into increased food security, as these programmes do not always strengthen food production or raise incomes. Regarding state subsidies for agriculture, Rokeya Kabir, Executive Director of Bangladesh Nari Progati Sangha, commented in her essay that these 'have not compensated for the stranglehold exercised by private traders. In fact, studies show that <span class="hl">sixty percent of beneficiaries of subsidies are not poor, but rich landowners and non-farmer traders</span><span class="mark">4</span>.'</p>
+<p class="para"><strong>F</strong> Nwanze, Murphy and Fan argued that private risk management tools, like private insurance, commodity futures markets, and rural finance can help small-scale producers mitigate risk and allow for investment in improvements. Kabir warned that financial support schemes often encourage the adoption of high-input agricultural practices, which in the medium term may raise production costs beyond the value of their harvests. Murphy noted that when futures markets become excessively financialised they can contribute to short-term price volatility, which increases farmers' food insecurity. Many participants and commentators emphasised that greater transparency in markets is needed to mitigate the impact of volatility, and make evident whether adequate stocks and supplies are available. Others contended that agribusiness companies should be held responsible for paying for negative side effects.</p>
+<p class="para"><strong>G</strong> Many essayists mentioned climate change and its consequences for small-scale agriculture. Fan explained that 'in addition to reducing crop yields, <span class="hl">climate change increases the magnitude and the frequency of extreme weather events, which increase smallholder vulnerability</span><span class="mark">10</span>.' The growing unpredictability of weather patterns increases farmers' difficulty in managing weather-related risks. According to this author, one solution would be to develop crop varieties that are more resilient to new climate trends and extreme weather patterns. Accordingly, Pat Mooney, co-founder and executive director of the ETC Group, suggested that 'if we are to survive climate change, we must adopt policies that let peasants diversify the plant and animal species and varieties/breeds that make up our menus.'</p>
+<p class="para"><strong>H</strong> Some participating authors and commentators argued in favour of community-based and autonomous risk management strategies through collective action groups, co-operatives or producers' groups. Such groups enhance market opportunities for small-scale producers, reduce marketing costs and synchronise buying and selling with seasonal price conditions. According to Murphy, '<span class="hl">collective action offers an important way for farmers to strengthen their political and economic bargaining power, and to reduce their business risks</span><span class="mark">5</span>.' One commentator, Giel Ton, <span class="hl">warned that collective action does not come as a free good. It takes time, effort and money to organise, build trust and to experiment</span><span class="mark">3</span>. Others, like Marcel Vernooij and Marcel Beukeboom, suggested that in order to 'apply what we already know', <span class="hl">all stakeholders, including business, government, scientists and civil society, must work together, starting at the beginning of the value chain</span><span class="mark">12</span>.</p>
+<p class="para"><strong>I</strong> Some participants explained that <span class="hl">market price volatility is often worsened by the presence of intermediary purchasers who, taking advantage of farmers' vulnerability, dictate prices</span><span class="mark">11</span>. One commentator suggested farmers can gain greater control over prices and minimise price volatility by selling directly to consumers. Similarly, Sonali Bisht, founder and advisor to the Institute of Himalayan Environmental Research and Education (INHERE), India, wrote that community-supported agriculture, <span class="hl">where consumers invest in local farmers by subscription and guarantee producers a fair price</span><span class="mark">7</span>, <span class="hl">is a risk-sharing model worth more attention</span><span class="mark">13</span>. Direct food distribution systems not only encourage small-scale agriculture but also give consumers more control over the food they consume, she wrote.</p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* The personal names in the text refer to the authors of written contributions to the online debate.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">The Lost City</div>
+<p class="para" style="font-style:italic;color:var(--muted);">An explorer's encounter with the ruined city of Machu Picchu, the most famous icon of the Inca civilisation</p>
+<p class="para"><strong>A</strong> When the US explorer and academic Hiram Bingham arrived in South America in 1911, he was ready for what was to be the greatest achievement of his life: <span class="hl">the exploration of the remote hinterland to the west of Cusco, the old capital of the Inca empire in the Andes mountains of Peru</span><span class="mark">14</span>. <span class="hl">His goal was to locate the remains of a city called Vitcos, the last capital of the Inca civilisation</span><span class="mark">21</span>. Cusco lies on a high plateau at an elevation of more than 3,000 metres, and Bingham's plan was to descend from this plateau along the valley of the Urubamba river, which takes a circuitous route down to the Amazon and passes through an area of dramatic canyons and mountain ranges.</p>
+<p class="para"><strong>B</strong> When Bingham and his team set off down the Urubamba in late July, <span class="hl">they had an advantage over travellers who had preceded them</span><span class="mark">15</span>: a track had recently been blasted down the valley canyon <span class="hl">to enable rubber to be brought up by mules from the jungle</span><span class="mark">25</span>. <span class="hl">Almost all previous travellers had left the river at Ollantaytambo and taken a high pass across the mountains</span><span class="mark">22</span> to rejoin the river lower down, thereby cutting a substantial corner, but also therefore never passing through the area around Machu Picchu.</p>
+<p class="para"><strong>C</strong> On 24 July they were a few days into their descent of the valley. The day began slowly, with Bingham trying to arrange sufficient mules for the next stage of the trek. His companions showed no interest in accompanying him up the nearby hill to see <span class="hl">some ruins that a local farmer, Melchor Arteaga, had told them about the night before</span><span class="mark">26</span>. The morning was dull and damp, and <span class="hl">Bingham also seems to have been less than keen on the prospect of climbing the hill</span><span class="mark">16</span>. In his book Lost City of the Incas, he relates that he made the ascent without having the least expectation that he would find anything at the top.</p>
+<p class="para"><strong>D</strong> <span class="hl">Bingham writes about the approach in vivid style in his book</span><span class="mark">17</span>. First, as he climbs up the hill, he describes the ever-present possibility of deadly snakes, 'capable of making considerable springs when in pursuit of their prey'; not that he sees any. Then there's a sense of mounting discovery as he comes across great sweeps of terraces, then a mausoleum, followed by monumental staircases and, finally, the grand ceremonial buildings of Machu Picchu. 'It seemed like an unbelievable dream ... the sight held me spellbound ...' he wrote.</p>
+<p class="para"><strong>E</strong> We should remember, however, that Lost City of the Incas is a work of hindsight, not written until 1948, many years after his journey. <span class="hl">His journal entries of the time reveal a much more gradual appreciation of his achievement</span><span class="mark">18</span>. He spent the afternoon at the ruins noting down the dimensions of some of the buildings, then descended and rejoined his companions, to whom he seems to have said little about his discovery. <span class="hl">At this stage, Bingham didn't realise the extent or the importance of the site</span><span class="mark">23</span>, nor did he realise what use he could make of the discovery.</p>
+<p class="para"><strong>F</strong> However, soon after returning it occurred to him that he could make a name for himself from this discovery. <span class="hl">When he came to write the National Geographic magazine article that broke the story to the world in April 1913, he knew he had to produce a big idea</span><span class="mark">19</span>. He wondered whether it could have been the birthplace of the very first Inca, Manco the Great, and whether it could also have been what chroniclers described as 'the last city of the Incas'. This term refers to Vilcabamba, the settlement where the Incas had fled from Spanish invaders in the 1530s. <span class="hl">Bingham made desperate attempts to prove this belief for nearly 40 years</span><span class="mark">24</span>. Sadly, his vision of the site as both the beginning and end of the Inca civilisation, while a magnificent one, is inaccurate. We now know that Vilcabamba actually lies 65 kilometres away in the depths of the jungle.</p>
+<p class="para"><strong>G</strong> One question that has perplexed visitors, historians and archaeologists alike ever since Bingham, is why the site seems to have been abandoned before the Spanish Conquest. There are no references to it by any of the Spanish chroniclers – and if they had known of its existence so close to Cusco they would certainly have come in search of gold. <span class="hl">An idea which has gained wide acceptance over the past few years is that Machu Picchu was a moya</span><span class="mark">20</span>, a country estate built by an Inca emperor to escape the cold winters of Cusco, where the elite could enjoy monumental architecture and spectacular views. Furthermore, the particular architecture of Machu Picchu suggests that it was constructed at the time of the greatest of all the Incas, the emperor Pachacuti (c. 1438-71). By custom, Pachacuti's descendants built other similar estates for their own use, and so Machu Picchu would have been abandoned after his death, some 50 years before the Spanish Conquest.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">The Benefits of Being Bilingual</div>
+<p class="para"><strong>A</strong> According to the latest figures, the majority of the world's population is now bilingual or multilingual, having grown up speaking two or more languages. <span class="hl">In the past, such children were considered to be at a disadvantage compared with their monolingual peers</span><span class="mark">32</span>. Over the past few decades, however, technological advances have allowed researchers to look more deeply at how bilingualism interacts with and changes the cognitive and neurological systems, thereby identifying several clear benefits of being bilingual.</p>
+<p class="para"><strong>B</strong> Research shows that when a bilingual person uses one language, the other is active at the same time. <span class="hl">When we hear a word, we don't hear the entire word all at once: the sounds arrive in sequential order</span><span class="mark">39</span>. <span class="hl">Long before the word is finished, the brain's language system begins to guess what that word might be</span><span class="mark">33</span>. If you hear 'can', you will likely activate words like 'candy' and 'candle' as well, at least during the earlier stages of word recognition. For bilingual people, this activation is not limited to a single language; auditory input activates corresponding words regardless of the language to which they belong. Some of the most compelling evidence for this phenomenon, <span class="hl">called 'language co-activation'</span><span class="mark">28</span>, <span class="hl">comes from studying eye movements</span><span class="mark">27</span>. A Russian-English bilingual asked to 'pick up a marker' from a set of objects would look more at a stamp than someone who doesn't know Russian, because the Russian word for 'stamp', marka, sounds like the English word he or she heard, 'marker'. In cases like this, language co-activation occurs because what the listener hears could map onto words in either language.</p>
+<p class="para"><strong>C</strong> <span class="hl">Having to deal with this persistent linguistic competition can result in difficulties, however.</span><span class="mark">40</span> For instance, knowing more than one language <span class="hl">can cause speakers to name pictures more slowly</span><span class="mark">34</span>, and can increase 'tip-of-the-tongue states', when you can almost, but not quite, bring a word to mind. As a result, the constant juggling of two languages creates a need to control how much a person accesses a language at any given time. For this reason, <span class="hl">bilingual people often perform better on tasks that require conflict management</span><span class="mark">30</span>. <span class="hl">In the classic Stroop Task, people see a word and are asked to name the colour of the word's font</span><span class="mark">29</span>. When the colour and the word match (i.e., the word 'red' printed in red), people correctly name the colour more quickly than when the colour and the word don't match (i.e., the word 'red' printed in blue). This occurs because the word itself ('red') and its font colour (blue) conflict. Bilingual people often excel at tasks such as this, which tap into the ability to ignore competing perceptual information and focus on the relevant aspects of the input. Bilinguals are also better at switching between two tasks; for example, when bilinguals have to switch from categorizing objects by colour (red or green) to categorizing them by shape (circle or triangle), they do so more quickly than monolingual people, <span class="hl">reflecting better cognitive control when having to make rapid changes of strategy</span><span class="mark">31</span>.</p>
+<p class="para"><strong>D</strong> It also seems that the neurological roots of the bilingual advantage extend to brain areas more traditionally associated with sensory processing. <span class="hl">When monolingual and bilingual adolescents listen to simple speech sounds without any intervening background noise, they show highly similar brain stem responses</span><span class="mark">35</span>. <span class="hl">When researchers play the same sound to both groups in the presence of background noise, however, the bilingual listeners' neural response is considerably larger</span><span class="mark">37</span>, reflecting better encoding of the sound's fundamental frequency, a feature of sound closely related to pitch perception.</p>
+<p class="para"><strong>E</strong> Such improvements in cognitive and sensory processing may help a bilingual person to process information in the environment, and help explain why bilingual adults acquire a third language better than monolingual adults master a second language. This advantage may be rooted in the skill of focussing on information about the new language while reducing interference from the languages they already know.</p>
+<p class="para"><strong>F</strong> Research also indicates that bilingual experience may help to keep the cognitive mechanisms sharp by recruiting alternate brain networks to compensate for those that become damaged during aging. Older bilinguals enjoy improved memory relative to monolingual people, which can lead to real-world health benefits. In a study of over 200 patients with Alzheimer's disease, a degenerative brain disease, <span class="hl">bilingual patients reported showing initial symptoms of the disease an average of five years later than monolingual patients</span><span class="mark">36</span>. In a follow-up study, researchers compared the brains of bilingual and monolingual patients matched on the severity of Alzheimer's symptoms. Surprisingly, the bilinguals' brains had more physical signs of disease than their monolingual counterparts, even though their outward behaviour and abilities were the same. If the brain is an engine, bilingualism may help it to go farther on the same amount of fuel.</p>
+<p class="para"><strong>G</strong> Furthermore, the benefits associated with bilingual experience seem to start very early. In one study, <span class="hl">researchers taught seven-month-old babies growing up in monolingual or bilingual homes</span><span class="mark">38</span> that when they heard a tinkling sound, a puppet appeared on one side of a screen. Halfway through the study, the puppet began appearing on the opposite side of the screen. In order to get a reward, the infants had to adjust the rule they'd learned; only the bilingual babies were able to successfully learn the new rule. This suggests that for very young children, as well as for older people, navigating a multilingual environment imparts advantages that transfer far beyond language.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–3</div><p>Which paragraph contains the following information? <i>Write the correct letter, A–I.</i></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">a reference to characteristics that only apply to food production<div class="yng">Which paragraph (A–I)?</div></div><span class="answer ans-letter">A</span><div class="explanation">Paragraph A names 'two things' that 'distinguish food production from all other productive activities'.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">a reference to challenges faced only by farmers in certain parts of the world<div class="yng">Which paragraph (A–I)?</div></div><span class="answer ans-letter">B</span><div class="explanation">Smallholder farmers in developing countries must 'in addition' deal with adverse natural and human environments.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">a reference to difficulties in bringing about co-operation between farmers<div class="yng">Which paragraph (A–I)?</div></div><span class="answer ans-letter">H</span><div class="explanation">Giel Ton warns collective action 'does not come as a free good' – it takes time, effort and money to organise.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 4–9</div><p>Look at the following statements and the list of people. Match each statement with the correct person, A–G. <i>You may use any letter more than once.</i></p><p><b>List of People</b></p><ul class='opts'><li><b>A</b> Kanayo F. Nwanze</li><li><b>B</b> Sophia Murphy</li><li><b>C</b> Shenggen Fan</li><li><b>D</b> Rokeya Kabir</li><li><b>E</b> Pat Mooney</li><li><b>F</b> Giel Ton</li><li><b>G</b> Sonali Bisht</li></ul></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Financial assistance from the government does not always go to the farmers who most need it.<div class="yng">Which person?</div></div><span class="answer ans-letter">D – Rokeya Kabir</span><div class="explanation">Kabir says sixty percent of subsidy beneficiaries 'are not poor, but rich landowners and non-farmer traders'.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">Farmers can benefit from collaborating as a group.<div class="yng">Which person?</div></div><span class="answer ans-letter">B – Sophia Murphy</span><div class="explanation">Murphy: 'collective action offers an important way for farmers to strengthen their political and economic bargaining power'.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">Financial assistance from the government can improve the standard of living of farmers.<div class="yng">Which person?</div></div><span class="answer ans-letter">C – Shenggen Fan</span><div class="explanation">Fan 'held up' social safety nets and welfare programmes as ways to address poverty among farming families.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">Farmers may be helped if there is financial input by the same individuals who buy from them.<div class="yng">Which person?</div></div><span class="answer ans-letter">G – Sonali Bisht</span><div class="explanation">Bisht describes community-supported agriculture, 'where consumers invest in local farmers by subscription'.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">Governments can help to reduce variation in prices.<div class="yng">Which person?</div></div><span class="answer ans-letter">B – Sophia Murphy</span><div class="explanation">Murphy suggests government stockholding can 'mitigate wild swings in food prices'.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">Improvements to infrastructure can have a major impact on risk for farmers.<div class="yng">Which person?</div></div><span class="answer ans-letter">A – Kanayo F. Nwanze</span><div class="explanation">Nwanze argues governments can 'significantly reduce risks' by providing basic services like roads.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 10 & 11</div><p>Choose <b>TWO</b> letters, A–E. Which TWO problems are mentioned which affect farmers with small farms in developing countries?</p><ul class='opts'><li><b>A</b> a lack of demand for locally produced food</li><li><b>B</b> a lack of irrigation programmes</li><li><b>C</b> being unable to get insurance</li><li><b>D</b> the effects of changing weather patterns</li><li><b>E</b> having to sell their goods to intermediary buyers</li></ul></div>
+<div class="q-block"><div class="q-num">Questions 10 &amp; 11</div><div class="question">Two problems affecting small farmers in developing countries</div><span class="answer ans-letter">D and E</span><div class="explanation"><b>D</b>: climate change brings unpredictable weather and extreme events (paragraph G). <b>E</b>: intermediary purchasers take advantage of farmers and 'dictate prices' (paragraph I). Insurance is presented as a solution, not a problem.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 12 & 13</div><p>Choose <b>TWO</b> letters, A–E. Which TWO actions are recommended for improving conditions for farmers?</p><ul class='opts'><li><b>A</b> reducing the size of food stocks</li><li><b>B</b> attempting to ensure that prices rise at certain times of the year</li><li><b>C</b> organising co-operation between a wide range of interested parties</li><li><b>D</b> encouraging consumers to take a financial stake in farming</li><li><b>E</b> making customers aware of the reasons for changing food prices</li></ul></div>
+<div class="q-block"><div class="q-num">Questions 12 &amp; 13</div><div class="question">Two recommended actions for improving conditions for farmers</div><span class="answer ans-letter">C and D</span><div class="explanation"><b>C</b>: all stakeholders – business, government, scientists and civil society – 'must work together' (paragraph H). <b>D</b>: community-supported agriculture, where consumers invest in farmers, is 'worth more attention' (paragraph I).</div></div>
+
+<div class="divider"></div>
+<div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–20</div><p>Reading Passage 2 has seven paragraphs, A–G. Choose the correct heading for each paragraph from the list of headings below. <i>Write the correct number, i–viii.</i></p><p><b>List of Headings</b></p><ul class='opts'><li><b>i</b> Different accounts of the same journey</li><li><b>ii</b> Bingham gains support</li><li><b>iii</b> A common belief</li><li><b>iv</b> The aim of the trip</li><li><b>v</b> A dramatic description</li><li><b>vi</b> A new route</li><li><b>vii</b> Bingham publishes his theory</li><li><b>viii</b> Bingham's lack of enthusiasm</li></ul></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Paragraph A<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">iv – The aim of the trip</span><div class="explanation">Bingham's goal was 'to locate the remains of a city called Vitcos' – the purpose of the expedition.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Paragraph B<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">vi – A new route</span><div class="explanation">His team had 'an advantage over travellers who had preceded them': a new track down the valley, not the usual high pass.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Paragraph C<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">viii – Bingham's lack of enthusiasm</span><div class="explanation">Bingham was 'less than keen' on climbing the hill and had no expectation of finding anything.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Paragraph D<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">v – A dramatic description</span><div class="explanation">He describes the climb 'in vivid style' – deadly snakes, terraces, staircases and the 'unbelievable dream'.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Paragraph E<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">i – Different accounts of the same journey</span><div class="explanation">The 1948 book is 'a work of hindsight'; his journal of the time gives 'a much more gradual appreciation'.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Paragraph F<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">vii – Bingham publishes his theory</span><div class="explanation">Bingham wrote the 1913 National Geographic article and put forward his 'big idea' about the site.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Paragraph G<div class="yng">Which heading (i–viii)?</div></div><span class="answer ans-letter">iii – A common belief</span><div class="explanation">'An idea which has gained wide acceptance' – that Machu Picchu was a royal country estate.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 21–24</div><p>Do the following statements agree with the information given in Reading Passage 2?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Bingham went to South America in search of an Inca city.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-yes">TRUE</span><div class="explanation">His goal was 'to locate the remains of a city called Vitcos', the last Inca capital.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Bingham chose a particular route down the Urubamba valley because it was the most common route used by travellers.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">Almost all previous travellers left the river at Ollantaytambo and crossed a pass; Bingham stayed on the valley track.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Bingham understood the significance of Machu Picchu as soon as he saw it.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-no">FALSE</span><div class="explanation">'At this stage, Bingham didn't realise the extent or the importance of the site'.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Bingham returned to Machu Picchu in order to find evidence to support his theory.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">He made 'desperate attempts to prove this belief for nearly 40 years', but the passage never says he went back to Machu Picchu.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 25 & 26</div><p>Complete the sentences below. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">The track that took Bingham down the Urubamba valley had been created for the transportation of <b>25 ………</b>.</div><span class="answer ans-letter">rubber</span><div class="explanation">The track was blasted 'to enable rubber to be brought up by mules from the jungle'.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Bingham found out about the ruins of Machu Picchu from a <b>26 ………</b> in the Urubamba valley.</div><span class="answer ans-letter">farmer</span><div class="explanation">'A local farmer, Melchor Arteaga' had told them about the ruins.</div></div>
+
+<div class="divider"></div>
+<div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–31</div><p>Complete the table below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question"><i>Observing the</i> <b>27 ………</b> <i>of Russian-English bilingual people when asked to select certain objects</i></div><span class="answer ans-letter">eye movements</span><div class="explanation">Evidence for co-activation 'comes from studying eye movements' (e.g. looking at a stamp when told to pick up a marker).</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question"><i>Bilingual people engage both languages simultaneously: a mechanism known as</i> <b>28 ………</b></div><span class="answer ans-letter">language co-activation</span><div class="explanation">The phenomenon is called 'language co-activation'.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question"><i>A test called the</i> <b>29 ………</b>, <i>focusing on naming colours</i></div><span class="answer ans-letter">Stroop Task</span><div class="explanation">'In the classic Stroop Task', people name the colour of a word's font.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question"><i>Bilingual people are more able to handle tasks involving a skill called</i> <b>30 ………</b></div><span class="answer ans-letter">conflict management</span><div class="explanation">Bilinguals 'perform better on tasks that require conflict management'.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question"><i>A test involving switching between tasks – when changing strategies, bilingual people have superior</i> <b>31 ………</b></div><span class="answer ans-letter">cognitive control</span><div class="explanation">Faster task-switching reflects 'better cognitive control'.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 32–36</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the views/claims of the writer<br><b>NO</b> if the statement contradicts the views/claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Attitudes towards bilingualism have changed in recent years.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Bilingual children were once 'considered to be at a disadvantage'; recent research has found 'clear benefits'.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">Bilingual people are better than monolingual people at guessing correctly what words are before they are finished.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The passage says the brain starts guessing a word early and that bilinguals activate both languages, but never compares guessing accuracy.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Bilingual people consistently name images faster than monolingual people.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Knowing two languages 'can cause speakers to name pictures more slowly'.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Bilingual people's brains process single sounds more efficiently than monolingual people in all situations.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Without background noise, the two groups show 'highly similar brain stem responses'; the difference appears only with noise.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Fewer bilingual people than monolingual people suffer from brain disease in old age.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Bilingual patients showed Alzheimer's symptoms about five years later, but the passage gives no figures on how many people develop disease.</div></div>
+
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Reading Passage 3 has seven paragraphs, A–G. Which paragraph contains the following information? <i>Write the correct letter, A–G.</i></p></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">an example of how bilingual and monolingual people's brains respond differently to a certain type of non-verbal auditory input<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">D</span><div class="explanation">With background noise, bilingual listeners' neural response to the same sound is 'considerably larger'.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">a demonstration of how a bilingual upbringing has benefits even before we learn to speak<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">G</span><div class="explanation">Only the bilingual seven-month-old babies learned the new rule.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">a description of the process by which people identify words that they hear<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">B</span><div class="explanation">'We don't hear the entire word all at once: the sounds arrive in sequential order.'</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">reference to some negative consequences of being bilingual<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">C</span><div class="explanation">Linguistic competition 'can result in difficulties', such as slower picture naming and more tip-of-the-tongue states.</div></div>
+
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>
