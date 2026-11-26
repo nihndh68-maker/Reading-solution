@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 7 – Reading Test 3 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 7 – Reading Test 3</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Ant Intelligence</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> When we think of intelligent members of the animal kingdom, the creatures that spring immediately to mind are apes and monkeys. But in fact the social lives of some members of the insect kingdom are sufficiently complex to suggest more than a hint of intelligence. Among these, the world of the ant has come in for considerable scrutiny lately, and the idea that ants demonstrate sparks of cognition has certainly not been rejected by those involved in these investigations.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Ants store food, repel attackers and use chemical signals to contact one another in case of attack. <span class="hl">Such chemical communication can be compared to the human use of visual and auditory channels</span><span class="mark">1</span> (as in religious chants, advertising images and jingles, political slogans and martial music) to arouse and propagate moods and attitudes. The biologist Lewis Thomas wrote, 'Ants are so much like human beings as to be an embarrassment. They farm fungi, raise aphids as livestock, launch armies to war, use chemical sprays to alarm and confuse enemies, capture slaves, engage in child labour, exchange information ceaselessly. They do everything but watch television.'</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> However, in ants there is no cultural transmission – everything must be encoded in the genes – whereas in humans the opposite is true. Only basic instincts are carried in the genes of a newborn baby, other skills being learned from others in the community as the child grows up. It may seem that this cultural continuity gives us a huge advantage over ants. They have never mastered fire nor progressed. Their fungus farming and aphid herding crafts are sophisticated when compared to the agricultural skills of humans five thousand years ago but have been totally overtaken by modern human agribusiness.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Or have they? <span class="hl">The farming methods of ants are at least sustainable.</span><span class="mark">11</span> <span class="hl">They do not ruin environments</span><span class="mark">12</span> or <span class="hl">use enormous amounts of energy</span><span class="mark">13</span>. Moreover, recent evidence suggests that the crop farming of ants may be more sophisticated and adaptable than was thought.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Ants were farmers fifty million years before humans were. <span class="hl">Ants can't digest the cellulose in leaves – but some fungi can.</span><span class="mark">7</span> The ants therefore cultivate these fungi in their nests, bringing them leaves to feed on, and then use them as a source of food. <span class="hl">Farmer ants secrete antibiotics to control other fungi that might act as 'weeds'</span><span class="mark">8</span>, and <span class="hl">spread waste to fertilise the crop</span><span class="mark">9</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> It was once thought that the fungus that ants cultivate was a single type that they had propagated, essentially unchanged from the distant past. Not so. Ulrich Mueller of Maryland and his colleagues genetically screened 862 different types of fungi taken from ants' nests. These turned out to be highly diverse: it seems that ants are continually domesticating new species. Even more impressively, DNA analysis of the fungi suggests that <span class="hl">the ants improve or modify the fungi by regularly swapping and sharing strains with neighbouring ant colonies</span><span class="mark">10</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> <span class="hl">Whereas prehistoric man had no exposure to urban lifestyles – the forcing house of intelligence</span><span class="mark">2</span> – the evidence suggests that ants have lived in urban settings for close on a hundred million years, developing and maintaining underground cities of specialised chambers and tunnels.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> When we survey Mexico City, Tokyo, Los Angeles, we are amazed at what has been accomplished by humans. Yet Hoelldobler and Wilson's magnificent work for ant lovers, <em>The Ants</em>, describes a supercolony of the ant <em>Formica yessensis</em> on the Ishikari Coast of Hokkaido. <span class="hl">This 'megalopolis' was reported to be composed of 360 million workers and a million queens living in 4,500 interconnected nests across a territory of 2.7 square kilometres.</span><span class="mark">3</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> Such enduring and intricately meshed levels of technical achievement outstrip by far anything achieved by our distant ancestors. We hail as masterpieces the cave paintings in southern France and elsewhere, dating back some 20,000 years. Ant societies existed in something like their present form more than seventy million years ago. Beside this, prehistoric man looks technologically primitive. Is this then some kind of intelligence, albeit of a different kind?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶10</strong> Research conducted at Oxford, Sussex and Zürich Universities has shown that <span class="hl">when desert ants return from a foraging trip, they navigate by integrating bearings and distances, which they continuously update in their heads</span><span class="mark">4</span>. They combine the evidence of visual landmarks with a mental library of local directions, all within a framework which is consulted and updated. So ants can learn too.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶11</strong> And in a twelve-year programme of work, Ryabko and Reznikova have found evidence that ants can transmit very complex messages. Scouts who had located food in a maze returned to mobilise their foraging teams. They engaged in contact sessions, at the end of which the scout was removed in order to observe what her team might do. Often the foragers proceeded to the exact spot in the maze where the food had been. <span class="hl">Elaborate precautions were taken to prevent the foraging team using odour clues.</span><span class="mark">5</span> Discussion now centres on whether the route through the maze is communicated as a 'left-right' sequence of turns or as a 'compass bearing and distance' message.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶12</strong> During the course of this exhaustive study, Reznikova has grown so attached to her laboratory ants that she feels she knows them as individuals – even without the paint spots used to mark them. <span class="hl">It's no surprise that Edward Wilson, in his essay, 'In the company of ants', advises readers who ask what to do with the ants in their kitchen to: 'Watch where you step. Be careful of little lives.'</span><span class="mark">6</span></p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Population movements and genetics</div>
+<p class="para"><strong>A</strong> Study of the origins and distribution of human populations used to be based on archaeological and fossil evidence. <span class="hl">A number of techniques developed since the 1950s, however, have placed the study of these subjects on a sounder and more objective footing.</span><span class="mark">14</span> The best information on early population movements is now being obtained from the 'archaeology of the living body', the clues to be found in genetic material.</p>
+<p class="para"><strong>B</strong> Recent work on the problem of when people first entered the Americas is an example of the value of these new techniques. North-east Asia and Siberia have long been accepted as the launching ground for the first human colonisers of the New World. <span class="hl">But was there one major wave of migration across the Bering Strait into the Americas, or several? And when did this event, or events, take place?</span><span class="mark">15</span> In recent years, new clues have come from research into genetics, including the distribution of genetic markers in modern Native Americans.</p>
+<p class="para"><strong>C</strong> An important project, led by the biological anthropologist Robert Williams, focused on the variants (called Gm allotypes) of one particular protein – immunoglobin G – found in the fluid portion of human blood. All proteins 'drift', or produce variants, over the generations, and members of an interbreeding human population will share a set of such variants. Thus, <span class="hl">by comparing the Gm allotypes of two different populations (e.g. two Indian tribes), one can establish their genetic 'distance'</span><span class="mark">16</span>, which itself can be calibrated to give an indication of the length of time since these populations last interbred.</p>
+<p class="para"><strong>D</strong> Williams and his colleagues sampled the blood of over 5,000 American Indians in western North America during a twenty-year period. They found that their Gm allotypes could be divided into two groups, one of which also corresponded to the genetic typing of Central and South American Indians. Other tests showed that the Inuit (or Eskimo) and Aleut formed a third group. <span class="hl">From this evidence it was deduced that there had been three major waves of migration across the Bering Strait.</span><span class="mark">17</span> <span class="hl">The first, Paleo-Indian, wave more than 15,000 years ago was ancestral to all Central and South American Indians.</span><span class="mark">20</span> <span class="hl">The second wave, about 14,000–12,000 years ago, brought Na-Dene hunters, ancestors of the Navajo and Apache</span><span class="mark">23</span> <span class="hl">(who only migrated south from Canada about 600 or 700 years ago)</span><span class="mark">21</span>. <span class="hl">The third wave, perhaps 10,000 or 9,000 years ago, saw the migration from North-east Asia of groups ancestral to the modern Eskimo and Aleut.</span><span class="mark">22</span></p>
+<p class="para"><strong>E</strong> How far does other research support these conclusions? Geneticist Douglas Wallace has studied mitochondrial DNA in blood samples from three widely separated Native American groups: <span class="hl">Pima-Papago Indians in Arizona</span><span class="mark">24</span>, Maya Indians on the Yucatán peninsula, Mexico, and <span class="hl">Ticuna Indians in the Upper Amazon region of Brazil</span><span class="mark">25</span>. <span class="hl">As would have been predicted by Robert Williams's work, all three groups appear to be descended from the same ancestral (Paleo-Indian) population.</span><span class="mark">18</span></p>
+<p class="para"><strong>F</strong> There are two other kinds of research that have thrown some light on the origins of the Native American population; they involve the study of teeth and of languages. <span class="hl">The biological anthropologist Christy Turner is an expert in the analysis of changing physical characteristics in human teeth.</span><span class="mark">19</span> He argues that tooth crowns and roots have a high genetic component, minimally affected by environmental and other factors. <span class="hl">Studies carried out by Turner of many thousands of New and Old World specimens, both ancient and modern, suggest that the majority of prehistoric Americans are linked to Northern Asian populations</span><span class="mark">26</span> by crown and root traits such as incisor shoveling (a scooping out on one or both surfaces of the tooth), single-rooted upper first premolars and triple-rooted lower first molars. According to Turner, this ties in with the idea of a single Paleo-Indian migration out of North Asia, which he sets at before 14,000 years ago by calibrating rates of dental micro-evolution. Tooth analyses also suggest that there were two later migrations of Na-Denes and Eskimo-Aleut.</p>
+<p class="para"><strong>G</strong> The linguist Joseph Greenberg has, since the 1950s, argued that all Native American languages belong to a single 'Amerind' family, except for Na-Dene and Eskimo-Aleut – a view that gives credence to the idea of three main migrations. Greenberg is in a minority among fellow linguists, most of whom favour the notion of a great many waves of migration to account for the more than 1,000 languages spoken at one time by American Indians. But there is no doubt that the new genetic and dental evidence provides strong backing for Greenberg's view. Dates given for the migrations should nevertheless be treated with caution, except where supported by hard archaeological evidence.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Saving Europe's forests</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Forests are one of the main elements of our natural heritage. The decline of Europe's forests over the last decade and a half has led to an increasing awareness and understanding of the serious imbalances which threaten them. European countries are becoming increasingly concerned by major threats to European forests, threats which know no frontiers other than those of geography or climate: air pollution, soil deterioration, the increasing number of forest fires and sometimes even the mismanagement of our woodland and forest heritage. There has been a growing awareness of the need for countries to get together to co-ordinate their policies. In December 1990, Strasbourg hosted the first Ministerial Conference on the protection of Europe's forests. The conference brought together 31 countries from both Western and Eastern Europe. The topics discussed included the co-ordinated study of the destruction of forests, as well as how to combat forest fires and the extension of European research programs on the forest ecosystem. The preparatory work for the conference had been undertaken at two meetings of experts. Their initial task was to decide which of the many forest problems of concern to Europe involved the largest number of countries and might be the subject of joint action. <span class="hl">Those confined to particular geographical areas, such as countries bordering the Mediterranean or the Nordic countries therefore had to be discarded.</span><span class="mark">28</span> <span class="hl">However, this does not mean that in future they will be ignored.</span><span class="mark">27</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> As a whole, European countries see forests as performing a triple function: biological, economic and recreational. The first is to act as a 'green lung' for our planet; by means of photosynthesis, forests produce oxygen through the transformation of solar energy, thus fulfilling what for humans is the essential role of an immense, non-polluting power plant. At the same time, <span class="hl">forests provide raw materials for human activities through their constantly renewed production of wood</span><span class="mark">29</span>. Finally, they offer those condemned to spend five days a week in an urban environment an unrivalled area of freedom to unwind and take part in a range of leisure activities, such as hunting, riding and hiking. The economic importance of forests has been understood since the dawn of man – wood was the first fuel. <span class="hl">The other aspects have been recognised only for a few centuries</span><span class="mark">30</span> but they are becoming more and more important. Hence, there is a real concern throughout Europe about the damage to the forest environment which threatens these three basic roles.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> The myth of the 'natural' forest has survived, yet <span class="hl">there are effectively no remaining 'primary' forests in Europe. All European forests are artificial</span><span class="mark">31</span>, having been adapted and exploited by man for thousands of years. This means that a forest policy is vital, that <span class="hl">it must transcend national frontiers and generations of people</span><span class="mark">32</span>, and that <span class="hl">it must allow for the inevitable changes that take place in the forests, in needs, and hence in policy</span><span class="mark">33</span>. The Strasbourg conference was one of the first events on such a scale to reach this conclusion. A general declaration was made that 'a central place in any ecologically coherent forest policy must be given to continuity over time and to the possible effects of unforeseen events, to ensure that the full potential of these forests is maintained'.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> That general declaration was accompanied by six detailed resolutions to assist national policy-making. <span class="hl">The first proposes the extension and systematisation of surveillance sites to monitor forest decline.</span><span class="mark">34</span> Forest decline is still poorly understood but leads to the loss of a high proportion of a tree's needles or leaves. The entire continent and the majority of species are now affected: between 30% and 50% of the tree population. The condition appears to result from the cumulative effect of a number of factors, with atmospheric pollutants the principal culprits. Compounds of nitrogen and sulphur dioxide should be particularly closely watched. However, their effects are probably accentuated by climatic factors, such as drought and hard winters, or soil imbalances such as soil acidification, which damages the roots. <span class="hl">The second resolution concentrates on the need to preserve the genetic diversity of European forests.</span><span class="mark">35</span> The aim is to reverse the decline in the number of tree species or at least to preserve the 'genetic material' of all of them. Although forest fires do not affect all of Europe to the same extent, the amount of damage caused <span class="hl">the experts to propose as the third resolution that the Strasbourg conference consider the establishment of a European databank on the subject. All information used in the development of national preventative policies would become generally available.</span><span class="mark">36</span> The subject of the fourth resolution discussed by the ministers was mountain forests. In Europe, it is undoubtedly the mountain ecosystem which has changed most rapidly and is most at risk. A thinly scattered permanent population and development of leisure activities, particularly skiing, have resulted in significant long-term changes to the local ecosystems. <span class="hl">Proposed developments include a preferential research program on mountain forests.</span><span class="mark">37</span> The fifth resolution relaunched the European research network on the physiology of trees, called Eurosilva. <span class="hl">Eurosilva should support joint European research on tree diseases and their physiological and biochemical aspects.</span><span class="mark">38</span> Each country concerned could increase the number of scholarships and other financial support for doctoral theses and research projects in this area. Finally, <span class="hl">the conference established the framework for a European research network on forest ecosystems. This would also involve harmonising activities in individual countries</span><span class="mark">39</span> as well as identifying a number of priority research topics relating to the protection of forests. <span class="hl">The Strasbourg conference's main concern was to provide for the future.</span><span class="mark">40</span> This was the initial motivation, one now shared by all 31 participants representing 31 European countries. Their final text commits them to on-going discussion between government representatives with responsibility for forests.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–6</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Ants use the same channels of communication as humans do.</div><span class="answer ans-letter">FALSE</span><div class="explanation">Ants use chemical signals; humans use visual and auditory channels. The two are only compared.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">City life is one factor that encourages the development of intelligence.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Urban lifestyles are called 'the forcing house of intelligence'.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Ants can build large cities more quickly than humans do.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The size of ant supercolonies is described, but not how fast they are built (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Some ants can find their way by making calculations based on distance and position.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Desert ants navigate by integrating bearings and distances, continuously updated in their heads.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">In one experiment, foraging teams were able to use their sense of smell to find food.</div><span class="answer ans-letter">FALSE</span><div class="explanation">Elaborate precautions were taken to prevent the use of odour clues.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">The essay, 'In the company of ants', explores ant communication.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The essay is mentioned only for its advice about ants in the kitchen.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 7–13</div><p>Complete the summary using the list of words, A–O.</p><p><b>Ants as farmers</b></p><ul class='opts'><li><b>A</b> aphids</li><li><b>B</b> agricultural</li><li><b>C</b> cellulose</li><li><b>D</b> exchanging</li><li><b>E</b> energy</li><li><b>F</b> fertilizers</li><li><b>G</b> food</li><li><b>H</b> fungi</li><li><b>I</b> growing</li><li><b>J</b> interbreeding</li><li><b>K</b> natural</li><li><b>L</b> other species</li><li><b>M</b> secretions</li><li><b>N</b> sustainable</li><li><b>O</b> environment</li></ul></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">The ants cultivate a large number of different species of edible fungi which convert <b>7 ………</b> into a form which they can digest.</div><span class="answer ans-letter">C – cellulose</span><div class="explanation">Ants can't digest the cellulose in leaves, but some fungi can.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">They use their own natural <b>8 ………</b> as weed-killers</div><span class="answer ans-letter">M – secretions</span><div class="explanation">Farmer ants secrete antibiotics to control other fungi that act as 'weeds'.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">…and also use unwanted materials as <b>9 ………</b>.</div><span class="answer ans-letter">F – fertilizers</span><div class="explanation">They spread waste to fertilise the crop.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">…by developing new species and by <b>10 ………</b> species with neighbouring ant colonies.</div><span class="answer ans-letter">D – exchanging</span><div class="explanation">Ants regularly swap and share strains with neighbouring colonies.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">…since they use <b>11 ………</b> methods,</div><span class="answer ans-letter">N – sustainable</span><div class="explanation">'The farming methods of ants are at least sustainable.'</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">…they do not affect the <b>12 ………</b></div><span class="answer ans-letter">O – environment</span><div class="explanation">'They do not ruin environments.'</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">…and do not waste <b>13 ………</b>.</div><span class="answer ans-letter">E – energy</span><div class="explanation">They do not use enormous amounts of energy.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–19</div><p>Reading Passage 2 has seven sections, A–G. Choose the correct heading for sections A–F from the list of headings below.</p><p><b>List of Headings</b></p><ul class='opts'><li><b>i</b> The results of the research into blood-variants</li><li><b>ii</b> Dental evidence</li><li><b>iii</b> Greenberg's analysis of the dental and linguistic evidence</li><li><b>iv</b> Developments in the methods used to study early population movements</li><li><b>v</b> Indian migration from Canada to the U.S.A.</li><li><b>vi</b> Further genetic evidence relating to the three-wave theory</li><li><b>vii</b> Long-standing questions about prehistoric migration to America</li><li><b>viii</b> Conflicting views of the three-wave theory, based on non-genetic evidence</li><li><b>ix</b> Questions about the causes of prehistoric migration to America</li><li><b>x</b> How analysis of blood-variants measures the closeness of the relationship between different populations</li></ul></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Section A<div class="yng">Heading</div></div><span class="answer ans-letter">iv</span><div class="explanation">The shift from archaeological and fossil evidence to genetic techniques developed since the 1950s.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Section B<div class="yng">Heading</div></div><span class="answer ans-letter">vii</span><div class="explanation">Raises the long-standing questions: one wave or several, and when?</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Section C<div class="yng">Heading</div></div><span class="answer ans-letter">x</span><div class="explanation">Explains how comparing Gm allotypes measures the genetic 'distance' between populations.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Section D<div class="yng">Heading</div></div><span class="answer ans-letter">i</span><div class="explanation">Williams's blood sampling gave three groups, matching three migration waves.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Section E<div class="yng">Heading</div></div><span class="answer ans-letter">vi</span><div class="explanation">Mitochondrial DNA gives further genetic support for the three-wave theory.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Section F<div class="yng">Heading</div></div><span class="answer ans-letter">ii</span><div class="explanation">Christy Turner's analysis of tooth crowns and roots.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 20–21</div><p>The discussion of Williams's research indicates the periods at which early people are thought to have migrated along certain routes. Six routes, A–F, are marked on a map in the printed test (the map can't be reproduced here). Complete the table by choosing the correct route.</p></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Route taken 15,000 or more years ago<div class="yng">Map route (A–F)</div></div><span class="answer ans-letter">E</span><div class="explanation">The first (Paleo-Indian) wave, more than 15,000 years ago, was ancestral to all Central and South American Indians.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Route taken 600 to 700 years ago<div class="yng">Map route (A–F)</div></div><span class="answer ans-letter">D</span><div class="explanation">The Navajo and Apache only migrated south from Canada about 600 or 700 years ago.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 22–25</div><p>Classify the groups as originating from</p><ul class='opts'><li><b>A</b> the first wave</li><li><b>B</b> the second wave</li><li><b>C</b> the third wave</li></ul></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Inuit<div class="yng">A / B / C</div></div><span class="answer ans-letter">C</span><div class="explanation">The third wave brought groups ancestral to the Eskimo (Inuit) and Aleut.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Apache<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">The second wave brought Na-Dene hunters, ancestors of the Navajo and Apache.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Pima-Papago<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Wallace's three groups, including the Pima-Papago, descend from the Paleo-Indian (first-wave) population.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Ticuna<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">The Ticuna also descend from the same Paleo-Indian population.</div></div>
+<div class="qintro"><div class="qintro-t">Question 26</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">Christy Turner's research involved the examination of<ul class='opts'><li><b>A</b> teeth from both prehistoric and modern Americans and Asians.</li><li><b>B</b> teeth of Europeans collected over a twenty-year period.</li><li><b>C</b> teeth from archaeological sites all over the Americas and Asia.</li><li><b>D</b> the eating habits of American and Asian populations.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Turner studied many thousands of New and Old World specimens, both ancient and modern.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–33</div><p>Do the following statements agree with the information given in Reading Passage 3?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Forest problems of Mediterranean countries are to be discussed at the next meeting of experts.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Such problems were discarded for now and 'will not be ignored in future', but no next meeting is mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Problems in Nordic countries were excluded because they are outside the European Economic Community.</div><span class="answer ans-letter">FALSE</span><div class="explanation">They were excluded because they were confined to particular geographical areas.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Forests are a renewable source of raw material.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Forests provide raw materials through their constantly renewed production of wood.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">The biological functions of forests were recognised only in the twentieth century.</div><span class="answer ans-letter">FALSE</span><div class="explanation">These aspects were recognised 'only for a few centuries'.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">Natural forests still exist in parts of Europe.</div><span class="answer ans-letter">FALSE</span><div class="explanation">There are effectively no primary forests left; all European forests are artificial.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Forest policy should be limited by national boundaries.</div><span class="answer ans-letter">FALSE</span><div class="explanation">A forest policy 'must transcend national frontiers'.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">The Strasbourg conference decided that a forest policy must allow for the possibility of change.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Policy 'must allow for the inevitable changes that take place in the forests'.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 34–39</div><p>Look at the following statements issued by the conference. Which six of the statements, A–J, refer to the resolutions that were issued? Match the statements with the appropriate resolutions.</p><p><b>Statements</b></p><ul class='opts'><li><b>A</b> All kinds of species of trees should be preserved.</li><li><b>B</b> Fragile mountain forests should be given priority in research programs.</li><li><b>C</b> The surviving natural forests of Europe do not need priority treatment.</li><li><b>D</b> Research is to be better co-ordinated throughout Europe.</li><li><b>E</b> Information on forest fires should be collected and shared.</li><li><b>F</b> Loss of leaves from trees should be more extensively and carefully monitored.</li><li><b>G</b> Resources should be allocated to research into tree diseases.</li><li><b>H</b> Skiing should be encouraged in thinly populated areas.</li><li><b>I</b> Soil imbalances such as acidification should be treated with compounds of nitrogen and sulphur.</li><li><b>J</b> Information is to be systematically gathered on any decline in the condition of forests.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">Resolution 1</div><span class="answer ans-letter">J</span><div class="explanation">The first resolution proposes extending and systematising surveillance sites to monitor forest decline.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Resolution 2</div><span class="answer ans-letter">A</span><div class="explanation">The second concentrates on preserving the genetic diversity of European forests.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Resolution 3</div><span class="answer ans-letter">E</span><div class="explanation">The third proposes a European databank on forest fires, so information is generally available.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Resolution 4</div><span class="answer ans-letter">B</span><div class="explanation">The fourth concerns mountain forests, with a preferential research programme.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Resolution 5</div><span class="answer ans-letter">G</span><div class="explanation">The fifth relaunches Eurosilva to support research on tree diseases.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Resolution 6</div><span class="answer ans-letter">D</span><div class="explanation">The sixth sets up a European research network on forest ecosystems, harmonising activities across countries.</div></div>
+<div class="qintro"><div class="qintro-t">Question 40</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">What is the best title for Reading Passage 3?<ul class='opts'><li><b>A</b> The biological, economic and recreational role of forests</li><li><b>B</b> Plans to protect the forests of Europe</li><li><b>C</b> The priority of European research into ecosystems</li><li><b>D</b> Proposals for a world-wide policy on forest management</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">The passage describes the problems facing Europe's forests and the plans agreed to protect them; the other options are too narrow or too broad.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

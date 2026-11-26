@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 7 – Reading Test 1 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 7 – Reading Test 1</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Let's Go Bats</div>
+<p class="para"><strong>A</strong> Bats have a problem: how to find their way around in the dark. They hunt at night, and cannot use light to help them find prey and avoid obstacles. You might say that this is a problem of their own making, one that they could avoid simply by changing their habits and hunting by day. But <span class="hl">the daytime economy is already heavily exploited by other creatures such as birds. Given that there is a living to be made at night, and given that alternative daytime trades are thoroughly occupied, natural selection has favoured bats that make a go of the night-hunting trade.</span><span class="mark">3</span> It is probable that the nocturnal trades go way back in the ancestry of all mammals. <span class="hl">In the time when the dinosaurs dominated the daytime economy, our mammalian ancestors probably only managed to survive at all because they found ways of scraping a living at night.</span><span class="mark">2</span> Only after the mysterious mass extinction of the dinosaurs about 65 million years ago were our ancestors able to emerge into the daylight in any substantial numbers.</p>
+<p class="para"><strong>B</strong> Bats have an engineering problem: how to find their way and find their prey in the absence of light. Bats are not the only creatures to face this difficulty today. Obviously the night-flying insects that they prey on must find their way about somehow. <span class="hl">Deep-sea fish and whales have little or no light by day or by night. Fish and dolphins that live in extremely muddy water cannot see because, although there is light, it is obstructed and scattered by the dirt in the water.</span><span class="mark">1</span> Plenty of other modern animals make their living in conditions where seeing is difficult or impossible.</p>
+<p class="para"><strong>C</strong> Given the questions of how to manoeuvre in the dark, what solutions might an engineer consider? The first one that might occur to him is to manufacture light, to use a lantern or a searchlight. Fireflies and some fish (usually with the help of bacteria) have the power to manufacture their own light, but the process seems to consume a large amount of energy. Fireflies use their light for attracting mates. This doesn't require a prohibitive amount of energy: a male's tiny pinprick of light can be seen by a female from some distance on a dark night, since her eyes are exposed directly to the light source itself. However, using light to find one's own way around requires vastly more energy, since the eyes have to detect the tiny fraction of the light that bounces off each part of the scene. The light source must therefore be immensely brighter if it is to be used as a headlight to illuminate the path, than if it is to be used as a signal to others. In any event, whether or not the reason is the energy expense, it seems to be the case that, with the possible exception of some weird deep-sea fish, no animal apart from man uses manufactured light to find its way about.</p>
+<p class="para"><strong>D</strong> What else might the engineer think of? Well, blind humans sometimes seem to have an uncanny sense of obstacles in their path. It has been given the name 'facial vision', because blind people have reported that it feels a bit like the sense of touch, on the face. One report tells of a totally blind boy who could ride his tricycle at good speed round the block near his home, using facial vision. Experiments showed that, in fact, facial vision is nothing to do with touch or the front of the face, although the sensation may be referred to the front of the face, <span class="hl">like the referred pain in a phantom limb</span><span class="mark">6</span>. The sensation of facial vision, it turns out, really goes in through the ears. <span class="hl">Blind people, without even being aware of the fact, are actually using echoes of their own footsteps and of other sounds, to sense the presence of obstacles.</span><span class="mark">7</span> Before this was discovered, engineers had already built instruments to exploit the principle, for example <span class="hl">to measure the depth of the sea under a ship</span><span class="mark">8</span>. After this technique had been invented, it was only a matter of time before <span class="hl">weapons designers adapted it for the detection of submarines</span><span class="mark">9</span>. <span class="hl">Both sides in the Second World War relied heavily on these devices, under such codenames as Asdic (British) and Sonar (American), as well as Radar (American) or RDF (British)</span><span class="mark">5</span>, which uses radio echoes rather than sound echoes.</p>
+<p class="para"><strong>E</strong> The Sonar and Radar pioneers didn't know it then, but all the world now knows that bats, or rather <span class="hl">natural selection working on bats, had perfected the system tens of millions of years earlier</span><span class="mark">10</span>; and their 'radar' achieves feats of detection and navigation that would strike an engineer dumb with admiration. It is technically incorrect to talk about bat 'radar', <span class="hl">since they do not use radio waves</span><span class="mark">11</span>. It is sonar. But <span class="hl">the underlying mathematical theories of radar and sonar are very similar</span><span class="mark">12</span>; and <span class="hl">much of our scientific understanding of the details of what bats are doing has come from applying radar theory to them</span><span class="mark">4</span>. <span class="hl">The American zoologist Donald Griffin, who was largely responsible for the discovery of sonar in bats, coined the term 'echolocation'</span><span class="mark">13</span> to cover both sonar and radar, whether used by animals or by human instruments.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">MAKING EVERY DROP COUNT</div>
+<p class="para"><strong>A</strong> The history of human civilisation is entwined with the history of the ways we have learned to manipulate water resources. <span class="hl">As towns gradually expanded, water was brought from increasingly remote sources, leading to sophisticated engineering efforts such as dams and aqueducts.</span><span class="mark">23</span> <span class="hl">At the height of the Roman Empire, nine major systems, with an innovative layout of pipes and well-built sewers,</span><span class="mark">14</span> <span class="hl">supplied the occupants of Rome with as much water per person as is provided in many parts of the industrial world today</span><span class="mark">21</span>.</p>
+<p class="para"><strong>B</strong> During the industrial revolution and population explosion of the 19th and 20th centuries, the demand for water rose dramatically. Unprecedented construction of tens of thousands of monumental engineering projects designed to control floods, protect clean water supplies, and provide water for irrigation and hydropower brought great benefits to hundreds of millions of people. <span class="hl">Food production has kept pace with soaring populations mainly because of the expansion of artificial irrigation systems</span><span class="mark">22</span> that make possible the growth of 40 % of the world's food. Nearly one fifth of all the electricity generated worldwide is produced by turbines spun by the power of falling water.</p>
+<p class="para"><strong>C</strong> Yet there is a dark side to this picture: despite our progress, half of the world's population still suffers, with water services inferior to those available to the ancient Greeks and Romans. As the United Nations report on access to water reiterated in November 2001, more than one billion people lack access to clean drinking water; some two and a half billion do not have adequate sanitation services. <span class="hl">Preventable water-related diseases kill an estimated 10,000 to 20,000 children every day</span><span class="mark">15</span>, and the latest evidence suggests that we are falling behind in efforts to solve these problems.</p>
+<p class="para"><strong>D</strong> The consequences of our water policies extend beyond jeopardising human health. Tens of millions of people have been forced to move from their homes – often with little warning or compensation – to make way for the reservoirs behind dams. <span class="hl">More than 20 % of all freshwater fish species are now threatened or endangered because dams and water withdrawals have destroyed the free-flowing river ecosystems where they thrive.</span><span class="mark">16</span> Certain irrigation practices degrade soil quality and reduce agricultural productivity. Groundwater aquifers* are being pumped down faster than they are naturally replenished in parts of India, China, the USA and elsewhere. And disputes over shared water resources have led to violence and continue to raise local, national and even international tensions.</p>
+<p class="para"><strong>E</strong> At the outset of the new millennium, however, the way resource planners think about water is beginning to change. The focus is slowly shifting back to the provision of basic human and environmental needs as top priority – ensuring 'some for all,' instead of 'more for some'. <span class="hl">Some water experts are now demanding that existing infrastructure be used in smarter ways rather than building new facilities</span><span class="mark">17</span>, which is increasingly considered the option of last, not first, resort. This shift in philosophy has not been universally accepted, and it comes with strong opposition from some established water organisations. Nevertheless, it may be the only way to address successfully the pressing problems of providing everyone with clean water to drink, adequate water to grow food and a life free from preventable water-related illness.</p>
+<p class="para"><strong>F</strong> <span class="hl">Fortunately – and unexpectedly – the demand for water is not rising as rapidly as some predicted.</span><span class="mark">18</span> As a result, the pressure to build new water infrastructures has diminished over the past two decades. <span class="hl">Although population, industrial output and economic productivity have continued to soar in developed nations, the rate at which people withdraw water from aquifers, rivers and lakes has slowed.</span><span class="mark">24</span> And in a few parts of the world, demand has actually fallen.</p>
+<p class="para"><strong>G</strong> What explains this remarkable turn of events? Two factors: <span class="hl">people have figured out how to use water more efficiently, and communities are rethinking their priorities for water use</span><span class="mark">19</span>. Throughout the first three-quarters of the 20th century, the quantity of freshwater consumed per person doubled on average; in the USA, water withdrawals increased tenfold while the population quadrupled. But <span class="hl">since 1980, the amount of water consumed per person has actually decreased, thanks to a range of new technologies that help to conserve water in homes and industry</span><span class="mark">25</span>. In 1965, for instance, Japan used approximately 13 million gallons* of water to produce $1 million of commercial output; by 1989 this had dropped to 3.5 million gallons (even accounting for inflation) – almost a quadrupling of water productivity. In the USA, water withdrawals have fallen by more than 20 % from their peak in 1980.</p>
+<p class="para"><strong>H</strong> On the other hand, <span class="hl">dams, aqueducts and other kinds of infrastructure will still have to be built</span><span class="mark">26</span>, particularly in developing countries where basic human needs have not been met. But <span class="hl">such projects must be built to higher specifications and with more accountability to local people and their environment than in the past</span><span class="mark">20</span>. And even in regions where new projects seem warranted, we must find ways to meet demands with fewer resources, respecting ecological criteria and to a smaller budget.</p>
+<p class="para" style="font-size:0.82rem;color:var(--muted);">* Groundwater aquifers: underground stores of water<br>* 1 gallon: 4.546 litres</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">EDUCATING PSYCHE</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> Educating Psyche by Bernie Neville is <span class="hl">a book which looks at radical new approaches to learning, describing the effects of emotion, imagination and the unconscious on learning</span><span class="mark">27</span>. One theory discussed in the book is that proposed by George Lozanov, which focuses on the power of suggestion.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Lozanov's instructional technique is based on the evidence that the connections made in the brain through unconscious processing (which he calls non-specific mental reactivity) are more durable than those made through conscious processing. <span class="hl">Besides the laboratory evidence for this, we know from our experience that we often remember what we have perceived peripherally, long after we have forgotten what we set out to learn.</span><span class="mark">29</span> <span class="hl">If we think of a book we studied months or years ago, we will find it easier to recall peripheral details – the colour, the binding, the typeface, the table at the library where we sat while studying it – than the content on which we were concentrating.</span><span class="mark">28</span> If we think of a lecture we listened to with great concentration, we will recall the lecturer's appearance and mannerisms, our place in the auditorium, the failure of the air-conditioning, much more easily than the ideas we went to learn. Even if these peripheral details are a bit elusive, they come back readily in hypnosis or when we relive the event imaginatively, as in psychodrama. The details of the content of the lecture, on the other hand, seem to have gone forever.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> This phenomenon can be partly attributed to the common counterproductive approach to study (making extreme efforts to memorise, tensing muscles, inducing fatigue), but it also simply reflects the way the brain functions. Lozanov therefore made indirect instruction (suggestion) central to his teaching system. <span class="hl">In suggestopedia, as he called his method, consciousness is shifted away from the curriculum to focus on something peripheral.</span><span class="mark">30</span> The curriculum then becomes peripheral and is dealt with by the reserve capacity of the brain.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> The suggestopedic approach to foreign language learning provides a good illustration. In its most recent variant (1980), it consists of the reading of vocabulary and text while the class is listening to music. The first session is in two parts. <span class="hl">In the first part, the music is classical (Mozart, Beethoven, Brahms) and the teacher reads the text slowly and solemnly, with attention to the dynamics of the music.</span><span class="mark">31</span> The students follow the text in their books. This is followed by several minutes of silence. In the second part, they listen to baroque music (Bach, Corelli, Handel) while the teacher reads the text in a normal speaking voice. During this time they have their books closed. During the whole of this session, their attention is passive; they listen to the music but make no attempt to learn the material.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Beforehand, the students have been carefully prepared for the language learning experience. Through meeting with the staff and satisfied students <span class="hl">they develop the expectation that learning will be easy and pleasant</span><span class="mark">32</span> and that they will successfully learn several hundred words of the foreign language during the class. In a preliminary talk, the teacher introduces them to the material to be covered, but does not 'teach' it. Likewise, the students are instructed not to try to learn it during this introduction.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Some hours after the two-part session, there is a follow-up class at which the students are stimulated to recall the material presented. Once again the approach is indirect. The students do not focus their attention on trying to remember the vocabulary, but focus on using the language to communicate (e.g. through games or improvised dramatisations). <span class="hl">Such methods are not unusual in language teaching.</span><span class="mark">33</span> What is distinctive in the suggestopedic method is that they are devoted entirely to assisting recall. <span class="hl">The 'learning' of the material is assumed to be automatic and effortless, accomplished while listening to music.</span><span class="mark">34</span> The teacher's task is to assist the students to apply what they have learned paraconsciously, and in doing so to make it easily accessible to consciousness. Another difference from conventional teaching is the evidence that <span class="hl">students can regularly learn 1000 new words of a foreign language during a suggestopedic session</span><span class="mark">36</span>, as well as grammar and idiom.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Lozanov experimented with teaching by direct suggestion during sleep, hypnosis and trance states, but found such procedures unnecessary. Hypnosis, yoga, Silva mind-control, religious ceremonies and faith healing are all associated with successful suggestion, but none of their techniques seem to be essential to it. Such rituals may be seen as placebos. <span class="hl">Lozanov acknowledges that the ritual surrounding suggestion in his own system is also a</span><span class="mark">37</span> <span class="hl">placebo</span><span class="mark">38</span>, but maintains that without such a placebo people are unable or afraid to tap the reserve capacity of their brains. Like any placebo, it must be dispensed with authority to be effective. Just as a doctor calls on the full power of autocratic suggestion by insisting that the patient take precisely this white capsule precisely three times a day before meals, Lozanov is categoric in insisting that the suggestopedic session be conducted exactly in the manner designated, by trained and accredited suggestopedic teachers.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> While <span class="hl">suggestopedia has gained some notoriety</span><span class="mark">39</span> through success in the teaching of modern languages, few teachers are able to emulate the spectacular results of Lozanov and his associates. <span class="hl">We can, perhaps, attribute mediocre results to an inadequate placebo effect.</span><span class="mark">40</span> The students have not developed the appropriate mind set. They are often not motivated to learn through this method. They do not have enough 'faith'. <span class="hl">They do not see it as 'real teaching', especially as it does not seem to involve the 'work' they have learned to believe is essential to learning.</span><span class="mark">35</span></p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–5</div><p>Reading Passage 1 has five paragraphs, A–E. Which paragraph contains the following information? <i>You may use any letter more than once.</i></p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">examples of wildlife other than bats which do not rely on vision to navigate by<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">B</span><div class="explanation">Night-flying insects, deep-sea fish, whales, and fish and dolphins in extremely muddy water.</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">how early mammals avoided dying out<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">A</span><div class="explanation">Our mammalian ancestors survived by finding ways of scraping a living at night.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">why bats hunt in the dark<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">A</span><div class="explanation">The daytime economy is already heavily exploited by creatures such as birds, so natural selection favoured night-hunting bats.</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">how a particular discovery has helped our understanding of bats<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">E</span><div class="explanation">Much of our understanding of bats has come from applying radar theory to them.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">early military uses of echolocation<div class="yng">Which paragraph (A–E)?</div></div><span class="answer ans-letter">D</span><div class="explanation">Asdic/Sonar and Radar/RDF were relied on heavily by both sides in the Second World War.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 6–9</div><p>Complete the summary. Choose <b>ONE WORD ONLY</b> from the passage for each answer.</p><p><b>Facial Vision</b></p></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">the sensation is more similar to the way in which pain from a <b>6 ………</b> arm or leg might be felt</div><span class="answer ans-letter">phantom</span><div class="explanation">The sensation is compared to 'the referred pain in a <b>phantom</b> limb'.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">The ability actually comes from perceiving <b>7 ………</b> through the ears.</div><span class="answer ans-letter">echoes</span><div class="explanation">Blind people use <b>echoes</b> of their own footsteps and other sounds.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">instruments which calculated the <b>8 ………</b> of the seabed</div><span class="answer ans-letter">depth</span><div class="explanation">Instruments measured the <b>depth</b> of the sea under a ship.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">a wartime application in devices for finding <b>9 ………</b></div><span class="answer ans-letter">submarines</span><div class="explanation">Weapons designers adapted the technique for the detection of <b>submarines</b>.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 10–13</div><p>Complete the sentences. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">Long before the invention of radar, <b>10 ………</b> had resulted in a sophisticated radar-like system in bats.</div><span class="answer ans-letter">natural selection</span><div class="explanation">Natural selection working on bats had perfected the system tens of millions of years earlier.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">Radar is an inaccurate term when referring to bats because <b>11 ………</b> are not used in their navigation system.</div><span class="answer ans-letter">radio waves</span><div class="explanation">'It is technically incorrect to talk about bat radar, since they do not use <b>radio waves</b>.'</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">Radar and sonar are based on similar <b>12 ………</b>.</div><span class="answer ans-letter">mathematical theories</span><div class="explanation">'The underlying <b>mathematical theories</b> of radar and sonar are very similar.'</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">The word 'echolocation' was first used by someone working as a <b>13 ………</b>.</div><span class="answer ans-letter">zoologist</span><div class="explanation">Coined by the American <b>zoologist</b> Donald Griffin.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–20</div><p>Reading Passage 2 has seven paragraphs, A–H. Choose the correct heading for paragraphs A and C–H from the list of headings below.</p><p><b>List of Headings</b></p><ul class='opts'><li><b>i</b> Scientists' call for a revision of policy</li><li><b>ii</b> An explanation for reduced water use</li><li><b>iii</b> How a global challenge was met</li><li><b>iv</b> Irrigation systems fall into disuse</li><li><b>v</b> Environmental effects</li><li><b>vi</b> The financial cost of recent technological improvements</li><li><b>vii</b> The relevance to health</li><li><b>viii</b> Addressing the concern over increasing populations</li><li><b>ix</b> A surprising downward trend in demand for water</li><li><b>x</b> The need to raise standards</li><li><b>xi</b> A description of ancient water supplies</li></ul></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">Paragraph A<div class="yng">Heading</div></div><span class="answer ans-letter">xi</span><div class="explanation">Roman aqueducts, pipes and sewers supplied as much water per person as many modern industrial systems.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Paragraph C<div class="yng">Heading</div></div><span class="answer ans-letter">vii</span><div class="explanation">Lack of clean water and sanitation; preventable water-related diseases kill thousands of children daily.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Paragraph D<div class="yng">Heading</div></div><span class="answer ans-letter">v</span><div class="explanation">Displaced people, threatened fish species, degraded soil, depleted aquifers and conflicts.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Paragraph E<div class="yng">Heading</div></div><span class="answer ans-letter">i</span><div class="explanation">Water experts want existing infrastructure used more smartly, prioritising basic human and environmental needs.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Paragraph F<div class="yng">Heading</div></div><span class="answer ans-letter">ix</span><div class="explanation">Demand is not rising as fast as predicted and has even fallen in places.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Paragraph G<div class="yng">Heading</div></div><span class="answer ans-letter">ii</span><div class="explanation">More efficient use of water and rethought priorities, supported by new technologies.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">Paragraph H<div class="yng">Heading</div></div><span class="answer ans-letter">x</span><div class="explanation">Future projects must meet higher specifications and be more accountable to people and the environment.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 21–26</div><p>Do the following statements agree with the claims of the writer in Reading Passage 2?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">Water use per person is higher in the industrial world than it was in Ancient Rome.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Romans received as much water per person as is provided in many parts of the industrial world today.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Feeding increasing populations is possible due primarily to improved irrigation systems.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Food production has kept pace 'mainly because of the expansion of artificial irrigation systems'.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">Modern water systems imitate those of the ancient Greeks and Romans.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Quantities of water are compared, but imitation of ancient designs is never mentioned (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Industrial growth is increasing the overall demand for water.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Although industrial output soars, water withdrawals have slowed or fallen.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">Modern technologies have led to a reduction in domestic water consumption.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Since 1980 new technologies have helped conserve water in homes and industry, and per-person use has fallen.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">In the future, governments should maintain ownership of water infrastructures.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Better standards and accountability are discussed, but government ownership is not (highlight is the nearest text).</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">The book <i>Educating Psyche</i> is mainly concerned with<ul class='opts'><li><b>A</b> the power of suggestion in learning.</li><li><b>B</b> a particular technique for learning based on emotions.</li><li><b>C</b> the effects of emotion on the imagination and the unconscious.</li><li><b>D</b> ways of learning which are not traditional.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">The opening describes the book as looking at 'radical new approaches to learning'.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Lozanov's theory claims that, when we try to remember things,<ul class='opts'><li><b>A</b> unimportant details are the easiest to recall.</li><li><b>B</b> concentrating hard produces the best results.</li><li><b>C</b> the most significant facts are most easily recalled.</li><li><b>D</b> peripheral vision is not important.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Peripheral details are recalled more easily and durably than the content we concentrate on.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">In this passage, the author uses the examples of a book and a lecture to illustrate that<ul class='opts'><li><b>A</b> both of these are important for developing concentration.</li><li><b>B</b> his theory about methods of learning is valid.</li><li><b>C</b> reading is a better technique for learning than listening.</li><li><b>D</b> we can remember things more easily under hypnosis.</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">The examples support Lozanov's theory about how memory and learning work.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Lozanov claims that teachers should train students to<ul class='opts'><li><b>A</b> memorise details of the curriculum.</li><li><b>B</b> develop their own sets of indirect instructions.</li><li><b>C</b> think about something other than the curriculum content.</li><li><b>D</b> avoid overloading the capacity of the brain.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">In suggestopedia 'consciousness is shifted away from the curriculum to focus on something peripheral'.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 31–36</div><p>Do the following statements agree with the information given in Reading Passage 3?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">In the example of suggestopedic teaching in the fourth paragraph, the only variable that changes is the music.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">FALSE</span><div class="explanation">Both the music and the way the teacher reads the text change between the two parts.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Prior to the suggestopedia class, students are made aware that the language experience will be demanding.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">FALSE</span><div class="explanation">Students develop the expectation that learning will be easy and pleasant.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">In the follow-up class, the teaching activities are similar to those used in conventional classes.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">TRUE</span><div class="explanation">Games and dramatisations are described as 'not unusual in language teaching'.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">As an indirect benefit, students notice improvements in their memory.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Nothing is said about students noticing memory improvements (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Teachers say they prefer suggestopedia to traditional approaches to language teaching.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">No information on teachers' preferences (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Students in a suggestopedia class retain more new vocabulary than those in ordinary classes.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div><span class="answer ans-letter">TRUE</span><div class="explanation">Students can regularly learn 1000 new words in a suggestopedic session.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 37–40</div><p>Complete the summary using the list of words, A–K.</p><ul class='opts'><li><b>A</b> spectacular</li><li><b>B</b> teaching</li><li><b>C</b> lesson</li><li><b>D</b> authoritarian</li><li><b>E</b> unpopular</li><li><b>F</b> ritual</li><li><b>G</b> unspectacular</li><li><b>H</b> placebo</li><li><b>I</b> involved</li><li><b>J</b> appropriate</li><li><b>K</b> well known</li></ul></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">…Lozanov admits that a certain amount of <b>37 ………</b> is necessary in order to convince students,</div><span class="answer ans-letter">F – ritual</span><div class="explanation">He acknowledges the ritual surrounding suggestion in his system.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">…even if this is just a <b>38 ………</b>.</div><span class="answer ans-letter">H – placebo</span><div class="explanation">The ritual is described as a placebo.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Although Lozanov's method has become quite <b>39 ………</b>,</div><span class="answer ans-letter">K – well known</span><div class="explanation">Suggestopedia 'has gained some notoriety'.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">…the results of most other teachers using this method have been <b>40 ………</b>.</div><span class="answer ans-letter">G – unspectacular</span><div class="explanation">Few teachers can emulate Lozanov's spectacular results; others get mediocre results.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

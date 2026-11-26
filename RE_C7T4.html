@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 7 – Reading Test 4 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 7 – Reading Test 4</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Pulling strings to build pyramids</div>
+<p class="para" style="font-style:italic;color:var(--muted);">No one knows exactly how the pyramids were built. Marcus Chown reckons the answer could be 'hanging in the air'.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> The pyramids of Egypt were built more than three thousand years ago, and no one knows how. <span class="hl">The conventional picture is that tens of thousands of slaves dragged stones on sledges.</span><span class="mark">1</span> But there is no evidence to back this up. Now a Californian software consultant called Maureen Clemmons has suggested that kites might have been involved. <span class="hl">While perusing a book on the monuments of Egypt, she noticed a hieroglyph</span><span class="mark">2</span> that showed a row of men standing in odd postures. They were holding what looked like ropes that led, via some kind of mechanical system, to a giant bird in the sky. She wondered if perhaps the bird was actually a giant kite, and the men were using it to lift a heavy object.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Intrigued, Clemmons contacted Morteza Gharib, aeronautics professor at the California Institute of Technology. He was fascinated by the idea. 'Coming from Iran, I have a keen interest in Middle Eastern science,' he says. He too was puzzled by the picture that had sparked Clemmons's interest. <span class="hl">The object in the sky apparently had wings far too short and wide for a bird.</span><span class="mark">3</span> 'The possibility certainly existed that it was a kite,' he says. And since he needed a summer project for his student Emilio Graff, investigating the possibility of using kites as heavy lifters seemed like a good idea.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Gharib and Graff set themselves the task of raising a 4.5-metre stone column from horizontal to vertical, using no source of energy except the wind. <span class="hl">Their initial calculations and scale-model wind-tunnel experiments convinced them they wouldn't need a strong wind to lift the 33.5-tonne column.</span><span class="mark">4</span> Even a modest force, if sustained over a long time, would do. The key was to use a pulley system that would magnify the applied force. So they rigged up a tent-shaped scaffold directly above the tip of the horizontal column, with pulleys suspended from the scaffold's apex. The idea was that as one end of the column rose, the base would roll across the ground on a trolley.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Earlier this year, the team put Clemmons's unlikely theory to the test, using a 40-square-metre rectangular nylon sail. The kite lifted the column clean off the ground. 'We were absolutely stunned,' Gharib says. 'The instant the sail opened into the wind, a huge force was generated and the column was raised to the vertical in a mere 40 seconds.'</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> <span class="hl">The wind was blowing at a gentle 16 to 20 kilometres an hour, little more than half what they thought would be needed.</span><span class="mark">5</span> What they had failed to reckon with was what happened when the kite was opened. '<span class="hl">There was a huge initial force – five times larger than the steady state force</span><span class="mark">6</span>,' Gharib says. This jerk meant that kites could lift huge weights, Gharib realised. Even a 300-tonne column could have been lifted to the vertical with 40 or so men and four or five sails. <span class="hl">So Clemmons was right: the pyramid builders could have used kites to lift massive stones into place.</span><span class="mark">7</span> 'Whether they actually did is another matter,' Gharib says. There are no pictures showing the construction of the pyramids, so there is no way to tell what really happened. 'The evidence for using kites to move large stones is no better or worse than the evidence for the brute force method,' Gharib says.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> Indeed, the experiments have left many specialists unconvinced. 'The evidence for kite-lifting is non-existent,' says Willeke Wendrich, an associate professor of Egyptology at the University of California, Los Angeles.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Others feel there is more of a case for the theory. Harnessing the wind would not have been a problem for <span class="hl">accomplished sailors like the Egyptians</span><span class="mark">10</span>. And they are known to have used <span class="hl">wooden pulleys</span><span class="mark">8</span>, which could have been made strong enough to bear the weight of massive blocks of <span class="hl">stone</span><span class="mark">9</span>. In addition, there is some physical evidence that the ancient Egyptians were interested in flight. A wooden artefact found on the step pyramid at Saqqara <span class="hl">looks uncannily like a modern glider</span><span class="mark">11</span>. Although it dates from several hundred years after the building of the pyramids, its sophistication suggests that the Egyptians might have been <span class="hl">developing ideas of flight</span><span class="mark">12</span> for a long time. And other ancient civilisations certainly knew about kites; as early as 1250 BC, the Chinese were using them to <span class="hl">deliver messages</span><span class="mark">13</span> and dump flaming debris on their foes.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> The experiments might even have practical uses nowadays. There are plenty of places around the globe where people have no access to heavy machinery, but do know how to deal with wind, sailing and basic mechanical principles. Gharib has already been contacted by a civil engineer in Nicaragua, who wants to put up buildings with adobe roofs supported by concrete arches on a site that heavy equipment can't reach. His idea is to build the arches horizontally, then lift them into place using kites. 'We've given him some design hints,' says Gharib. 'We're just waiting for him to report back.' So whether they were actually used to build the pyramids or not, it seems that kites may make sensible construction tools in the 21st century AD.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">Endless Harvest</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> More than two hundred years ago, Russian explorers and fur hunters landed on the Aleutian Islands, a volcanic archipelago in the North Pacific, and learned of a land mass that lay farther to the north. <span class="hl">The islands' native inhabitants called this land mass Aleyska, the 'Great Land'</span><span class="mark">14</span>; today, we know it as Alaska.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> The forty-ninth state to join the United States of America (in 1959), Alaska is fully one-fifth the size of the mainland 48 states combined. It shares, with Canada, the second longest river system in North America and has over half the coastline of the United States. The rivers feed into the Bering Sea and Gulf of Alaska – cold, nutrient-rich waters which support tens of millions of seabirds, and over 400 species of fish, shellfish, crustaceans, and molluscs. Taking advantage of this rich bounty, <span class="hl">Alaska's commercial fisheries have developed into some of the largest in the world.</span><span class="mark">15</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> According to the Alaska Department of Fish and Game (ADF&G), Alaska's commercial fisheries landed hundreds of thousands of tonnes of shellfish and herring, and well over a million tonnes of groundfish (cod, sole, perch and pollock) in 2000. The true cultural heart and soul of Alaska's fisheries, however, is salmon. 'Salmon,' notes writer Susan Ewing in <em>The Great Alaska Nature Factbook</em>, '<span class="hl">pump through Alaska like blood through a heart, bringing rhythmic, circulating nourishment to land, animals and people</span><span class="mark">16</span>.' The 'predictable abundance of salmon allowed some native cultures to flourish,' and 'dying spawners feed bears, eagles, other animals, and ultimately the soil itself.' All five species of Pacific salmon – chinook, or king; chum, or dog; coho, or silver; sockeye, or red; and pink, or humpback – spawn in Alaskan waters, and <span class="hl">90% of all Pacific salmon commercially caught in North America are produced there</span><span class="mark">17</span>. Indeed, if Alaska was an independent nation, it would be the largest producer of wild salmon in the world. <span class="hl">During 2000, commercial catches of Pacific salmon in Alaska exceeded 320,000 tonnes</span><span class="mark">18</span>, with an ex-vessel value of over $US260 million.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> Catches have not always been so healthy. <span class="hl">Between 1940 and 1959, overfishing led to crashes in salmon populations so severe that in 1953 Alaska was declared a federal disaster area.</span><span class="mark">19</span> With the onset of statehood, however, the State of Alaska took over management of its own fisheries, guided by a state constitution which mandates that Alaska's natural resources be managed on a sustainable basis. At that time, statewide harvests totalled around 25 million salmon. Over the next few decades average catches steadily increased as a result of this policy of sustainable management, until, <span class="hl">during the 1990s, annual harvests were well in excess of 100 million, and on several occasions over 200 million fish</span><span class="mark">20</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> The primary reason for such increases is what is known as 'In-Season Abundance-Based Management'. <span class="hl">There are biologists throughout the state constantly monitoring adult fish as they show up to spawn.</span><span class="mark">21</span> The biologists sit in streamside counting towers, study sonar, watch from aeroplanes, and talk to fishermen. The salmon season in Alaska is not pre-set. The fishermen know the approximate time of year when they will be allowed to fish, but on any given day, one or more field biologists in a particular area can put a halt to fishing. <span class="hl">Even sport fishing can be brought to a halt.</span><span class="mark">22</span> <span class="hl">It is this management mechanism that has allowed Alaska salmon stocks – and, accordingly, Alaska salmon fisheries – to prosper</span><span class="mark">23</span>, even as salmon populations in the rest of the United States are increasingly considered threatened or even endangered.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> In 1999, the Marine Stewardship Council (MSC) commissioned a review of the Alaska salmon fishery. <span class="hl">The Council, which was founded in 1996, certifies fisheries that meet high environmental standards, enabling them to use a label that recognises their environmental responsibility.</span><span class="mark">24</span> The MSC has established a set of criteria by which commercial fisheries can be judged. Recognising the potential benefits of being identified as environmentally responsible, fisheries approach the Council requesting to undergo the certification process. The MSC then appoints a certification committee, composed of a panel of fisheries experts, which gathers information and opinions from fishermen, biologists, government officials, industry representatives, non-governmental organisations and others.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> Some observers thought the Alaska salmon fisheries would not have any chance of certification when, in the months leading up to MSC's final decision, salmon runs throughout western Alaska completely collapsed. In the Yukon and Kuskokwim rivers, chinook and chum runs were probably the poorest since statehood; subsistence communities throughout the region, who normally have priority over commercial fishing, were devastated.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> The crisis was completely unexpected, but researchers believe it had nothing to do with impacts of fisheries. Rather, they contend, it was almost certainly the result of climatic shifts, prompted in part by cumulative effects of the el niño/la niña phenomenon on Pacific Ocean temperatures, culminating in a harsh winter in which huge numbers of salmon eggs were frozen. It could have meant the end as far as the certification process was concerned. However, <span class="hl">the state reacted quickly, closing down all fisheries, even those necessary for subsistence purposes</span><span class="mark">25</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> In September 2000, MSC announced that the Alaska salmon fisheries qualified for certification. <span class="hl">Seven companies producing Alaska salmon were immediately granted permission to display the MSC logo on their products.</span><span class="mark">26</span> Certification is for an initial period of five years, with an annual review to ensure that the fishery is continuing to meet the required standards.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Effects of Noise</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> In general, it is plausible to suppose that we should prefer peace and quiet to noise. And yet most of us have had the experience of having to adjust to sleeping in the mountains or the countryside because it was initially 'too quiet', <span class="hl">an experience that suggests that humans are capable of adapting to a wide range of noise levels</span><span class="mark">27</span>. Research supports this view. For example, Glass and Singer (1972) exposed people to short bursts of very loud noise and then measured their ability to work out problems and their physiological reactions to the noise. <span class="hl">The noise was quite disruptive at first</span><span class="mark">35</span>, but <span class="hl">after about four minutes the subjects were doing just as well on their tasks as control subjects who were not exposed to noise</span><span class="mark">28</span>. Their physiological arousal also declined quickly to the same levels as those of the control subjects.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> But there are limits to adaptation and <span class="hl">loud noise becomes more troublesome if the person is required to concentrate on more than one task</span><span class="mark">29</span>. For example, <span class="hl">high noise levels interfered with the performance of subjects who were required to monitor three dials at a time</span><span class="mark">39</span>, a task not unlike that of an aeroplane pilot or an air-traffic controller (Broadbent, 1957). Similarly, noise did not affect a subject's ability to track a moving line with a steering wheel, but <span class="hl">it did interfere with the subject's ability to repeat numbers while tracking</span><span class="mark">40</span> (Finkelman and Glass, 1970).</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Probably the most significant finding from research on noise is that its predictability is more important than how loud it is. <span class="hl">We are much more able to 'tune out' chronic background noise, even if it is quite loud, than to work under circumstances with unexpected intrusions of noise.</span><span class="mark">30</span> In the Glass and Singer study, in which subjects were exposed to bursts of noise as they worked on a task, some subjects heard loud bursts and others heard soft bursts. For some subjects, the bursts were spaced exactly one minute apart (predictable noise); <span class="hl">others heard the same amount of noise overall</span><span class="mark">31</span>, but the bursts occurred at random intervals (unpredictable noise). Subjects reported finding the predictable and unpredictable noise equally annoying, and <span class="hl">all subjects performed at about the same level during the noise portion of the experiment</span><span class="mark">32</span>. But the different noise conditions had quite different after-effects when the subjects were required to proofread written material under conditions of no noise. As shown in Table 1 <span class="hl">the unpredictable noise produced more errors in the later proofreading task than predictable noise</span><span class="mark">33</span>; and <span class="hl">soft, unpredictable noise actually produced slightly more errors on this task than the loud, predictable noise</span><span class="mark">38</span>.</p>
+<table style="border-collapse:collapse;margin:12px auto;font-size:0.85rem;"><caption style="caption-side:bottom;padding-top:6px;color:var(--muted);">Table 1: Proofreading Errors and Noise</caption><tr><th style="border:1px solid #cbd5e0;padding:5px 10px;"></th><th style="border:1px solid #cbd5e0;padding:5px 10px;">Unpredictable Noise</th><th style="border:1px solid #cbd5e0;padding:5px 10px;">Predictable Noise</th><th style="border:1px solid #cbd5e0;padding:5px 10px;">Average</th></tr><tr><td style="border:1px solid #cbd5e0;padding:5px 10px;">Loud noise</td><td style="border:1px solid #cbd5e0;padding:5px 10px;">40.1</td><td style="border:1px solid #cbd5e0;padding:5px 10px;">31.8</td><td style="border:1px solid #cbd5e0;padding:5px 10px;">35.9</td></tr><tr><td style="border:1px solid #cbd5e0;padding:5px 10px;">Soft noise</td><td style="border:1px solid #cbd5e0;padding:5px 10px;">36.7</td><td style="border:1px solid #cbd5e0;padding:5px 10px;">27.4</td><td style="border:1px solid #cbd5e0;padding:5px 10px;">32.1</td></tr><tr><td style="border:1px solid #cbd5e0;padding:5px 10px;">Average</td><td style="border:1px solid #cbd5e0;padding:5px 10px;">38.4</td><td style="border:1px solid #cbd5e0;padding:5px 10px;">29.6</td><td style="border:1px solid #cbd5e0;padding:5px 10px;"></td></tr></table>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> <span class="hl">Apparently, unpredictable noise produces more fatigue than predictable noise, but it takes a while for this fatigue to take its toll on performance.</span><span class="mark">34</span></p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> Predictability is not the only variable that reduces or eliminates the negative effects of noise. Another is control. <span class="hl">If the individual knows that he or she can control the noise, this seems to eliminate both its negative effects at the time and its after-effects.</span><span class="mark">37</span> This is true even if the individual never actually exercises his or her option to turn the noise off (Glass and Singer, 1972). Just the knowledge that one has control is sufficient.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> The studies discussed so far exposed people to noise for only short periods and only transient effects were studied. But the major worry about noisy environments is that living day after day with chronic noise may produce serious, lasting effects. One study, suggesting that this worry is a realistic one, compared elementary school pupils who attended schools near Los Angeles's busiest airport with students who attended schools in quiet neighbourhoods (Cohen et al., 1980). It was found that children from the noisy schools had higher blood pressure and were more easily distracted than those who attended the quiet schools. Moreover, there was no evidence of adaptability to the noise. In fact, the longer the children had attended the noisy schools, the more distractible they became. The effects also seem to be long lasting. <span class="hl">A follow-up study showed that children who were moved to less noisy classrooms still showed greater distractibility one year later than students who had always been in the quiet schools</span><span class="mark">36</span> (Cohen et al., 1981). It should be noted that the two groups of children had been carefully matched by the investigators so that they were comparable in age, ethnicity, race, and social class.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–7</div><p>Do the following statements agree with the information given in Reading Passage 1?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">It is generally believed that large numbers of people were needed to build the pyramids.</div><span class="answer ans-letter">TRUE</span><div class="explanation">'The conventional picture is that tens of thousands of slaves dragged stones on sledges.'</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">Clemmons found a strange hieroglyph on the wall of an Egyptian monument.</div><span class="answer ans-letter">FALSE</span><div class="explanation">She noticed the hieroglyph while perusing a book on the monuments of Egypt, not on a wall.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">Gharib had previously done experiments on bird flight.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Nothing is said about earlier bird-flight experiments (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">Gharib and Graff tested their theory before applying it.</div><span class="answer ans-letter">TRUE</span><div class="explanation">They did initial calculations and scale-model wind-tunnel experiments before the full-scale test.</div></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">The success of the actual experiment was due to the high speed of the wind.</div><span class="answer ans-letter">FALSE</span><div class="explanation">The wind was gentle, little more than half what they thought would be needed.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">They found that, as the kite flew higher, the wind force got stronger.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">A huge initial force when the kite opened is mentioned, but nothing about force increasing with height (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">The team decided that it was possible to use kites to raise very heavy stones.</div><span class="answer ans-letter">TRUE</span><div class="explanation">'So Clemmons was right: the pyramid builders could have used kites to lift massive stones into place.'</div></div>
+<div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Complete the summary. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p><p><b>Additional evidence for theory of kite-lifting</b></p></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">The Egyptians had <b>8 ………</b>, which could lift large pieces of <b>9 ………</b></div><span class="answer ans-letter">(wooden) pulleys</span><div class="explanation">They are known to have used wooden pulleys.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">…which could lift large pieces of <b>9 ………</b></div><span class="answer ans-letter">stone</span><div class="explanation">The pulleys could bear the weight of massive blocks of stone.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">…and they knew how to use the energy of the wind from their skill as <b>10 ………</b>.</div><span class="answer ans-letter">(accomplished) sailors</span><div class="explanation">Harnessing the wind would not have been a problem for accomplished sailors.</div></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">The discovery on one pyramid of an object which resembled a <b>11 ………</b></div><span class="answer ans-letter">(modern) glider</span><div class="explanation">A wooden artefact at Saqqara looks uncannily like a modern glider.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">…suggests they may have experimented with <b>12 ………</b>.</div><span class="answer ans-letter">flight</span><div class="explanation">Its sophistication suggests they were developing ideas of flight.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">…kites were used in China as weapons, as well as for sending <b>13 ………</b>.</div><span class="answer ans-letter">messages</span><div class="explanation">The Chinese used kites to deliver messages and dump flaming debris on foes.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–20</div><p>Do the following statements agree with the information given in Reading Passage 2?</p><p><b>TRUE</b> if the statement agrees with the information<br><b>FALSE</b> if the statement contradicts the information<br><b>NOT GIVEN</b> if there is no information on this</p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">The inhabitants of the Aleutian islands renamed their islands 'Aleyska'.</div><span class="answer ans-letter">FALSE</span><div class="explanation">The natives gave the name Aleyska to the land mass to the north, not to their own islands.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">Alaska's fisheries are owned by some of the world's largest companies.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The fisheries are among the world's largest, but ownership isn't mentioned (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">Life in Alaska is dependent on salmon.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Salmon pump through Alaska like blood through a heart, nourishing land, animals and people.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">Ninety per cent of all Pacific salmon caught are sockeye or pink salmon.</div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">90% of North American Pacific salmon caught commercially come from Alaska; the share of sockeye or pink isn't given.</div></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">More than 320,000 tonnes of salmon were caught in Alaska in 2000.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Commercial catches in 2000 exceeded 320,000 tonnes.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">Between 1940 and 1959, there was a sharp decrease in Alaska's salmon population.</div><span class="answer ans-letter">TRUE</span><div class="explanation">Overfishing led to crashes in salmon populations.</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">During the 1990s, the average number of salmon caught each year was 100 million.</div><span class="answer ans-letter">FALSE</span><div class="explanation">Annual harvests were well in excess of 100 million, and on several occasions over 200 million.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 21–26</div><p>Complete each sentence with the correct ending, A–K.</p><p><b>List of endings</b></p><ul class='opts'><li><b>A</b> to recognise fisheries that care for the environment.</li><li><b>B</b> to be successful.</li><li><b>C</b> to stop fish from spawning.</li><li><b>D</b> to set up environmental protection laws.</li><li><b>E</b> to stop people fishing for sport.</li><li><b>F</b> to label their products using the MSC logo.</li><li><b>G</b> to ensure that fish numbers are sufficient to permit fishing.</li><li><b>H</b> to assist the subsistence communities in the region.</li><li><b>I</b> to freeze a huge number of salmon eggs.</li><li><b>J</b> to deny certification to the Alaska fisheries.</li><li><b>K</b> to close down all fisheries.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">In Alaska, biologists keep a check on adult fish</div><span class="answer ans-letter">G</span><div class="explanation">They monitor adult fish as they spawn to decide whether fishing is allowed.</div></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Biologists have the authority</div><span class="answer ans-letter">E</span><div class="explanation">They can halt fishing, even sport fishing.</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">In-Season Abundance-Based Management has allowed the Alaska salmon fisheries</div><span class="answer ans-letter">B</span><div class="explanation">This management mechanism has allowed the fisheries to prosper.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">The Marine Stewardship Council (MSC) was established</div><span class="answer ans-letter">A</span><div class="explanation">It certifies fisheries that meet high environmental standards and recognises their environmental responsibility.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">As a result of the collapse of the salmon runs in 1999, the state decided</div><span class="answer ans-letter">K</span><div class="explanation">The state reacted quickly, closing down all fisheries.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">In September 2000, the MSC allowed seven Alaska salmon companies</div><span class="answer ans-letter">F</span><div class="explanation">They were granted permission to display the MSC logo on their products.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–29</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">The writer suggests that people may have difficulty sleeping in the mountains because<ul class='opts'><li><b>A</b> humans do not prefer peace and quiet to noise.</li><li><b>B</b> they may be exposed to short bursts of very strange sounds.</li><li><b>C</b> humans prefer to hear a certain amount of noise while they sleep.</li><li><b>D</b> they may have adapted to a higher noise level in the city.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">The mountains are initially 'too quiet', suggesting people are adapted to higher noise levels.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">In noise experiments, Glass and Singer found that<ul class='opts'><li><b>A</b> problem-solving is much easier under quiet conditions.</li><li><b>B</b> physiological arousal prevents the ability to work.</li><li><b>C</b> bursts of noise do not seriously disrupt problem-solving in the long term.</li><li><b>D</b> the physiological arousal of control subjects declined quickly.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">After about four minutes noise subjects did as well as control subjects.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Researchers discovered that high noise levels are not likely to interfere with the<ul class='opts'><li><b>A</b> successful performance of a single task.</li><li><b>B</b> tasks of pilots or air traffic controllers.</li><li><b>C</b> ability to repeat numbers while tracking moving lines.</li><li><b>D</b> ability to monitor three dials at once.</li></ul></div><span class="answer ans-letter">A</span><div class="explanation">Loud noise becomes more troublesome only when more than one task is required.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 30–34</div><p>Complete the summary using the list of words and phrases, A–J. <i>You may use any letter more than once.</i></p><ul class='opts'><li><b>A</b> no control over</li><li><b>B</b> unexpected</li><li><b>C</b> intense</li><li><b>D</b> the same amount of</li><li><b>E</b> performed better than</li><li><b>F</b> performed at about the same level as</li><li><b>G</b> no</li><li><b>H</b> showed more irritation than</li><li><b>I</b> made more mistakes than</li><li><b>J</b> different types of</li></ul></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">…situations in which there is intense noise have less effect on performance than circumstances in which <b>30 ………</b> noise occurs.</div><span class="answer ans-letter">B – unexpected</span><div class="explanation">We tune out loud chronic noise more easily than unexpected intrusions.</div></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">All groups were exposed to <b>31 ………</b> noise.</div><span class="answer ans-letter">D – the same amount of</span><div class="explanation">Both groups heard the same amount of noise overall.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">The predictable noise group <b>32 ………</b> the unpredictable noise group on this task.</div><span class="answer ans-letter">F – performed at about the same level as</span><div class="explanation">All subjects performed at about the same level during the noise.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">The group exposed to unpredictable noise <b>33 ………</b> the group exposed to predictable noise.</div><span class="answer ans-letter">I – made more mistakes than</span><div class="explanation">Unpredictable noise produced more proofreading errors.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">The results suggest that <b>34 ………</b> noise produces fatigue but that this manifests itself later.</div><span class="answer ans-letter">B – unexpected</span><div class="explanation">Unpredictable noise produces more fatigue, but it takes a while to take its toll.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 35–40</div><p>Look at the following statements and the list of researchers. Match each statement with the correct researcher(s), A–E. <i>You may use any letter more than once.</i></p><ul class='opts'><li><b>A</b> Glass and Singer</li><li><b>B</b> Broadbent</li><li><b>C</b> Finkelman and Glass</li><li><b>D</b> Cohen et al.</li><li><b>E</b> None of the above</li></ul></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">Subjects exposed to noise find it difficult at first to concentrate on problem-solving tasks.<div class="yng">Which researcher?</div></div><span class="answer ans-letter">A</span><div class="explanation">Glass and Singer: the noise was quite disruptive at first.</div></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Long-term exposure to noise can produce changes in behaviour which can still be observed a year later.<div class="yng">Which researcher?</div></div><span class="answer ans-letter">D</span><div class="explanation">Cohen et al.: moved children still showed greater distractibility a year later.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">The problems associated with exposure to noise do not arise if the subject knows they can make it stop.<div class="yng">Which researcher?</div></div><span class="answer ans-letter">A</span><div class="explanation">Glass and Singer: knowing one can control the noise eliminates its negative effects.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">Exposure to high-pitched noise results in more errors than exposure to low-pitched noise.<div class="yng">Which researcher?</div></div><span class="answer ans-letter">E</span><div class="explanation">No researcher is linked to pitch; only loud versus soft noise is compared (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">Subjects find it difficult to perform three tasks at the same time when exposed to noise.<div class="yng">Which researcher?</div></div><span class="answer ans-letter">B</span><div class="explanation">Broadbent: noise interfered with monitoring three dials at a time.</div></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Noise affects a subject's capacity to repeat numbers while carrying out another task.<div class="yng">Which researcher?</div></div><span class="answer ans-letter">C</span><div class="explanation">Finkelman and Glass: noise interfered with repeating numbers while tracking.</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>

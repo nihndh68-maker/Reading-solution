@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 7 – Reading Test 2 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style></head><body>
+<header><h1>Cambridge IELTS 7 – Reading Test 2</h1><p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p></header>
+<div class="container"><div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<div class="passage-title">Why pagodas don't fall down</div>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶1</strong> In a land swept by typhoons and shaken by earthquakes, how have Japan's tallest and seemingly flimsiest old buildings – 500 or so wooden pagodas – remained standing for centuries? <span class="hl">Records show that only two have collapsed during the past 1400 years.</span><span class="mark">1</span> Those that have disappeared were destroyed by fire as a result of lightning or civil war. The disastrous Hanshin earthquake in 1995 killed 6,400 people, toppled elevated highways, flattened office blocks and devastated the port area of Kobe. <span class="hl">Yet it left the magnificent five-storey pagoda at the Toji temple in nearby Kyoto unscathed</span><span class="mark">2</span>, <span class="hl">though it levelled a number of buildings in the neighbourhood</span><span class="mark">3</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶2</strong> Japanese scholars have been mystified for ages about why these tall, slender buildings are so stable. It was only thirty years ago that the building industry felt confident enough to erect office blocks of steel and reinforced concrete that had more than a dozen floors. With its special shock absorbers to dampen the effect of sudden sideways movements from an earthquake, the thirty-six-storey Kasumigaseki building in central Tokyo – Japan's first skyscraper – was considered a masterpiece of modern engineering when it was built in 1968.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶3</strong> Yet in 826, with only pegs and wedges to keep his wooden structure upright, the master builder Kobodaishi had no hesitation in sending his majestic Toji pagoda soaring fifty-five metres into the sky – nearly half as high as the Kasumigaseki skyscraper built some eleven centuries later. Clearly, Japanese carpenters of the day knew a few tricks about allowing a building to sway and settle itself rather than fight nature's forces. But what sort of tricks?</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶4</strong> The multi-storey pagoda came to Japan from China in the sixth century. <span class="hl">As in China, they were first introduced with Buddhism and were attached to important temples.</span><span class="mark">9</span> <span class="hl">The Chinese built their pagodas in brick or stone, with inner staircases</span><span class="mark">5</span>, and <span class="hl">used them in later centuries mainly as watchtowers</span><span class="mark">7</span>. When the pagoda reached Japan, however, its architecture was freely adapted to local conditions – they were built less high, typically five rather than nine storeys, made mainly of wood and the staircase was dispensed with because the Japanese pagoda did not have any practical use but became more of an art object. <span class="hl">Because of the typhoons that batter Japan in the summer, Japanese builders learned to extend the eaves of buildings further beyond the walls.</span><span class="mark">4</span> This prevents rainwater gushing down the walls. Pagodas in China and Korea have nothing like the overhang that is found on pagodas in Japan.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶5</strong> <span class="hl">The roof of a Japanese temple building can be made to overhang the sides of the structure by fifty per cent or more of the building's overall width.</span><span class="mark">8</span> For the same reason, the builders of Japanese pagodas seem to have further increased their weight by choosing to cover these extended eaves <span class="hl">not with the porcelain tiles of many Chinese pagodas but with much heavier earthenware tiles</span><span class="mark">6</span>.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶6</strong> But this does not totally explain the great resilience of Japanese pagodas. Is the answer that, like a tall pine tree, the Japanese pagoda – with its massive trunk-like central pillar known as shinbashira – simply flexes and sways during a typhoon or earthquake? For centuries, many thought so. But the answer is not so simple because the startling thing is that the shinbashira actually carries no load at all. In fact, in some pagoda designs, it does not even rest on the ground, but is suspended from the top of the pagoda – hanging loosely down through the middle of the building. The weight of the building is supported entirely by twelve outer and four inner columns.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶7</strong> And what is the role of the shinbashira, the central pillar? The best way to understand the shinbashira's role is to watch a video made by Shuzo Ishida, a structural engineer at Kyoto Institute of Technology. Mr Ishida, known to his students as 'Professor Pagoda' because of <span class="hl">his passion to understand the pagoda</span><span class="mark">12</span>, has built a series of models and tested them on a 'shake-table' in his laboratory. In short, the shinbashira was acting like an enormous stationary pendulum. The ancient craftsmen, apparently without the assistance of very advanced mathematics, seemed to grasp the principles that were, more than a thousand years later, applied in the construction of Japan's first skyscraper. What those early craftsmen had found by trial and error was that <span class="hl">under pressure a pagoda's loose stack of floors could be made to slither to and fro independent of one another</span><span class="mark">10</span>. Viewed from the side, the pagoda seemed to be doing a snake dance – with each consecutive floor moving in the opposite direction to its neighbours above and below. <span class="hl">The shinbashira, running up through a hole in the centre of the building, constrained individual storeys from moving too far</span><span class="mark">11</span> because, after moving a certain distance, they banged into it, transmitting energy away along the column.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶8</strong> Another strange feature of the Japanese pagoda is that, because the building tapers, with each successive floor plan being smaller than the one below, none of the vertical pillars that carry the weight of the building is connected to its corresponding pillar above. In other words, a five-storey pagoda contains not even one pillar that travels right up through the building to carry the structural loads from the top to the bottom. More surprising is the fact that <span class="hl">the individual storeys of a Japanese pagoda, unlike their counterparts elsewhere, are not actually connected to each other. They are simply stacked one on top of another like a pile of hats.</span><span class="mark">13</span> Interestingly, such a design would not be permitted under current Japanese building regulations.</p>
+<p class="para"><strong style="color:var(--muted);font-weight:600;">¶9</strong> And the extra-wide eaves? Think of them as a tightrope walker's balancing pole. The bigger the mass at each end of the pole, the easier it is for the tightrope walker to maintain his or her balance. The same holds true for a pagoda. 'With the eaves extending out on all sides like balancing poles,' says Mr Ishida, 'the building responds to even the most powerful jolt of an earthquake with a graceful swaying, never an abrupt shaking.' Here again, Japanese master builders of a thousand years ago anticipated concepts of modern structural engineering.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+<div class="passage-title">The True Cost of Food</div>
+<p class="para"><strong>A</strong> For more than forty years the cost of food has been rising. It has now reached a point where a growing number of people believe that it is far too high, and that bringing it down will be one of the great challenges of the twenty first century. That cost, however, is not in immediate cash. In the West at least, <span class="hl">most food is now far cheaper to buy in relative terms than it was in 1960</span><span class="mark">19</span>. The cost is in the collateral damage of the very methods of food production that have made the food cheaper: in the pollution of water, the enervation of soil, the destruction of wildlife, the harm to animal welfare and the threat to human health caused by modern industrial agriculture.</p>
+<p class="para"><strong>B</strong> <span class="hl">First mechanisation, then mass use of chemical fertilisers and pesticides, then monocultures, then battery rearing of livestock, and now genetic engineering</span><span class="mark">15</span> – the onward march of intensive farming has seemed unstoppable in the last half-century, as the yields of produce have soared. But the damage it has caused has been colossal. In Britain, for example, <span class="hl">many of our best-loved farmland birds, such as the skylark, the grey partridge, the lapwing and the corn bunting, have vanished from huge stretches of countryside</span><span class="mark">18</span>, as have even more wild flowers and insects. This is a direct result of the way we have produced our food in the last four decades. Thousands of miles of hedgerows, thousands of ponds, have disappeared from the landscape. The faecal filth of salmon farming has driven wild salmon from many of the sea lochs and rivers of Scotland. Natural soil fertility is dropping in many areas because of continuous industrial fertiliser and pesticide use, while <span class="hl">the growth of algae is increasing in lakes because of the fertiliser run-off</span><span class="mark">17</span>.</p>
+<p class="para"><strong>C</strong> Put it all together and it looks like a battlefield, but consumers rarely make the connection at the dinner table. That is mainly because the costs of all this damage are <span class="hl">what economists refer to as externalities</span><span class="mark">16</span>: they are outside the main transaction, which is for example producing and selling a field of wheat, and are borne directly by neither producers nor consumers. <span class="hl">To many, the costs may not even appear to be financial at all, but merely aesthetic</span><span class="mark">20</span> – a terrible shame, but nothing to do with money. And anyway they, as consumers of food, certainly aren't paying for it, are they?</p>
+<p class="para"><strong>D</strong> But the costs to society can actually be quantified and, when added up, can amount to staggering sums. A remarkable exercise in doing this has been carried out by one of the world's leading thinkers on the future of agriculture, Professor Jules Pretty, Director of the Centre for Environment and Society at the University of Essex. Professor Pretty and his colleagues calculated the externalities of British agriculture for one particular year. They added up the costs of repairing the damage it caused, and came up with a total figure of £2,343m. This is equivalent to £208 for every hectare of arable land and permanent pasture, almost as much again as the total government and EU spend on British farming in that year. And according to Professor Pretty, it was a conservative estimate.</p>
+<p class="para"><strong>E</strong> The costs included: £120m for removal of pesticides; £16m for removal of nitrates; £55m for removal of phosphates and soil; <span class="hl">£23m for the removal of the bug cryptosporidium from drinking water by water companies</span><span class="mark">14</span>; £125m for damage to wildlife habitats, hedgerows and dry stone walls; £1,113m from emissions of gases likely to contribute to climate change; £106m from soil erosion and organic carbon losses; <span class="hl">£169m from food poisoning</span><span class="mark">21</span>; and £607m from cattle disease. Professor Pretty draws a simple but memorable conclusion from all this: <span class="hl">our food bills are actually threefold</span><span class="mark">22</span>. We are paying for our supposedly cheaper food in three separate ways: once over the counter, secondly through our taxes, which provide the enormous subsidies propping up modern intensive farming, and thirdly to clean up the mess that modern farming leaves behind.</p>
+<p class="para"><strong>F</strong> So can the true cost of food be brought down? <span class="hl">Breaking away from industrial agriculture as the solution to hunger may be very hard for some countries, but in Britain, where the immediate need to supply food is less urgent, and the costs and the damage of intensive farming have been clearly seen, it may be more feasible.</span><span class="mark">23</span> The government needs to create sustainable, competitive and diverse farming and food sectors, which will contribute to a thriving and sustainable rural economy, and advance environmental, economic, health, and animal welfare goals.</p>
+<p class="para"><strong>G</strong> But if industrial agriculture is to be replaced, what is a viable alternative? <span class="hl">Professor Pretty feels that organic farming would be too big a jump in thinking and in practices for many farmers.</span><span class="mark">24</span> Furthermore, the price premium would put the produce out of reach of many poorer consumers. <span class="hl">He is recommending the immediate introduction of a 'Greener Food Standard'</span><span class="mark">25</span>, which would push the market towards more sustainable environmental practices than the current norm, while not requiring the full commitment to organic production. Such a standard would comprise agreed practices for different kinds of farming, covering agrochemical use, soil health, land management, water and energy use, food safety and animal health. It could go a long way, he says, to <span class="hl">shifting consumers as well as farmers towards a more sustainable system of agriculture</span><span class="mark">26</span>.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+<div class="passage-title">Makete Integrated Rural Transport Project</div>
+<p class="para"><strong>A</strong> The disappointing results of many conventional road transport projects in Africa led some experts to rethink the strategy by which rural transport problems were to be tackled at the beginning of the 1980s. A request for help in improving the availability of transport within the remote Makete District of south-western Tanzania presented the opportunity to try a new approach.</p>
+<p class="para">The concept of 'integrated rural transport' was adopted in the task of examining the transport needs of the rural households in the district. <span class="hl">The objective was to reduce the time and effort needed to obtain access to essential goods and services through an improved rural transport system.</span><span class="mark">35</span> The underlying assumption was that the time saved would be used instead for activities that would improve the social and economic development of the communities. The Makete Integrated Rural Transport Project (MIRTP) started in 1985 with financial support from the Swiss Development Corporation and was co-ordinated with the help of the Tanzanian government.</p>
+<p class="para"><strong>B</strong> <span class="hl">When the project began, Makete District was virtually totally isolated during the rainy season.</span><span class="mark">32</span> The regional road was in such bad shape that access to the main towns was impossible for about three months of the year. Road traffic was extremely rare within the district, and alternative means of transport were restricted to donkeys in the north of the district. People relied primarily on the paths, which were slippery and dangerous during the rains.</p>
+<p class="para"><span class="hl">Before solutions could be proposed, the problems had to be understood.</span><span class="mark">27</span> Little was known about the transport demands of the rural households, so <span class="hl">Phase I, between December 1985 and December 1987, focused on research. The socio-economic survey of more than 400 households in the district indicated that a household in Makete spent, on average, seven hours a day on transporting themselves and their goods</span><span class="mark">33</span>, a figure which seemed extreme but which has also been obtained in surveys in other rural areas in Africa. Interesting facts regarding transport were found: <span class="hl">95% was on foot; 80% was within the locality</span><span class="mark">34</span>; and 70% was related to the collection of water and firewood and travelling to grinding mills.</p>
+<p class="para"><strong>C</strong> <span class="hl">Having determined the main transport needs, possible solutions were identified which might reduce the time and burden. During Phase II, from January to February 1991, a number of approaches were implemented in an effort to improve mobility and access to transport.</span><span class="mark">28</span></p>
+<p class="para">An improvement of the road network was considered necessary to ensure the import and export of goods to the district. These improvements were carried out using methods that were heavily dependent on labour. In addition to the improvement of roads, these methods provided training in the operation of a mechanical workshop and bus and truck services. However, the difference from the conventional approach was that this time consideration was given to local transport needs outside the road network.</p>
+<p class="para"><span class="hl">Most goods were transported along the paths that provide short-cuts up and down the hillsides, but the paths were a real safety risk</span><span class="mark">36</span> and made the journey on foot even more arduous. <span class="hl">It made sense to improve the paths by building steps, handrails and footbridges.</span><span class="mark">36</span></p>
+<p class="para">It was uncommon to find means of transport that were more efficient than walking but less technologically advanced than motor vehicles. The use of bicycles was constrained by their high cost and the lack of available spare parts. Oxen were not used at all but donkeys were used by a few households in the northern part of the district. MIRTP focused on what would be most appropriate for the inhabitants of Makete in terms of what was available, how much they could afford and what they were willing to accept.</p>
+<p class="para">After careful consideration, the project chose the promotion of donkeys – a donkey costs less than a bicycle – and the introduction of a locally manufacturable wheelbarrow.</p>
+<p class="para"><strong>D</strong> <span class="hl">Phase III, from March 1991 to March 1993, focused on the refinement and institutionalisation of these activities.</span><span class="mark">31</span> <span class="hl">At the end of Phase II, it was clear that the selected approaches to Makete's transport problems had had different degrees of success.</span><span class="mark">40</span></p>
+<p class="para"><span class="hl">The road improvements and accompanying maintenance system had helped make the district centre accessible throughout the year.</span><span class="mark">39</span> Essential goods from outside the district had become more readily available at the market, and prices did not fluctuate as much as they had done before.</p>
+<p class="para"><span class="hl">Paths and secondary roads were improved only at the request of communities who were willing to participate in construction and maintenance.</span><span class="mark">38</span> However, the improved paths impressed the inhabitants, and requests for assistance greatly increased soon after only a few improvements had been completed.</p>
+<p class="para"><span class="hl">The efforts to improve the efficiency of the existing transport services were not very successful because most of the motorised vehicles in the district broke down and there were no resources to repair them.</span><span class="mark">37</span> Even the introduction of low-cost means of transport was difficult because of the general poverty of the district. The locally manufactured wheelbarrows were still too expensive for all but a few of the households. Modifications to the original design by local carpenters cut production time and costs. Other local carpenters have been trained in the new design so that they can respond to requests. Nevertheless, a locally produced wooden wheelbarrow which costs around 5000 Tanzanian shillings (less than US$20) in Makete, and is about one quarter the cost of a metal wheelbarrow, is still too expensive for most people.</p>
+<p class="para">Donkeys, which were imported to the district, have become more common and contribute, in particular, to the transportation of crops and goods to market. Those who have bought donkeys are mainly from richer households but, with an increased supply through local breeding, donkeys should become more affordable. Meanwhile, local initiatives are promoting the renting out of the existing donkeys.</p>
+<p class="para">It should be noted, however, that a donkey, which at 20,000 Tanzanian shillings costs less than a bicycle, is still an investment equal to an average household's income over half a year. This clearly illustrates the need for supplementary measures if one wants to assist the rural poor.</p>
+<p class="para"><strong>E</strong> It would have been easy to criticise the MIRTP for using in the early phases a 'top-down' approach, in which decisions were made by experts and officials before being handed down to communities, but <span class="hl">it was necessary to start the process from the level of the governmental authorities of the district</span><span class="mark">29</span>. It would have been difficult to respond to the requests of villagers and other rural inhabitants without the support and understanding of district authorities.</p>
+<p class="para"><strong>F</strong> Today, nobody in the district argues about the importance of improved paths and inexpensive means of transport. But this is the result of dedicated work over a long period, particularly from the officers in charge of community development. They played an essential role in raising awareness and interest among the rural communities.</p>
+<p class="para">The concept of integrated rural transport is now well established in Tanzania, where a major program of rural transport is just about to start. The experiences from Makete will help in this initiative, and <span class="hl">Makete District will act as a reference for future work</span><span class="mark">30</span>.</p>
+</div>
+<div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–4</div><p>Do the following statements agree with the claims of the writer in Reading Passage 1?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 1</div><div class="question">Only two Japanese pagodas have collapsed in 1400 years.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">'Records show that only two have collapsed during the past 1400 years.'</div></div>
+<div class="q-block"><div class="q-num">Question 2</div><div class="question">The Hanshin earthquake of 1995 destroyed the pagoda at the Toji temple.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The earthquake left the Toji pagoda unscathed.</div></div>
+<div class="q-block"><div class="q-num">Question 3</div><div class="question">The other buildings near the Toji pagoda had been built in the last 30 years.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Nearby buildings were levelled, but their age is not given (highlight is the nearest text).</div></div>
+<div class="q-block"><div class="q-num">Question 4</div><div class="question">The builders of pagodas knew how to absorb some of the power produced by severe weather conditions.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Because of typhoons, builders learned to extend the eaves to deal with severe weather.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 5–10</div><p>Classify the following as typical of</p><ul class='opts'><li><b>A</b> both Chinese and Japanese pagodas</li><li><b>B</b> only Chinese pagodas</li><li><b>C</b> only Japanese pagodas</li></ul></div>
+<div class="q-block"><div class="q-num">Question 5</div><div class="question">easy interior access to top<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">Chinese pagodas had inner staircases; the Japanese dispensed with them.</div></div>
+<div class="q-block"><div class="q-num">Question 6</div><div class="question">tiles on eaves<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">Both use tiles on the eaves: Chinese porcelain, Japanese heavier earthenware.</div></div>
+<div class="q-block"><div class="q-num">Question 7</div><div class="question">use as observation post<div class="yng">A / B / C</div></div><span class="answer ans-letter">B</span><div class="explanation">Chinese pagodas were later used mainly as watchtowers.</div></div>
+<div class="q-block"><div class="q-num">Question 8</div><div class="question">size of eaves up to half the width of the building<div class="yng">A / B / C</div></div><span class="answer ans-letter">C</span><div class="explanation">Only Japanese temple roofs overhang by fifty per cent or more of the building's width.</div></div>
+<div class="q-block"><div class="q-num">Question 9</div><div class="question">original religious purpose<div class="yng">A / B / C</div></div><span class="answer ans-letter">A</span><div class="explanation">The pagoda came from China and was introduced with Buddhism, attached to important temples.</div></div>
+<div class="q-block"><div class="q-num">Question 10</div><div class="question">floors fitting loosely over each other<div class="yng">A / B / C</div></div><span class="answer ans-letter">C</span><div class="explanation">The Japanese pagoda has a loose stack of floors, stacked like a pile of hats.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 11–13</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 11</div><div class="question">In a Japanese pagoda, the shinbashira<ul class='opts'><li><b>A</b> bears the full weight of the building.</li><li><b>B</b> bends under pressure like a tree.</li><li><b>C</b> connects the floors with the foundations.</li><li><b>D</b> stops the floors moving too far.</li></ul></div><span class="answer ans-letter">D</span><div class="explanation">The shinbashira constrained individual storeys from moving too far; it carries no load.</div></div>
+<div class="q-block"><div class="q-num">Question 12</div><div class="question">Shuzo Ishida performs experiments in order to<ul class='opts'><li><b>A</b> improve skyscraper design.</li><li><b>B</b> be able to build new pagodas.</li><li><b>C</b> learn about the dynamics of pagodas.</li><li><b>D</b> understand ancient mathematics.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">He built models and tested them on a shake-table out of his passion to understand the pagoda.</div></div>
+<div class="q-block"><div class="q-num">Question 13</div><div class="question">The storeys of a Japanese pagoda are<ul class='opts'><li><b>A</b> linked only by wood.</li><li><b>B</b> fastened only to the central pillar.</li><li><b>C</b> fitted loosely on top of each other.</li><li><b>D</b> joined by special weights.</li></ul></div><span class="answer ans-letter">C</span><div class="explanation">The storeys are not connected; they are stacked like a pile of hats.</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–17</div><p>Reading Passage 2 has seven paragraphs, A–G. Which paragraph contains the following information? <i>You may use any letter more than once.</i></p></div>
+<div class="q-block"><div class="q-num">Question 14</div><div class="question">a cost involved in purifying domestic water<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">E</span><div class="explanation">£23m for removing cryptosporidium from drinking water.</div></div>
+<div class="q-block"><div class="q-num">Question 15</div><div class="question">the stages in the development of the farming industry<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">B</span><div class="explanation">Mechanisation, chemicals, monocultures, battery rearing, and now genetic engineering.</div></div>
+<div class="q-block"><div class="q-num">Question 16</div><div class="question">the term used to describe hidden costs<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">C</span><div class="explanation">Economists call them 'externalities'.</div></div>
+<div class="q-block"><div class="q-num">Question 17</div><div class="question">one effect of chemicals on water sources<div class="yng">Which paragraph (A–G)?</div></div><span class="answer ans-letter">B</span><div class="explanation">Fertiliser run-off is increasing algae growth in lakes.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 18–21</div><p>Do the following statements agree with the claims of the writer in Reading Passage 2?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 18</div><div class="question">Several species of wildlife in the British countryside are declining.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">Farmland birds, wild flowers and insects have vanished from huge stretches of countryside.</div></div>
+<div class="q-block"><div class="q-num">Question 19</div><div class="question">The taste of food has deteriorated in recent years.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">Nothing is said about taste (highlight is the nearest text, on food prices).</div></div>
+<div class="q-block"><div class="q-num">Question 20</div><div class="question">The financial costs of environmental damage are widely recognised.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">To many, the costs seem merely aesthetic, not financial.</div></div>
+<div class="q-block"><div class="q-num">Question 21</div><div class="question">One of the costs calculated by Professor Pretty was illness caused by food.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">£169m from food poisoning.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 22–26</div><p>Complete the summary. Choose <b>NO MORE THAN THREE WORDS</b> from the passage for each answer.</p></div>
+<div class="q-block"><div class="q-num">Question 22</div><div class="question">Professor Pretty concludes that our <b>22 ………</b> are higher than most people realise, because we make three different types of payment.</div><span class="answer ans-letter">food bills / costs</span><div class="explanation">'Our food bills are actually threefold.'</div></div>
+<div class="q-block"><div class="q-num">Question 23</div><div class="question">He feels it is realistic to suggest that Britain should reduce its reliance on <b>23 ………</b>.</div><span class="answer ans-letter">(modern) intensive farming</span><div class="explanation">In Britain it may be more feasible to break away from industrial / intensive agriculture.</div></div>
+<div class="q-block"><div class="q-num">Question 24</div><div class="question">Although most farmers would be unable to adapt to <b>24 ………</b>,</div><span class="answer ans-letter">organic farming</span><div class="explanation">Organic farming would be too big a jump for many farmers.</div></div>
+<div class="q-block"><div class="q-num">Question 25</div><div class="question">…Professor Pretty wants the government to initiate change by establishing what he refers to as a <b>25 ………</b>.</div><span class="answer ans-letter">Greener Food Standard</span><div class="explanation">He recommends introducing a 'Greener Food Standard'.</div></div>
+<div class="q-block"><div class="q-num">Question 26</div><div class="question">He feels this would help to change the attitudes of both <b>26 ………</b>.</div><span class="answer ans-letter">farmers (and) consumers</span><div class="explanation">It would shift consumers as well as farmers towards a more sustainable system (either order).</div></div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Questions &amp; Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Reading Passage 3 has six sections, A–F. Choose the correct heading for sections B, C, E and F from the list of headings below.</p><p><b>List of Headings</b></p><ul class='opts'><li><b>i</b> MIRTP as a future model</li><li><b>ii</b> Identifying the main transport problems</li><li><b>iii</b> Preference for motorised vehicles</li><li><b>iv</b> Government authorities' instructions</li><li><b>v</b> Initial improvements in mobility and transport modes</li><li><b>vi</b> Request for improved transport in Makete</li><li><b>vii</b> Transport improvements in the northern part of the district</li><li><b>viii</b> Improvements in the rail network</li><li><b>ix</b> Effects of initial MIRTP measures</li><li><b>x</b> Co-operation of district officials</li><li><b>xi</b> Role of wheelbarrows and donkeys</li></ul></div>
+<div class="q-block"><div class="q-num">Question 27</div><div class="question">Section B<div class="yng">Heading</div></div><span class="answer ans-letter">ii</span><div class="explanation">Describes isolation in the rainy season and the research needed to understand the problems.</div></div>
+<div class="q-block"><div class="q-num">Question 28</div><div class="question">Section C<div class="yng">Heading</div></div><span class="answer ans-letter">v</span><div class="explanation">Phase II implemented approaches to improve mobility and access: roads, paths, donkeys, wheelbarrows.</div></div>
+<div class="q-block"><div class="q-num">Question 29</div><div class="question">Section E<div class="yng">Heading</div></div><span class="answer ans-letter">x</span><div class="explanation">The process had to start with district authorities to gain their support and understanding.</div></div>
+<div class="q-block"><div class="q-num">Question 30</div><div class="question">Section F<div class="yng">Heading</div></div><span class="answer ans-letter">i</span><div class="explanation">Makete will act as a reference for future work.</div></div>
+<div class="qintro"><div class="qintro-t">Questions 31–35</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block"><div class="q-num">Question 31</div><div class="question">MIRTP was divided into five phases.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">Only three phases (I, II and III) are mentioned.</div></div>
+<div class="q-block"><div class="q-num">Question 32</div><div class="question">Prior to the start of MIRTP the Makete district was almost inaccessible during the rainy season.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">The district was virtually totally isolated in the rainy season; access was impossible for about three months.</div></div>
+<div class="q-block"><div class="q-num">Question 33</div><div class="question">Phase I of MIRTP consisted of a survey of household expenditure on transport.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-no">NO</span><div class="explanation">The survey measured time spent on transport (seven hours a day), not money spent.</div></div>
+<div class="q-block"><div class="q-num">Question 34</div><div class="question">The survey concluded that one-fifth or 20% of the household transport requirement was outside the local area.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-yes">YES</span><div class="explanation">80% was within the locality, so 20% was outside it.</div></div>
+<div class="q-block"><div class="q-num">Question 35</div><div class="question">MIRTP hoped to improve the movement of goods from Makete district to the country's capital.<div class="yng">YES / NO / NOT GIVEN</div></div><span class="answer ans-ng">NOT GIVEN</span><div class="explanation">The capital is never mentioned (highlight is the nearest text, on the project's objective).</div></div>
+<div class="qintro"><div class="qintro-t">Questions 36–39</div><p>Complete each sentence with the correct ending, A–J.</p><p><b>List of Endings</b></p><ul class='opts'><li><b>A</b> provided the people of Makete with experience in running bus and truck services.</li><li><b>B</b> was especially successful in the northern part of the district.</li><li><b>C</b> differed from earlier phases in that the community became less actively involved.</li><li><b>D</b> improved paths used for transport up and down hillsides.</li><li><b>E</b> was no longer a problem once the roads had been improved.</li><li><b>F</b> cost less than locally made wheelbarrows.</li><li><b>G</b> was done only at the request of local people who were willing to lend a hand.</li><li><b>H</b> was at first considered by MIRTP to be affordable for the people of the district.</li><li><b>I</b> hindered attempts to make the existing transport services more efficient.</li><li><b>J</b> was thought to be the most important objective of Phase III.</li></ul></div>
+<div class="q-block"><div class="q-num">Question 36</div><div class="question">Construction of footbridges, steps and handrails</div><span class="answer ans-letter">D</span><div class="explanation">It improved the paths used for transport up and down the hillsides.</div></div>
+<div class="q-block"><div class="q-num">Question 37</div><div class="question">Frequent breakdown of buses and trucks in Makete</div><span class="answer ans-letter">I</span><div class="explanation">It hindered attempts to make the existing transport services more efficient.</div></div>
+<div class="q-block"><div class="q-num">Question 38</div><div class="question">The improvement of secondary roads and paths</div><span class="answer ans-letter">G</span><div class="explanation">It was done only at the request of communities willing to participate in construction and maintenance.</div></div>
+<div class="q-block"><div class="q-num">Question 39</div><div class="question">The isolation of Makete for part of the year</div><span class="answer ans-letter">E</span><div class="explanation">It was no longer a problem once the roads had been improved: the district centre became accessible all year.</div></div>
+<div class="qintro"><div class="qintro-t">Question 40</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block"><div class="q-num">Question 40</div><div class="question">Which of the following phrases best describes the main aim of Reading Passage 3?<ul class='opts'><li><b>A</b> to suggest that projects such as MIRTP are needed in other countries</li><li><b>B</b> to describe how MIRTP was implemented and how successful it was</li><li><b>C</b> to examine how MIRTP promoted the use of donkeys</li><li><b>D</b> to warn that projects such as MIRTP are likely to have serious problems</li></ul></div><span class="answer ans-letter">B</span><div class="explanation">The passage describes MIRTP's phases and how successful each was (highlight marks one such evaluation).</div></div>
+</div></div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script></body></html>
