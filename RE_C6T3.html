@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 6 – Academic Reading Test 3 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cambridge IELTS 6 – Academic Reading Test 3</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <div class="column left">
+    <div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+<p class="para"><strong>A</strong> <span class="hl">The Lumière Brothers opened their Cinématographe, at 14 Boulevard des Capucines in Paris</span><span class="mark">1</span>, to 100 paying customers over 100 years ago, on December 8, 1895. Before the eyes of the stunned, thrilled audience, photographs came to life and moved across a flat screen.</p>
+<p class="para"><strong>B</strong> So ordinary and routine has this become to us that it takes a determined leap of the imagination to grasp the impact of those first moving images. But <span class="hl">it is worth trying, for to understand the initial shock of those images is to understand the extraordinary power and magic of cinema</span><span class="mark">6</span>, <span class="hl">the unique, hypnotic quality that has made film the most dynamic, effective art form of the 20th century</span><span class="mark">13</span>.</p>
+<p class="para"><strong>C</strong> One of the Lumière Brothers’ earliest films was a 30-second piece which showed a section of a railway platform flooded with sunshine. A train appears and heads straight for the camera. And that is all that happens. Yet the Russian director Andrei Tarkovsky, one of the greatest of all film artists, <span class="hl">described the film as a ‘work of genius’</span><span class="mark">7</span>. ‘As the train approached,’ wrote Tarkovsky, ‘<span class="hl">panic started in the theatre: people jumped and ran away</span><span class="mark">10</span>. That was the moment when cinema was born. The frightened audience could not accept that they were watching a mere picture. Pictures were still, only reality moved; this must, therefore, be reality. In their confusion, they feared that a real train was about to crush them.’</p>
+<p class="para"><strong>D</strong> Early cinema audiences often experienced the same confusion. In time, the idea of film became familiar, the magic was accepted – but it never stopped being magic. <span class="hl">Film has never lost its unique power to embrace its audiences and transport them to a different world.</span><span class="mark">13</span> For Tarkovsky, <span class="hl">the key to that magic was the way in which cinema created a dynamic image of the real flow of events</span><span class="mark">11</span>. A still picture could only imply the existence of time, while time in a novel passed at the whim of the reader. <span class="hl">But in cinema, the real, objective flow of time was captured.</span><span class="mark">11</span></p>
+<p class="para"><strong>E</strong> One effect of this realism was to educate the world about itself. For cinema makes the world smaller. <span class="hl">Long before people travelled to America or anywhere else, they knew what other places looked like; they knew how other people worked and lived.</span><span class="mark">4</span> <span class="hl">Overwhelmingly, the lives recorded – at least in film fiction – have been American.</span><span class="mark">8</span> From the earliest days of the industry, Hollywood has dominated the world film market. American imagery – the cars, the cities, the cowboys – became the primary imagery of film. <span class="hl">Film carried American life and values around the globe.</span><span class="mark">8</span></p>
+<p class="para"><strong>F</strong> And, thanks to film, future generations will know the 20th century more intimately than any other period. We can only imagine what life was like in the 14th century or in classical Greece. But the life of the modern world has been recorded on film in massive, encyclopaedic detail. We shall be known better than any preceding generations.</p>
+<p class="para"><strong>G</strong> <span class="hl">The ‘star’ was another natural consequence of cinema.</span><span class="mark">5</span> The cinema star was effectively born in 1910. Film personalities have such an immediate presence that, inevitably, they become super-real. <span class="hl">Because we watch them so closely and because everybody in the world seems to know who they are, they appear more real to us than we do ourselves.</span><span class="mark">5</span> The star as magnified human self is one of cinema’s most strange and enduring legacies.</p>
+<p class="para"><strong>H</strong> Cinema has also given a new lease of life to the idea of the story. When the Lumière Brothers and other pioneers began showing off this new invention, <span class="hl">it was by no means obvious how it would be used</span><span class="mark">12</span>. <span class="hl">All that mattered at first was the wonder of movement.</span><span class="mark">9</span> Indeed, some said that, <span class="hl">once this novelty had worn off, cinema would fade away</span><span class="mark">12</span>. It was no more than a passing gimmick, a fairground attraction.</p>
+<p class="para"><strong>I</strong> Cinema might, for example, have become primarily a documentary form. Or it might have developed like television – as a strange, noisy transfer of music, information and narrative. <span class="hl">But what happened was that it became, overwhelmingly, a medium for telling stories.</span><span class="mark">2</span> Originally these were conceived as short stories – early producers doubted the ability of audiences to concentrate for more than the length of a reel. Then, in 1912, an Italian 2-hour film was hugely successful, and Hollywood settled upon the novel-length narrative that remains the dominant cinematic convention of today.</p>
+<p class="para"><strong>J</strong> <span class="hl">And it has all happened so quickly. Almost unbelievably, it is a mere 100 years since that train arrived</span><span class="mark">3</span> and the audience screamed and fled, convinced by the dangerous reality of what they saw, and, perhaps, suddenly aware that the world could never be the same again – that, maybe, it could be better, brighter, more astonishing, more real than reality.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–27.</p>
+<div class="passage-title">Motivating Employees under Adverse Conditions</div>
+<p class="para"><strong>THE CHALLENGE</strong> It is a great deal easier to motivate employees in a growing organisation than a declining one. When organisations are expanding and adding personnel, promotional opportunities, pay rises, and the excitement of being associated with a dynamic organisation create feelings of optimism. Management is able to use the growth to entice and encourage employees. <span class="hl">When an organisation is shrinking, the best and most mobile workers are prone to leave voluntarily.</span><span class="mark">19</span> Unfortunately, they are the ones the organisation can least afford to lose – those with the highest skills and experience. <span class="hl">The minor employees remain because their job options are limited.</span><span class="mark">19</span></p>
+<p class="para">Morale also suffers during decline. People fear they may be the next to be made redundant. Productivity often suffers, as employees spend their time sharing rumours and providing one another with moral support rather than focusing on their jobs. For those whose jobs are secure, pay increases are rarely possible. Pay cuts, unheard of during times of growth, may even be imposed. The challenge to management is how to motivate employees under such retrenchment conditions. The ways of meeting this challenge can be broadly divided into six Key Points, which are outlined below.</p>
+<p class="para"><strong>KEY POINT ONE</strong> There is an abundance of evidence to support the motivational benefits that result from carefully matching people to jobs. For example, <span class="hl">if the job is running a small business or an autonomous unit within a larger business, high achievers should be sought. However, if the job to be filled is a managerial post in a large bureaucratic organisation, a candidate who has a high need for power and a low need for affiliation should be selected.</span><span class="mark">20</span> Accordingly, high achievers should not be put into jobs that are inconsistent with their needs. <span class="hl">High achievers will do best when the job provides moderately challenging goals and where there is independence and feedback.</span><span class="mark">21</span> However, it should be remembered that not everybody is motivated by jobs that are high in independence, variety and responsibility.</p>
+<p class="para"><strong>KEY POINT TWO</strong> The literature on goal-setting theory suggests that <span class="hl">managers should ensure that all employees have specific goals and receive comments on how well they are doing in those goals</span><span class="mark">14</span>. For those with high achievement needs, typically a minority in any organisation, <span class="hl">the existence of external goals is less important because high achievers are already internally motivated</span><span class="mark">25</span>. The next factor to be determined is whether the goals should be assigned by a manager or collectively set in conjunction with the employees. The answer to that depends on perceptions of goal acceptance and the organisation’s culture. If resistance to goals is expected, the use of participation in goal-setting should increase acceptance. If participation is inconsistent with the culture, however, goals should be assigned. <span class="hl">If participation and the culture are incongruous, employees are likely to perceive the participation process as manipulative and be negatively affected by it.</span><span class="mark">22</span></p>
+<p class="para"><strong>KEY POINT THREE</strong> Regardless of whether goals are achievable or well within management’s perceptions of the employee’s ability, <span class="hl">if employees see them as unachievable they will reduce their effort</span><span class="mark">15</span>. Managers must be sure, therefore, that employees feel confident that their efforts can lead to performance goals. For managers, this means that employees must have the capability of doing the job and <span class="hl">must regard the appraisal process as valid</span><span class="mark">23</span>.</p>
+<p class="para"><strong>KEY POINT FOUR</strong> <span class="hl">Since employees have different needs, what acts as a reinforcement for one may not for another. Managers could use their knowledge of each employee to personalise the rewards over which they have control.</span><span class="mark">16</span> Some of the more obvious rewards that managers allocate include pay, promotions, autonomy, job scope and depth, and the opportunity to participate in goal-setting and decision-making.</p>
+<p class="para"><strong>KEY POINT FIVE</strong> <span class="hl">Managers need to make rewards contingent on performance.</span><span class="mark">17</span> To reward factors other than performance will only reinforce those other factors. Key rewards such as pay increases and promotions or advancements should be allocated for the attainment of the employee’s specific goals. Consistent with maximising the impact of rewards, managers should look for ways to increase their visibility. <span class="hl">Eliminating the secrecy surrounding pay by openly communicating everyone’s remuneration</span><span class="mark">24</span>, publicising performance bonuses and allocating annual salary increases in a lump sum rather than spreading them out over an entire year are examples of actions that will make rewards more visible and potentially more motivating.</p>
+<p class="para"><strong>KEY POINT SIX</strong> <span class="hl">The way rewards are distributed should be transparent so that employees perceive that rewards or outcomes are equitable and equal to the inputs given.</span><span class="mark">18</span> On a simplistic level, experience, abilities, effort and other obvious inputs should explain differences in pay, responsibility and other obvious outcomes. The problem, however, is complicated by the existence of dozens of inputs and outcomes and by the fact that employee groups place different degrees of importance on them. For instance, a study comparing clerical and production workers identified nearly twenty inputs and outcomes. <span class="hl">The clerical workers considered factors such as quality of work performed and job knowledge near the top of their list</span><span class="mark">26</span>, but these were at the bottom of the production workers’ list. Similarly, production workers thought that the most important inputs were intelligence and personal involvement with task accomplishment, two factors that were quite low in the importance ratings of the clerks. There were also important, though less dramatic, differences on the outcome side. For example, <span class="hl">production workers rated advancement very highly</span><span class="mark">27</span>, whereas clerical workers rated advancement in the lower third of their list. Such findings suggest that one person’s equity is another’s inequity, so an ideal should probably weigh different inputs and outcomes according to employee group.</p>
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 28–40.</p>
+<div class="passage-title">The Search for the Anti-aging Pill</div>
+<p class="para" style="font-style:italic;color:var(--muted);">In government laboratories and elsewhere, scientists are seeking a drug able to prolong life and youthful vigor. Studies of caloric restriction are showing the way</p>
+<p class="para">As researchers on aging noted recently, <span class="hl">no treatment on the market today has been proved to slow human aging</span><span class="mark">28</span> – the build-up of molecular and cellular damage that increases vulnerability to infirmity as we grow older. But one intervention, consumption of a low-calorie* yet nutritionally balanced diet, works incredibly well in a broad range of animals, increasing longevity and prolonging good health. <span class="hl">Those findings suggest that caloric restriction could delay aging and increase longevity in humans, too.</span><span class="mark">29</span></p>
+<p class="para">Unfortunately, for maximum benefit, people would probably have to reduce their caloric intake by roughly thirty per cent, equivalent to dropping from 2,500 calories a day to 1,750. <span class="hl">Few mortals could stick to that harsh a regimen, especially for years on end.</span><span class="mark">30</span> But what if someone could create a pill that mimicked the physiological effects of eating less without actually forcing people to eat less? Could such a ‘caloric-restriction mimetic’, as we call it, enable people to stay healthy longer, <span class="hl">postponing age-related disorders (such as diabetes, arteriosclerosis, heart disease and cancer) until very late in life</span><span class="mark">31</span>? Scientists first posed this question in the mid-1990s, after researchers came upon a chemical agent that in rodents seemed to reproduce many of caloric restriction’s benefits. No compound that would safely achieve the same feat in people has been found yet, but the search has been informative and has fanned hope that caloric-restriction (CR) mimetics can indeed be developed eventually.</p>
+<p class="para"><strong style="color:var(--primary);">The benefits of caloric restriction</strong></p>
+<p class="para">The hunt for CR mimetics grew out of a desire to better understand caloric restriction’s many effects on the body. Scientists first recognized the value of the practice more than 60 years ago, when they found that <span class="hl">rats fed a low-calorie diet lived longer on average than free-feeding rats</span><span class="mark">32</span> and also had a reduced incidence of conditions that become increasingly common in old age. What is more, some of the treated animals survived longer than the oldest-living animals in the control group, which means that the maximum lifespan (the oldest attainable age), not merely the normal lifespan, increased. Various interventions, such as infection-fighting drugs, can increase a population’s average survival time, but only approaches that slow the body’s rate of aging will increase the maximum lifespan.</p>
+<p class="para">The rat findings have been replicated many times and extended to creatures ranging from yeast to fruit flies, worms, fish, spiders, mice and hamsters. Until fairly recently, the studies were limited to short-lived creatures genetically distant from humans. But caloric-restriction projects underway in two species more closely related to humans – rhesus and squirrel monkeys – have made scientists optimistic that CR mimetics could help people.</p>
+<p class="para">The monkey projects demonstrate that, compared with control animals that eat normally, <span class="hl">caloric-restricted monkeys have lower body temperatures and levels of the pancreatic hormone insulin</span><span class="mark">37</span>, and they retain more youthful levels of certain hormones that tend to fall with age.</p>
+<p class="para">The caloric-restricted animals also look better on indicators of risk for age-related diseases. For example, <span class="hl">they have lower blood pressure and triglyceride levels (signifying a decreased likelihood of heart disease)</span><span class="mark">36</span>, and <span class="hl">they have more normal blood glucose levels (pointing to a reduced risk for diabetes, which is marked by unusually high blood glucose levels)</span><span class="mark">33</span>. Further, it has recently been shown that <span class="hl">rhesus monkeys kept on caloric-restricted diets for an extended time (nearly 15 years) have less chronic disease</span><span class="mark">34</span>. <span class="hl">They and the other monkeys must be followed still longer, however, to know whether low-calorie intake can increase both average and maximum lifespans in monkeys.</span><span class="mark">35</span> Unlike the multitude of elixirs being touted as the latest anti-aging cure, CR mimetics would alter fundamental processes that underlie aging. We aim to develop compounds that fool cells into activating maintenance and repair.</p>
+<p class="para"><strong style="color:var(--primary);">How a prototype caloric-restriction mimetic works</strong></p>
+<p class="para">The best-studied candidate for a caloric-restriction mimetic, 2DG (2-deoxy-D-glucose), <span class="hl">works by interfering with the way cells process glucose</span><span class="mark">38</span>. It has proved toxic at some doses in animals and so cannot be used in humans. But it has demonstrated that chemicals can replicate the effects of caloric restriction; the trick is finding the right one.</p>
+<p class="para">Cells use the glucose from food to generate ATP (adenosine triphosphate), the molecule that powers many activities in the body. By limiting food intake, caloric restriction minimizes the amount of glucose entering cells and decreases ATP generation. When 2DG is administered to animals that eat normally, glucose reaches cells in abundance but the drug prevents most of it from being processed and thus reduces ATP synthesis. Researchers have proposed several explanations for why interruption of glucose processing and ATP production might retard aging. <span class="hl">One possibility relates to the ATP-making machinery’s emission of free radicals, which are thought to contribute to aging and to such age-related diseases as cancer by damaging cells.</span><span class="mark">39</span> Reduced operation of the machinery should limit their production and thereby constrain the damage. Another hypothesis suggests that <span class="hl">decreased processing of glucose could indicate to cells that food is scarce (even if it isn’t) and induce them to shift into an anti-aging mode that emphasizes preservation of the organism over such ‘luxuries’ as growth and reproduction</span><span class="mark">40</span>.</p>
+<p class="para" style="font-size:.82rem;color:var(--muted);">*calorie: a measure of the energy value of food</p>
+  </div>
+
+  <div class="column right">
+    <div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+<div class="section-title">Reading Passage 1 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 1–5</div><p>Reading Passage 1 has ten paragraphs, <b>A–J</b>. Which paragraph contains the following information?</p></div>
+<div class="q-block">
+      <div class="q-num">Question 1</div>
+      <div class="question">the location of the first cinema<div class="yng">Which paragraph (A–J)?</div></div>
+      <span class="answer ans-letter">A</span>
+      <div class="explanation">Paragraph A clearly states the location: “The Lumière Brothers opened their Cinématographe, at 14 Boulevard des Capucines in Paris…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 2</div>
+      <div class="question">how cinema came to focus on stories<div class="yng">Which paragraph (A–J)?</div></div>
+      <span class="answer ans-letter">I</span>
+      <div class="explanation">Paragraph I explains how cinema developed into a storytelling medium: “But what happened was that it became, overwhelmingly, a medium for telling stories.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 3</div>
+      <div class="question">the speed with which cinema has changed<div class="yng">Which paragraph (A–J)?</div></div>
+      <span class="answer ans-letter">J</span>
+      <div class="explanation">Paragraph J focuses on the rapid development of cinema: “And it has all happened so quickly… it is a mere 100 years since…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 4</div>
+      <div class="question">how cinema teaches us about other cultures<div class="yng">Which paragraph (A–J)?</div></div>
+      <span class="answer ans-letter">E</span>
+      <div class="explanation">Paragraph E discusses how cinema educated people about other places and cultures: “Long before people travelled to America or anywhere else, they knew what other places looked like; they knew how other people worked and lived.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 5</div>
+      <div class="question">the attraction of actors in films<div class="yng">Which paragraph (A–J)?</div></div>
+      <span class="answer ans-letter">G</span>
+      <div class="explanation">Paragraph G is entirely about the rise of the film star and its attraction: “The ‘star’ was another natural consequence of cinema… they appear more real to us than we do ourselves.”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 6–9</div><p>Do the following statements agree with the views of the writer in Reading Passage 1?</p><p><b>YES</b> if the statement agrees with the views of the writer<br><b>NO</b> if the statement contradicts the views of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block">
+      <div class="q-num">Question 6</div>
+      <div class="question">It is important to understand how the first audiences reacted to the cinema.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">Paragraph B says it is “worth trying” to understand the initial shock of the first images in order to grasp the power of cinema.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 7</div>
+      <div class="question">The Lumière Brothers’ film about the train was one of the greatest films ever made.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">Tarkovsky called the train film a “work of genius,” but the writer does not claim it is one of the greatest films ever made.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 8</div>
+      <div class="question">Cinema presents a biased view of other countries.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The passage notes Hollywood’s dominance and American imagery, but does not say cinema presents a biased view of other countries.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 9</div>
+      <div class="question">Storylines were important in very early cinema.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">Early cinema was mainly about the “wonder of movement.” Storytelling became dominant later (Paragraphs H and I).</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 10–13</div><p>Choose the correct letter, A, B, C or D.</p></div>
+<div class="q-block">
+      <div class="q-num">Question 10</div>
+      <div class="question">The writer refers to the film of the train in order to demonstrate<ul class="opts"><li><b>A</b> the simplicity of early films.</li><li><b>B</b> the impact of early films.</li><li><b>C</b> how short early films were.</li><li><b>D</b> how imaginative early films were.</li></ul></div>
+      <span class="answer ans-letter">B – the impact of early films.</span>
+      <div class="explanation">The train film is used to show the powerful impact and shock it created on the first audiences (panic, people running away).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 11</div>
+      <div class="question">In Tarkovsky’s opinion, the attraction of the cinema is that it<ul class="opts"><li><b>A</b> aims to impress its audience.</li><li><b>B</b> tells stories better than books.</li><li><b>C</b> illustrates the passing of time.</li><li><b>D</b> describes familiar events.</li></ul></div>
+      <span class="answer ans-letter">C – illustrates the passing of time.</span>
+      <div class="explanation">Tarkovsky valued cinema because it captured “the real, objective flow of time.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 12</div>
+      <div class="question">When cinema first began, people thought that<ul class="opts"><li><b>A</b> it would always tell stories.</li><li><b>B</b> it should be used in fairgrounds.</li><li><b>C</b> its audiences were unappreciative.</li><li><b>D</b> its future was uncertain.</li></ul></div>
+      <span class="answer ans-letter">D – its future was uncertain.</span>
+      <div class="explanation">Early on, people were unsure about cinema’s future; some thought it was just a temporary novelty or fairground attraction.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 13</div>
+      <div class="question">What is the best title for this passage?<ul class="opts"><li><b>A</b> The rise of the cinema star</li><li><b>B</b> Cinema and novels compared</li><li><b>C</b> The domination of Hollywood</li><li><b>D</b> The power of the big screen</li></ul></div>
+      <span class="answer ans-letter">D – The power of the big screen</span>
+      <div class="explanation">The whole passage is about the extraordinary power and magic of cinema (“the power of the big screen”).</div>
+    </div>
+<div class="divider"></div><div class="section-title">Reading Passage 2 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 14–18</div><p>Reading Passage 2 contains six Key Points. Choose the correct heading for Key Points TWO to SIX from the list of headings below.</p><p><b>List of Headings</b></p><ul class="opts"><li><b>i</b> Ensure the reward system is fair</li><li><b>ii</b> Match rewards to individuals</li><li><b>iii</b> Ensure targets are realistic</li><li><b>iv</b> Link rewards to achievement</li><li><b>v</b> Encourage managers to take more responsibility</li><li><b>vi</b> Recognise changes in employees’ performance over time</li><li><b>vii</b> Establish targets and give feedback</li><li><b>viii</b> Ensure employees are suited to their jobs</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 14 – Key Point Two</div>
+      <div class="question">Choose the correct heading for <b>Key Point TWO</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">vii – Establish targets and give feedback</span>
+      <div class="explanation">Managers should ensure employees have specific goals and receive comments on their performance.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 15 – Key Point Three</div>
+      <div class="question">Choose the correct heading for <b>Key Point THREE</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">iii – Ensure targets are realistic</span>
+      <div class="explanation">Employees must believe the goals are achievable; otherwise they will reduce their effort.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 16 – Key Point Four</div>
+      <div class="question">Choose the correct heading for <b>Key Point FOUR</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">ii – Match rewards to individuals</span>
+      <div class="explanation">Managers should personalise rewards because employees have different needs.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 17 – Key Point Five</div>
+      <div class="question">Choose the correct heading for <b>Key Point FIVE</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">iv – Link rewards to achievement</span>
+      <div class="explanation">Rewards should be contingent on performance and goal attainment.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 18 – Key Point Six</div>
+      <div class="question">Choose the correct heading for <b>Key Point SIX</b>.<div class="yng">Heading i–viii</div></div>
+      <span class="answer ans-letter">i – Ensure the reward system is fair</span>
+      <div class="explanation">Rewards must be distributed transparently so employees perceive equity.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 19–24</div><p>Do the following statements agree with the views of the writer in Reading Passage 2?</p><p><b>YES</b> if the statement agrees with the views of the writer<br><b>NO</b> if the statement contradicts the views of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block">
+      <div class="q-num">Question 19</div>
+      <div class="question">A shrinking organisation tends to lose its less skilled employees rather than its more skilled employees.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">In a shrinking organisation, the best and most skilled workers leave; the less skilled remain.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 20</div>
+      <div class="question">It is easier to manage a small business than a large business.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The text does not compare the ease of managing small vs large businesses.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 21</div>
+      <div class="question">High achievers are well suited to team work.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">High achievers do best with independence and moderately challenging goals, not necessarily team work.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 22</div>
+      <div class="question">Some employees can feel manipulated when asked to participate in goal-setting.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">If participation in goal-setting does not fit the culture, employees may see it as manipulative.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 23</div>
+      <div class="question">The staff appraisal process should be designed by employees.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The text says employees must regard the appraisal process as valid, but does not say they should design it.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 24</div>
+      <div class="question">Employees’ earnings should be disclosed to everyone within the organisation.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">The text recommends “Eliminating the secrecy surrounding pay by openly communicating everyone’s remuneration…”</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 25–27</div><p>Look at the following groups of workers and the list of descriptions below. Match each group with the correct description, A–E.</p><ul class="opts"><li><b>A</b> They judge promotion to be important.</li><li><b>B</b> They have less need of external goals.</li><li><b>C</b> They think that the quality of their work is important.</li><li><b>D</b> They resist goals which are imposed.</li><li><b>E</b> They have limited job options.</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 25</div>
+      <div class="question">Which description matches <b>high achievers</b>?<div class="yng">Match with A–E</div></div>
+      <span class="answer ans-letter">B – They have less need of external goals.</span>
+      <div class="explanation">They have less need of external goals (they are already internally motivated).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 26</div>
+      <div class="question">Which description matches <b>clerical workers</b>?<div class="yng">Match with A–E</div></div>
+      <span class="answer ans-letter">C – They think that the quality of their work is important.</span>
+      <div class="explanation">They rated quality of work and job knowledge as highly important.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 27</div>
+      <div class="question">Which description matches <b>production workers</b>?<div class="yng">Match with A–E</div></div>
+      <span class="answer ans-letter">A – They judge promotion to be important.</span>
+      <div class="explanation">They rated advancement (promotion) very highly.</div>
+    </div>
+<div class="divider"></div><div class="section-title">Reading Passage 3 – Answers</div>
+<div class="qintro"><div class="qintro-t">Questions 28–32</div><p>Do the following statements agree with the claims of the writer in Reading Passage 3?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+<div class="q-block">
+      <div class="q-num">Question 28</div>
+      <div class="question">Studies show drugs available today can delay the process of growing old.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">“No treatment on the market today has been proved to slow human aging.”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 29</div>
+      <div class="question">There is scientific evidence that eating fewer calories may extend human life.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">Animal studies strongly suggest caloric restriction could delay aging and increase longevity in humans.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 30</div>
+      <div class="question">Not many people are likely to find a caloric-restricted diet attractive.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">“Few mortals could stick to that harsh a regimen…”</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 31</div>
+      <div class="question">Diet-related diseases are common in older people.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The text mentions age-related diseases but does not specifically say diet-related diseases are common in older people.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 32</div>
+      <div class="question">In experiments, rats who ate what they wanted led shorter lives than rats on a low-calorie diet.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">Rats on a low-calorie diet lived longer than free-feeding (control) rats.</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 33–37</div><p>Classify the following descriptions as relating to</p><ul class="opts"><li><b>A</b> caloric-restricted monkeys</li><li><b>B</b> control monkeys</li><li><b>C</b> neither caloric-restricted monkeys nor control monkeys</li></ul></div>
+<div class="q-block">
+      <div class="q-num">Question 33</div>
+      <div class="question">Monkeys were less likely to become diabetic.<div class="yng">A, B or C</div></div>
+      <span class="answer ans-letter">A – caloric-restricted monkeys</span>
+      <div class="explanation">Caloric-restricted monkeys had more normal blood glucose levels (lower risk of diabetes).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 34</div>
+      <div class="question">Monkeys experienced more chronic disease.<div class="yng">A, B or C</div></div>
+      <span class="answer ans-letter">B – control monkeys</span>
+      <div class="explanation">Control monkeys (normal diet) experienced more chronic disease.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 35</div>
+      <div class="question">Monkeys have been shown to experience a longer than average life span.<div class="yng">A, B or C</div></div>
+      <span class="answer ans-letter">C – neither caloric-restricted monkeys nor control monkeys</span>
+      <div class="explanation">Neither group has yet been shown to have a longer maximum lifespan (studies are still ongoing).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 36</div>
+      <div class="question">Monkeys enjoyed a reduced chance of heart disease.<div class="yng">A, B or C</div></div>
+      <span class="answer ans-letter">A – caloric-restricted monkeys</span>
+      <div class="explanation">Caloric-restricted monkeys had lower blood pressure and triglyceride levels (reduced heart-disease risk).</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 37</div>
+      <div class="question">Monkeys produced greater quantities of insulin.<div class="yng">A, B or C</div></div>
+      <span class="answer ans-letter">B – control monkeys</span>
+      <div class="explanation">Control monkeys produced higher levels of insulin (caloric-restricted monkeys had lower insulin levels).</div>
+    </div>
+<div class="qintro"><div class="qintro-t">Questions 38–40</div><p>Complete the flow-chart below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p><p><b>How a caloric-restriction mimetic works</b></p><p style="text-align:center;margin:.2rem 0;">CR mimetic<br>↓<br>less <b>38 ………</b> is processed<br>↓<br>production of ATP is decreased</p><p><b>Theory 1:</b> cells less damaged by disease because fewer <b>39 ………</b> are emitted<br><b>Theory 2:</b> cells focus on <b>40 ………</b> because food is in short supply</p></div>
+<div class="q-block">
+      <div class="q-num">Question 38</div>
+      <div class="question">CR mimetic → less <b>38 ………</b> is processed → production of ATP is decreased</div>
+      <span class="answer ans-letter">glucose</span>
+      <div class="explanation">The mimetic interferes with the way cells process glucose.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 39</div>
+      <div class="question">Theory 1: cells less damaged by disease because fewer <b>39 ………</b> are emitted</div>
+      <span class="answer ans-letter">free radicals</span>
+      <div class="explanation">Reduced ATP production means fewer free radicals are emitted.</div>
+    </div>
+<div class="q-block">
+      <div class="q-num">Question 40</div>
+      <div class="question">Theory 2: cells focus on <b>40 ………</b> because food is in short supply</div>
+      <span class="answer ans-letter">preservation</span>
+      <div class="explanation">Cells shift into an anti-aging mode that emphasises preservation of the organism.</div>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>

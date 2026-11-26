@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 6 Academic Reading Test 1 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff; --border: #e2e8f0;
+    --text: #2d3748; --muted: #718096; --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  .note { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.85rem; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+  .tbl { border-collapse:collapse; width:100%; font-size:.84rem; margin-top:.4rem; background:#fff; }
+  .tbl th, .tbl td { border:1px solid var(--border); padding:.35rem .5rem; text-align:left; vertical-align:top; }
+  .tbl th { background:#e2e8f0; color:var(--primary); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cambridge IELTS 6 Academic Reading Test 1</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">AUSTRALIA'S SPORTING SUCCESS</div>
+
+<p class="para"><strong>A</strong> They play hard, they play often, and they play to win. Australian sports teams win more than their fair share of titles, demolishing rivals with seeming ease. How do they do it? A big part of the secret is an extensive and expensive network of sporting academies underpinned by science and medicine. At the Australian Institute of Sport (AIS), hundreds of youngsters and pros live and train under the eyes of coaches. Another body, the Australian Sports Commission (ASC), <span class="hl">finances programmes of excellence in a total of 96 sports for thousands of sportsmen and women</span><span class="mark">6</span>. Both provide intensive coaching, training facilities and nutritional advice.</p>
+
+<p class="para"><strong>B</strong> Inside the academies, science takes centre stage. The AIS employs more than 100 sports scientists and doctors, and collaborates with scores of others in universities and research centres. AIS scientists <span class="hl">work across a number of sports, applying skills learned in one – such as building muscle strength in golfers – to others, such as swimming and squash</span><span class="mark">1</span>. They are backed up by technicians who design instruments to collect data from athletes. They all focus on one aim: winning. ‘We can’t waste our time looking at ethereal scientific questions that don’t help the coach work with an athlete and improve performance,’ says Peter Fricker, chief of science at AIS. <span class="hl">This is the reason for narrowing the scope of research activity</span><span class="mark">3</span>.</p>
+
+<p class="para"><strong>C</strong> A lot of their work comes down to measurement – everything from the exact angle of a swimmer’s dive to the second-by-second power output of a cyclist. This data is used to wring improvements out of athletes. The focus is on individuals, tweaking performances to squeeze an extra hundredth of a second here, an extra millimetre there. No gain is too slight to bother with. It’s the tiny, gradual improvements that add up to world-beating results. To demonstrate how the system works, Bruce Mason at AIS shows off the prototype of a 3D analysis tool for studying swimmers. A wire-frame model of a champion swimmer slices through the water, her arms moving in slow motion. Looking side-on, Mason measures the distance between strokes. From above, he analyses how her spine swivels. When fully developed, this system will enable him to build a biomechanical profile for coaches to use to help budding swimmers. Mason’s contribution to sport also includes the development of the SWAN (SWimming ANalysis) system now used in Australian national competitions. It <span class="hl">collects images from digital cameras running at 50 frames a second and breaks down each part of a swimmer’s performance into factors that can be analysed individually</span><span class="mark">2</span><span class="mark">8</span> – stroke length, stroke frequency, average duration of each stroke, velocity, start, lap and finish times, and so on. At the end of each race, SWAN spits out data on each swimmer.</p>
+
+<p class="para"><strong>D</strong> ‘Take a look,’ says Mason, pulling out a sheet of data. He points out the data on the swimmers in second and third place, which shows that the one who finished third actually swam faster. So why did he finish 35 hundredths of a second down? ‘His turn times were 44 hundredths of a second behind the other guy,’ says Mason. ‘If he can improve on his turns, he can do much better.’ This is the kind of accuracy that AIS scientists’ research is bringing to a range of sports. With the Cooperative Research Centre for Micro Technology in Melbourne, they are developing <span class="hl">unobtrusive sensors that will be embedded</span><span class="mark">9</span> in an athlete’s clothes or running shoes to monitor heart rate, sweating, heat production or any other factor that might have an impact on an athlete’s ability to run. There’s more to it than simply measuring performance. Fricker gives the example of athletes who may be down with coughs and colds 11 or 12 times a year. After years of experimentation, AIS and the University of Newcastle in New South Wales developed a test that measures how much of the immune-system protein immunoglobulin A is present in athletes’ saliva. If IgA levels suddenly fall below a certain level, training is eased or dropped altogether. Soon, IgA levels start rising again, and the danger passes. <span class="hl">Since the tests were introduced, AIS athletes in all sports have been remarkably successful at staying healthy</span><span class="mark">10</span>. <span class="hl">These examples show how obstacles to optimum achievement can be investigated</span><span class="mark">5</span>.</p>
+
+<p class="para"><strong>E</strong> Using data is a complex business. Well before a championship, sports scientists and coaches start to prepare the athlete by developing a <span class="hl">‘competition model’</span><span class="mark">12</span>, based on what they expect will be the winning times. ‘You design the model to make that time,’ says Mason. ‘A start of this much, each free-swimming period has to be this fast, with a certain stroke frequency and stroke length, with turns done in these times.’ All the training is then geared towards making the athlete hit those targets, both overall and for each segment of the race. <span class="hl">Techniques like these have transformed Australia into arguably the world’s most successful sporting nation</span><span class="mark">7</span>.</p>
+
+<p class="para"><strong>F</strong> Of course, there’s nothing to stop other countries copying – and many have tried. Some years ago, the AIS unveiled coolant-lined jackets for endurance athletes. At the Atlanta Olympic Games in 1996, these sliced as much as <span class="hl">two per cent</span><span class="mark">13</span> off cyclists’ and rowers’ times. Now everyone uses them. The same has happened to the <span class="hl">‘altitude tent’</span><span class="mark">11</span>, developed by AIS to replicate the effect of altitude training at sea level. <span class="hl">But Australia’s success story is about more than easily copied technological fixes, and up to now no nation has replicated its all-encompassing system</span><span class="mark">4</span>.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">DELIVERING THE GOODS</div>
+<p class="para" style="font-style:italic;font-size:0.9rem;margin-bottom:0.8rem;">The vast expansion in international trade owes much to a revolution in the business of moving freight</p>
+
+<p class="para"><strong>A</strong> International trade is growing at a startling pace. While the global economy has been expanding at a bit over 3% a year, the volume of trade has been rising at a <span class="hl">compound annual rate of about twice that</span><span class="mark">18</span>. Foreign products, from meat to machinery, play a more important role in almost every economy in the world, and foreign markets now tempt businesses that never much worried about sales beyond their nation’s borders.</p>
+
+<p class="para"><strong>B</strong> What lies behind this explosion in international commerce? The general worldwide decline in trade barriers, such as customs duties and import quotas, is surely one explanation. The economic opening of countries that have traditionally been minor players is another. But one force behind the import-export boom has passed all but unnoticed: the rapidly falling cost of getting goods to market. Theoretically, in the world of trade, shipping costs do not matter. Goods, once they have been made, are assumed to move instantly and at no cost from place to place. The real world, however, is full of frictions. <span class="hl">Cheap labour may make Chinese clothing competitive in America, but if delays in shipment tie up working capital and cause winter coats to arrive in spring, trade may lose its advantages</span><span class="mark">19</span>.</p>
+
+<p class="para"><strong>C</strong> At the turn of the 20th century, agriculture and manufacturing were the two most important sectors almost everywhere, accounting for about 70% of total output in Germany, Italy and France, and 40-50% in America, Britain and Japan. International commerce was therefore dominated by raw materials, such as wheat, wood and iron ore, or processed commodities, such as meat and steel. But these sorts of products are heavy and bulky and the cost of transporting them relatively high.</p>
+
+<p class="para"><strong>D</strong> <span class="hl">Countries still trade disproportionately with their geographic neighbours</span><span class="mark">21</span>. Over time, however, world output has shifted into goods whose worth is unrelated to their size and weight. Today, it is finished manufactured products that dominate the flow of trade, and, thanks to technological advances such as lightweight components, manufactured goods themselves have tended to become lighter and less bulky. As a result, <span class="hl">less transportation is required for every dollar’s worth of imports or exports</span><span class="mark">17</span>.</p>
+
+<p class="para"><strong>E</strong> To see how this influences trade, consider the business of making disk drives for computers. Most of the world’s disk-drive manufacturing is concentrated in South-east Asia. This is possible only because disk drives, while valuable, are small and light and so cost little to ship. Computer manufacturers in Japan or Texas will not face hugely bigger freight bills if they import <span class="hl">drives</span><span class="mark">24</span> from Singapore rather than purchasing them on the domestic market<span class="mark">16</span>. Distance therefore poses no obstacle to the globalisation of the disk-drive industry.</p>
+
+<p class="para"><strong>F</strong> This is even more true of the fast-growing information industries. Films and compact discs cost little to transport, even by aeroplane. <span class="hl">Computer software can be ‘exported’ without ever loading it onto a ship, simply by transmitting it over telephone lines from one country to another, so freight rates and cargo-handling schedules become insignificant factors in deciding where to make the product</span><span class="mark">15</span>. Businesses can locate based on other considerations, such as the availability of labour, while worrying less about the cost of delivering their output.</p>
+
+<p class="para"><strong>G</strong> In many countries deregulation has helped to drive the process along. But, behind the scenes, a series of technological innovations known broadly as containerisation and inter-modal transportation has led to swift productivity improvements in cargo-handling. Forty years ago, the process of exporting or importing involved a great many stages of handling, which risked portions of the shipment being damaged or stolen along the way. The invention of the container crane made it possible to load and unload containers without capsizing the ship and the adoption of standard container sizes allowed almost any box to be transported on any ship. By 1967, dual-purpose ships, carrying loose cargo in the hold and containers on the deck, were giving way to <span class="hl">all-container vessels that moved thousands of boxes at a time</span><span class="mark">25</span>.</p>
+
+<p class="para"><strong>H</strong> The shipping container transformed ocean shipping into a highly efficient, intensely competitive business. But getting the cargo to and from the dock was a different story. National governments, by and large, kept a much firmer hand on truck and railroad <span class="hl">tariffs</span><span class="mark">26</span> than on charges for ocean freight. This started changing, however, in the mid-1970s, when America began to deregulate its transportation industry. First airlines, then road hauliers and railways, were freed from restrictions on what they could carry, where they could haul it and what price they could charge. Big productivity gains resulted. Between 1985 and 1996, for example, America’s freight railways dramatically reduced their employment, trackage, and their fleets of locomotives – while increasing the amount of cargo they hauled. Europe’s railways have also shown marked, albeit smaller, productivity improvements.</p>
+
+<p class="para"><strong>I</strong> In America the period of huge productivity gains in transportation may be almost over, but in most countries the process still has far to go. State ownership of railways and airlines, regulation of freight rates and toleration of anti-competitive practices, such as cargo-handling monopolies, all keep the cost of shipping unnecessarily high and deter international trade. <span class="hl">Bringing these barriers down would help the world’s economies grow even closer</span><span class="mark">14</span><span class="mark">23</span>.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">Climate Change and the Inuit</div>
+<p class="para" style="font-style:italic;font-size:0.9rem;margin-bottom:0.8rem;">The threat posed by climate change in the Arctic and the problems faced by Canada’s Inuit people</p>
+
+<p class="para"><strong>A</strong> Unusual incidents are being reported across the Arctic. Inuit families going off on snowmobiles to prepare their summer hunting camps have found themselves cut off from home by a sea of mud, following early thaws. There are reports of igloos losing their insulating properties as the snow drips and refreezes, of lakes draining into the sea as permafrost melts, and sea ice breaking up earlier than usual, carrying seals beyond the reach of hunters. Climate change may still be a rather abstract idea to most of us, but in the Arctic it is already having dramatic effects – if summertime ice continues to shrink at its present rate, the Arctic Ocean could soon become virtually ice-free in summer. The knock-on effects are likely to include more warming, cloudier skies, increased precipitation and higher sea levels. Scientists are increasingly keen to find out what’s going on because they consider the Arctic the ‘canary in the mine’ for global warming – a warning of what’s in store for the rest of the world.</p>
+
+<p class="para"><strong>B</strong> For the Inuit the problem is urgent. They live in precarious balance with one of the toughest environments on earth. Climate change, whatever its causes, is a direct threat to their way of life. Nobody knows the Arctic as well as the locals, which is why they are not content simply to stand back and let outside experts tell them what’s happening. In Canada, where the Inuit people are jealously guarding their hard-won autonomy in the country’s newest territory, Nunavut, they believe their best hope of survival in this changing environment lies in combining their ancestral knowledge with the best of modern science. This is a challenge in itself. <span class="hl">This paragraph describes the reaction of the Inuit community to climate change</span><span class="mark">27</span>.</p>
+
+<p class="para"><strong>C</strong> The Canadian Arctic is a vast, treeless polar desert that’s covered with snow for most of the year. Venture into this terrain and you get some idea of the hardships facing anyone who calls this home. <span class="hl">Farming is out of the question</span><span class="mark">33</span> and nature offers meagre pickings. Humans first settled in the Arctic a mere 4,500 years ago, surviving by exploiting <span class="hl">sea mammals</span><span class="mark">34</span> and <span class="hl">fish</span><span class="mark">35</span>. The environment tested them to the limits: sometimes the colonists were successful, sometimes they failed and vanished. But around a thousand years ago, one group emerged that was uniquely well adapted to cope with the Arctic environment. These <span class="hl">Thule</span><span class="mark">36</span> people moved in from Alaska, bringing kayaks, sleds, dogs, pottery and iron tools. They are the ancestors of today’s Inuit people. <span class="hl">This is a description of a difficult landscape</span><span class="mark">28</span>.</p>
+
+<p class="para"><strong>D</strong> Life for the descendants of the Thule people is still harsh. Nunavut is 1.9 million square kilometres of rock and ice, and a handful of <span class="hl">islands</span><span class="mark">37</span> around the North Pole. It’s currently home to 2,500 people, all but a handful of them indigenous Inuit. Over the past 40 years, most have abandoned their <span class="hl">nomadic</span><span class="mark">38</span> ways and settled in the territory’s 28 isolated communities, but they still rely heavily on <span class="hl">nature</span><span class="mark">39</span> to provide food and clothing. Provisions available in local shops have to be flown into Nunavut on one of the most costly air networks in the world, or brought by supply ship during the few ice-free weeks of summer. It would cost a family around £7,000 a year to replace meat they obtained themselves through hunting with <span class="hl">imported</span><span class="mark">40</span> meat. Economic opportunities are scarce, and for many people state benefits are their only income. <span class="hl">This discusses alternative sources of essential supplies</span><span class="mark">29</span>.</p>
+
+<p class="para"><strong>E</strong> While the Inuit may not actually starve if hunting and trapping are curtailed by climate change, there has certainly been an impact on people’s health. Obesity, heart disease and diabetes are beginning to appear in a people for whom these have never before been problems. There has been a crisis of identity as the traditional skills of hunting, trapping and preparing skins have begun to disappear. In Nunavut’s ‘igloo and email’ society, where adults who were born in igloos have children who may never have been out on the land, there’s a high incidence of depression. <span class="hl">These are negative effects on well-being</span><span class="mark">30</span>.</p>
+
+<p class="para"><strong>F</strong> With so much at stake, the Inuit are determined to play a key role in teasing out the mysteries of climate change in the Arctic. Having survived there for centuries, they believe their wealth of traditional knowledge is vital to the task. And Western scientists are starting to draw on this wisdom, increasingly referred to as ‘Inuit Qaujimajatuqangit’, or IQ. ‘In the early days scientists ignored us when they came up here to study anything. They just figured these people don’t know very much so we won’t ask them,’ says John Amagoalik, an Inuit leader and politician. ‘But in recent years IQ has had much more credibility and weight.’ In fact it is now a requirement for anyone hoping to get permission to do research that they consult the communities, who are helping to set the research agenda to reflect their most important concerns. They can turn down applications from scientists they believe will work against their interests, or research projects that will impinge too much on their daily lives and traditional activities. <span class="hl">Respect for Inuit opinion grows</span><span class="mark">31</span>.</p>
+
+<p class="para"><strong>G</strong> Some scientists doubt the value of traditional knowledge because the occupation of the Arctic doesn’t go back far enough. Others, however, point out that the first weather stations in the far north date back just 50 years. There are still huge gaps in our environmental knowledge, and despite the scientific onslaught, many predictions are no more than best guesses. IQ could help to bridge the gap and resolve the tremendous uncertainty about how much of what we’re seeing is natural capriciousness and how much is the consequence of human activity. <span class="hl">Understanding of climate change remains limited</span><span class="mark">32</span>.</p>
+  </div>
+
+  <div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+
+<div class="section-title">Reading Passage 1 – Answers</div>
+
+<div class="qintro"><div class="qintro-t">Questions 1–7</div>
+<p>Reading Passage 1 has six paragraphs, A–F.<br>Which paragraph contains the following information?<br>NB You may use any letter more than once.</p></div>
+
+<div class="q-block">
+  <div class="q-num">Question 1</div>
+  <div class="question">a reference to the exchange of expertise between different sports</div>
+  <span class="answer ans-letter">B</span>
+  <div class="explanation">Paragraph B states that AIS scientists “work across a number of sports, applying skills learned in one – such as building muscle strength in golfers – to others, such as swimming and squash.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 2</div>
+  <div class="question">an explanation of how visual imaging is employed in investigations</div>
+  <span class="answer ans-letter">C</span>
+  <div class="explanation">Paragraph C describes the SWAN system: it “collects images from digital cameras… and breaks down each part of a swimmer’s performance into factors that can be analysed individually.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 3</div>
+  <div class="question">a reason for narrowing the scope of research activity</div>
+  <span class="answer ans-letter">B</span>
+  <div class="explanation">Peter Fricker says: “We can’t waste our time looking at ethereal scientific questions that don’t help the coach work with an athlete and improve performance.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 4</div>
+  <div class="question">how some AIS ideas have been reproduced</div>
+  <span class="answer ans-letter">F</span>
+  <div class="explanation">Paragraph F discusses how other countries have copied AIS innovations (coolant-lined jackets and altitude tents): “Now everyone uses them.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 5</div>
+  <div class="question">how obstacles to optimum achievement can be investigated</div>
+  <span class="answer ans-letter">D</span>
+  <div class="explanation">Paragraph D gives examples of investigating obstacles: analysing turn times, developing sensors, and using IgA protein tests to detect health problems.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 6</div>
+  <div class="question">an overview of the funded support of athletes</div>
+  <span class="answer ans-letter">A</span>
+  <div class="explanation">Paragraph A mentions the ASC, which “finances programmes of excellence in a total of 96 sports for thousands of sportsmen and women.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 7</div>
+  <div class="question">how performance requirements are calculated before an event</div>
+  <span class="answer ans-letter">E</span>
+  <div class="explanation">Paragraph E explains that scientists develop a “competition model” based on expected winning times before a championship.</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 8–11</div>
+<p>Classify the following techniques according to whether the writer states they<br>
+<b>A</b> are currently exclusively used by Australians<br>
+<b>B</b> will be used in the future by Australians<br>
+<b>C</b> are currently used by both Australians and their rivals</p></div>
+
+<div class="q-block">
+  <div class="q-num">Question 8</div>
+  <div class="question">cameras</div>
+  <span class="answer ans-letter">A</span>
+  <div class="explanation">The SWAN system that uses cameras “is now used in Australian national competitions.” No mention is made of other countries using it.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 9</div>
+  <div class="question">sensors</div>
+  <span class="answer ans-letter">B</span>
+  <div class="explanation">Paragraph D says scientists “are developing unobtrusive sensors that will be embedded…” (future use).</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 10</div>
+  <div class="question">protein tests</div>
+  <span class="answer ans-letter">A</span>
+  <div class="explanation">The IgA protein test was developed by AIS and is used by AIS athletes. Only Australian athletes are mentioned.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 11</div>
+  <div class="question">altitude tents</div>
+  <span class="answer ans-letter">C</span>
+  <div class="explanation">Paragraph F states that the altitude tent has been copied: “Now everyone uses them.”</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 12–13</div>
+<p>Answer the questions below.<br>Choose <b>NO MORE THAN THREE WORDS AND/OR A NUMBER</b> from the passage for each answer.</p></div>
+
+<div class="q-block">
+  <div class="q-num">Question 12</div>
+  <div class="question">What is produced to help an athlete plan their performance in an event?</div>
+  <span class="answer ans-letter">competition model</span>
+  <div class="explanation">Paragraph E: “sports scientists and coaches start to prepare the athlete by developing a ‘competition model’…”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 13</div>
+  <div class="question">By how much did some cyclists’ performance improve at the 1996 Olympic Games?</div>
+  <span class="answer ans-letter">2 per cent / %</span>
+  <div class="explanation">Paragraph F: “these sliced as much as two per cent off cyclists’ and rowers’ times.”</div>
+</div>
+
+<div class="divider"></div>
+<div class="section-title">Reading Passage 2 – Answers</div>
+
+<div class="qintro"><div class="qintro-t">Questions 14–17</div>
+<p>Reading Passage 2 has nine paragraphs, A–I.<br>Which paragraph contains the following information?</p></div>
+
+<div class="q-block">
+  <div class="q-num">Question 14</div>
+  <div class="question">a suggestion for improving trade in the future</div>
+  <span class="answer ans-letter">I</span>
+  <div class="explanation">The final paragraph suggests: “Bringing these barriers down would help the world’s economies grow even closer.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 15</div>
+  <div class="question">the effects of the introduction of electronic delivery</div>
+  <span class="answer ans-letter">F</span>
+  <div class="explanation">Paragraph F discusses electronic delivery of software: “Computer software can be ‘exported’… simply by transmitting it over telephone lines…”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 16</div>
+  <div class="question">the similar cost involved in transporting a product from abroad or from a local supplier</div>
+  <span class="answer ans-letter">E</span>
+  <div class="explanation">Paragraph E: “Computer manufacturers in Japan or Texas will not face hugely bigger freight bills if they import drives from Singapore rather than purchasing them on the domestic market.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 17</div>
+  <div class="question">the weakening relationship between the value of goods and the cost of their delivery</div>
+  <span class="answer ans-letter">D</span>
+  <div class="explanation">Paragraph D: “less transportation is required for every dollar’s worth of imports or exports.”</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 18–22</div>
+<p>Do the following statements agree with the information given in Reading Passage 2?<br>
+<b>TRUE</b> if the statement agrees with the information<br>
+<b>FALSE</b> if the statement contradicts the information<br>
+<b>NOT GIVEN</b> if there is no information on this</p></div>
+
+<div class="q-block">
+  <div class="q-num">Question 18</div>
+  <div class="question">International trade is increasing at a greater rate than the world economy.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-yes">TRUE</span>
+  <div class="explanation">Paragraph A: trade volume is rising “at a compound annual rate of about twice that” of the global economy.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 19</div>
+  <div class="question">Cheap labour guarantees effective trade conditions.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-no">FALSE</span>
+  <div class="explanation">Paragraph B says cheap labour may make goods competitive, <b>but</b> delays in shipment can make trade lose its advantages. Cheap labour does <b>not</b> guarantee effective trade.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 20</div>
+  <div class="question">Japan imports more meat and steel than France.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-ng">NOT GIVEN</span>
+  <div class="explanation">Paragraph C mentions meat and steel as historically important products but never compares Japan’s and France’s imports.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 21</div>
+  <div class="question">Most countries continue to prefer to trade with nearby nations.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-yes">TRUE</span>
+  <div class="explanation">Paragraph D: “Countries still trade disproportionately with their geographic neighbours.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 22</div>
+  <div class="question">Small computer components are manufactured in Germany.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-ng">NOT GIVEN</span>
+  <div class="explanation">Disk drives are manufactured mainly in South-east Asia; Germany is never mentioned.</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 23–26</div>
+<p>Complete the summary using the list of words, A–K, below.</p>
+<p><b>THE TRANSPORT REVOLUTION</b><br>
+Modern cargo-handling methods have had a significant effect on <b>23</b> ______ as the business of moving freight around the world becomes increasingly streamlined. Manufacturers of computers, for instance, are able to import <b>24</b> ______ from overseas, rather than having to rely on a local supplier. The introduction of <b>25</b> ______ has meant that bulk cargo can be safely and efficiently moved over long distances. While international shipping is now efficient, there is still a need for governments to reduce <b>26</b> ______ in order to free up the domestic cargo sector.</p>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 23</div>
+  <div class="question">Modern cargo-handling methods have had a significant effect on ______</div>
+  <span class="answer ans-letter">G (trade)</span>
+  <div class="explanation">The whole passage is about the revolution in freight and its effect on the expansion of international trade.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 24</div>
+  <div class="question">Manufacturers of computers… are able to import ______ from overseas</div>
+  <span class="answer ans-letter">B (components)</span>
+  <div class="explanation">Paragraph E talks about computer manufacturers importing disk drives (lightweight components) from overseas.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 25</div>
+  <div class="question">The introduction of ______ has meant that bulk cargo can be safely and efficiently moved</div>
+  <span class="answer ans-letter">C (container ships)</span>
+  <div class="explanation">Paragraph G describes containerisation and all-container vessels that moved bulk cargo safely and efficiently.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 26</div>
+  <div class="question">…there is still a need for governments to reduce ______</div>
+  <span class="answer ans-letter">A (tariffs)</span>
+  <div class="explanation">Paragraphs H and I discuss government regulation of truck and railroad tariffs that still keep domestic cargo costs high.</div>
+</div>
+
+<div class="divider"></div>
+<div class="section-title">Reading Passage 3 – Answers</div>
+
+<div class="qintro"><div class="qintro-t">Questions 27–32</div>
+<p>Reading Passage 3 has seven paragraphs, A–G.<br>Choose the correct heading for paragraphs B–G from the list of headings below.</p>
+<ul class="opts">
+<li><b>i</b> The reaction of the Inuit community to climate change</li>
+<li><b>ii</b> Understanding of climate change remains limited</li>
+<li><b>iii</b> Alternative sources of essential supplies</li>
+<li><b>iv</b> Respect for Inuit opinion grows</li>
+<li><b>v</b> A healthier choice of food</li>
+<li><b>vi</b> A difficult landscape</li>
+<li><b>vii</b> Negative effects on well-being</li>
+<li><b>viii</b> Alarm caused by unprecedented events in the Arctic</li>
+<li><b>ix</b> The benefits of an easier existence</li>
+</ul>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 27</div>
+  <div class="question">Paragraph B</div>
+  <span class="answer ans-letter">i</span>
+  <div class="explanation">Paragraph B focuses on how the Inuit refuse to just listen to outside experts and want to combine their own knowledge with modern science.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 28</div>
+  <div class="question">Paragraph C</div>
+  <span class="answer ans-letter">vi</span>
+  <div class="explanation">Paragraph C describes the harsh Arctic environment: vast treeless polar desert, farming impossible, meagre pickings, and how early settlers often failed.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 29</div>
+  <div class="question">Paragraph D</div>
+  <span class="answer ans-letter">iii</span>
+  <div class="explanation">Paragraph D explains that shop provisions must be flown in or brought by ship and that replacing hunted meat with imported meat would cost a family £7,000 a year.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 30</div>
+  <div class="question">Paragraph E</div>
+  <span class="answer ans-letter">vii</span>
+  <div class="explanation">Paragraph E lists health problems (obesity, heart disease, diabetes), identity crisis, loss of traditional skills, and high rates of depression.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 31</div>
+  <div class="question">Paragraph F</div>
+  <span class="answer ans-letter">iv</span>
+  <div class="explanation">Paragraph F shows the change from scientists ignoring the Inuit to now requiring consultation and giving IQ (Inuit knowledge) real credibility.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 32</div>
+  <div class="question">Paragraph G</div>
+  <span class="answer ans-letter">ii</span>
+  <div class="explanation">Paragraph G states there are still “huge gaps in our environmental knowledge” and many predictions are only “best guesses.”</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 33–40</div>
+<p>Complete the summary of paragraphs C and D below.<br>Choose <b>NO MORE THAN TWO WORDS</b> from paragraphs C and D for each answer.</p></div>
+
+<div class="q-block">
+  <div class="q-num">Question 33</div>
+  <div class="question">It would clearly be impossible for the people to engage in <b>33 ………</b> as a means of supporting themselves.</div>
+  <span class="answer ans-letter">farming</span>
+  <div class="explanation">“Farming is out of the question…”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 34</div>
+  <div class="question">For thousands of years they have had to rely on catching <b>34 ………</b></div>
+  <span class="answer ans-letter">sea mammals</span>
+  <div class="explanation">“surviving by exploiting sea mammals and fish.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 35</div>
+  <div class="question">and <b>35 ………</b> as a means of sustenance.</div>
+  <span class="answer ans-letter">fish</span>
+  <div class="explanation">“surviving by exploiting sea mammals and fish.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 36</div>
+  <div class="question">The <b>36 ………</b> people were an example of the latter…</div>
+  <span class="answer ans-letter">Thule</span>
+  <div class="explanation">“These Thule people… were uniquely well adapted…”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 37</div>
+  <div class="question">The territory of Nunavut consists of little more than ice, rock and a few <b>37 ………</b>.</div>
+  <span class="answer ans-letter">islands</span>
+  <div class="explanation">“Nunavut is… rock and ice, and a handful of islands…”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 38</div>
+  <div class="question">…many of them have been obliged to give up their <b>38 ………</b> lifestyle…</div>
+  <span class="answer ans-letter">nomadic</span>
+  <div class="explanation">“most have abandoned their nomadic ways…”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 39</div>
+  <div class="question">…but they continue to depend mainly on <b>39 ………</b> for their food and clothes.</div>
+  <span class="answer ans-letter">nature</span>
+  <div class="explanation">“they still rely heavily on nature to provide food and clothing.”</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 40</div>
+  <div class="question"><b>40 ………</b> produce is particularly expensive.</div>
+  <span class="answer ans-letter">imported</span>
+  <div class="explanation">Replacing hunted meat with “imported meat” would cost £7,000 a year.</div>
+</div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>

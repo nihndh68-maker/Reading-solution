@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 6 – Academic Reading Test 4 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d;
+    --accent: #2b6cb0;
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #2d3748;
+    --muted: #718096;
+    --yes: #276749;
+    --no: #c53030;
+    --ng: #744210;
+    --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+  }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container {
+    display: flex;
+    height: calc(100vh - 64px);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .column {
+    flex: 1;
+    padding: 1.4rem 1.6rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+
+  .section-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 1.6rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c5282;
+    margin: 1.1rem 0 0.55rem;
+  }
+  .para {
+    margin-bottom: 0.85rem;
+    text-align: justify;
+    font-size: 0.92rem;
+  }
+  .para strong { color: var(--primary); }
+
+  .hl {
+    background: var(--hl);
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    background: #059669;
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 700;
+    border-radius: 9px;
+    margin: 0 2px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .q-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer {
+    display: inline-block;
+    margin: 0.35rem 0;
+    padding: 0.22rem 0.65rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation {
+    font-size: 0.86rem;
+    color: #4a5568;
+    margin-top: 0.35rem;
+    line-height: 1.5;
+  }
+  .list-headings {
+    background: #edf2f7;
+    border-radius: 6px;
+    padding: 0.7rem 0.9rem;
+    margin: 0.7rem 0;
+    font-size: 0.86rem;
+  }
+  .list-headings li { margin-bottom: 0.2rem; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+
+  /* ===== Click-to-locate feature ===== */
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cambridge IELTS 6 – Academic Reading Test 4</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <!-- ===================== LEFT: PASSAGES WITH HIGHLIGHTS ===================== -->
+  <div class="column left">
+    <div class="section-title">READING PASSAGE 1</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13.</p>
+
+    <div class="passage-title">Doctoring sales</div>
+    <p class="para">Pharmaceuticals is one of the most profitable industries in North America. But do the drugs industry’s sales and marketing strategies go too far?</p>
+
+    <p class="para"><strong>A</strong> A few months ago Kim Schaefer, sales representative of a major global pharmaceutical company, walked into a medical center in New York to bring information and free samples of her company’s latest products. That day she was lucky – a doctor was available to see her. <span class="hl">‘The last rep offered me a trip to Florida. What do you have?’ the physician asked. He was only half joking.</span><span class="mark">1</span></p>
+
+    <p class="para"><strong>B</strong> What was on offer that day was a pair of tickets for a New York musical. But on any given day what Schaefer can offer is typical for today’s drugs rep – a car trunk full of promotional gifts and gadgets, <span class="hl">a budget that could buy lunches and dinners for a small county, hundreds of free drug samples and the freedom to give a physician $200 to prescribe her new product to the next six patients who fit the drug’s profile. And she also has a few $1,000 honoraria</span><span class="mark">2</span><span class="mark">8</span> to offer in exchange for doctors’ attendance at her company’s next educational lecture.</p>
+
+    <p class="para"><strong>C</strong> <span class="hl">Selling pharmaceuticals is a daily exercise in ethical judgment.</span><span class="mark">9</span> Salespeople like Schaefer walk the line between the common practice of buying a prospect’s time with a free meal, and bribing doctors to prescribe their drugs. They work in an industry highly criticized for its sales and marketing practices, but find themselves in the middle of the age-old chicken-or-egg question – <span class="hl">businesses won’t use strategies that don’t work, so are doctors to blame for the escalating extravagance of pharmaceutical marketing? Or is it the industry’s responsibility to decide the boundaries?</span><span class="mark">3</span></p>
+
+    <p class="para"><strong>D</strong> The explosion in the sheer number of salespeople in the field – and the amount of funding used to promote their causes – forces close examination of the pressures, influences and relationships between drug reps and doctors. <span class="hl">Salespeople provide much-needed information and education to physicians. In many cases the glossy brochures, article reprints and prescriptions they deliver are primary sources of drug education for healthcare givers. With the huge investment the industry has placed in face-to-face selling, salespeople have essentially become specialists in one drug or group of drugs – a tremendous advantage in getting the attention of busy doctors in need of quick information.</span><span class="mark">4</span><span class="mark">10</span></p>
+
+    <p class="para"><strong>E</strong> But the sales push rarely stops in the office. The flashy brochures and pamphlets left by the sales reps are often followed up with meals at expensive restaurants, meetings in warm and sunny places, and an inundation of promotional gadgets. <span class="hl">Rarely do patients watch a doctor write with a pen that isn’t emblazoned with a drug’s name, or see a nurse use a tablet not bearing a pharmaceutical company’s logo.</span><span class="mark">11</span> Millions of dollars are spent by pharmaceutical companies on promotional products like coffee mugs, shirts, umbrellas, and golf balls. Money well spent? It’s hard to tell. <span class="hl">‘I’ve been the recipient of golf balls from one company and I use them, but it doesn’t make me prescribe their medicine,’ says one doctor. ‘I tend to think I’m not influenced by what they give me.’</span><span class="mark">5</span></p>
+
+    <p class="para"><strong>F</strong> Free samples of new and expensive drugs might be the single most effective way of getting doctors and patients to become loyal to a product. <span class="hl">Salespeople hand out hundreds of dollars’ worth of samples each week</span><span class="mark">12</span> – $7.2 billion worth of them in one year. Though few comprehensive studies have been conducted, one by the University of Washington investigated how drug sample availability affected what physicians prescribe. <span class="hl">A total of 131 doctors self-reported their prescribing patterns – the conclusion was that the availability of samples led them to dispense and prescribe drugs that differed from their preferred drug choice.</span><span class="mark">6</span></p>
+
+    <p class="para"><strong>G</strong> The bottom line is that pharmaceutical companies as a whole invest more in marketing than they do in research and development. And <span class="hl">patients are the ones who pay – in the form of sky-rocketing prescription prices – for every pen that’s handed out, every free theatre ticket, and every steak dinner eaten.</span><span class="mark">7</span> In the end the fact remains that <span class="hl">pharmaceutical companies have every right to make a profit</span><span class="mark">13</span> and will continue to find new ways to increase sales. But as the medical world continues to grapple with what’s acceptable and what’s not, it is clear that companies must continue to be heavily scrutinized for their sales and marketing strategies.</p>
+
+    <div class="divider"></div>
+    <div class="section-title">READING PASSAGE 2</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26.</p>
+
+    <div class="passage-title">Literate women make better mothers?</div>
+    <p class="para">Children in developing countries are healthier and more likely to survive past the age of five <span class="hl">when their mothers can read and write</span><span class="mark">15</span>. Experts in public health accepted this idea decades ago, but until now no one has been able to show that a woman’s ability to read in itself improves her children’s chances of survival.</p>
+    <p class="para">Most literate women learnt to read in primary school, and the fact that a woman has had an education <span class="hl">may simply indicate her family’s wealth or that it values its children more highly</span><span class="mark">17</span>. Now a long-term study carried out in Nicaragua has eliminated these factors by showing that <span class="hl">teaching reading to poor adult women, who would otherwise have remained illiterate, has a direct effect on their children’s health and survival</span><span class="mark">18</span>.</p>
+    <p class="para">In 1979, the government of Nicaragua established a number of social programmes, including a National Literacy Crusade. By 1985, about <span class="hl">300,000 illiterate adults</span><span class="mark">14</span> from all over the country, many of whom had never attended primary school, had learnt how to read, write and use numbers.</p>
+    <p class="para">During this period, researchers from the Liverpool School of Tropical Medicine, the Central American Institute of Health in Nicaragua, the National Autonomous University of Nicaragua and the Costa Rican Institute of Health <span class="hl">interviewed nearly 3,000 women</span><span class="mark">16</span>, <span class="hl">some of whom had learnt to read as children, some during the literacy crusade and some who had never learnt at all</span><span class="mark">19</span>. The women were asked how many children they had given birth to and how many of them had died in infancy. The research teams also examined the surviving children to find out how well-nourished they were.</p>
+    <p class="para">The investigators’ findings were striking. In the late 1970s, the infant mortality rate for the children of <span class="hl">illiterate mothers was around 110 deaths per thousand live births</span>. At this point in their lives, those mothers who later went on to learn to read had a similar level of child mortality (105/1000). For women <span class="hl">educated in primary school</span>, however, the infant mortality rate was significantly lower, at <span class="hl">80 per thousand</span><span class="mark">20</span>.</p>
+    <p class="para">In 1985, after the National Literacy Crusade had ended, <span class="hl">the infant mortality figures for those who remained illiterate and for those educated in primary school remained more or less unchanged</span><span class="mark">21</span>. For those women who learnt to read through the campaign, the infant mortality rate was <span class="hl">84 per thousand, an impressive 21 points lower</span><span class="mark">22</span><span class="mark">23</span> than for those women who were still illiterate. <span class="hl">The children of the newly-literate mothers were also better nourished than those of women who could not read.</span><span class="mark">24</span></p>
+    <p class="para">Why are the children of literate mothers better off? According to Peter Sandiford of the Liverpool School of Tropical Medicine, no one knows for certain. Child health was not on the curriculum during the women’s lessons, so he and his colleagues are looking at other factors. They are working with the same group of 3,000 women, to try to find out whether reading mothers make better use of hospitals and clinics, opt for smaller families, exert more control at home, learn modern childcare techniques more quickly, or whether they merely have more respect for themselves and their children.</p>
+    <p class="para">The Nicaraguan study may have important implications for governments and aid agencies that need to know where to direct their resources. Sandiford says that there is increasing evidence that female education, at any age, is ‘an important health intervention in its own right’. The results of the study <span class="hl">lend support to the World Bank’s recommendation that education budgets in developing countries should be increased</span><span class="mark">25</span><span class="mark">26</span>, not just to help their economies, but also to improve child health.</p>
+    <p class="para">‘We’ve known for a long time that maternal education is important,’ says John Cleland of the London School of Hygiene and Tropical Medicine. ‘But we thought that even if we started educating girls today, we’d have to wait a generation for the pay-off. <span class="hl">The Nicaraguan study suggests we may be able to bypass that.</span><span class="mark">25</span><span class="mark">26</span>’</p>
+    <p class="para">Cleland warns that the Nicaraguan crusade was special in many ways, and similar campaigns elsewhere might not work as well. It is notoriously difficult to teach adults skills that do not have an immediate impact on their everyday lives, and many literacy campaigns in other countries have been much less successful. ‘The crusade was part of a larger effort to bring a better life to the people,’ says Cleland. Replicating these conditions in other countries will be a major challenge for development workers.</p>
+
+    <div class="divider"></div>
+    <div class="section-title">READING PASSAGE 3</div>
+    <p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40.</p>
+
+    <div class="passage-title">Persistent bullying is one of the worst experiences a child can face. How can it be prevented?</div>
+    <p class="para">Peter Smith, Professor of Psychology at the University of Sheffield, directed the Sheffield Anti-Bullying Intervention Project, funded by the Department for Education. Here he reports on his findings.</p>
+
+    <p class="para"><strong>A</strong> Bullying can take a variety of forms, from the verbal – being taunted or called hurtful names – to the physical – being kicked or shoved – as well as indirect forms, such as being excluded from social groups. <span class="hl">A survey I conducted with Irene Whitney found that in British primary schools up to a quarter of pupils reported experience of bullying, which in about one in ten cases was persistent. There was less bullying in secondary schools, with about one in twenty-five suffering persistent bullying</span><span class="mark">27</span><span class="mark">31</span>, but these cases may be particularly recalcitrant.</p>
+
+    <p class="para"><strong>B</strong> Bullying is clearly unpleasant, and can make the child experiencing it feel unworthy and depressed. In extreme cases it can even lead to suicide, though this is thankfully rare. <span class="hl">Victimised pupils are more likely to experience difficulties with interpersonal relationships as adults</span><span class="mark">28</span><span class="mark">32</span>, while children who persistently bully are more likely to grow up to be physically violent, and convicted of anti-social offences.</p>
+
+    <p class="para"><strong>C</strong> Until recently, not much was known about the topic, and little help was available to teachers to deal with bullying. Perhaps as a consequence, schools would often deny the problem. <span class="hl">‘There is no bullying at this school’ has been a common refrain, almost certainly untrue.</span><span class="mark">29</span><span class="mark">33</span> Fortunately more schools are now saying: ‘There is not much bullying here, but when it occurs we have a clear policy for dealing with it.’</p>
+
+    <p class="para"><strong>D</strong> <span class="hl">Three factors are involved in this change.</span><span class="mark">30</span> First is an awareness of the severity of the problem. Second, a number of resources to help tackle bullying have become available in Britain. For example, the Scottish Council for Research in Education produced a package of materials, <em>Action Against Bullying</em>, circulated to all schools in England and Wales as well as in Scotland in summer 1992, with a second pack, <em>Supporting Schools Against Bullying</em>, produced the following year. In Ireland, <em>Guidelines on Countering Bullying Behaviour in Post-Primary Schools</em> was published in 1993. Third, there is evidence that these materials work, and that schools can achieve something. This comes from carefully conducted ‘before and after’ evaluations of interventions in schools, monitored by a research team. <span class="hl">In Norway, after an intervention campaign was introduced nationally, an evaluation of forty-two schools suggested that, over a two-year period, bullying was halved.</span><span class="mark">34</span> The Sheffield investigation, which involved sixteen primary schools and seven secondary schools, found that most schools succeeded in reducing bullying.</p>
+
+    <p class="para"><strong>E</strong> Evidence suggests that a key step is to develop a <span class="hl">policy</span><span class="mark">35</span> on bullying, saying clearly what is meant by bullying, and giving <span class="hl">explicit guidelines</span><span class="mark">36</span> on what will be done if it occurs, what record will be kept, who will be informed, what sanctions will be employed. The policy should be developed through consultation, over a period of time – not just imposed from the head teacher’s office! Pupils, parents and staff should feel they have been involved in the policy, which needs to be disseminated and implemented effectively.</p>
+    <p class="para">Other actions can be taken to back up the policy. There are ways of dealing with the topic through the <span class="hl">curriculum</span><span class="mark">37</span>, using video, drama and literature. These are useful for raising awareness, and can best be tied in to early phases of development while the school is starting to discuss the issue of bullying. They are also useful in renewing the policy for new pupils, or revising it in the light of experience. But curriculum work alone may only have short-term effects; it should be an addition to policy work, not a substitute.</p>
+    <p class="para">There are also ways of working with individual pupils, or in small groups. Assertiveness training for pupils who are liable to be <span class="hl">victims</span><span class="mark">38</span> is worthwhile, and certain approaches to group bullying such as ‘no blame’, can be useful in changing the behaviour of bullying pupils without confronting them directly, although other sanctions may be needed for those who continue with persistent bullying.</p>
+    <p class="para">Work in the playground is important, too. One helpful step is to train lunchtime supervisors to distinguish bullying from <span class="hl">playful fighting</span><span class="mark">39</span>, and help them break up conflicts. Another possibility is to improve the playground environment, so that pupils are less likely to be led into bullying from boredom or frustration.</p>
+
+    <p class="para"><strong>F</strong> With these developments, schools can expect that at least the most serious kinds of bullying can largely be prevented. The more effort put in and the wider the whole school involvement, the more substantial the results are likely to be. <span class="hl">The reduction in bullying – and the consequent improvement in pupil happiness – is surely a worthwhile objective.</span><span class="mark">40</span></p>
+  </div>
+
+  <!-- ===================== RIGHT: FULL QUESTIONS + ANSWERS (UNCHANGED STYLE) ===================== -->
+  <div class="column right">
+    <div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+    <div class="section-title">Reading Passage 1 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 1–7</div><p>Reading Passage 1 has seven paragraphs, A–G. Choose the correct heading for each paragraph from the list of headings below. <i>Write the correct number, i–x.</i></p><p><b>List of Headings</b></p><ul class="opts"><li><b>i</b> Not all doctors are persuaded</li><li><b>ii</b> Choosing the best offers</li><li><b>iii</b> Who is responsible for the increase in promotions?</li><li><b>iv</b> Fighting the drug companies</li><li><b>v</b> An example of what doctors expect from drug companies</li><li><b>vi</b> Gifts include financial incentives</li><li><b>vii</b> Research shows that promotion works</li><li><b>viii</b> The high costs of research</li><li><b>ix</b> The positive side of drugs promotion</li><li><b>x</b> Who really pays for doctors’ free gifts?</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 1 – Paragraph A</div>
+      <div class="question">Choose the correct heading for <b>Paragraph A</b>.</div>
+      <span class="answer ans-letter">v – An example of what doctors expect from drug companies</span>
+      <div class="explanation">Paragraph A describes sales representative Kim Schaefer visiting a medical centre. The doctor says: “The last rep offered me a trip to Florida. What do you have?” and is only half joking. This is a clear example of the kind of generous offers doctors have come to expect from drug companies.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 2 – Paragraph B</div>
+      <div class="question">Choose the correct heading for <b>Paragraph B</b>.</div>
+      <span class="answer ans-letter">vi – Gifts include financial incentives</span>
+      <div class="explanation">Paragraph B lists the gifts a typical drugs rep can offer: theatre tickets, a car full of promotional gadgets, a large entertainment budget, free samples, $200 payments, and $1,000 honoraria. These include direct financial incentives.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 3 – Paragraph C</div>
+      <div class="question">Choose the correct heading for <b>Paragraph C</b>.</div>
+      <span class="answer ans-letter">iii – Who is responsible for the increase in promotions?</span>
+      <div class="explanation">Paragraph C asks whether salespeople, doctors, or the pharmaceutical industry itself should be held responsible for the growing extravagance of drug marketing. The focus is on the question of responsibility.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 4 – Paragraph D</div>
+      <div class="question">Choose the correct heading for <b>Paragraph D</b>.</div>
+      <span class="answer ans-letter">ix – The positive side of drugs promotion</span>
+      <div class="explanation">Paragraph D presents the benefits of the system: sales representatives provide much-needed information and education to physicians and have become specialists in particular drugs.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 5 – Paragraph E</div>
+      <div class="question">Choose the correct heading for <b>Paragraph E</b>.</div>
+      <span class="answer ans-letter">i – Not all doctors are persuaded</span>
+      <div class="explanation">Paragraph E shows that some doctors claim they are not influenced by gifts. One doctor says he uses free golf balls but does not prescribe the company’s medicine as a result.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 6 – Paragraph F</div>
+      <div class="question">Choose the correct heading for <b>Paragraph F</b>.</div>
+      <span class="answer ans-letter">vii – Research shows that promotion works</span>
+      <div class="explanation">A University of Washington study found that free samples caused doctors to prescribe drugs different from their preferred choice. This is research evidence that promotion is effective.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 7 – Paragraph G</div>
+      <div class="question">Choose the correct heading for <b>Paragraph G</b>.</div>
+      <span class="answer ans-letter">x – Who really pays for doctors’ free gifts?</span>
+      <div class="explanation">Paragraph G states that patients ultimately pay for all the free gifts through higher prescription prices.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 8–13</div><p>Do the following statements agree with the views of the writer in Reading Passage 1?</p><p><b>YES</b> if the statement agrees with the views of the writer<br><b>NO</b> if the statement contradicts the views of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 8</div>
+      <div class="question">Sales representatives like Kim Schaefer work to a very limited budget.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">The text describes a large budget that can buy lunches and dinners for a small country, $200 payments, and $1,000 honoraria. This is the opposite of a limited budget.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 9</div>
+      <div class="question">Kim Schaefer’s marketing technique may be open to criticism on moral grounds.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">Paragraph C says selling pharmaceuticals is “a daily exercise in ethical judgement” and notes that the industry is highly criticised for its sales and marketing practices.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 10</div>
+      <div class="question">The information provided by drug companies is of little use to doctors.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">Paragraph D states that salespeople provide “much-needed information and education” and that their materials are often primary sources of drug education for doctors.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 11</div>
+      <div class="question">Evidence of drug promotion is clearly visible in the healthcare environment.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">Paragraph E notes that patients rarely see a doctor writing with a pen that is not branded or a nurse using a tablet without a company logo. Promotional items are clearly visible.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 12</div>
+      <div class="question">The drug companies may give free drug samples to patients without doctors’ prescriptions.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">Free samples are discussed as a way of influencing doctors, but the text does not say anything about giving samples directly to patients without a prescription.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 13</div>
+      <div class="question">It is legitimate for drug companies to make money.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">The final paragraph states that pharmaceutical companies “have every right to make a profit.”</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">Reading Passage 2 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 14–18</div><p>Complete the summary using the list of words, A–J, below. <i>NB You may use any letter more than once.</i></p><p>The Nicaraguan National Literacy Crusade aimed to teach large numbers of illiterate <b>14 ………</b> to read and write. Public health experts have known for many years that there is a connection between child health and <b>15 ………</b>. However, it has not previously been known whether these two factors were directly linked or not. This question has been investigated by <b>16 ………</b> in Nicaragua. As a result, factors such as <b>17 ………</b> and attitudes to children have been eliminated, and it has been shown that <b>18 ………</b> can in itself improve infant health and survival.</p><ul class="opts"><li><b>A</b> child literacy</li><li><b>B</b> men and women</li><li><b>C</b> an international research team</li><li><b>D</b> medical care</li><li><b>E</b> mortality</li><li><b>F</b> maternal literacy</li><li><b>G</b> adults and children</li><li><b>H</b> paternal literacy</li><li><b>I</b> a National Literacy Crusade</li><li><b>J</b> family wealth</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 14</div>
+      <div class="question">The Nicaraguan National Literacy Crusade aimed to teach large numbers of illiterate <b>14 ………</b> to read and write.</div>
+      <span class="answer ans-letter">B (men and women)</span>
+      <div class="explanation">The Crusade taught about 300,000 illiterate adults (both men and women) to read, write and use numbers.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 15</div>
+      <div class="question">Public health experts have known for many years that there is a connection between child health and <b>15 ………</b>.</div>
+      <span class="answer ans-letter">F (maternal literacy)</span>
+      <div class="explanation">The first paragraph states that children are healthier and more likely to survive past the age of five when their mothers can read and write. Experts accepted this decades ago.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 16</div>
+      <div class="question">This question has been investigated by <b>16 ………</b> in Nicaragua.</div>
+      <span class="answer ans-letter">C (an international research team)</span>
+      <div class="explanation">Researchers from the UK, Nicaragua and Costa Rica jointly carried out the study.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 17</div>
+      <div class="question">As a result, factors such as <b>17 ………</b> and attitudes to children have been eliminated,</div>
+      <span class="answer ans-letter">J (family wealth)</span>
+      <div class="explanation">The study eliminated the possibility that a woman’s education simply reflected her family’s wealth or the value the family placed on children.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 18</div>
+      <div class="question">and it has been shown that <b>18 ………</b> can in itself improve infant health and survival.</div>
+      <span class="answer ans-letter">F (maternal literacy)</span>
+      <div class="explanation">Teaching reading to poor adult women who would otherwise have remained illiterate has a direct positive effect on their children’s health and survival.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 19–24</div><p>Do the following statements agree with the claims of the writer in Reading Passage 2?</p><p><b>YES</b> if the statement agrees with the claims of the writer<br><b>NO</b> if the statement contradicts the claims of the writer<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 19</div>
+      <div class="question">About a thousand of the women interviewed by the researchers had learnt to read when they were children.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">Nearly 3,000 women were interviewed and some had learnt as children, but the exact number is never given.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 20</div>
+      <div class="question">Before the National Literacy Crusade, illiterate women had approximately the same levels of infant mortality as those who had learnt to read in primary school.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">Before the Crusade, the rate was about 110 per 1,000 for illiterate mothers but only 80 per 1,000 for mothers educated in primary school. The levels were different.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 21</div>
+      <div class="question">Before and after the National Literacy Crusade, the child mortality rate for the illiterate women stayed at about 110 deaths for each thousand live births.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">The rate for women who remained illiterate stayed more or less unchanged at around 110 per 1,000.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 22</div>
+      <div class="question">The women who had learnt to read through the National Literacy Crusade showed the greatest change in infant mortality levels.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-yes">YES</span>
+      <div class="explanation">These women showed the largest drop (to 84 per 1,000), while the rates for the other groups remained almost the same.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 23</div>
+      <div class="question">The women who had learnt to read through the National Literacy Crusade had the lowest rates of child mortality.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-no">NO</span>
+      <div class="explanation">Mothers educated in primary school still had the lowest rate (around 80 per 1,000). The Crusade group had a higher rate (84).</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 24</div>
+      <div class="question">After the National Literacy Crusade, the children of the women who remained illiterate were found to be severely malnourished.<div class="yng">YES / NO / NOT GIVEN</div></div>
+      <span class="answer ans-ng">NOT GIVEN</span>
+      <div class="explanation">The children of newly literate mothers were better nourished, but the text does not say the children of remaining illiterate mothers were severely malnourished.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Questions 25 &amp; 26</div>
+      <div class="question">Which <b>TWO</b> important implications drawn from the Nicaraguan study are mentioned by the writer of the passage? <i>(Choose TWO letters, A–E.)</i><ul class="opts"><li><b>A</b> It is better to educate mature women than young girls</li><li><b>B</b> Similar campaigns in other countries would be equally successful.</li><li><b>C</b> The effects of maternal literacy programmes can be seen very quickly</li><li><b>D</b> Improving child health can quickly affect a country’s economy.</li><li><b>E</b> Money spent on female education will improve child health.</li></ul></div>
+      <span class="answer ans-letter">C and E (in either order)</span>
+      <div class="explanation">
+        <strong>C:</strong> The effects of maternal literacy programmes can be seen very quickly.<br>
+        <strong>E:</strong> Money spent on female education will improve child health.<br>
+        These are the two clear implications stated by the writer.
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-title">Reading Passage 3 – Answers</div>
+
+    <div class="qintro"><div class="qintro-t">Questions 27–30</div><p>Reading Passage 3 has six sections, A–F. Choose the correct heading for sections A–D from the list of headings below. <i>Write the correct number, i–vii.</i></p><p><b>List of Headings</b></p><ul class="opts"><li><b>i</b> The role of video violence</li><li><b>ii</b> The failure of government policy</li><li><b>iii</b> Reasons for the increased rate of bullying</li><li><b>iv</b> Research into how common bullying is in British schools</li><li><b>v</b> The reaction from schools to enquiries about bullying</li><li><b>vi</b> The effect of bullying on the children involved</li><li><b>vii</b> Developments that have led to a new approach by schools</li></ul></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 27 – Section A</div>
+      <div class="question">Choose the correct heading for <b>Section A</b>.</div>
+      <span class="answer ans-letter">iv – Research into how common bullying is in British schools</span>
+      <div class="explanation">Section A reports the results of a survey on how common bullying is in British primary and secondary schools.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 28 – Section B</div>
+      <div class="question">Choose the correct heading for <b>Section B</b>.</div>
+      <span class="answer ans-letter">vi – The effect of bullying on the children involved</span>
+      <div class="explanation">Section B describes the emotional harm (feeling unworthy and depressed) and possible long-term effects on relationships in adulthood.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 29 – Section C</div>
+      <div class="question">Choose the correct heading for <b>Section C</b>.</div>
+      <span class="answer ans-letter">v – The reaction from schools to enquiries about bullying</span>
+      <div class="explanation">Schools often denied the problem with the common response “There is no bullying at this school.”</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 30 – Section D</div>
+      <div class="question">Choose the correct heading for <b>Section D</b>.</div>
+      <span class="answer ans-letter">vii – Developments that have led to a new approach by schools</span>
+      <div class="explanation">Section D lists three factors that caused a change in attitudes and practice regarding bullying.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 31–34</div><p>Choose the correct letter, A, B, C or D.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 31</div>
+      <div class="question">A recent survey found that in British secondary schools<ul class="opts"><li><b>A</b> there was more bullying than had previously been the case.</li><li><b>B</b> there was less bullying than in primary schools.</li><li><b>C</b> cases of persistent bullying were very common.</li><li><b>D</b> indirect forms of bullying were particularly difficult to deal with.</li></ul></div>
+      <span class="answer ans-letter">B – There was less bullying than in primary schools</span>
+      <div class="explanation">The survey found less bullying in secondary schools (about 1 in 25 pupils suffered persistent bullying).</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 32</div>
+      <div class="question">Children who are bullied<ul class="opts"><li><b>A</b> are twice as likely to commit suicide as the average person.</li><li><b>B</b> find it more difficult to relate to adults.</li><li><b>C</b> are less likely to be violent in later life.</li><li><b>D</b> may have difficulty forming relationships in later life.</li></ul></div>
+      <span class="answer ans-letter">D – may have difficulty forming relationships in later life</span>
+      <div class="explanation">Victimised pupils are more likely to experience difficulties with interpersonal relationships as adults.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 33</div>
+      <div class="question">The writer thinks that the declaration ‘There is no bullying at this school’<ul class="opts"><li><b>A</b> is no longer true in many schools.</li><li><b>B</b> was not in fact made by many schools.</li><li><b>C</b> reflected the school’s lack of concern.</li><li><b>D</b> reflected a lack of knowledge and resources.</li></ul></div>
+      <span class="answer ans-letter">D – reflected a lack of knowledge and resources</span>
+      <div class="explanation">The writer says this common response is “almost certainly untrue” and links it to the previous lack of knowledge and help available.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 34</div>
+      <div class="question">What were the findings of research carried out in Norway?<ul class="opts"><li><b>A</b> Bullying declined by 50% after an anti-bullying campaign.</li><li><b>B</b> Twenty-one schools reduced bullying as a result of an anti-bullying campaign.</li><li><b>C</b> Two years is the optimum length for an anti-bullying campaign.</li><li><b>D</b> Bullying is a less serious problem in Norway than in the UK.</li></ul></div>
+      <span class="answer ans-letter">A – Bullying declined by 50% after an anti-bullying campaign</span>
+      <div class="explanation">After a national campaign, bullying was halved over two years in the schools studied.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="qintro"><div class="qintro-t">Questions 35–39</div><p>Complete the summary below. Choose <b>NO MORE THAN TWO WORDS</b> from the passage for each answer.</p><p><b>What steps should schools take to reduce bullying?</b></p><p>The most important step is for the school authorities to produce a <b>35 ………</b> which makes the school’s attitude towards bullying quite clear. It should include detailed <b>36 ………</b> as to how the school and its staff will react if bullying occurs.</p><p>In addition, action can be taken through the <b>37 ………</b>. This is particularly useful in the early part of the process, as a way of raising awareness and encouraging discussion. On its own, however, it is insufficient to bring about a permanent solution.</p><p>Effective work can also be done with individual pupils and small groups. For example, potential <b>38 ………</b> of bullying can be trained to be more self-confident. Or again, in dealing with group bullying, a ‘no blame’ approach, which avoids confronting the offender too directly, is often effective.</p><p>Playground supervision will be more effective if members of staff are trained to recognise the difference between bullying and mere <b>39 ………</b>.</p></div>
+
+    <div class="q-block">
+      <div class="q-num">Question 35</div>
+      <div class="question">The most important step is for the school authorities to produce a <b>35 ………</b> which makes the school’s attitude towards bullying quite clear.</div>
+      <span class="answer ans-letter">policy</span>
+      <div class="explanation">Evidence suggests a key step is to develop a clear policy that defines what is meant by bullying.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 36</div>
+      <div class="question">It should include detailed <b>36 ………</b> as to how the school and its staff will react if bullying occurs.</div>
+      <span class="answer ans-letter">(explicit) guidelines</span>
+      <div class="explanation">The policy should give explicit guidelines on what will be done, what records will be kept, who will be informed, and what sanctions will be used.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 37</div>
+      <div class="question">In addition, action can be taken through the <b>37 ………</b>. This is particularly useful in the early part of the process, as a way of raising awareness and encouraging discussion.</div>
+      <span class="answer ans-letter">(school) curriculum</span>
+      <div class="explanation">Bullying can usefully be dealt with through the school curriculum using video, drama and literature.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 38</div>
+      <div class="question">For example, potential <b>38 ………</b> of bullying can be trained to be more self-confident.</div>
+      <span class="answer ans-letter">victims</span>
+      <div class="explanation">Assertiveness training for pupils who are liable to be victims is worthwhile.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 39</div>
+      <div class="question">Playground supervision will be more effective if members of staff are trained to recognise the difference between bullying and mere <b>39 ………</b>.</div>
+      <span class="answer ans-letter">playful fighting</span>
+      <div class="explanation">Lunchtime supervisors should be trained to distinguish bullying from playful fighting.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-num">Question 40</div>
+      <div class="question">Which of the following is the most suitable title for Reading Passage 3?<ul class="opts"><li><b>A</b> Bullying: what parents can do</li><li><b>B</b> Bullying: are the media to blame?</li><li><b>C</b> Bullying: the link with academic failure</li><li><b>D</b> Bullying: from crisis management to prevention</li></ul></div>
+      <span class="answer ans-letter">D – Bullying: from crisis management to prevention</span>
+      <div class="explanation">The whole passage focuses on understanding bullying and the practical steps schools can take to prevent it.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  // question number -> highlighted evidence spans in the passages
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  // question number -> answer card
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;                       // clicking again cycles through multiple evidence spots
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;   // don't hijack text selection
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  // reverse: click a badge in the passage -> jump to its answer card
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>

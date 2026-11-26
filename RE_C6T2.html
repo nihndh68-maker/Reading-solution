@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambridge IELTS 6 Academic Reading Test 2 | Passages + Answers</title>
+<style>
+  :root {
+    --primary: #1a365d; --accent: #2b6cb0; --bg: #f7fafc; --card: #ffffff; --border: #e2e8f0;
+    --text: #2d3748; --muted: #718096; --yes: #276749; --no: #c53030; --ng: #744210; --hl: #a7f3d0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+  header { background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 0.9rem 1.5rem; text-align: center; height: 64px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-shrink: 0; }
+  header h1 { font-size: 1.25rem; font-weight: 600; }
+  header p { font-size: 0.85rem; opacity: 0.9; margin-top: 0.15rem; }
+  .container { display: flex; height: calc(100vh - 64px); max-width: 1600px; margin: 0 auto; }
+  .column { flex: 1; padding: 1.4rem 1.6rem; overflow-y: auto; height: 100%; }
+  .left { background: #fff; border-right: 1px solid var(--border); }
+  .right { background: #f8fafc; }
+  .column::-webkit-scrollbar { width: 8px; }
+  .column::-webkit-scrollbar-track { background: #edf2f7; }
+  .column::-webkit-scrollbar-thumb { background: #a0aec0; border-radius: 4px; }
+  .column::-webkit-scrollbar-thumb:hover { background: #718096; }
+  .section-title { font-size: 1.12rem; font-weight: 700; color: var(--primary); margin: 1.6rem 0 0.7rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--accent); }
+  .section-title:first-child { margin-top: 0; }
+  .passage-title { font-size: 1.05rem; font-weight: 600; color: #2c5282; margin: 1.1rem 0 0.55rem; }
+  .para { margin-bottom: 0.85rem; text-align: justify; font-size: 0.92rem; }
+  .para strong { color: var(--primary); }
+  .hl { background: var(--hl); padding: 1px 3px; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .mark { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 4px; background: #059669; color: white; font-size: 0.68rem; font-weight: 700; border-radius: 9px; margin: 0 2px; vertical-align: middle; line-height: 1; }
+  .q-block { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.95rem 1.1rem; margin-bottom: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .q-num { font-weight: 700; color: var(--accent); font-size: 0.93rem; }
+  .answer { display: inline-block; margin: 0.35rem 0; padding: 0.22rem 0.65rem; border-radius: 4px; font-weight: 600; font-size: 0.88rem; }
+  .ans-yes { background: #c6f6d5; color: var(--yes); }
+  .ans-no { background: #fed7d7; color: var(--no); }
+  .ans-ng { background: #feebc8; color: var(--ng); }
+  .ans-letter { background: #bee3f8; color: #2a4365; }
+  .explanation { font-size: 0.86rem; color: #4a5568; margin-top: 0.35rem; line-height: 1.5; }
+  .divider { height: 1px; background: var(--border); margin: 1.3rem 0; }
+  .note { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.85rem; }
+  @media (max-width: 900px) {
+    html, body { overflow: auto; height: auto; }
+    .container { flex-direction: column; height: auto; }
+    .column { height: auto; overflow: visible; }
+    .left { border-right: none; border-bottom: 2px solid var(--border); }
+  }
+  .q-block { cursor: pointer; transition: border-color .15s, box-shadow .15s, background .15s; position: relative; }
+  .q-block:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(43,108,176,.18); }
+  .q-block:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .q-block.active { border-color: var(--accent); background: #ebf4ff; box-shadow: 0 0 0 2px rgba(43,108,176,.25); }
+  .q-block .locate { position:absolute; top:.7rem; right:.9rem; font-size:.72rem; color:var(--muted); opacity:0; transition:opacity .15s; }
+  .q-block:hover .locate, .q-block.active .locate { opacity:1; }
+  .mark { cursor: pointer; }
+  .mark:hover { background:#047857; }
+  .hl.pulse { animation: hlpulse 2.4s ease-out; }
+  @keyframes hlpulse { 0%,55% { background:#fde047; box-shadow:0 0 0 4px rgba(250,204,21,.7);} 100% { background:var(--hl); box-shadow:0 0 0 0 rgba(250,204,21,0);} }
+  .hint { background:#ebf8ff; border:1px solid #bee3f8; color:#2c5282; border-radius:6px; padding:.5rem .8rem; font-size:.82rem; margin-bottom:1rem; }
+  .question { font-size:.9rem; color:#1a202c; background:#f7fafc; border-left:3px solid var(--accent); padding:.5rem .7rem; margin:.45rem 0 .5rem; border-radius:0 4px 4px 0; }
+  .question .yng { font-size:.72rem; color:var(--muted); margin-top:.25rem; letter-spacing:.03em; }
+  .opts { list-style:none; margin:.4rem 0 0; padding:0; font-size:.86rem; }
+  .opts li { margin:.15rem 0; }
+  .opts b { display:inline-block; min-width:1.6rem; color:var(--accent); }
+  .qintro { background:#edf2f7; border:1px solid var(--border); border-radius:8px; padding:.8rem 1rem; margin:.9rem 0; font-size:.88rem; }
+  .qintro-t { font-weight:700; color:var(--primary); margin-bottom:.35rem; }
+  .qintro p { margin:.35rem 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cambridge IELTS 6 Academic Reading Test 2</h1>
+  <p>Passages with highlighted evidence (left) &nbsp;|&nbsp; Questions + Answers &amp; Explanations (right)</p>
+</header>
+
+<div class="container">
+  <div class="column left">
+<div class="section-title">READING PASSAGE 1</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below.</p>
+<div class="passage-title">Advantages of public transport</div>
+
+<p class="para">A new study conducted for the World Bank by Murdoch University’s Institute for Science and Technology Policy (ISTP) has demonstrated that public transport is more efficient than cars. The study compared the proportion of wealth poured into transport by <span class="hl">thirty-seven cities</span><span class="mark">6</span> around the world. This included both the public and private costs of building, maintaining and using a transport system.</p>
+
+<p class="para">The study found that the Western Australian city of <span class="hl">Perth is a good example of a city with minimal public transport. As a result, 17% of its wealth went into transport costs</span><span class="mark">11</span>. Some European and Asian cities, on the other hand, spent as little as 5%. Professor Peter Newman, ISTP Director, pointed out that these more efficient cities were able to put the difference into attracting industry and jobs or <span class="hl">creating a better place to live</span><span class="mark">7</span>.</p>
+
+<p class="para">According to Professor Newman, the larger Australian city of Melbourne is a rather unusual city in this sort of comparison. He describes it as two cities: ‘A European city surrounded by a car-dependent one’. Melbourne’s large tram network has made car use in the inner city much lower, but the outer suburbs have the same car-based structure as most other Australian cities. The explosion in demand for accommodation in the <span class="hl">inner suburbs</span><span class="mark">9</span> of Melbourne suggests a recent change in many people’s preferences as to where they live.</p>
+
+<p class="para">Newman says this is a new, broader way of considering public transport issues. In the past, the case for public transport has been made on the basis of environmental and social justice considerations rather than economics. Newman, however, believes the study demonstrates that ‘the auto-dependent city model is inefficient and grossly inadequate in economic as well as environmental terms’.</p>
+
+<p class="para">Bicycle use was not included in the study but Newman noted that the two most ‘bicycle friendly’ cities considered – Amsterdam and Copenhagen – were <span class="hl">very efficient, even though their public transport systems were ‘reasonable but not special’</span><span class="mark">10</span>.</p>
+
+<p class="para">It is common for supporters of road networks to reject the models of cities with good public transport by arguing that such systems would not work in their particular city. One objection is climate. Some people say their city could not make more use of public transport because it is either too hot or too cold. Newman rejects this, pointing out that public transport has been successful in both Toronto and Singapore and, in fact, he has checked the use of cars against climate and found ‘zero correlation’.</p>
+
+<p class="para">When it comes to other physical features, road lobbies are on stronger ground. For example, Newman accepts it would be hard for a city as <span class="hl">hilly as Auckland to develop a really good rail network</span><span class="mark">12</span>. However, he points out that both Hong Kong and Zürich have managed to make a success of their rail systems, heavy and light respectively, though there are few cities in the world as hilly.</p>
+
+<p class="para"><strong>A</strong> In fact, Newman believes the main reason for adopting one sort of transport over another is politics: ‘The more democratic the process, the more public transport is favored.’ He considers Portland, Oregon, a perfect example of this. Some years ago, federal money was granted to build a new road. However, local pressure groups forced a referendum over whether to spend the money on light rail instead. The rail proposal won and the railway worked spectacularly well. In the years that have followed, more and more rail systems have been put in, dramatically changing the nature of the city. Newman notes that Portland has about the same population as Perth and had a similar population density at the time. <span class="hl">This is a successful exercise in people power</span><span class="mark">1</span><span class="mark">13</span>.</p>
+
+<p class="para"><strong>B</strong> In the UK, travel times to work had been stable for at least six centuries, with people avoiding situations that required them to spend more than half an hour travelling to work. Trains and cars initially allowed people to live at greater distances without taking longer to reach their destination. However, public infrastructure did not keep pace with urban sprawl, causing massive congestion problems which now make commuting times far higher. <span class="hl">This describes increases in travelling time</span><span class="mark">2</span>.</p>
+
+<p class="para"><strong>C</strong> There is a widespread belief that increasing wealth encourages people to live farther out where cars are the only viable transport. The example of European cities refutes that. They are often wealthier than their American counterparts but have not generated the same level of car use. In Stockholm, car use has actually fallen in recent years as the city has become larger and wealthier. A new study makes this point even more starkly. Developing cities in Asia, such as Jakarta and Bangkok, make more use of the car than wealthy Asian cities such as Tokyo and Singapore. In cities that developed later, the World Bank and Asian Development Bank discouraged the building of public transport and people have been forced to rely on cars – creating the massive traffic jams that characterize those cities. <span class="hl">Higher incomes need not mean more cars</span><span class="mark">3</span>.</p>
+
+<p class="para"><strong>D</strong> Newman believes one of the best studies on how cities built for cars might be converted to rail use is <em>The Urban Village</em> report, which used Melbourne as an example. It found that pushing everyone into the city centre was not the best approach. Instead, the proposal advocated the creation of urban villages at hundreds of sites, mostly around railway stations. <span class="hl">This is about avoiding an overcrowded centre</span><span class="mark">4</span>.</p>
+
+<p class="para"><strong>E</strong> It was once assumed that improvements in telecommunications would lead to more dispersal in the population as people were no longer forced into cities. However, the ISTP team’s research demonstrates that the population and job density of cities rose or remained constant in the 1980s after decades of decline. The explanation for this seems to be that it is valuable to place people working in related fields together. ‘The new world will largely depend on human creativity, and creativity flourishes where people come together face-to-face.’ <span class="hl">This describes the benefits of working together in cities</span><span class="mark">5</span>.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 2</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below.</p>
+<div class="passage-title">GREYING POPULATION STAYS IN THE PINK</div>
+
+<p class="para">Elderly people are growing healthier, happier and more independent, say American scientists. The results of a 14-year study to be announced later this month reveal that the diseases associated with old age are <span class="hl">afflicting fewer and fewer people</span><span class="mark">14</span> and when they do strike, it is much later in life.</p>
+
+<p class="para">In the last 14 years, the National Long-term Health Care Survey has gathered data on the health and lifestyles of more than 20,000 men and women over 65. Researchers, now analysing the results of data gathered in 1994, say arthritis, high blood pressure and circulation problems – the major medical complaints in this age group – are troubling a smaller proportion every year. And the data confirms that the rate at which these diseases are declining <span class="hl">continues to accelerate</span><span class="mark">15</span>. Other diseases of old age – dementia, stroke, arteriosclerosis and emphysema – are also troubling fewer and fewer people.</p>
+
+<p class="para">‘It really raises the question of what should be considered normal ageing,’ says Kenneth Manton, a demographer from Duke University in North Carolina. He says the problems doctors accepted as normal in a 65-year-old in 1982 are often not appearing until people are <span class="hl">70 or 75</span><span class="mark">16</span>.</p>
+
+<p class="para">Clearly, certain diseases are beating a retreat in the face of <span class="hl">medical advances</span><span class="mark">17</span>. But there may be other contributing factors. Improvements in <span class="hl">childhood nutrition</span><span class="mark">18</span> in the first quarter of the twentieth century, for example, gave today’s elderly people a better start in life than their predecessors.</p>
+
+<p class="para">On the downside, the data also reveals failures in public health that have caused surges in some illnesses. An increase in some cancers and bronchitis may reflect changing smoking habits and poorer air quality, say the researchers. ‘These may be subtle influences,’ says Manton, ‘but our subjects have been exposed to worse and worse <span class="hl">pollution</span><span class="mark">19</span> for over 60 years. It’s not surprising we see some effect.’</p>
+
+<p class="para">One interesting correlation Manton uncovered is that <span class="hl">better-educated</span><span class="mark">20</span> people are likely to live longer. For example, 65-year-old women with fewer than eight years of schooling are expected, on average, to live to 82. Those who continued their education live an extra seven years. Although some of this can be attributed to a higher income, Manton believes it is mainly because educated people seek more medical attention.</p>
+
+<p class="para">The survey also assessed how independent people over 65 were, and again found a striking trend. Almost 80% of those in the 1994 survey could complete everyday activities ranging from eating and dressing unaided to complex tasks such as cooking and managing their finances. That represents a significant drop in the number of <span class="hl">disabled</span><span class="mark">21</span> old people in the population. If the trends apparent in the United States 14 years ago had continued, researchers calculate there would be an additional one million disabled elderly people in today’s population. According to Manton, slowing the trend has saved the United States government’s Medicare system more than <span class="hl">$200 billion</span><span class="mark">22</span>, suggesting that the greying of America’s population may prove less of a financial burden than expected.</p>
+
+<p class="para">The increasing self-reliance of many elderly people is probably linked to a massive increase in the use of simple <span class="hl">home medical aids</span><span class="mark">23</span>. For instance, the use of raised toilet seats has more than doubled since the start of the study, and the use of bath seats has grown by more than 50%. These developments also bring some health benefits, according to a report from the MacArthur Foundation’s research group on successful ageing. The group found that those elderly people who were able to retain a sense of independence were more likely to stay healthy in old age.</p>
+
+<p class="para">Maintaining a level of daily physical activity may help <span class="hl">mental functioning</span><span class="mark">24</span>, says Carl Cotman, a neuroscientist at the University of California at Irvine. He found that rats that exercise on a treadmill have raised levels of brain-derived neurotrophic factor coursing through their brains. Cotman believes this hormone, which keeps neurons functioning, may prevent the brains of active humans from deteriorating.</p>
+
+<p class="para">As part of the same study, Teresa Seeman, a social epidemiologist at the University of Southern California in Los Angeles, found a connection between self-esteem and stress in people over 70. In laboratory simulations of challenging activities such as driving, those who felt <span class="hl">in control of their lives</span><span class="mark">25</span> pumped out lower levels of stress hormones such as cortisol. Chronically high levels of these hormones have been linked to heart disease.</p>
+
+<p class="para">But independence can have drawbacks. Seeman found that elderly people who felt <span class="hl">emotionally isolated</span><span class="mark">26</span> maintained higher levels of stress hormones even when asleep. The research suggests that older people fare best when they feel independent but know they can get help when they need it.</p>
+
+<p class="para">‘Like much research into ageing, these results support common sense,’ says Seeman. They also show that we may be underestimating the impact of these simple factors. ‘The sort of thing that your grandmother always told you turns out to be right on target,’ she says.</p>
+
+<div class="divider"></div>
+<div class="section-title">READING PASSAGE 3</div>
+<p class="para" style="font-style:italic;color:var(--muted);font-size:0.88rem;">You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below.</p>
+<div class="passage-title">Numeration</div>
+
+<p class="para">One of the first great intellectual feats of a young child is learning how to talk, closely followed by learning how to count. From earliest childhood we are so bound up with our system of numeration that it is a feat of imagination to consider the problems faced by early humans who had not yet developed this facility. Careful consideration of our system of numeration leads to the conviction that, rather than being a facility that comes naturally to a person, it is one of the great and remarkable achievements of the human race.</p>
+
+<p class="para">It is impossible to learn the sequence of events that led to our developing the concept of number. Even the earliest of tribes had a system of numeration that, if not advanced, was sufficient for the tasks that they had to perform. Our ancestors had little use for actual numbers; instead their considerations would have been more of the kind <span class="hl"><em>Is this enough?</em> rather than <em>How many?</em></span><span class="mark">32</span> when they were engaged in food gathering, for example. However, when early humans first began to reflect on the nature of things around them, they discovered that they needed an idea of number simply to keep their thoughts in order. As they began to settle, <span class="hl">grow plants and herd animals</span><span class="mark">27</span>, the need for a sophisticated number system became paramount. It will never be known how and when this numeration ability developed, but it is certain that numeration was well developed by the time humans had formed even semi-permanent settlements.</p>
+
+<p class="para">Evidence of early stages of arithmetic and numeration can be readily found. The indigenous peoples of Tasmania were only able to count <span class="hl"><em>one, two, many</em></span><span class="mark">33</span>; those of South Africa counted <em>one, two, two and one, two twos, two twos and one</em>, and so on. But in real situations the number and words are often accompanied by <span class="hl">gestures</span><span class="mark">28</span> to help resolve any confusion. For example, when using the <em>one, two, many</em> type of system, the word <em>many</em> would mean, <span class="hl"><em>Look at my hands and see how many fingers I am showing you</em></span><span class="mark">34</span>. This basic approach is limited in the range of numbers that it can express, but this range will generally suffice when dealing with the simpler aspects of human existence.</p>
+
+<p class="para">The lack of ability of some cultures to deal with <span class="hl">large numbers</span><span class="mark">35</span> is not really surprising. European languages, when traced back to their earlier version, are very poor in number words and expressions. The ancient Gothic word for ten, <em>tachund</em>, is used to express the number 100 as <em>tachund tachund</em>. By the seventh century, the word <em>teon</em> had become interchangeable with the <em>tachund</em> or <em>hund</em> of the Anglo-Saxon language, and so 100 was denoted as <em>hund teontig</em>, or ten times ten. The average person in the <span class="hl">seventh century</span><span class="mark">37</span> in Europe was not as familiar with numbers as we are today. In fact, to qualify as a witness in a court of law a man had to be able to <span class="hl">count to nine</span><span class="mark">29</span>!</p>
+
+<p class="para">Perhaps the most fundamental step in developing a sense of number is not the ability to count, but rather to see that a number is really an <span class="hl">abstract idea</span><span class="mark">30</span> instead of a simple attachment to a group of particular objects. It must have been within the grasp of the earliest humans to conceive that four birds are distinct from two birds; however, it is not an elementary step to associate the number 4, as connected with four birds, to the number 4, as connected with four rocks. Associating a number as one of the qualities of a specific object is a great hindrance to the development of a true number sense. When the number 4 can be registered in the mind as a specific word, independent of the object being referenced, the individual is ready to take the first step toward the development of a notational system for numbers and, from there, to arithmetic.</p>
+
+<p class="para">Traces of the very first stages in the development of numeration can be seen in several living languages today. The numeration system of the Tsimshian language in British Columbia contains <span class="hl">seven distinct sets of words for numbers according to the class of the item being counted</span><span class="mark">31</span>: for counting flat objects and animals, for round objects and time, for people, for <span class="hl">long objects and trees, for canoes</span><span class="mark">38</span>, for measures, and for counting when no particular object is being numerated. It seems that the last is a <span class="hl">later development</span><span class="mark">39</span> while the first six groups show the relics of an older system. This diversity of number names can also be found in some widely used languages such as Japanese.</p>
+
+<p class="para">Intermixed with the development of a number sense is the development of an ability to count. Counting is not directly related to the formation of a number concept because it is possible to count by matching the items being counted against a group of pebbles, grains of corn, or the counter’s fingers. These aids would have been indispensable to very early people who would have found the process impossible without some form of mechanical aid. Such aids, while different, are still used even by the most educated in today’s society due to their convenience. All counting ultimately involves reference to something other than the things being counted. At first it may have been grains or pebbles but now it is a memorised sequence of words that happen to be the names of the numbers.</p>
+  </div>
+
+  <div class="column right">
+<div class="hint">💡 Click any question/answer card to jump to its evidence in the passage. Click a green number badge in the passage to jump back to its answer.</div>
+
+<div class="section-title">Reading Passage 1 – Answers</div>
+
+<div class="qintro"><div class="qintro-t">Questions 1–5</div>
+<p>Reading Passage 1 has five marked paragraphs, A–E.<br>Choose the correct heading for each paragraph from the list of headings below.</p>
+<ul class="opts">
+<li><b>i</b> Avoiding an overcrowded centre</li>
+<li><b>ii</b> A successful exercise in people power</li>
+<li><b>iii</b> The benefits of working together in cities</li>
+<li><b>iv</b> Higher incomes need not mean more cars</li>
+<li><b>v</b> Economic arguments fail to persuade</li>
+<li><b>vi</b> The impact of telecommunications on population distribution</li>
+<li><b>vii</b> Increases in travelling time</li>
+<li><b>viii</b> Responding to arguments against public transport</li>
+</ul>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 1</div>
+  <div class="question">Paragraph A</div>
+  <span class="answer ans-letter">ii</span>
+  <div class="explanation">Paragraph A focuses on politics and democracy. Local pressure groups forced a referendum, the rail proposal won, and it worked spectacularly well – a clear example of people power.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 2</div>
+  <div class="question">Paragraph B</div>
+  <span class="answer ans-letter">vii</span>
+  <div class="explanation">Paragraph B states that travel times to work had been stable for centuries, but public infrastructure failed to keep up with urban sprawl, causing much longer commuting times.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 3</div>
+  <div class="question">Paragraph C</div>
+  <span class="answer ans-letter">iv</span>
+  <div class="explanation">Paragraph C rejects the idea that increasing wealth automatically leads to more car use. European cities and Stockholm show the opposite.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 4</div>
+  <div class="question">Paragraph D</div>
+  <span class="answer ans-letter">i</span>
+  <div class="explanation">Paragraph D discusses <em>The Urban Village</em> report: pushing everyone into the city centre is not best; instead create urban villages around railway stations.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 5</div>
+  <div class="question">Paragraph E</div>
+  <span class="answer ans-letter">iii</span>
+  <div class="explanation">Paragraph E explains that population and job density rose because people benefit from working face-to-face. Creativity flourishes when people come together.</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 6–10</div>
+<p>Do the following statements agree with the information given in Reading Passage 1?<br>
+<b>TRUE</b> if the statement agrees with the information<br>
+<b>FALSE</b> if the statement contradicts the information<br>
+<b>NOT GIVEN</b> if there is no information on this</p></div>
+
+<div class="q-block">
+  <div class="q-num">Question 6</div>
+  <div class="question">The ISTP study examined public and private systems in every city of the world.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-no">FALSE</span>
+  <div class="explanation">The study examined <b>thirty-seven cities</b>, not every city in the world.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 7</div>
+  <div class="question">Efficient cities can improve the quality of life for their inhabitants.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-yes">TRUE</span>
+  <div class="explanation">Newman says efficient cities could put the money saved into attracting industry and jobs or creating a better place to live.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 8</div>
+  <div class="question">An inner-city tram network is dangerous for car drivers.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-ng">NOT GIVEN</span>
+  <div class="explanation">The text mentions Melbourne’s tram network lowered car use in the inner city, but says nothing about it being dangerous for car drivers.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 9</div>
+  <div class="question">In Melbourne, people prefer to live in the outer suburbs.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-no">FALSE</span>
+  <div class="explanation">The text says there is an explosion in demand for accommodation in the <b>inner</b> suburbs, showing people prefer to live there, not the outer suburbs.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 10</div>
+  <div class="question">Cities with high levels of bicycle usage can be efficient even when public transport is only averagely good.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-yes">TRUE</span>
+  <div class="explanation">Newman notes that Amsterdam and Copenhagen (the most bicycle-friendly cities) were very efficient even though their public transport was only “reasonable but not special”.</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 11–13</div>
+<p>Look at the following cities and the list of descriptions below.<br>Match each city with the correct description, A–F.</p>
+<ul class="opts">
+<li><b>A</b> successfully uses a light rail transport system in hilly environment</li>
+<li><b>B</b> successful public transport system despite cold winters</li>
+<li><b>C</b> profitably moved from road to light rail transport system</li>
+<li><b>D</b> hilly and inappropriate for rail transport system</li>
+<li><b>E</b> heavily dependent on cars despite widespread poverty</li>
+<li><b>F</b> inefficient due to a limited public transport system</li>
+</ul>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 11</div>
+  <div class="question">Perth</div>
+  <span class="answer ans-letter">F</span>
+  <div class="explanation">Perth is described as a city with minimal public transport that spends 17% of its wealth on transport (inefficient due to limited public transport).</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 12</div>
+  <div class="question">Auckland</div>
+  <span class="answer ans-letter">D</span>
+  <div class="explanation">Newman accepts it would be hard for a hilly city like Auckland to develop a really good rail network.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 13</div>
+  <div class="question">Portland</div>
+  <span class="answer ans-letter">C</span>
+  <div class="explanation">Portland successfully moved from a road project to a light rail system after a referendum, and it worked spectacularly well.</div>
+</div>
+
+<div class="divider"></div>
+<div class="section-title">Reading Passage 2 – Answers</div>
+
+<div class="qintro"><div class="qintro-t">Questions 14–22</div>
+<p>Complete the summary using the list of words, A–Q, below.</p>
+<p>Research carried out by scientists in the United States has shown that the proportion of people over 65 suffering from the most common age-related medical problems is <b>14</b> ______ and that the speed of this change is <b>15</b> ______. It also seems that these diseases are affecting people <b>16</b> ______ in life than they did in the past. This is largely due to developments in <b>17</b> ______, but other factors such as improved <b>18</b> ______ may also be playing a part. Increases in some other illnesses may be due to changes in personal habits and to <b>19</b> ______. The research establishes a link between levels of <b>20</b> ______ and life expectancy. It also shows that there has been a considerable reduction in the number of elderly people who are <b>21</b> ______, which means that the <b>22</b> ______ involved in supporting this section of the population may be less than previously predicted.</p>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 14</div>
+  <div class="question">the proportion … is ______</div>
+  <span class="answer ans-letter">B (falling)</span>
+  <div class="explanation">The proportion of elderly people suffering from major age-related diseases is declining every year.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 15</div>
+  <div class="question">the speed of this change is ______</div>
+  <span class="answer ans-letter">I (increasing)</span>
+  <div class="explanation">The rate at which these diseases are declining continues to accelerate (i.e., the speed of improvement is increasing).</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 16</div>
+  <div class="question">these diseases are affecting people ______ in life</div>
+  <span class="answer ans-letter">F (later)</span>
+  <div class="explanation">Problems that used to appear at 65 are now appearing at 70 or 75 – later in life.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 17</div>
+  <div class="question">This is largely due to developments in ______</div>
+  <span class="answer ans-letter">M (medicine)</span>
+  <div class="explanation">Diseases are retreating mainly because of medical advances.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 18</div>
+  <div class="question">other factors such as improved ______</div>
+  <span class="answer ans-letter">J (nutrition)</span>
+  <div class="explanation">Improved childhood nutrition in the early 20th century also helped.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 19</div>
+  <div class="question">Increases in some other illnesses may be due to … and to ______</div>
+  <span class="answer ans-letter">N (pollution)</span>
+  <div class="explanation">Increases in some cancers and bronchitis are linked to poorer air quality / pollution.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 20</div>
+  <div class="question">a link between levels of ______ and life expectancy</div>
+  <span class="answer ans-letter">K (education)</span>
+  <div class="explanation">Better-educated people live longer; education is strongly linked to life expectancy.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 21</div>
+  <div class="question">reduction in the number of elderly people who are ______</div>
+  <span class="answer ans-letter">G (disabled)</span>
+  <div class="explanation">There has been a significant drop in the number of disabled elderly people.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 22</div>
+  <div class="question">the ______ involved in supporting this section of the population</div>
+  <span class="answer ans-letter">A (cost)</span>
+  <div class="explanation">This reduction has saved the Medicare system more than $200 billion, so the financial cost may be lower than expected.</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 23–26</div>
+<p>Complete each sentence with the correct ending, A–H, below.</p>
+<ul class="opts">
+<li><b>A</b> may cause heart disease.</li>
+<li><b>B</b> can be helped by hormone treatment.</li>
+<li><b>C</b> may cause rises in levels of stress hormones.</li>
+<li><b>D</b> have cost the United States government more than $200 billion.</li>
+<li><b>E</b> may help prevent mental decline.</li>
+<li><b>F</b> may get stronger at night.</li>
+<li><b>G</b> allow old people to be more independent.</li>
+<li><b>H</b> can reduce stress in difficult situations.</li>
+</ul>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 23</div>
+  <div class="question">Home medical aids ______</div>
+  <span class="answer ans-letter">G</span>
+  <div class="explanation">Home medical aids (raised toilet seats, bath seats, etc.) allow old people to be more independent.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 24</div>
+  <div class="question">Regular amounts of exercise ______</div>
+  <span class="answer ans-letter">E</span>
+  <div class="explanation">Regular exercise may help prevent mental decline (Cotman’s research on brain-derived neurotrophic factor).</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 25</div>
+  <div class="question">Feelings of control over life ______</div>
+  <span class="answer ans-letter">H</span>
+  <div class="explanation">Feelings of control over life reduce stress hormone levels in challenging situations.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 26</div>
+  <div class="question">Feelings of loneliness ______</div>
+  <span class="answer ans-letter">C</span>
+  <div class="explanation">Feelings of loneliness / emotional isolation maintain higher levels of stress hormones (even when asleep).</div>
+</div>
+
+<div class="divider"></div>
+<div class="section-title">Reading Passage 3 – Answers</div>
+
+<div class="qintro"><div class="qintro-t">Questions 27–31</div>
+<p>Complete each sentence with the correct ending, A–G, below.</p>
+<ul class="opts">
+<li><b>A</b> was necessary in order to fulfil a civic role.</li>
+<li><b>B</b> was necessary when people began farming.</li>
+<li><b>C</b> was necessary for the development of arithmetic.</li>
+<li><b>D</b> persists in all societies.</li>
+<li><b>E</b> was used when the range of number words was restricted.</li>
+<li><b>F</b> can be traced back to early European languages.</li>
+<li><b>G</b> was a characteristic of early numeration systems.</li>
+</ul>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 27</div>
+  <div class="question">A developed system of numbering ______</div>
+  <span class="answer ans-letter">B</span>
+  <div class="explanation">A sophisticated number system became necessary when people began to settle, grow plants and herd animals (farming).</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 28</div>
+  <div class="question">An additional hand signal ______</div>
+  <span class="answer ans-letter">E</span>
+  <div class="explanation">When number words were limited (e.g., “one, two, many”), people used hand signals / gestures to show the exact quantity.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 29</div>
+  <div class="question">In seventh-century Europe, the ability to count to a certain number ______</div>
+  <span class="answer ans-letter">A</span>
+  <div class="explanation">In seventh-century Europe a man had to be able to count to nine to qualify as a witness in court (a civic role).</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 30</div>
+  <div class="question">Thinking about numbers as concepts separate from physical objects ______</div>
+  <span class="answer ans-letter">C</span>
+  <div class="explanation">Understanding that a number is an abstract idea (separate from specific objects) is essential for developing a notational system and arithmetic.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 31</div>
+  <div class="question">Expressing number differently according to class of item ______</div>
+  <span class="answer ans-letter">G</span>
+  <div class="explanation">Having different number words for different classes of objects (as in Tsimshian) was a characteristic of early numeration systems.</div>
+</div>
+
+<div class="qintro"><div class="qintro-t">Questions 32–40</div>
+<p>Do the following statements agree with the information given in Reading Passage 3?<br>
+<b>TRUE</b> if the statement agrees with the information<br>
+<b>FALSE</b> if the statement contradicts the information<br>
+<b>NOT GIVEN</b> if there is no information on this</p></div>
+
+<div class="q-block">
+  <div class="q-num">Question 32</div>
+  <div class="question">For the earliest tribes, the concept of sufficiency was more important than the concept of quantity.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-yes">TRUE</span>
+  <div class="explanation">Early humans thought in terms of “Is this enough?” rather than “How many?”.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 33</div>
+  <div class="question">Indigenous Tasmanians used only four terms to indicate numbers of objects.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-no">FALSE</span>
+  <div class="explanation">Tasmanians only had <em>one, two, many</em> (three terms), not four.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 34</div>
+  <div class="question">Some peoples with simple number systems use body language to prevent misunderstanding of expressions of number.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-yes">TRUE</span>
+  <div class="explanation">Simple systems often used gestures (e.g., showing fingers) to avoid confusion.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 35</div>
+  <div class="question">All cultures have been able to express large numbers clearly.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-no">FALSE</span>
+  <div class="explanation">Many cultures (including early European languages) could not deal with large numbers clearly.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 36</div>
+  <div class="question">The word ‘thousand’ has Anglo-Saxon origins.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-ng">NOT GIVEN</span>
+  <div class="explanation">The text discusses words for ten and hundred in early European languages but does not mention the origin of the word “thousand”.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 37</div>
+  <div class="question">In general, people in seventh-century Europe had poor counting ability.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-yes">TRUE</span>
+  <div class="explanation">The average person in seventh-century Europe was not familiar with numbers; counting to nine was required just to be a court witness.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 38</div>
+  <div class="question">In the Tsimshian language, the number for long objects and canoes is expressed with the same word.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-no">FALSE</span>
+  <div class="explanation">Tsimshian has separate sets of words for long objects/trees and for canoes.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 39</div>
+  <div class="question">The Tsimshian language contains both older and newer systems of counting.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-yes">TRUE</span>
+  <div class="explanation">The last set of number words (when no particular object is counted) is a later development; the first six are relics of an older system.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-num">Question 40</div>
+  <div class="question">Early peoples found it easier to count by using their fingers rather than a group of pebbles.<div class="yng">TRUE / FALSE / NOT GIVEN</div></div>
+  <span class="answer ans-ng">NOT GIVEN</span>
+  <div class="explanation">The text says early people used pebbles, grains or fingers as counting aids, but does not say which was easier.</div>
+</div>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  var left = document.querySelector('.column.left');
+  var right = document.querySelector('.column.right');
+  var stacked = function () { return window.matchMedia('(max-width: 900px)').matches; };
+
+  function scrollInto(container, el) {
+    if (stacked()) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var c = container.getBoundingClientRect(), r = el.getBoundingClientRect();
+    container.scrollTo({
+      top: container.scrollTop + (r.top - c.top) - container.clientHeight / 2 + r.height / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function flash(els) {
+    els.forEach(function (el) {
+      el.classList.remove('pulse'); void el.offsetWidth; el.classList.add('pulse');
+      setTimeout(function () { el.classList.remove('pulse'); }, 2500);
+    });
+  }
+
+  var targets = {};
+  left.querySelectorAll('.mark').forEach(function (m) {
+    var n = parseInt(m.textContent, 10);
+    var node = m.previousSibling;
+    while (node && node.nodeType === 1 && node.classList.contains('mark')) node = node.previousSibling;
+    var el = (node && node.nodeType === 1 && node.classList.contains('hl')) ? node : m.closest('.para');
+    if (!targets[n]) targets[n] = [];
+    if (targets[n].indexOf(el) === -1) targets[n].push(el);
+  });
+
+  var blocks = {};
+  var allBlocks = Array.prototype.slice.call(right.querySelectorAll('.q-block'));
+  allBlocks.forEach(function (b) {
+    var q = b.querySelector('.q-num');
+    var m = q && q.textContent.match(/Questions?\s+(\d+)(?:\s*(?:&|–|-|and)\s*(\d+))?/);
+    if (!m) return;
+    var nums = [parseInt(m[1], 10)];
+    if (m[2]) nums.push(parseInt(m[2], 10));
+    b._i = 0;
+    nums.forEach(function (n) { blocks[n] = b; });
+
+    b.setAttribute('tabindex', '0');
+    b.setAttribute('role', 'button');
+    var tip = document.createElement('span');
+    tip.className = 'locate'; tip.textContent = '📍 Show in passage';
+    b.appendChild(tip);
+
+    function go() {
+      var list = [];
+      nums.forEach(function (n) { (targets[n] || []).forEach(function (t) { if (list.indexOf(t) === -1) list.push(t); }); });
+      if (!list.length) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      var t = list[b._i % list.length];
+      b._i++;
+      scrollInto(left, t);
+      flash(list);
+    }
+    b.addEventListener('click', function () {
+      if (String(window.getSelection()).length) return;
+      go();
+    });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+
+  left.querySelectorAll('.mark').forEach(function (m) {
+    m.addEventListener('click', function () {
+      var b = blocks[parseInt(m.textContent, 10)];
+      if (!b) return;
+      allBlocks.forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      scrollInto(right, b);
+    });
+  });
+})();
+</script>
+</body>
+</html>
